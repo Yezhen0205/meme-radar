@@ -11,7 +11,15 @@ from .normalize import canonical_url, item_timestamp
 
 GROUPABLE_KINDS = {"video", "article", "hot"}
 KIND_PRIORITY = {"video": 0, "article": 1, "hot": 2}
-CATEGORY_ORDER = {"meme": 0, "reply": 1, "comment": 2, "hot": 3}
+CATEGORY_ORDER = {"abstract": 0, "meme": 1, "reply": 2, "comment": 3, "hot": 4}
+GENERIC_SUMMARY_PREFIXES = (
+    "微博热搜第",
+    "百度热搜第",
+    "抖音热榜第",
+    "头条热榜第",
+    "贴吧热榜第",
+    "知乎日报第",
+)
 _CONTENT_FIELDS = (
     "title",
     "summary",
@@ -59,9 +67,12 @@ def deduplicate(items: list[dict], max_items: int = 300) -> tuple[list[dict], di
             if rep["category"] in {"comment", "reply"} or rep["source_kind"] not in GROUPABLE_KINDS:
                 continue
             if item["fingerprint"] == rep["fingerprint"]:
-                best_group, best_score = group, 1.0
+                if _can_group(item, rep):
+                    best_group, best_score = group, 1.0
                 break
             if rep["source_kind"] != item["source_kind"]:
+                continue
+            if not _can_group(item, rep):
                 continue
             other = title_words_for_grouping(rep["title"])
             if min(len(tokens), len(other)) < 3:
@@ -136,6 +147,26 @@ def _representative_key(item: dict) -> tuple:
         -int(heat or 0),
         item.get("id", ""),
     )
+
+
+def _substantive_summary(item: dict) -> str:
+    summary = (item.get("summary") or "").strip()
+    if len(summary) < 12:
+        return ""
+    if summary.startswith(GENERIC_SUMMARY_PREFIXES):
+        return ""
+    return summary
+
+
+def _can_group(item: dict, representative: dict) -> bool:
+    """Do not merge same-title posts from different sources when bodies differ."""
+    if item.get("source_id") == representative.get("source_id"):
+        return True
+    left = _substantive_summary(item)
+    right = _substantive_summary(representative)
+    if left and right and left != right:
+        return False
+    return True
 
 
 def content_signature(item: dict) -> str:

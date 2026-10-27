@@ -141,6 +141,8 @@ def make_item(
     content_hash = digest(source, source_id, title, post_url, image_url)
     item = {
         "id": stable_item_id(source, source_id, post_url),
+        "content_type": "image",
+        "authenticity": "real",
         "source": source,
         "source_id": str(source_id),
         "source_name": source_name,

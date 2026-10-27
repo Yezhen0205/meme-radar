@@ -1,4 +1,4 @@
-"""Collect public hot lists and Bilibili comments into data/feed.json."""
+"""Collect text hot lists, memes and comments into data/text.json."""
 from __future__ import annotations
 
 import argparse
@@ -26,11 +26,11 @@ from .sources import (
 LOGGER = logging.getLogger("meme_radar.collect")
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = ROOT / "config" / "sources.json"
-DEFAULT_OUTPUT = ROOT / "data" / "feed.json"
+DEFAULT_OUTPUT = ROOT / "data" / "text.json"
 SITE = {
-    "name": "热梗雷达",
+    "name": "梗图雷达",
     "name_en": "Meme Radar",
-    "tagline": "把中文互联网的乐子，装进一部手机。",
+    "tagline": "图片、热梗、抽象段子、神回复和热点，装进一部手机。",
 }
 
 
@@ -214,7 +214,13 @@ def collect(
 
     if previous_items:
         stabilize_collected_at(merged_items, previous_items)
+    previous_ids = {item.get("id") for item in previous_items if item.get("id")}
     items, dedupe_stats = deduplicate(merged_items, max_items=max_items)
+    new_count = sum(1 for item in items if item.get("id") not in previous_ids)
+    category_counts: dict[str, int] = {}
+    for item in items:
+        category = item.get("category") or "hot"
+        category_counts[category] = category_counts.get(category, 0) + 1
 
     enabled = [s for s in statuses if s["status"] != "disabled"]
     sources_ok = sum(1 for s in statuses if s["status"] == "ok")
@@ -236,7 +242,8 @@ def collect(
 
     generated_at = iso_utc(now) if sources_ok else (previous or {}).get("generated_at")
     feed = {
-        "schema_version": 1,
+        "schema_version": 2,
+        "content_kind": "text",
         "site": SITE,
         "timezone": config.get("timezone", "Asia/Shanghai"),
         "generated_at": generated_at,
@@ -258,8 +265,15 @@ def collect(
             "sources_using_previous": sources_with_previous,
             "items_raw": sum(s["fetched"] for s in statuses),
             "items_final": len(items),
+            "items_new": new_count,
             "duplicates_removed": dedupe_stats["duplicates_removed"],
             "groups": dedupe_stats["groups"],
+            "categories": category_counts,
+            "authenticity": {
+                "real": sum(1 for item in items if item.get("authenticity", "real") == "real"),
+                "rewrite": sum(1 for item in items if item.get("authenticity") == "rewrite"),
+                "ai": sum(1 for item in items if item.get("authenticity") == "ai"),
+            },
             "duration_ms": int((time.monotonic() - started_monotonic) * 1000),
         },
         "sources": statuses,
@@ -306,6 +320,8 @@ def _print_summary(feed: dict) -> None:
                 "sources_failed": run.get("sources_failed"),
                 "sources_skipped": run.get("sources_skipped"),
                 "items": (feed.get("run") or {}).get("items_final"),
+                "new": (feed.get("run") or {}).get("items_new"),
+                "categories": (feed.get("run") or {}).get("categories"),
                 "duplicates_removed": run.get("duplicates_removed"),
                 "groups": run.get("groups"),
                 "source_status": [

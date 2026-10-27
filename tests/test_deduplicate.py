@@ -68,6 +68,12 @@ class DeduplicateTests(unittest.TestCase):
         self.assertEqual(len(result), 1)
         self.assertGreaterEqual(result[0]["group_size"], 2)
 
+    def test_same_title_with_different_bodies_is_not_merged(self):
+        first = item("同一标题", source_id="weibo_hot", summary="第一条正文，内容完全不同")
+        second = item("同一标题", source_id="toutiao_hot", summary="第二条正文，讲的是另一件事")
+        result, _ = deduplicate([first, second], max_items=100)
+        self.assertEqual(len(result), 2)
+
     def test_stabilize_collected_at_reuses_unchanged_item_time(self):
         old = item("不变的内容")
         old["collected_at"] = "2026-10-01T00:00:00Z"

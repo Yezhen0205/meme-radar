@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f4f1e8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#10130f" media="(prefers-color-scheme: dark)">
-  <meta name="description" content="梗图雷达：真实采集 Reddit 与百度贴吧的公开梗图，安卓手机瀑布流阅读，可添加到主屏幕。">
+  <meta name="description" content="梗图雷达：真实采集梗图、热梗、抽象段子、神回复、评论金句和热点，安卓手机图文混合信息流，可添加到主屏幕。">
   <title>梗图雷达 · Meme Radar</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -15,7 +15,7 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#grid">跳到图片流</a>
+  <a class="skip-link" href="#grid">跳到内容流</a>
   <div class="ambient" aria-hidden="true"></div>
 
   <div class="app-shell">
@@ -46,20 +46,31 @@
     <main>
       <section class="hero" aria-labelledby="heroTitle">
         <div class="hero-top">
-          <span class="hero-kicker">LIVE · REDDIT × TIEBA</span>
+          <span class="hero-kicker">LIVE · 图片 × 文字</span>
           <span id="statusPill" class="status-pill is-loading">连接中</span>
         </div>
-        <h1 id="heroTitle">刷点<br><em>真的梗图。</em></h1>
-        <p id="heroMeta" class="hero-meta">正在接收 Reddit 与贴吧的公开图片…</p>
-        <div class="stats" aria-label="图库统计">
-          <div class="stat"><strong id="statTotal">—</strong><span>张有效图片</span></div>
-          <div class="stat"><strong id="statNew">—</strong><span>本轮新发现</span></div>
-          <div class="stat"><strong id="statSource">—</strong><span>活跃来源</span></div>
+        <h1 id="heroTitle">刷点<br><em>真的梗。</em></h1>
+        <p id="heroMeta" class="hero-meta">正在接收梗图、热梗、神回复和公开热点…</p>
+        <div class="stats" aria-label="内容统计">
+          <div class="stat"><strong id="statTotal">—</strong><span>条内容</span></div>
+          <div class="stat"><strong id="statImages">—</strong><span>张梗图</span></div>
+          <div class="stat"><strong id="statText">—</strong><span>条文字</span></div>
         </div>
       </section>
 
+      <nav id="categoryTabs" class="category-tabs" aria-label="内容分类" role="tablist">
+        <button class="cat-btn" type="button" role="tab" data-category="discover" aria-selected="true">综合发现 <span>—</span></button>
+        <button class="cat-btn" type="button" role="tab" data-category="image" aria-selected="false">梗图 <span>—</span></button>
+        <button class="cat-btn" type="button" role="tab" data-category="meme" aria-selected="false">热梗 <span>—</span></button>
+        <button class="cat-btn" type="button" role="tab" data-category="abstract" aria-selected="false">抽象段子 <span>—</span></button>
+        <button class="cat-btn" type="button" role="tab" data-category="reply" aria-selected="false">神回复 <span>—</span></button>
+        <button class="cat-btn" type="button" role="tab" data-category="comment" aria-selected="false">评论金句 <span>—</span></button>
+        <button class="cat-btn" type="button" role="tab" data-category="hot" aria-selected="false">热点 <span>—</span></button>
+      </nav>
+
       <div id="banner" class="banner" role="status" hidden></div>
       <div id="imageNote" class="image-note" role="status" hidden></div>
+      <div id="authLine" class="auth-line" hidden></div>
 
       <section class="discovery" aria-label="浏览与筛选">
         <div class="search-box">
@@ -67,20 +78,25 @@
             <circle cx="10.8" cy="10.8" r="6.4" stroke="currentColor" stroke-width="1.8"/>
             <path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
           </svg>
-          <input id="searchInput" type="search" placeholder="搜标题、社区、梗词…" autocomplete="off" enterkeyhint="search" aria-label="搜索梗图">
+          <input id="searchInput" type="search" placeholder="搜标题、正文、社区、热词…" autocomplete="off" enterkeyhint="search" aria-label="搜索内容">
           <button id="clearSearch" type="button" aria-label="清空搜索" hidden>×</button>
         </div>
 
-        <div class="mode-row" role="tablist" aria-label="浏览方式">
+        <div class="mode-row" role="tablist" aria-label="排序方式">
           <button class="mode-btn" type="button" role="tab" data-mode="latest" aria-selected="true">最新</button>
           <button class="mode-btn" type="button" role="tab" data-mode="hot" aria-selected="false">热门</button>
           <button class="mode-btn" type="button" role="tab" data-mode="random" aria-selected="false">随机发现</button>
         </div>
 
-        <div class="filter-row" aria-label="来源与收藏筛选">
-          <button class="filter-btn" type="button" data-source="all" aria-pressed="true">全部 <span id="countAll"></span></button>
-          <button class="filter-btn" type="button" data-source="reddit" aria-pressed="false">Reddit <span id="countReddit"></span></button>
-          <button class="filter-btn" type="button" data-source="tieba" aria-pressed="false">贴吧 <span id="countTieba"></span></button>
+        <div class="filter-row" id="typeFilters" aria-label="内容类型">
+          <button class="filter-btn" type="button" data-type="all" aria-pressed="true">全部 <span id="countTypeAll"></span></button>
+          <button class="filter-btn" type="button" data-type="image" aria-pressed="false">图片 <span id="countTypeImage"></span></button>
+          <button class="filter-btn" type="button" data-type="text" aria-pressed="false">文字 <span id="countTypeText"></span></button>
+        </div>
+
+        <div class="filter-row" id="sourceFilters" aria-label="来源筛选"></div>
+
+        <div class="filter-row" aria-label="收藏与已看">
           <button id="favOnly" class="filter-btn is-utility" type="button" aria-pressed="false">♥ 收藏 <span id="favCount">0</span></button>
           <button id="hideSeen" class="filter-btn is-utility" type="button" aria-pressed="false">隐藏已看</button>
         </div>
@@ -88,12 +104,12 @@
         <div id="trendChips" class="chip-row" aria-label="热点候选词"></div>
 
         <div class="list-meta">
-          <p id="resultMeta">正在整理图片…</p>
+          <p id="resultMeta">正在整理内容…</p>
           <button id="shuffleBtn" class="text-btn" type="button" hidden>换一批</button>
         </div>
       </section>
 
-      <section id="grid" class="masonry" aria-label="梗图瀑布流" aria-live="polite" aria-busy="true">
+      <section id="grid" class="masonry" aria-label="综合内容流" aria-live="polite" aria-busy="true">
         <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
         <div class="skeleton-card"><div class="skeleton-img tall"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
         <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
@@ -102,8 +118,8 @@
 
       <section id="empty" class="empty" hidden aria-live="polite">
         <div class="empty-orbit" aria-hidden="true"><span></span><span></span><i></i></div>
-        <h2 id="emptyTitle">还没有图片</h2>
-        <p id="emptyText">采集器还没有拿到可用图片，稍后再来看看。</p>
+        <h2 id="emptyTitle">还没有内容</h2>
+        <p id="emptyText">采集器还没有拿到可用数据，稍后再来看看。</p>
         <button id="emptyAction" class="primary-btn" type="button" hidden>重新加载</button>
       </section>
 
@@ -118,14 +134,14 @@
             <span id="healthSummary" class="health-summary"></span>
           </summary>
           <div id="healthList" class="health-list"></div>
-          <p class="health-note">Reddit 使用官方公开 Atom/RSS；贴吧使用公开热点页。热度只使用来源真实提供的互动量，缺失时保持为空。X、B站、微博为 planned，不会显示为正常运行。</p>
+          <p class="health-note">图片：Reddit 官方 RSS + 贴吧公开热点页；文字：B站公开热评、微博/百度/头条/抖音/贴吧热榜、知乎日报。互动数据只使用来源真实提供值，缺失时保持为空。planned 来源不会显示为运行中。</p>
         </details>
       </section>
     </main>
 
     <footer class="footer">
-      <p><strong>梗图雷达</strong> · 不登录、不伪造、不镜像整站。</p>
-      <p>图片版权归原作者与平台所有；每张图都能打开真实原帖。</p>
+      <p><strong>梗图雷达</strong> · 不登录、不伪造、不把 AI 内容冒充网友发言。</p>
+      <p>图片与文字版权归原作者与平台所有；每条内容都保留真实来源入口。</p>
       <p class="footer-links"><a id="repoLink" href="https://github.com/Yezhen0205/meme-radar" target="_blank" rel="noopener noreferrer">源码与采集说明</a></p>
     </footer>
   </div>
@@ -157,18 +173,36 @@
     </div>
   </div>
 
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <noscript><p class="noscript">这个图片流需要 JavaScript 才能加载。</p></noscript>
+  <div id="textModal" class="text-modal" role="dialog" aria-modal="true" aria-labelledby="textModalTitle" hidden>
+    <div class="text-sheet">
+      <button id="textClose" class="sheet-close" type="button" aria-label="关闭">×</button>
+      <div id="textBadges" class="badge-row"></div>
+      <h2 id="textModalTitle"></h2>
+      <p id="textBody" class="text-detail-body"></p>
+      <p id="textContext" class="text-detail-context" hidden></p>
+      <div id="textTags" class="tag-list"></div>
+      <div id="textStats" class="lightbox-stats"></div>
+      <div class="text-detail-actions">
+        <button id="textCopy" type="button" class="primary-btn">复制文字</button>
+        <button id="textFav" type="button" class="ghost-btn">收藏</button>
+        <button id="textSeen" type="button" class="ghost-btn">标为已看</button>
+        <a id="textPost" class="ghost-btn" href="#" target="_blank" rel="noopener noreferrer nofollow">打开原帖 ↗</a>
+      </div>
+    </div>
+  </div>
 
-  <template id="cardTemplate">
-    <article class="card">
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">这个信息流需要 JavaScript 才能加载。</p></noscript>
+
+  <template id="imageCardTemplate">
+    <article class="card image-card">
       <div class="card-media">
         <img loading="lazy" decoding="async" alt="">
         <div class="media-fallback" hidden>
           <span>图片暂时无法加载</span>
           <a target="_blank" rel="noopener noreferrer">打开原帖</a>
         </div>
-        <div class="card-badges"><span class="source-pill"></span><span class="related-pill" hidden></span></div>
+        <div class="card-badges"><span class="cat-pill"></span><span class="source-pill"></span><span class="related-pill" hidden></span></div>
         <span class="seen-pill" hidden>已看</span>
         <button class="fav-btn" type="button" aria-label="收藏" aria-pressed="false">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -181,6 +215,29 @@
         <p class="card-summary"></p>
         <div class="card-meta"><span class="community"></span><span class="dot"></span><span class="time"></span><span class="comments"></span></div>
         <div class="card-tags"></div>
+      </div>
+    </article>
+  </template>
+
+  <template id="textCardTemplate">
+    <article class="card text-card">
+      <span class="seen-pill" hidden>已看</span>
+      <div class="text-top">
+        <div class="badge-row"><span class="cat-pill"></span><span class="auth-pill"></span></div>
+        <button class="fav-btn text-fav" type="button" aria-label="收藏" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 20.2 4.7 13a4.8 4.8 0 0 1 6.8-6.8l.5.5.5-.5a4.8 4.8 0 0 1 6.8 6.8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <h2 class="card-title text-title"></h2>
+      <p class="text-body"></p>
+      <p class="text-context" hidden></p>
+      <div class="card-meta"><span class="source-name"></span><span class="dot"></span><span class="time"></span><span class="comments"></span></div>
+      <div class="card-tags"></div>
+      <div class="text-actions">
+        <button class="copy-btn" type="button">复制</button>
+        <a class="original-link" target="_blank" rel="noopener noreferrer nofollow">原帖 ↗</a>
       </div>
     </article>
   </template>

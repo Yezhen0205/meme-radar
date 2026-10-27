@@ -1,7 +1,7 @@
 {
   "name": "梗图雷达 · Meme Radar",
   "short_name": "梗图雷达",
-  "description": "真实采集 Reddit 与百度贴吧公开梗图的安卓图片瀑布流。",
+  "description": "真实采集梗图、热梗、抽象段子、神回复、评论金句和热点，安卓手机图文混合信息流。",
   "lang": "zh-CN",
   "dir": "ltr",
   "start_url": "./",
@@ -10,7 +10,7 @@
   "orientation": "portrait",
   "background_color": "#f2eee4",
   "theme_color": "#f14b2b",
-  "categories": ["entertainment", "photo", "social"],
+  "categories": ["entertainment", "news", "social"],
   "icons": [
     {
       "src": "icon-192.png",

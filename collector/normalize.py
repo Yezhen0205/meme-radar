@@ -229,7 +229,7 @@ def make_item(
     url = canonical_url(url)
     if not url.startswith(("http://", "https://")):
         raise ValueError(f"item URL is not absolute: {url!r}")
-    category = category if category in {"meme", "reply", "comment", "hot"} else "hot"
+    category = category if category in {"meme", "abstract", "reply", "comment", "hot"} else "hot"
     source_rank = max(1, int(heat_rank or 1))
     heat = None
     if heat_label and heat_value is not None:
@@ -254,6 +254,8 @@ def make_item(
     context_value = clean_text(context, 120) if context else None
     item = {
         "id": stable_id(source_id, native_id, url),
+        "content_type": "text",
+        "authenticity": "real",
         "fingerprint": fingerprint_for(title, context_id=context_id),
         "title": title,
         "summary": summary,

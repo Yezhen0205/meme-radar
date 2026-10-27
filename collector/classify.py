@@ -52,6 +52,44 @@ MEME_KEYWORDS = {
     "迷惑行为",
     "人类早期",
     "离谱操作",
+    "图吧",
+    "垃圾佬",
+    "胶佬",
+    "答辩",
+    "弱智吧",
+}
+
+# Absurd / shitpost-adjacent signals.  These are still title-based and
+# explainable; a serious headline is never reclassified as abstract.
+ABSTRACT_KEYWORDS = {
+    "抽象",
+    "离谱",
+    "逆天",
+    "弱智",
+    "沙雕",
+    "吧友",
+    "神操作",
+    "迷惑",
+    "精神状态",
+    "发疯",
+    "脑干",
+    "缺德",
+    "地狱笑话",
+    "整活",
+    "翻车",
+    "社死",
+    "破防",
+    "绷不住",
+    "笑死",
+    "吐槽",
+    "乐子",
+    "离谱操作",
+    "人类早期",
+    "答辩",
+    "图吧",
+    "垃圾佬",
+    "胶佬",
+    "弱智吧",
 }
 
 # Bilibili's public category name is a useful, non-fabricated signal.  Strong
@@ -112,6 +150,7 @@ def classify_item(
     # a chip "翻车") should not turn a serious post into a meme.  The title and
     # the platform's own category are the signals we can explain.
     meme_hits = _contains_any(title_text, MEME_KEYWORDS)
+    abstract_hits = _contains_any(title_text, ABSTRACT_KEYWORDS)
     strong_category = bool(tname and _category_matches(tname, STRONG_FUNNY_TNAMES))
     serious = bool(_contains_any(text, SERIOUS_HINTS))
 
@@ -123,16 +162,21 @@ def classify_item(
         tags.append(label)
 
     is_meme = bool(meme_hits) or strong_category
+    category = "hot"
     if is_meme:
         tags.extend(["热梗", "搞笑"] if meme_hits else ["热梗"])
         # In a serious headline a single word such as "翻车" should not turn the
         # item into entertainment.  The general hot tab still keeps it.
         if serious:
             is_meme = False
+        elif abstract_hits:
+            category = "abstract"
+            tags.insert(0, "抽象")
+        else:
+            category = "meme"
     if source_kind == "article":
         # Editorial explainers are still useful under 综合热点.
         pass
-    category = "meme" if is_meme else "hot"
     return category, _dedupe_tags(tags)
 
 
@@ -154,7 +198,7 @@ def _category_matches(tname: str, names: set[str]) -> bool:
 
 def normalise_category(value: Any) -> str:
     value = str(value or "").strip().lower()
-    return value if value in {"meme", "reply", "comment", "hot"} else "hot"
+    return value if value in {"meme", "abstract", "reply", "comment", "hot"} else "hot"
 
 
 def keyword_tag_count(title: str, summary: str = "") -> int:

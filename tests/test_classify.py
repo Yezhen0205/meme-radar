@@ -22,6 +22,15 @@ class ClassifyTests(unittest.TestCase):
 
     def test_keyword_in_title_is_meme(self):
         category, _ = classify_item(title="这波操作太抽象了", source_kind="hot")
+        self.assertEqual(category, "abstract")
+
+    def test_abstract_category_is_distinct_from_general_meme(self):
+        category, tags = classify_item(title="这波操作太抽象了", source_kind="hot")
+        self.assertEqual(category, "abstract")
+        self.assertIn("抽象", tags)
+
+    def test_plain_funny_title_remains_meme(self):
+        category, _ = classify_item(title="今天看到一个搞笑视频", source_kind="hot")
         self.assertEqual(category, "meme")
 
     def test_serious_hint_wins_over_single_keyword(self):

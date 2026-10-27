@@ -1,5 +1,5 @@
 /* Meme Radar PWA shell. Gallery JSON is network-first, assets cache-first. */
-const CACHE = "meme-radar-gallery-v3";
+const CACHE = "meme-radar-mixed-v4";
 const SHELL = [
   "./",
   "./index.html",
@@ -58,7 +58,7 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(networkFirst(request));
     return;
   }
-  if (url.pathname.endsWith("/gallery.json") || url.pathname.endsWith("/health.json")) {
+  if (url.pathname.endsWith("/gallery.json") || url.pathname.endsWith("/text.json") || url.pathname.endsWith("/health.json")) {
     event.respondWith(networkFirst(request));
     return;
   }

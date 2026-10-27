@@ -544,7 +544,9 @@
       ],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:0f8cc22ea5deba83",
@@ -592,7 +594,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:b32960ea5c3621bc",
@@ -652,7 +656,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:dbfbaf3b57a8888d",
@@ -712,7 +718,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:0465296c04d22b6e",
@@ -773,7 +781,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:174c55f83bdb9978",
@@ -821,7 +831,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:2696045661398113",
@@ -870,7 +882,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:7f4272b174650598",
@@ -930,7 +944,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:8d99d85503e85960",
@@ -990,7 +1006,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:9166700bf043b956",
@@ -1050,7 +1068,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:308c55f4d4d53983",
@@ -1110,7 +1130,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:4b279c6710edefcc",
@@ -1157,7 +1179,9 @@
       "group_size": 1,
       "related": [],
       "source_stale": false,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:206008c7a5ce3f60",
@@ -1217,7 +1241,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:1bd9a6b6ac8ad615",
@@ -1265,7 +1291,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:501a88ab365df0de",
@@ -1325,7 +1353,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:6b7b22104f7132f2",
@@ -1385,7 +1415,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:3f7084819b669565",
@@ -1434,7 +1466,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:a7b516a456448d62",
@@ -1494,7 +1528,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:0ca27cb2cc5f2082",
@@ -1555,7 +1591,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:6cfb178be037c268",
@@ -1610,7 +1648,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:72148c2386e5164b",
@@ -1670,7 +1710,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:365efb1c4e6ff928",
@@ -1730,7 +1772,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:2b0abbd676a492f4",
@@ -1790,7 +1834,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:2dc6ee1f21d9611e",
@@ -1850,7 +1896,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:8d7134a61f170828",
@@ -1910,7 +1958,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:5e8718d56eee1cab",
@@ -1970,7 +2020,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:9dd4f28d78ada577",
@@ -2024,7 +2076,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "tieba:21fc7b2c734e769e",
@@ -2084,7 +2138,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:2429f3753866b61b",
@@ -2137,7 +2193,9 @@
       "group_size": 1,
       "related": [],
       "source_stale": false,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:3908fc784ee57a10",
@@ -2190,7 +2248,9 @@
       "group_size": 1,
       "related": [],
       "source_stale": false,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:d168d441bb5fcbf4",
@@ -2244,7 +2304,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:edefc2a89afe9d61",
@@ -2298,7 +2360,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:b10740940a939e6d",
@@ -2352,7 +2416,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:9ef68dbe6a6932d2",
@@ -2406,7 +2472,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:d4d13808e78bfdb4",
@@ -2460,7 +2528,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:70a431ea0b41d39b",
@@ -2514,7 +2584,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:03ce34bf66fa4c05",
@@ -2562,7 +2634,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:71956a0ae036ea9d",
@@ -2616,7 +2690,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:4d9fb2c61918d8f1",
@@ -2670,7 +2746,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:a36511bf851ac282",
@@ -2724,7 +2802,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:a7cd5e5f0cfd0b3f",
@@ -2778,7 +2858,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:acf2423de81ff654",
@@ -2832,7 +2914,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:c7cc36da1f69d7f3",
@@ -2886,7 +2970,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:99a27fe9c8f6d1d8",
@@ -2934,7 +3020,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:73391a61545744df",
@@ -2988,7 +3076,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:d0c406f11ce2ef4a",
@@ -3042,7 +3132,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:0226ef949747f4b6",
@@ -3096,7 +3188,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:eb0beef39dd92916",
@@ -3150,7 +3244,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:63be7980b738deba",
@@ -3198,7 +3294,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:7340ce978c51ddc9",
@@ -3252,7 +3350,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:6b6ed3b33d40ae7a",
@@ -3300,7 +3400,9 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:923dbbf557383c08",
@@ -3353,7 +3455,9 @@
       "group_size": 1,
       "related": [],
       "source_stale": false,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:bb0980c13f3016ff",
@@ -3400,7 +3504,9 @@
       "group_size": 1,
       "related": [],
       "source_stale": false,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:95d3cd037f05e7ea",
@@ -3455,7 +3561,9 @@
         }
       ],
       "source_stale": false,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     },
     {
       "id": "reddit:8a61e48a8211c742",
@@ -3502,7 +3610,9 @@
       "group_size": 1,
       "related": [],
       "source_stale": false,
-      "trending": []
+      "trending": [],
+      "content_type": "image",
+      "authenticity": "real"
     }
   ]
 }

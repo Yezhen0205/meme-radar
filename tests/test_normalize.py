@@ -28,6 +28,7 @@ def item(
     context_id: str | None = None,
     context: str | None = None,
     heat_value: int = 1000,
+    summary: str = "测试摘要",
 ) -> dict:
     return make_item(
         source_id=source_id,
@@ -35,7 +36,7 @@ def item(
         source_kind=source_kind,
         native_id=native_id or title,
         title=title,
-        summary="测试摘要",
+        summary=summary,
         url=url or f"https://example.com/{abs(hash(title))}",
         collected_at=NOW,
         published_at=NOW - timedelta(hours=1),

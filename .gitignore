@@ -13,6 +13,7 @@ venv/
 site/data/feed.json
 site/data/gallery.json
 site/data/health.json
+site/data/text.json
 
 # Local scratch / probes
 .probe/
