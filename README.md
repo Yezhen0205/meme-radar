@@ -1,333 +1,305 @@
-# 热梗雷达 · Meme Radar
+# 梗图雷达 · Meme Radar
 
-把中文互联网的搞笑帖子、抽象热梗、神回复和评论区金句，收进一个可以直接用安卓手机浏览器打开的轻量信息流。
+一个免费优先、无需 VPS 的中外梗图发现系统。
 
-- **不登录、不注册**
-- **不接入付费 AI API**
-- **不使用 VPS、域名或持续运行的服务器**
-- **不伪造点赞、评论、排名或“模拟采集”数据**
-- 采集与页面均为静态文件，靠 GitHub Actions 定时更新、GitHub Pages 托管
+- **阅读器：** [https://yezhen0205.github.io/meme-radar/](https://yezhen0205.github.io/meme-radar/)
+- **源码：** [https://github.com/Yezhen0205/meme-radar](https://github.com/Yezhen0205/meme-radar)
+- **最新 Actions：** [40519973264](https://github.com/Yezhen0205/meme-radar/actions/runs/40519973264)（成功）
+- Android 手机可直接打开，支持添加到主屏幕。
 
-> 当前状态：代码、采集器、移动端页面、GitHub Actions 与 Pages 均已实际部署并验证。源码：`https://github.com/Yezhen0205/meme-radar`；阅读器：`https://yezhen0205.github.io/meme-radar/`。
-
-### 部署验收（2026-10-27 21:29 CST）
-
-- GitHub Actions 手动运行 [40512041225](https://github.com/Yezhen0205/meme-radar/actions/runs/40512041225)：`collect` 与 `deploy` 均成功；
-- 云端一次真实采集：8/8 数据源成功，339 条原始条目，保留 324 条；
-- Pages：`https://yezhen0205.github.io/meme-radar/` 返回 HTTP 200；
-- 使用 Chromium 以 390×844 安卓视口实际加载线上页面：16 张热梗卡片、8 个数据源状态、0 个控制台错误；
-- 数据提交 `a7bbf57` 由 Actions 机器人产生，仅修改 `data/feed.json`。
+> 本项目是在原有文字版「热梗雷达」上的扩展：保留旧 `collector/` 与 `data/feed.json` 作为历史/实验代码，新的主流程是 `gallery/` 图片采集器、`data/gallery.json` 和图片瀑布流页面。
 
 ---
 
-## 1. 它采集什么
+## 1. 当前真实验收结果
 
-第一版只使用**公开、匿名可访问**的 JSON 接口，不绕过登录、验证码、访问控制或反爬措施。
+最近一次 GitHub Actions 真实采集（2026-10-27 22:19 CST）：
 
-| 数据源 | 实际内容 | 热度口径 | 最近一次 Actions（2026-10-27） |
-| --- | --- | --- | --- |
-| 哔哩哔哩热门 | 公开热门视频（标题、简介、UP 主、封面） | 播放量，来源内榜位 | 50 条 |
-| 哔哩哔哩评论区 | 热门视频下的公开热评；对高讨论热评再取一层公开回复 | 点赞数，来源内榜位 | 56 条（12 条热评 + 44 条回复） |
-| 微博热搜 | 热搜词与热搜指数 | 微博提供的热搜指数，来源内榜位 | 50 条 |
-| 百度热搜 | 热搜词 | 接口未提供数值热度，只展示榜位 | 50 条 |
-| 贴吧热榜 | 热门话题、摘要、讨论数 | 讨论数，来源内榜位 | 30 条 |
-| 头条热榜 | 热榜标题、热度、分类标签 | 头条热度，来源内榜位 | 50 条 |
-| 抖音热榜 | 热榜词、热度 | 抖音热度，来源内榜位 | 49 条 |
-| 知乎日报 | 日报编辑精选文章（不是知乎热榜） | 无热度，只展示日报顺序 | 4 条 |
+| 指标 | 实际结果 |
+|---|---:|
+| 图库条目 | **53 张** |
+| Reddit | **25 张**（当前运行接受 23，另保留 2 张历史） |
+| 百度贴吧 | **28 张**（当前运行接受 29，1 张重复图合并） |
+| 本轮新发现 | **5 张** |
+| 本轮更新 | 19 张 |
+| 同图合并组 | **1 组** |
+| 来源端图片校验 | **52 张检查，0 张失效** |
+| dHash 图片指纹 | 22 张 |
+| 采集耗时 | 约 49 秒 |
+| 健康状态 | **degraded**（贴吧详情页 403，使用公开热点页降级采集） |
+| Actions `collect` / `deploy` | **均成功** |
+| 页面 HTTP | **200** |
+| 页面实测 | 390×844、320×720 Chromium，0 个 JS 错误，0 横向溢出 |
 
-> 表中数字是最近一次运行的真实快照，会随热榜变化；成功/失败状态以页面“数据源状态”和 Actions 日志为准。
-
-最近一次 GitHub Actions 采集得到 **339 条原始条目**，经同日事件归类和上限控制后保留 **324 条**：热梗 16、神回复 44、评论金句 12、综合热点 252。当前快照没有完全重复的 URL；有 13 组同一事件的多来源报道被合并展示。
-
-### 实际测试后跳过的源
-
-| 源 | 结果 | 处理 |
-| --- | --- | --- |
-| 知乎热榜 `api/v3/feed/topstory/hot-lists` | HTTP 401，要求登录身份 | 跳过，不伪造知乎热榜；只用无需登录的知乎日报 |
-| 煎蛋 RSS | HTTP 403 | 跳过 |
-| V2EX 热门 API | 连接超时 | 跳过 |
-| 抖音、微博的完整帖子/评论 | 需要登录态或额外签名，未稳定匿名可得 | 第一版只取公开热榜，不抓完整帖子/评论 |
-
-> 热榜接口给的是**榜单快照**，不是完整帖子，更不是完整评论树。B 站评论区采集的是公开热评和其下的一层公开回复；不递归抓取整棵树，也不登录。
+**重要网络限制：** Reddit 的 JSON/API 对云 IP 返回 403，因此本项目使用 Reddit 官方 Atom/RSS；Reddit 图片直链（`i.redd.it` / `preview.redd.it`）在当前本机网络不可达，页面会明确显示“图片暂时无法加载 / 打开原帖”，不会伪装成功。贴吧图片可正常加载。
 
 ---
 
-## 2. 为什么没有直接复用候选项目
+## 2. 数据源状态
 
-| 项目 | 结论 | 原因 |
-| --- | --- | --- |
-| [TrendRadar](https://github.com/sansan0/TrendRadar) | 参考数据源思路，不复制代码 | GPL-3.0；功能偏新闻热榜聚合、通知和 AI 分析，直接嵌入会让本项目的许可证和依赖变重 |
-| [MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 不采用 | `NON-COMMERCIAL LEARNING LICENSE 1.1`；依赖 Playwright、数据库、Redis、登录态和代理，不适合免费、无服务器的 GitHub Actions，也不符合“不绕过访问控制”的约束 |
+| 来源 | 接入方式 | 状态 | 内容 |
+|---|---|---|---|
+| **Reddit** | 官方多社区 Atom/RSS：`/r/196+okbuddyretard+AnimalsBeingDerps/new/.rss` | **ok** | 标题、帖子 ID、社区、原帖 URL、发布时间、图片 URL；RSS 不提供点赞/评论数，字段为 `null` |
+| **百度贴吧** | 公开热点话题列表 + 热点话题页 | **degraded** | 真实帖子标题、原帖链接、吧名、评论数、帖子图片；帖子详情页对自动请求 403 |
+| **热点辅助** | 微博热搜、百度热搜、头条热榜的公开接口 | **ok** | 生成候选关键词，用于标签和轻量排序；不直接生成图片 |
+| **X** | 未实现 | planned | 不显示为运行中 |
+| **B站** | 未实现（旧文字采集器里的 B站逻辑不用于图库） | planned | 不显示为运行中 |
+| **微博图片** | 未实现 | planned | 不显示为运行中 |
 
-本项目为独立实现，运行期只依赖 **Python 3.12 标准库**。没有把上述项目的代码复制进来，因此本仓库使用 MIT 许可证；聚合内容的版权仍归原作者和平台。
+### Reddit 的分页、空结果和限速
+
+- Reddit 多社区 RSS 一次请求返回约 25 条最新条目；已验证 200、25 条、图片直链 206。
+- 使用 `new` feed，并按 72 小时时间窗过滤旧置顶通知。
+- 连续请求单社区会被 429，因此生产路径只用**一次多社区请求**；失败会有限重试并标记 blocked/degraded。
+- 不使用 OAuth、不伪造点赞数、不尝试绕过 Reddit 的访问限制。
+
+### 贴吧为什么是 degraded
+
+已验证：
+
+- `topicList` 热点话题接口：200；
+- 热点话题页：200，包含真实帖子标题、`/p/{id}` 原帖链接、吧名、评论数、`data-origin` 图片；
+- 帖子图片直链：206，真实 JPEG；
+- 帖子详情页：自动请求 **403**。
+
+因此贴吧不使用详情页，也不声称拿到了完整帖子/评论；只展示热点页中真实存在的帖子摘要、原帖链接和图片，并把来源明确标为 degraded。
 
 ---
 
-## 3. 工作原理
+## 3. 页面功能
+
+- 图片优先的 CSS 多列瀑布流：手机 2 列，平板 3 列，桌面 4–5 列；
+- **最新 / 热门 / 随机发现** 三个入口；
+- 来源筛选：全部 / Reddit / 贴吧；
+- 关键词搜索、热点候选词标签筛选；
+- 点击卡片打开大图：大图、标题、摘要、来源、社区、时间、评论数、标签、原帖链接；
+- **收藏**：`localStorage`，不需要登录；
+- **已看标记 / 隐藏已看**：打开大图自动标记，也可以手动切换；
+- 加载更多（首屏 24 张，避免一次加载全部历史）；
+- 图片加载失败显示明确占位与原帖入口；
+- 空状态、网络错误、本机缓存回退、数据过期/来源降级提示；
+- 数据源健康面板，展示 ok/degraded/blocked/planned；
+- 深色模式、跟随系统；
+- PWA：`manifest.webmanifest`、192/512 图标、Service Worker；可添加到 Android 主屏幕。
+
+### 添加到 Android 主屏幕
+
+1. 用 Chrome 打开 [https://yezhen0205.github.io/meme-radar/](https://yezhen0205.github.io/meme-radar/)。
+2. 点浏览器右上角菜单（三个点）。
+3. 选择 **“添加到主屏幕” / “安装应用”**。
+4. 确认后从桌面图标打开，页面会以 standalone 模式显示。
+5. 首次加载后 Service Worker 会缓存应用外壳；图库 JSON 使用 network-first，离线时回退到缓存。
+
+---
+
+## 4. 采集与数据模型
 
 ```text
-GitHub Actions (cron: 每 6 小时 / 手动)
-        │
-        ├─ python -m collector.collect
-        │    ├─ 公开 JSON 接口（超时 / 重试 / 限速）
-        │    ├─ 归一化：标题、摘要、来源、原文、时间、热度
-        │    ├─ 分类：热梗 / 神回复 / 评论金句 / 综合热点
-        │    ├─ 去重：规范化 URL + 内容指纹
-        │    ├─ 归类：同一事件的多来源标题相似度
-        │    └─ 合并：失败源保留上次成功条目
-        │
-        ├─ data/feed.json（提交进仓库的唯一数据源）
-        │
-        ├─ scripts/build_feed.py --check --stage
-        │    └─ 校验并生成 site/data/feed.json（压缩 JSON）
-        │
-        └─ GitHub Pages
-             └─ site/index.html + app.css + app.js
-                  └─ 安卓手机浏览器信息流
+GitHub Actions (每 6 小时 / 手动)
+  → gallery.collect
+      ├─ Reddit 官方多社区 RSS（一次请求）
+      ├─ Tieba 公开热点话题页
+      ├─ 微博/百度/头条公开热榜 → 候选关键词
+      ├─ 图片 HTTP Range 校验 + Pillow dHash
+      ├─ 去重：帖子 ID / URL / 图片 URL / dHash
+      ├─ 历史合并：失败来源保留上次数据
+      └─ health 连续失败计数
+  → data/gallery.json + data/health.json
+  → scripts/build_gallery.py --check --stage
+  → GitHub Pages (site/)
 ```
 
-### 目录结构
-
-```text
-meme-radar/
-├── README.md
-├── LICENSE
-├── requirements.txt          # 仅注释；运行期无第三方依赖
-├── .gitignore
-├── config/
-│   └── sources.json          # 源开关、超时、限量、评论采集参数
-├── collector/
-│   ├── http.py               # 标准库 HTTP、超时、重试、按域限速
-│   ├── sources.py            # 8 个公开源适配器
-│   ├── normalize.py          # 清洗、时间、URL、指纹、个人联系方式脱敏
-│   ├── classify.py           # 可解释的关键词/分区分类
-│   ├── deduplicate.py        # URL + 指纹去重、事件归类
-│   └── collect.py            # 编排、失败保留、原子写入
-├── data/
-│   └── feed.json             # 已提交的真实采集结果
-├── site/
-│   ├── index.html
-│   ├── app.css
-│   ├── app.js
-│   ├── favicon.svg
-│   └── .nojekyll
-├── scripts/
-│   └── build_feed.py         # 校验 + 生成 Pages 用压缩 JSON
-├── tests/
-│   ├── test_normalize.py
-│   ├── test_classify.py
-│   ├── test_deduplicate.py
-│   └── test_collect.py
-└── .github/workflows/collect.yml
-```
-
----
-
-## 4. 本地运行
-
-要求 Python 3.12+，不需要 `pip install`。
-
-```bash
-# 1. 真实采集一次（会写 data/feed.json）
-python -m collector.collect
-
-# 2. 校验 JSON 并生成 site/data/feed.json
-python scripts/build_feed.py --check --stage --summary
-
-# 3. 本地预览
-python -m http.server 8765 --directory site
-# 浏览器打开 http://127.0.0.1:8765/
-```
-
-测试：
-
-```bash
-python -m unittest discover -s tests -t . -v
-```
-
-测试覆盖：URL 规范化、联系方式脱敏、热度格式、标题摘要切分、分类规则、URL/指纹去重、同一事件归类、评论跨视频不误合并、失败保留旧数据、首次全失败空状态、部分失败合并、无实质变化时复用上一份 feed、JSON 校验。
-
-### 配置
-
-`config/sources.json` 可单独关闭数据源或调整限量。关键参数：
-
-- `request.timeout_seconds`：单请求超时，默认 15 秒；
-- `request.retries`：最多重试 1 次，指数退避；
-- `request.min_interval_seconds`：同一域名请求间隔，默认 1.2 秒；
-- `feed.max_items`：最多保留条目数；
-- `feed.retention_hours`：失败源旧数据最长保留 7 天；
-- `bilibili_comments.videos`：最多读取 4 个热门视频的评论区；
-- `bilibili_comments.comments_per_video` / `subreplies_per_video`：每视频热评/回复上限。
-
----
-
-## 5. 数据格式
-
-`data/feed.json` 的关键字段：
+### 条目字段
 
 ```json
 {
-  "schema_version": 1,
-  "generated_at": "2026-10-27T13:26:36Z",
-  "checked_at": "2026-10-27T13:26:36Z",
-  "stale": false,
-  "run": {
-    "ok": true,
-    "partial": false,
-    "sources_ok": 8,
-    "sources_failed": 0,
-    "items_raw": 339,
-    "items_final": 324
-  },
-  "sources": [
-    {
-      "id": "bilibili",
-      "name": "哔哩哔哩热门",
-      "status": "ok",
-      "accepted": 50,
-      "retained": 0,
-      "error": null,
-      "using_previous": false
-    }
-  ],
-  "items": [
-    {
-      "id": "bilibili:…",
-      "fingerprint": "…",
-      "title": "…",
-      "summary": "…",
-      "source_id": "bilibili",
-      "source_name": "哔哩哔哩热门",
-      "source_kind": "video",
-      "url": "https://www.bilibili.com/video/…",
-      "published_at": "2026-10-27T07:45:29Z",
-      "published_precision": "datetime",
-      "collected_at": "2026-10-27T13:26:36Z",
-      "category": "meme",
-      "tags": ["B站热门", "短片", "热梗"],
-      "heat": {
-        "label": "播放",
-        "value": 640976,
-        "display": "64.1万",
-        "rank": 10
-      },
-      "rank": 10,
-      "context": null,
-      "context_url": null,
-      "author": "…",
-      "image": "https://…",
-      "group_id": "…",
-      "group_size": 1,
-      "related": []
-    }
-  ]
+  "id": "reddit:…",
+  "source": "reddit",
+  "source_id": "1xgtqsz",
+  "source_name": "Reddit",
+  "community": "r/196",
+  "title": "I participated in the protest for housing in Madrid, AMA",
+  "summary": "",
+  "post_url": "https://www.reddit.com/r/196/comments/…",
+  "image_url": "https://i.redd.it/….jpeg",
+  "thumbnail_url": "https://preview.redd.it/…",
+  "images": [{"url": "…", "thumbnail_url": "…"}],
+  "created_at": "2026-10-27T14:16:42Z",
+  "collected_at": "2026-10-27T14:19:24Z",
+  "time_source": "source",
+  "score": null,
+  "comment_count": null,
+  "tags": ["r/196", "reddit", "196"],
+  "content_hash": "…",
+  "image_hash": "34afeb7c5e1d368e",
+  "image_id": "…",
+  "status": "active",
+  "image_status": "ok",
+  "image_http_status": 206,
+  "image_checked_at": "2026-10-27T14:19:24Z",
+  "image_error": null,
+  "image_width": 1200,
+  "image_height": 675,
+  "rank_score": 100.0,
+  "rank_basis": "recency",
+  "group_id": "…",
+  "group_size": 1,
+  "related": []
 }
 ```
 
-### 热度与排序的边界
+- `score` / `comment_count` 没有来源数据时必须是 `null`，不编造。
+- 贴吧的 `created_at` 在热点页不可得，使用 `time_source: "collection"`；页面显示“收录于”。
+- `rank_basis` 说明排序依据：`recency`、`recency+comments`、`recency+comments+trend` 或 `recency+trend`。
+- `image_status` 为 `ok` 表示 Actions 侧 HTTP/Range 校验通过，并不保证每个读者所在网络都能访问 Reddit 图片域。
+- 图片失效不删除记录，保留原帖入口；下次运行会重新校验新条目。
 
-不同平台的热度不可直接等价比较。因此：
+### 去重
 
-- 每条只保存来源**确实提供**的指标；百度热搜没有数值热度就保持 `heat: null`；
-- 卡片展示“播放 / 点赞 / 讨论 / 热搜指数 / 热度 + 来源内榜位”；
-- 页面的「榜位」排序是**来源内排名的跨源排列**，不是统一的跨平台热度分；
-- 页面在「榜位」模式下明确提示“不同来源的热度值不可直接比较”。
+1. 同一来源按帖子 ID 去重；
+2. 同一来源按规范化原帖 URL 去重；
+3. 完全相同的图片 URL 直接合并；
+4. 有 dHash 时，汉明距离 ≤ 6 的图片合并为同一组，保留一个代表卡片和多个 `related` 原帖链接；
+5. 不同来源的同一图片会保留来源链接，不丢失原帖入口。
 
-### 去重与事件归类
+### 关键词
 
-1. 规范化 URL：统一 `https`、去掉 `www.` 和 `utm_*` / `spm_*` / 分享参数，保留评论锚点；
-2. 同一来源内按规范化 URL 与内容指纹去重；
-3. 跨来源按标题字符 bigram 的 Jaccard/包含度归类；只有视频/文章/热榜条目参与，评论和回复不会跨视频误合并；
-4. 保留质量更高的一条作为代表，其余放入 `related`，并显示“同一事件还有 N 条相关来源”；
-5. `group_size` 是真实相关条目数，不代表互动量。
-
----
-
-## 6. 失败、过期与保留策略
-
-- 单个源失败不会中断其他源；
-- 失败源的旧条目在 7 天内保留，卡片标记「上次数据」，页面顶部提示“部分数据源未更新”；
-- 所有源都失败时，`stale: true`，页面保留上次成功数据并显示最后成功时间；
-- 首次采集全部失败且没有旧数据时，页面显示空状态，不展示任何虚构内容；
-- 页面加载不到 JSON 时先尝试浏览器本地缓存；缓存也没有则显示“雷达暂时失联”；
-- 数据超过 12 小时未更新会显示延迟提示；
-- 采集写入使用临时文件 + 原子替换，进程中断不会写坏 `data/feed.json`。
-
-### “只在数据变化时提交”
-
-采集器会为每条内容计算内容签名；如果两次运行的内容、来源状态都没有实质变化，会直接保留上一份 `data/feed.json` 的字节，不更新时间戳。因此定时任务不会每 6 小时制造一个空提交。
+- 从微博/百度/头条热榜真实标题提取；
+- 优先使用 `jieba` 分词；未安装时使用精选词表和完整短词，不使用会产生“交部回应 / 应姆巴佩”这类碎片的滑动 n-gram；
+- 候选词只用于标签、搜索提示和轻微排序加成，不声称是 AI 主题分析。
 
 ---
 
-## 7. GitHub Actions 与 Pages
+## 5. 测试结果
+
+测试分为实际运行结果（PASS）、实际失败/外部限制（FAIL/BLOCKED）和未运行（NOT_TESTED）。
+
+| 测试 | 结果 | 证据 |
+|---|---|---|
+| Reddit 官方多社区 RSS | **PASS** | GitHub Actions 200；一次返回 25 条；实际进入图库 25 张 |
+| Reddit 图片直链 | **PASS（Actions 侧）** | 206，0 张 collector 校验失效；本机/大陆网络可能被 Reddit 域阻断 |
+| Reddit JSON/API | **BLOCKED** | 云 IP 403；不绕过，改用官方 RSS |
+| 贴吧热点话题接口 | **PASS** | 200，返回 30 个话题 |
+| 贴吧热点页帖子/图片 | **PASS** | 29 条帖子，真实 `/p/` 链接和 `tiebapic` 图片 |
+| 贴吧详情页 | **BLOCKED / degraded** | 自动请求 403；不绕过，页面标注降级 |
+| 单来源失败保留历史 | **PASS** | `tests/test_gallery_dedupe.py` |
+| 空结果不清空历史 | **PASS** | 合并逻辑保留旧条目，页面显示空/过期状态 |
+| 重复帖子/图片去重 | **PASS** | 53 条最终数据，0 重复帖子，1 个图片合并组 |
+| 图片 URL 真实可访问 | **PASS（Actions）** | 52 张检查、0 失效，图片字节为真实 JPEG/PNG/WebP |
+| 手机瀑布流 | **PASS** | 390×844、320×720，0 横向溢出，0 JS 错误 |
+| 搜索/来源筛选/随机/收藏/已看 | **PASS** | Chromium 交互测试 |
+| 图片加载失败占位 | **PASS** | 受限网络下 Reddit 卡片显示“图片暂时无法加载 / 打开原帖” |
+| PWA manifest / Service Worker | **PASS** | manifest、图标、SW 已注册并接管 |
+| GitHub Actions 手动运行 | **PASS** | run 40519973264，collect/deploy 均 success |
+| GitHub Pages | **PASS** | 页面 HTTP 200；gallery.json HTTP 200 |
+| 6 小时定时任务 | **NOT_TESTED（尚未到首个自然触发点）** | 已配置 `0 */6 * * *` |
+| 密钥/隐私扫描 | **PASS** | 仓库无 Token/Cookie/.env；无用户隐私数据 |
+| X / B站 / 微博图片 | **NOT_TESTED / planned** | 未实现，未显示为运行中 |
+
+本地单元测试：**38 项全部通过**。
+
+---
+
+## 6. 自动更新与费用
 
 工作流：`.github/workflows/collect.yml`
 
-- 定时：`0 */6 * * *`（UTC），约对应北京时间 02:00 / 08:00 / 14:00 / 20:00；
-- 手动：Actions → Collect and deploy Meme Radar → Run workflow；
-- 并发组 `meme-radar-collect`，`cancel-in-progress: false`，避免上一轮未结束时重复执行；
-- 单任务超时 15 分钟；
-- 只授予 `contents: write`、`pages: write`、`id-token: write`；
-- 采集前跑单元测试，采集后校验 JSON；
-- `git diff --quiet -- data/feed.json` 为真时跳过提交；
-- 通过 `actions/upload-pages-artifact` + `actions/deploy-pages` 发布 `site/`；
-- 不使用任何仓库密钥、Cookie 或账号凭证。
+- 每 6 小时：`0 */6 * * *`（UTC），约北京时间 02:00 / 08:00 / 14:00 / 20:00；
+- 手动触发：Actions → Collect gallery and deploy → Run workflow；
+- 并发组 `meme-radar-gallery`，`cancel-in-progress: false`；
+- 任务超时 20 分钟；
+- 仅在 `data/gallery.json` 或 `data/health.json` 有实质变化时提交；
+- 采集失败保留历史；连续失败会写入 health 并在 Actions 输出 `::warning::`；
+- 只使用 `contents: write`、`pages: write`、`id-token: write`；
+- 不保存 Token/Cookie/账号凭证，不需要任何 Secrets；
+- 不使用 VPS、付费 API、域名、数据库或付费云资源。
 
-### 启用步骤（仓库创建后）
+### 免费额度
 
-1. 仓库设为 **Public**（免费 Pages 和标准 Actions 的前提）；
-2. Settings → Actions → General → Workflow permissions：允许 **Read and write permissions**；
-3. Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**；
-4. Actions 里手动运行一次 `Collect and deploy Meme Radar`；
-5. 等待 `deploy` job 完成，打开 `https://<owner>.github.io/meme-radar/`。
-
-> GitHub 的定时任务**不保证准点**：可能因平台负载、额度、仓库状态延迟数分钟到数十分钟，极端情况下会跳过某次。页面以 `generated_at` 和“最后更新”显示真实数据时间，不会把计划时间伪装成采集时间。
+- 公开仓库使用 GitHub 托管 runner 通常不消耗私有仓库分钟额度；私有仓库 Free 计划约 2,000 分钟/月，以 GitHub 账单为准。
+- GitHub Pages 公开仓库免费；常见软限制约 1 GB 站点、100 GB/月流量、10 次构建/小时，以 [GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) 为准。
+- **GitHub 的 cron 不保证准点**，可能延迟数分钟到数十分钟，极端情况下跳过某次；页面显示数据的真实生成时间，不把计划时间伪装成采集时间。
 
 ---
 
-## 8. 免费额度与限制
+## 7. 已知问题与限制
 
-- **GitHub Actions**：公开仓库使用 GitHub 托管的标准 runner 通常不消耗私有仓库分钟数；私有仓库 Free 计划有每月 2,000 分钟额度。以 GitHub 当前账单页面为准。
-- **GitHub Pages**：公开仓库可免费使用；常见软限制为站点不超过 1 GB、每月约 100 GB 流量、每小时约 10 次构建。以 [GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) 为准。
-- **不使用**：付费 AI API、VPS、域名、数据库、Redis、代理池、付费云资源。
-- **运行时间**：本地完整采集约 20–30 秒；Actions 还包含 checkout、测试和 Pages 部署，通常 1–4 分钟。
-
-### 已知限制
-
-1. 热榜接口只返回榜单快照，不返回完整帖子正文；B 站评论只取公开热评和一层回复，不是完整评论树。
-2. 微博/百度/头条/抖音的条目链接是热榜搜索或榜单详情链接，不保证直达原帖；页面标注来源并在新标签页打开。微博搜索在部分网络会先跳到访客验证页，百度搜索也可能触发验证码；这是平台侧访问策略，本项目不会绕过，必要时可在平台 App 内搜索标题。
-3. 知乎热榜、煎蛋、V2EX 当前不可匿名稳定获取，已跳过；知乎只保留无需登录的知乎日报。
-4. B 站接口在部分云机房 IP 上会返回 `-352` 风控；采集器使用官方网页同款的匿名 `buvid` 标识和浏览器 UA，仍失败时记录状态并保留旧数据，不绕过验证码。
-5. “热梗/神回复”分类是可解释的关键词和 B 站分区规则，不是语义模型；可能误判，后续可继续调参。
-6. 热度只在同一来源、同一类型内可比；页面不生成跨平台统一热度分。
-7. 数据源随时可能改接口或封禁云 IP；失败会在页面“数据源状态”中显示。
-8. B 站视频/知乎日报封面图来自原平台 CDN，弱网或防盗链环境下可能不显示；正文与链接不受影响。
-9. 截至本次验收，手动触发已成功；6 小时定时任务尚未到达首个自然触发点，因此无法用“已观察到一次定时运行”来背书。GitHub 官方也明确说明 cron 可能延迟或跳过。
+1. **Reddit 图片在大陆网络可能不可达**：数据与 Actions 侧校验正常，但浏览器可能显示占位。没有使用第三方图片代理或镜像，以避免绕过网络限制、版权和隐私问题。
+2. **Reddit RSS 不提供点赞/评论数**：字段保持 `null`，热门排序只使用时间/趋势，不会伪造互动量。
+3. **贴吧详情页 403**：只使用公开热点页的帖子摘要与图片，标记 degraded，不能保证拿到完整楼层/评论。
+4. **贴吧没有可靠发布时间**：按收录时间排序并明确标注。
+5. **热点候选词是统计结果**：不是语义模型，可能包含泛词。
+6. **图片版权**：页面只展示原帖链接和来源图片 URL，不批量镜像全部图片；版权归原作者/平台。
+7. **X、B站、微博是 planned**：没有空壳采集器伪装成正常来源。
+8. **定时任务尚未自然触发**：手动运行已验证；首次自然 cron 仍需观察。
+9. GitHub Pages CDN 可能有缓存；页面请求带时间戳并优先网络，Service Worker 提供离线回退。
 
 ---
 
-## 9. 合规与安全
+## 8. 本地运行
 
-- 只请求公开、无需登录的接口；
-- 不提交 Cookie、Token、密码、`.env` 或账号信息；
-- 不绕过登录、验证码、付费墙、访问控制或反爬；
-- 请求有超时、重试上限和按域限速；不递归抓取完整评论树；
-- 评论展示前脱敏手机号和邮箱，移除 URL、推广/加群等明显垃圾内容；
-- 页面不跟踪用户、不接第三方统计、不要求注册；
-- 收藏只存在浏览器 `localStorage`，不会上传；
-- 内容版权归原作者和平台，页面只展示标题、摘要、必要上下文与原文链接；
-- 如需删除某条内容，请通过仓库 Issues 联系，附上原始链接。
+要求 Python 3.12+。
+
+```bash
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -t . -v
+python -m gallery.collect
+python scripts/build_gallery.py --check --stage --summary
+python -m http.server 8765 --directory site
+# 打开 http://127.0.0.1:8765/
+```
+
+无 Reddit 网络时可只验证贴吧：
+
+```bash
+python - <<'PY'
+import json
+from pathlib import Path
+from gallery.collect import load_config, build_feed
+from gallery.models import utc_now
+cfg = load_config(Path("config/gallery.json"))
+cfg["reddit"]["enabled"] = False
+feed, health, code = build_feed(cfg, None, utc_now(), previous_health={}, image_enabled=True)
+print(health["status"], len(feed["items"]))
+PY
+```
 
 ---
 
-## 10. 后续可扩展
+## 9. 目录
 
-- 更多稳定公开源（在实测通过后加入 `config/sources.json` + 适配器）；
-- 更细的“抽象/沙雕/社会趣闻”标签；
-- 同一事件的时间线视图；
-- 可选的 RSS 输出；
-- 更丰富的来源内热度趋势（不跨源比较）。
+```text
+meme-radar/
+├── config/gallery.json        # Reddit 社区、贴吧话题、限制、planned 来源
+├── gallery/
+│   ├── collect.py             # 编排、图片校验、健康与输出
+│   ├── http.py                # 超时/重试/限速、Range 图片校验
+│   ├── models.py              # 统一数据模型
+│   ├── images.py              # 图片魔数、尺寸、dHash
+│   ├── dedupe.py              # 历史合并、去重、同图分组、排序
+│   ├── health.py              # 连续失败与健康文件
+│   └── collectors/
+│       ├── reddit.py          # 官方多社区 RSS
+│       ├── tieba.py           # 公开热点话题页
+│       └── trends.py          # 热点候选词
+├── data/gallery.json          # 线上图库数据
+├── data/health.json           # 来源健康/历史
+├── site/                      # 图片瀑布流 + PWA
+├── scripts/build_gallery.py   # 校验与 Pages 压缩数据
+├── tests/                     # 38 项单元/交互 fixture 测试
+├── collector/                 # 旧文字版采集器（legacy）
+└── data/feed.json             # 旧文字版数据（legacy）
+```
+
+## 10. 合规
+
+- 只访问公开、无需登录的页面/接口；
+- 不绕过登录、验证码、403、访问控制或反爬；
+- 不提交任何 Token、Cookie、密码、`.env`；
+- 不下载/传播违法、恶意或侵犯隐私的内容；
+- 图片展示遵循来源平台条款；如需删除某条内容，请通过仓库 Issues 提供原帖链接；
+- 用户收藏与已看记录只保存在浏览器 `localStorage`。
 
 ## License
 
-代码采用 [MIT](LICENSE)。聚合内容版权归原平台与原作者；本项目不主张对聚合内容的所有权。
+代码采用 MIT；聚合内容版权归原作者与平台。
