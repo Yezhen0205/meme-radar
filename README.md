@@ -4,7 +4,7 @@
 
 - **阅读器：** [https://yezhen0205.github.io/meme-radar/](https://yezhen0205.github.io/meme-radar/)
 - **源码：** [https://github.com/Yezhen0205/meme-radar](https://github.com/Yezhen0205/meme-radar)
-- **最新 Actions：** [40519973264](https://github.com/Yezhen0205/meme-radar/actions/runs/40519973264)（成功）
+- **最新 Actions：** [40521418470](https://github.com/Yezhen0205/meme-radar/actions/runs/40521418470)（成功）
 - Android 手机可直接打开，支持添加到主屏幕。
 
 > 本项目是在原有文字版「热梗雷达」上的扩展：保留旧 `collector/` 与 `data/feed.json` 作为历史/实验代码，新的主流程是 `gallery/` 图片采集器、`data/gallery.json` 和图片瀑布流页面。
@@ -13,19 +13,19 @@
 
 ## 1. 当前真实验收结果
 
-最近一次 GitHub Actions 真实采集（2026-10-27 22:19 CST）：
+最近一次 GitHub Actions 真实采集（2026-10-27 22:29 CST）：
 
 | 指标 | 实际结果 |
 |---|---:|
-| 图库条目 | **53 张** |
-| Reddit | **25 张**（当前运行接受 23，另保留 2 张历史） |
-| 百度贴吧 | **28 张**（当前运行接受 29，1 张重复图合并） |
-| 本轮新发现 | **5 张** |
-| 本轮更新 | 19 张 |
-| 同图合并组 | **1 组** |
+| 图库条目 | **55 张** |
+| Reddit | **27 张**（图库实际数量，含历史保留） |
+| 百度贴吧 | **28 张**（当前运行接受 29，重复图片归并） |
+| 本轮新发现 | **4 张** |
+| 本轮更新 | 3 张 |
+| 同图合并组 | **2 组** |
 | 来源端图片校验 | **52 张检查，0 张失效** |
-| dHash 图片指纹 | 22 张 |
-| 采集耗时 | 约 49 秒 |
+| dHash 图片指纹 | 本轮新图 5 张计算，历史指纹保留 |
+| 采集耗时 | 约 29 秒 |
 | 健康状态 | **degraded**（贴吧详情页 403，使用公开热点页降级采集） |
 | Actions `collect` / `deploy` | **均成功** |
 | 页面 HTTP | **200** |
@@ -176,7 +176,7 @@ GitHub Actions (每 6 小时 / 手动)
 
 | 测试 | 结果 | 证据 |
 |---|---|---|
-| Reddit 官方多社区 RSS | **PASS** | GitHub Actions 200；一次返回 25 条；实际进入图库 25 张 |
+| Reddit 官方多社区 RSS | **PASS** | GitHub Actions 200；一次返回约 25 条；图库实际 27 张（含历史） |
 | Reddit 图片直链 | **PASS（Actions 侧）** | 206，0 张 collector 校验失效；本机/大陆网络可能被 Reddit 域阻断 |
 | Reddit JSON/API | **BLOCKED** | 云 IP 403；不绕过，改用官方 RSS |
 | 贴吧热点话题接口 | **PASS** | 200，返回 30 个话题 |
@@ -184,13 +184,13 @@ GitHub Actions (每 6 小时 / 手动)
 | 贴吧详情页 | **BLOCKED / degraded** | 自动请求 403；不绕过，页面标注降级 |
 | 单来源失败保留历史 | **PASS** | `tests/test_gallery_dedupe.py` |
 | 空结果不清空历史 | **PASS** | 合并逻辑保留旧条目，页面显示空/过期状态 |
-| 重复帖子/图片去重 | **PASS** | 53 条最终数据，0 重复帖子，1 个图片合并组 |
+| 重复帖子/图片去重 | **PASS** | 55 条最终数据，0 重复帖子，2 个图片合并组 |
 | 图片 URL 真实可访问 | **PASS（Actions）** | 52 张检查、0 失效，图片字节为真实 JPEG/PNG/WebP |
 | 手机瀑布流 | **PASS** | 390×844、320×720，0 横向溢出，0 JS 异常；网络图片错误按预期占位 |
 | 搜索/来源筛选/随机/收藏/已看 | **PASS** | Chromium 交互测试 |
 | 图片加载失败占位 | **PASS** | 受限网络下 Reddit 卡片显示“图片暂时无法加载 / 打开原帖” |
 | PWA manifest / Service Worker | **PASS** | manifest、图标、SW 已注册并接管 |
-| GitHub Actions 手动运行 | **PASS** | run 40519973264，collect/deploy 均 success |
+| GitHub Actions 手动运行 | **PASS** | run 40521418470，collect/deploy 均 success |
 | GitHub Pages | **PASS** | 页面 HTTP 200；gallery.json HTTP 200 |
 | 6 小时定时任务 | **NOT_TESTED（尚未到首个自然触发点）** | 已配置 `0 */6 * * *` |
 | 密钥/隐私扫描 | **PASS** | 仓库无 Token/Cookie/.env；无用户隐私数据 |
