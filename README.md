@@ -10,7 +10,7 @@
 
 > 当前状态：代码、采集器、移动端页面、GitHub Actions 与 Pages 均已实际部署并验证。源码：`https://github.com/Yezhen0205/meme-radar`；阅读器：`https://yezhen0205.github.io/meme-radar/`。
 
-### 部署验收（2026-10-27 21:22 CST）
+### 部署验收（2026-10-27 21:29 CST）
 
 - GitHub Actions 手动运行 [40512041225](https://github.com/Yezhen0205/meme-radar/actions/runs/40512041225)：`collect` 与 `deploy` 均成功；
 - 云端一次真实采集：8/8 数据源成功，339 条原始条目，保留 324 条；
@@ -302,6 +302,7 @@ python -m unittest discover -s tests -t . -v
 6. 热度只在同一来源、同一类型内可比；页面不生成跨平台统一热度分。
 7. 数据源随时可能改接口或封禁云 IP；失败会在页面“数据源状态”中显示。
 8. B 站视频/知乎日报封面图来自原平台 CDN，弱网或防盗链环境下可能不显示；正文与链接不受影响。
+9. 截至本次验收，手动触发已成功；6 小时定时任务尚未到达首个自然触发点，因此无法用“已观察到一次定时运行”来背书。GitHub 官方也明确说明 cron 可能延迟或跳过。
 
 ---
 
