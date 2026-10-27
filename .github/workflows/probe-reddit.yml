@@ -11,68 +11,58 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Probe Reddit RSS structure and Tieba
+      - name: Probe Reddit new RSS and image URLs
         run: |
           python - <<'PY'
           import html
           import json
           import re
           import ssl
+          import time
           import urllib.error
           import urllib.request
           import xml.etree.ElementTree as ET
 
           UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
           ctx = ssl.create_default_context()
+          ns = {"a": "http://www.w3.org/2005/Atom", "media": "http://search.yahoo.com/mrss/"}
 
-          def fetch(name, url, ref):
-              req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/atom+xml,application/xml,text/xml,*/*", "Accept-Language": "en-US,en;q=0.9", "Referer": ref})
+          def get(url, ref, rng=None):
+              headers = {"User-Agent": UA, "Accept": "application/atom+xml,application/xml,image/*,*/*", "Referer": ref}
+              if rng:
+                  headers["Range"] = rng
+              req = urllib.request.Request(url, headers=headers)
               try:
                   with urllib.request.urlopen(req, timeout=30, context=ctx) as response:
-                      body = response.read()
-                      print(json.dumps({"name": name, "status": response.status, "content_type": response.headers.get("Content-Type"), "bytes": len(body)}, ensure_ascii=True))
-                      return body
+                      body = response.read(250000)
+                      return response.status, response.headers.get("Content-Type"), body
               except urllib.error.HTTPError as exc:
-                  print(json.dumps({"name": name, "status": exc.code, "error": "HTTPError", "body": exc.read(200).decode("utf-8", "replace")}, ensure_ascii=True))
-              except Exception as exc:
-                  print(json.dumps({"name": name, "status": None, "error": type(exc).__name__, "detail": str(exc)[:200]}, ensure_ascii=True))
-              return b""
+                  return exc.code, "error", exc.read(200)
 
-          for sub in ("196", "okbuddyretard", "AnimalsBeingDerps"):
-              body = fetch("rss_" + sub, "https://www.reddit.com/r/%s/.rss" % sub, "https://www.reddit.com/")
-              if not body:
-                  continue
-              try:
+          for sub in ("okbuddyretard", "AnimalsBeingDerps", "196"):
+              url = "https://www.reddit.com/r/%s/new/.rss" % sub
+              status, ctype, body = get(url, "https://www.reddit.com/")
+              print(json.dumps({"name": "new_rss_" + sub, "status": status, "content_type": ctype, "bytes": len(body)}, ensure_ascii=True))
+              if status == 200:
                   root = ET.fromstring(body)
-              except Exception as exc:
-                  print(json.dumps({"name": "parse_" + sub, "error": type(exc).__name__, "detail": str(exc)}, ensure_ascii=True))
-                  continue
-              ns = {"a": "http://www.w3.org/2005/Atom", "media": "http://search.yahoo.com/mrss/"}
-              entries = root.findall("a:entry", ns)
-              print(json.dumps({"name": "entries_" + sub, "count": len(entries)}, ensure_ascii=True))
-              for entry in entries[:2]:
-                  title = (entry.findtext("a:title", default="", namespaces=ns) or "").strip()
-                  link_el = entry.find("a:link", ns)
-                  link = link_el.get("href") if link_el is not None else ""
-                  updated = entry.findtext("a:updated", default="", namespaces=ns)
-                  content_el = entry.find("a:content", ns)
-                  content = content_el.text if content_el is not None and content_el.text else ""
-                  imgs = re.findall(r'<img[^>]+src="([^"]+)"', content, flags=re.I)
-                  thumb_el = entry.find("media:thumbnail", ns)
-                  thumb = thumb_el.get("url") if thumb_el is not None else ""
-                  text = re.sub(r"<[^>]+>", " ", html.unescape(content))
-                  text = re.sub(r"\s+", " ", text).strip()
-                  print(json.dumps({
-                      "sub": sub,
-                      "title": title,
-                      "link": link,
-                      "updated": updated,
-                      "content_len": len(content),
-                      "text": text[:180],
-                      "imgs": imgs[:4],
-                      "thumb": thumb,
-                      "categories": [x.get("term") for x in entry.findall("a:category", ns)],
-                  }, ensure_ascii=True))
-
-          tieba = fetch("tieba_hottopic", "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28368171", "https://tieba.baidu.com/")
+                  entries = root.findall("a:entry", ns)
+                  print(json.dumps({"name": "entries_" + sub, "count": len(entries)}, ensure_ascii=True))
+                  for entry in entries:
+                      content = entry.findtext("a:content", default="", namespaces=ns) or ""
+                      imgs = [html.unescape(x) for x in re.findall(r'<img[^>]+src="([^"]+)"', content, flags=re.I)]
+                      if not imgs:
+                          continue
+                      link_el = entry.find("a:link", ns)
+                      print(json.dumps({
+                          "sub": sub,
+                          "title": (entry.findtext("a:title", default="", namespaces=ns) or "")[:100],
+                          "link": link_el.get("href") if link_el is not None else "",
+                          "published": entry.findtext("a:published", default="", namespaces=ns),
+                          "updated": entry.findtext("a:updated", default="", namespaces=ns),
+                          "image": imgs[0][:220],
+                      }, ensure_ascii=True))
+                      istatus, itype, ibody = get(imgs[0], "https://www.reddit.com/", "bytes=0-4095")
+                      print(json.dumps({"name": "image_" + sub, "status": istatus, "content_type": itype, "bytes": len(ibody), "magic": ibody[:8].hex()}, ensure_ascii=True))
+                      break
+              time.sleep(12)
           PY
