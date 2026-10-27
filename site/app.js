@@ -1,45 +1,43 @@
 "use strict";
 
 const TZ = "Asia/Shanghai";
-const FEED_URL = "data/feed.json";
-const CACHE_KEY = "memeRadar:feed:v1";
-const FAV_KEY = "memeRadar:favorites:v1";
-const THEME_KEY = "memeRadar:theme:v1";
-const PAGE_SIZE = 40;
-const CATEGORY_LABELS = {
-  meme: "热梗",
-  reply: "神回复",
-  comment: "评论金句",
-  hot: "热点",
-};
+const FEED_URL = "data/gallery.json";
+const CACHE_KEY = "memeRadar:gallery:feed:v2";
+const FAV_KEY = "memeRadar:gallery:favorites:v1";
+const SEEN_KEY = "memeRadar:gallery:seen:v1";
+const THEME_KEY = "memeRadar:gallery:theme:v1";
+const PAGE_SIZE = 24;
 const THEMES = ["auto", "light", "dark"];
-const THEME_LABELS = {
-  auto: "跟随系统",
-  light: "浅色",
-  dark: "深色",
-};
+const THEME_LABELS = { auto: "跟随系统", light: "浅色", dark: "深色" };
+const SOURCE_LABELS = { reddit: "Reddit", tieba: "贴吧" };
 
 const state = {
   feed: null,
-  filter: "meme",
-  sort: "latest",
+  mode: "latest",
+  source: "all",
   query: "",
+  tag: "",
   favoritesOnly: false,
+  hideSeen: false,
   visible: PAGE_SIZE,
+  randomSeed: 1,
+  favorites: new Set(),
+  seen: new Set(),
+  theme: "auto",
   loading: true,
   fromCache: false,
   error: null,
-  favorites: new Set(),
-  theme: "auto",
+  currentItem: null,
   toastTimer: 0,
   searchTimer: 0,
+  deferredPrompt: null,
 };
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
 const els = {
-  feed: $("#feed"),
+  grid: $("#grid"),
   empty: $("#empty"),
   emptyTitle: $("#emptyTitle"),
   emptyText: $("#emptyText"),
@@ -47,30 +45,50 @@ const els = {
   loadMoreWrap: $("#loadMoreWrap"),
   loadMore: $("#loadMore"),
   resultMeta: $("#resultMeta"),
-  notice: $("#notice"),
-  dataStatus: $("#dataStatus"),
+  banner: $("#banner"),
+  statusPill: $("#statusPill"),
   heroMeta: $("#heroMeta"),
-  statMeme: $("#statMeme"),
-  statReply: $("#statReply"),
-  statComment: $("#statComment"),
-  countMeme: $("#countMeme"),
-  countReply: $("#countReply"),
-  countComment: $("#countComment"),
-  countHot: $("#countHot"),
+  statTotal: $("#statTotal"),
+  statNew: $("#statNew"),
+  statSource: $("#statSource"),
+  countAll: $("#countAll"),
+  countReddit: $("#countReddit"),
+  countTieba: $("#countTieba"),
+  favCount: $("#favCount"),
+  favOnly: $("#favOnly"),
+  hideSeen: $("#hideSeen"),
   searchInput: $("#searchInput"),
   clearSearch: $("#clearSearch"),
-  rankHint: $("#rankHint"),
-  sourcePanel: $("#sourcePanel"),
-  sourceSummary: $("#sourceSummary"),
-  sourceList: $("#sourceList"),
-  favToggle: $("#favToggle"),
-  favCount: $("#favCount"),
+  trendChips: $("#trendChips"),
+  shuffleBtn: $("#shuffleBtn"),
+  healthPanel: $("#healthPanel"),
+  healthSummary: $("#healthSummary"),
+  healthList: $("#healthList"),
   themeToggle: $("#themeToggle"),
+  installBtn: $("#installBtn"),
+  lightbox: $("#lightbox"),
+  lightboxClose: $("#lightboxClose"),
+  lightboxImage: $("#lightboxImage"),
+  lightboxLoading: $("#lightboxLoading"),
+  lightboxMedia: $(".lightbox-media"),
+  lightboxFallback: $("#lightboxFallback"),
+  lightboxFallbackLink: $("#lightboxFallbackLink"),
+  lightboxSource: $("#lightboxSource"),
+  lightboxCommunity: $("#lightboxCommunity"),
+  lightboxTime: $("#lightboxTime"),
+  lightboxTitle: $("#lightboxTitle"),
+  lightboxSummary: $("#lightboxSummary"),
+  lightboxTags: $("#lightboxTags"),
+  lightboxFav: $("#lightboxFav"),
+  lightboxSeen: $("#lightboxSeen"),
+  lightboxPost: $("#lightboxPost"),
+  lightboxStats: $("#lightboxStats"),
+  lightboxRelated: $("#lightboxRelated"),
   toast: $("#toast"),
   template: $("#cardTemplate"),
 };
 
-function safeStorageGet(key) {
+function safeGet(key) {
   try {
     return window.localStorage.getItem(key);
   } catch (_error) {
@@ -78,16 +96,31 @@ function safeStorageGet(key) {
   }
 }
 
-function safeStorageSet(key, value) {
+function safeSet(key, value) {
   try {
     window.localStorage.setItem(key, value);
   } catch (_error) {
-    /* Private mode or a full quota should not break reading. */
+    /* Storage can be unavailable in private mode. */
   }
 }
 
+function loadSet(key) {
+  const raw = safeGet(key);
+  if (!raw) return new Set();
+  try {
+    const value = JSON.parse(raw);
+    return new Set(Array.isArray(value) ? value.filter((entry) => typeof entry === "string") : []);
+  } catch (_error) {
+    return new Set();
+  }
+}
+
+function saveSet(key, value) {
+  safeSet(key, JSON.stringify(Array.from(value)));
+}
+
 function initTheme() {
-  const saved = safeStorageGet(THEME_KEY);
+  const saved = safeGet(THEME_KEY);
   state.theme = THEMES.includes(saved) ? saved : "auto";
   applyTheme();
 }
@@ -102,128 +135,88 @@ function applyTheme() {
 function cycleTheme() {
   const index = THEMES.indexOf(state.theme);
   state.theme = THEMES[(index + 1) % THEMES.length];
-  safeStorageSet(THEME_KEY, state.theme);
+  safeSet(THEME_KEY, state.theme);
   applyTheme();
-  showToast(`主题已切换为：${THEME_LABELS[state.theme]}`);
+  showToast(`主题：${THEME_LABELS[state.theme]}`);
 }
 
-function loadFavorites() {
-  const raw = safeStorageGet(FAV_KEY);
-  if (!raw) return;
-  try {
-    const values = JSON.parse(raw);
-    if (Array.isArray(values)) {
-      state.favorites = new Set(values.filter((value) => typeof value === "string"));
-    }
-  } catch (_error) {
-    state.favorites = new Set();
-  }
+function loadLocalState() {
+  state.favorites = loadSet(FAV_KEY);
+  state.seen = loadSet(SEEN_KEY);
+  updateFavoriteCount();
 }
 
-function saveFavorites() {
-  safeStorageSet(FAV_KEY, JSON.stringify(Array.from(state.favorites)));
-  const count = state.favorites.size;
-  els.favCount.textContent = String(count);
-  els.favCount.hidden = count === 0;
+function updateFavoriteCount() {
+  els.favCount.textContent = String(state.favorites.size);
+  els.favOnly.setAttribute("aria-pressed", String(state.favoritesOnly));
+  els.hideSeen.setAttribute("aria-pressed", String(state.hideSeen));
 }
 
 function toggleFavorite(id) {
-  if (state.favorites.has(id)) {
-    state.favorites.delete(id);
-    showToast("已取消收藏");
-  } else {
-    state.favorites.add(id);
-    showToast("已收藏，仅保存在这台设备");
+  const active = state.favorites.has(id);
+  if (active) state.favorites.delete(id);
+  else state.favorites.add(id);
+  saveSet(FAV_KEY, state.favorites);
+  updateFavoriteCount();
+  updateCardState(id);
+  if (state.currentItem?.id === id) syncLightboxFavorite();
+  showToast(active ? "已取消收藏" : "已收藏，仅保存在这台设备");
+  if (state.favoritesOnly && active) renderGrid();
+}
+
+function markSeen(id, silent = false) {
+  if (!id || state.seen.has(id)) return;
+  state.seen.add(id);
+  saveSet(SEEN_KEY, state.seen);
+  updateCardState(id);
+  if (!silent) showToast("已标记为已看");
+}
+
+function updateCardState(id) {
+  const card = $(`.card[data-id="${cssEscape(id)}"]`, els.grid);
+  if (!card) return;
+  const fav = state.favorites.has(id);
+  const seen = state.seen.has(id);
+  card.classList.toggle("is-favorite", fav);
+  card.classList.toggle("is-seen", seen);
+  const favButton = $(".fav-btn", card);
+  if (favButton) {
+    favButton.setAttribute("aria-pressed", String(fav));
+    favButton.setAttribute("aria-label", fav ? "取消收藏" : "收藏");
   }
-  saveFavorites();
-  updateBookmarkButtons();
-  if (state.favoritesOnly) {
-    state.visible = PAGE_SIZE;
-    renderFeed();
-  }
+  const seenPill = $(".seen-pill", card);
+  if (seenPill) seenPill.hidden = !seen;
 }
 
-function updateBookmarkButtons() {
-  $$(".bookmark", els.feed).forEach((button) => {
-    const active = state.favorites.has(button.dataset.id);
-    button.setAttribute("aria-pressed", String(active));
-    button.setAttribute("aria-label", active ? "取消收藏" : "收藏");
-  });
+function cssEscape(value) {
+  if (window.CSS && typeof window.CSS.escape === "function") return window.CSS.escape(value);
+  return String(value).replace(/["\\]/g, "\\$&");
 }
 
-function isRecent(item, hours) {
-  const value = item.collected_at || item.published_at;
-  const timestamp = Date.parse(value || "");
-  if (!Number.isFinite(timestamp)) return true;
-  return Date.now() - timestamp <= hours * 3600 * 1000;
-}
-
-function todayHours() {
-  return Number(state.feed?.settings?.today_hours || 24);
-}
-
-function counts() {
-  const items = state.feed?.items || [];
-  return {
-    meme: items.filter((item) => item.category === "meme" && isRecent(item, todayHours())).length,
-    reply: items.filter((item) => item.category === "reply").length,
-    comment: items.filter((item) => item.category === "comment").length,
-    hot: items.filter((item) => item.category === "hot").length,
-  };
-}
-
-function normalizeSearch(value) {
+function normalize(value) {
   return String(value || "")
     .normalize("NFKC")
     .toLocaleLowerCase("zh-CN")
     .replace(/\s+/g, "");
 }
 
-function searchText(item) {
-  return normalizeSearch(
+function itemText(item) {
+  return normalize(
     [
       item.title,
       item.summary,
-      item.context,
+      item.community,
       item.source_name,
-      item.author,
       ...(item.tags || []),
-      ...(item.related || []).map((related) => related.title),
+      ...(item.related || []).map((entry) => entry.title),
     ]
       .filter(Boolean)
       .join(" ")
   );
 }
 
-function compareLatest(a, b) {
-  const at = Date.parse(a.published_at || a.collected_at || "") || 0;
-  const bt = Date.parse(b.published_at || b.collected_at || "") || 0;
-  if (bt !== at) return bt - at;
-  return (a.rank || 1) - (b.rank || 1);
-}
-
-function compareRank(a, b) {
-  const ar = Number(a.rank) || 1;
-  const br = Number(b.rank) || 1;
-  if (ar !== br) return ar - br;
-  return String(a.source_name || "").localeCompare(String(b.source_name || ""), "zh-CN");
-}
-
-function filteredItems() {
-  let items = (state.feed?.items || []).slice();
-  if (state.favoritesOnly) {
-    items = items.filter((item) => state.favorites.has(item.id));
-  } else if (state.filter === "meme") {
-    items = items.filter((item) => item.category === "meme" && isRecent(item, todayHours()));
-  } else if (state.filter === "reply" || state.filter === "comment" || state.filter === "hot") {
-    items = items.filter((item) => item.category === state.filter);
-  }
-  const query = normalizeSearch(state.query);
-  if (query) {
-    items = items.filter((item) => searchText(item).includes(query));
-  }
-  items.sort(state.sort === "rank" ? compareRank : compareLatest);
-  return items;
+function itemTime(item) {
+  return Date.parse(item.created_at || item.collected_at || "") || 0;
 }
 
 function formatParts(iso) {
@@ -246,21 +239,15 @@ function formatParts(iso) {
   return parts;
 }
 
-function formatWhen(iso, precision = "datetime") {
+function formatWhen(iso) {
   const parts = formatParts(iso);
   if (!parts) return "时间未知";
   const now = formatParts(new Date().toISOString());
   const sameDay = now && now.year === parts.year && now.month === parts.month && now.day === parts.day;
-  if (precision === "date") {
-    if (now && now.year === parts.year) return `${Number(parts.month)}月${Number(parts.day)}日`;
-    return `${parts.year}年${Number(parts.month)}月${Number(parts.day)}日`;
-  }
   const clock = `${parts.hour}:${parts.minute}`;
   if (sameDay) return `今天 ${clock}`;
-  if (now && now.year === parts.year) {
-    return `${Number(parts.month)}月${Number(parts.day)}日 ${clock}`;
-  }
-  return `${parts.year}年${Number(parts.month)}月${Number(parts.day)}日 ${clock}`;
+  if (now && now.year === parts.year) return `${Number(parts.month)}月${Number(parts.day)}日 ${clock}`;
+  return `${parts.year}年${Number(parts.month)}月${Number(parts.day)}日`;
 }
 
 function formatAge(iso) {
@@ -269,222 +256,385 @@ function formatAge(iso) {
   const minutes = Math.max(0, Math.floor((Date.now() - timestamp) / 60000));
   if (minutes < 1) return "刚刚";
   if (minutes < 60) return `${minutes} 分钟前`;
-  if (minutes < 24 * 60) return `${Math.floor(minutes / 60)} 小时前`;
+  if (minutes < 1440) return `${Math.floor(minutes / 60)} 小时前`;
   return formatWhen(iso);
 }
 
-function formatItemTime(item) {
-  if (item.published_at) {
-    return formatWhen(item.published_at, item.published_precision || "datetime");
-  }
-  if (item.collected_at) {
-    return `采集于 ${formatWhen(item.collected_at)}`;
-  }
-  return "时间未知";
+function formatNumber(value) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "";
+  if (value >= 10000) return `${(value / 10000).toFixed(1).replace(".0", "")}万`;
+  return String(value);
 }
 
-function itemHeatText(item) {
-  if (item.heat && item.heat.display) {
-    return `${item.heat.label} ${item.heat.display} · 榜位 ${item.rank}`;
+function sourceLabel(source) {
+  return SOURCE_LABELS[source] || source || "来源";
+}
+
+function allItems() {
+  return state.feed?.items || [];
+}
+
+function counts() {
+  const items = allItems();
+  return {
+    all: items.length,
+    reddit: items.filter((item) => item.source === "reddit").length,
+    tieba: items.filter((item) => item.source === "tieba").length,
+  };
+}
+
+function hashString(value) {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
   }
-  if (item.rank) return `榜位 ${item.rank}`;
-  return "";
+  return hash >>> 0;
+}
+
+function filteredItems() {
+  let items = allItems().slice();
+  if (state.favoritesOnly) items = items.filter((item) => state.favorites.has(item.id));
+  if (state.source !== "all") items = items.filter((item) => item.source === state.source);
+  if (state.hideSeen) items = items.filter((item) => !state.seen.has(item.id));
+  const query = normalize(state.query);
+  if (query) items = items.filter((item) => itemText(item).includes(query));
+  if (state.tag) {
+    items = items.filter(
+      (item) =>
+        (item.tags || []).some((tag) => tag === state.tag) ||
+        normalize(item.title).includes(normalize(state.tag)) ||
+        normalize(item.summary).includes(normalize(state.tag))
+    );
+  }
+  if (state.mode === "hot") {
+    items.sort((a, b) => (b.rank_score || 0) - (a.rank_score || 0) || itemTime(b) - itemTime(a));
+  } else if (state.mode === "random") {
+    items.sort(
+      (a, b) =>
+        hashString(`${a.id}:${state.randomSeed}`) - hashString(`${b.id}:${state.randomSeed}`)
+    );
+  } else {
+    items.sort((a, b) => itemTime(b) - itemTime(a));
+  }
+  return items;
 }
 
 function setStatus(text, kind) {
-  els.dataStatus.textContent = text;
-  els.dataStatus.className = `status-pill ${kind || ""}`.trim();
-}
-
-function makeActionButton(label, handler) {
-  const button = document.createElement("button");
-  button.type = "button";
-  button.textContent = label;
-  button.addEventListener("click", handler);
-  return button;
-}
-
-function showNotice(message, kind, actionLabel, action) {
-  els.notice.replaceChildren();
-  els.notice.className = `notice ${kind || ""}`.trim();
-  els.notice.hidden = false;
-  els.notice.append(document.createTextNode(message));
-  if (actionLabel && action) {
-    els.notice.append(makeActionButton(actionLabel, action));
-  }
-}
-
-function hideNotice() {
-  els.notice.hidden = true;
-  els.notice.replaceChildren();
-}
-
-function openSourcePanel() {
-  if (els.sourcePanel.hidden) return;
-  const details = $("details", els.sourcePanel);
-  if (details) details.open = true;
-  els.sourcePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  els.statusPill.textContent = text;
+  els.statusPill.className = `status-pill ${kind || ""}`.trim();
 }
 
 function renderHero() {
-  const feed = state.feed;
   const values = counts();
-  els.statMeme.textContent = feed ? values.meme : "—";
-  els.statReply.textContent = feed ? values.reply : "—";
-  els.statComment.textContent = feed ? values.comment : "—";
-  els.countMeme.textContent = feed ? values.meme : "";
-  els.countReply.textContent = feed ? values.reply : "";
-  els.countComment.textContent = feed ? values.comment : "";
-  els.countHot.textContent = feed ? values.hot : "";
+  els.statTotal.textContent = state.feed ? String(values.all) : "—";
+  els.statNew.textContent = state.feed ? String(state.feed.run?.items_new ?? 0) : "—";
+  els.statSource.textContent = state.feed
+    ? String(
+        (state.feed.sources || []).filter(
+          (entry) =>
+            (entry.source === "reddit" || entry.source === "tieba") &&
+            (entry.status === "ok" || entry.status === "degraded")
+        ).length
+      )
+    : "—";
+  els.countAll.textContent = String(values.all);
+  els.countReddit.textContent = String(values.reddit);
+  els.countTieba.textContent = String(values.tieba);
 
   if (state.loading) {
     setStatus("连接中", "is-loading");
-    els.heroMeta.textContent = "正在接收公开热榜与评论区信号…";
+    els.heroMeta.textContent = "正在接收 Reddit 与贴吧的公开图片…";
     return;
   }
   if (state.error) {
     setStatus("连接失败", "is-error");
-    els.heroMeta.textContent = "没有读到数据文件，请检查部署或稍后重试。";
+    els.heroMeta.textContent = "没有读到图库数据，请稍后重试。";
     return;
   }
-  if (!feed) {
+  if (!state.feed) {
     setStatus("无信号", "is-error");
     return;
   }
-  const run = feed.run || {};
-  const generated = feed.generated_at ? formatAge(feed.generated_at) : "尚未成功采集";
-  const sourceText =
-    typeof run.sources_total === "number"
-      ? `${run.sources_ok || 0}/${run.sources_total} 个数据源正常`
-      : "";
-  const parts = [`最后更新 ${generated}`, sourceText, `共 ${(feed.items || []).length} 条`].filter(Boolean);
-  if (state.fromCache) parts.push("本机缓存");
-  els.heroMeta.textContent = parts.join(" · ");
+  const health = state.feed.health || {};
+  const updated = state.feed.generated_at ? formatAge(state.feed.generated_at) : "尚未成功采集";
+  const bits = [
+    `更新 ${updated}`,
+    state.feed.trends?.keywords?.length ? `${state.feed.trends.keywords.length} 个热点候选词` : "",
+    `${state.feed.items?.length || 0} 张图`,
+  ].filter(Boolean);
+  if (state.fromCache) bits.push("本机缓存");
+  els.heroMeta.textContent = bits.join(" · ");
 
-  if (feed.stale) setStatus("数据过期", "is-warn");
-  else if (run.partial) setStatus("部分更新", "is-warn");
+  if (state.feed.stale) setStatus("数据过期", "is-warn");
+  else if (health.status === "blocked") setStatus("来源中断", "is-error");
+  else if (health.status === "degraded") setStatus("部分降级", "is-warn");
   else if (state.fromCache) setStatus("缓存阅读", "is-warn");
   else setStatus("已更新", "is-live");
 }
 
-function renderNotice() {
-  hideNotice();
+function showBanner(message, kind, actionLabel, action) {
+  els.banner.replaceChildren();
+  els.banner.className = `banner ${kind || ""}`.trim();
+  els.banner.hidden = false;
+  els.banner.append(document.createTextNode(message));
+  if (actionLabel && action) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = actionLabel;
+    button.addEventListener("click", action);
+    els.banner.append(button);
+  }
+}
+
+function hideBanner() {
+  els.banner.hidden = true;
+  els.banner.replaceChildren();
+}
+
+function openHealth() {
+  if (els.healthPanel.hidden) return;
+  const details = $("details", els.healthPanel);
+  if (details) details.open = true;
+  els.healthPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderBanner() {
+  hideBanner();
   if (state.loading) return;
   if (state.error) {
-    showNotice(`加载失败：${state.error.message || "未知错误"}。`, "is-error", "重新加载", () =>
-      loadFeed(true)
-    );
+    showBanner(`加载失败：${state.error.message || "网络错误"}。`, "is-error", "重新加载", () => loadFeed(true));
     return;
   }
-  const feed = state.feed;
-  if (!feed) return;
+  if (!state.feed) return;
   if (state.fromCache) {
-    showNotice(
-      "网络请求失败，正在显示本机上次缓存的内容；缓存可能是旧的。",
-      "is-warn",
-      "重试",
-      () => loadFeed(true)
-    );
+    showBanner("网络不可用，正在显示本机上次缓存的图片数据。", "is-warn", "重试", () => loadFeed(true));
     return;
   }
-  if (feed.stale) {
-    showNotice(
-      `${feed.stale_reason || "本次采集全部失败，页面展示上次成功数据。"} 最后成功更新：${
-        feed.generated_at ? formatWhen(feed.generated_at) : "暂无"
+  if (state.feed.stale) {
+    showBanner(
+      `${state.feed.stale_reason || "本轮没有成功更新。"} 最后成功更新：${
+        state.feed.generated_at ? formatWhen(state.feed.generated_at) : "暂无"
       }。`,
       "is-error",
       "查看数据源",
-      openSourcePanel
+      openHealth
     );
     return;
   }
-  if (feed.run?.partial) {
-    showNotice(
-      "部分数据源本次未更新，页面保留了它们的上次成功数据。",
-      "is-warn",
-      "查看数据源",
-      openSourcePanel
+  const health = state.feed.health || {};
+  const alerts = health.alerts || [];
+  if (health.status === "degraded" || alerts.length) {
+    const sourceIssue = (state.feed.sources || []).find(
+      (entry) => entry.status === "blocked" || entry.status === "degraded"
     );
-    return;
-  }
-  const timestamp = Date.parse(feed.generated_at || "");
-  if (Number.isFinite(timestamp) && Date.now() - timestamp > 12 * 3600 * 1000) {
-    showNotice(
-      `距上次更新已超过 12 小时（${formatWhen(feed.generated_at)}），定时任务可能被平台延迟。`,
-      "is-warn",
-      "查看数据源",
-      openSourcePanel
-    );
+    const reason = sourceIssue && sourceIssue.status === "degraded"
+      ? `${sourceIssue.name} 处于降级采集，内容仍来自真实公开页面。`
+      : "部分来源本次不可用，已保留历史图片。";
+    showBanner(`${reason} ${alerts.join("；")}`.trim(), "is-warn", "数据源详情", openHealth);
   }
 }
 
-function renderSourcePanel() {
-  const sources = state.feed?.sources || [];
-  if (!sources.length) {
-    els.sourcePanel.hidden = true;
+function renderChips() {
+  const keywords = state.feed?.trends?.keywords || [];
+  els.trendChips.replaceChildren();
+  if (!keywords.length) {
+    els.trendChips.hidden = true;
     return;
   }
-  const run = state.feed.run || {};
-  const ok = sources.filter((source) => source.status === "ok").length;
-  const total = sources.filter((source) => source.status !== "disabled").length;
-  els.sourceSummary.textContent = `${ok}/${total} 正常 · ${
-    state.feed.generated_at ? formatWhen(state.feed.generated_at) : "尚未成功采集"
+  els.trendChips.hidden = false;
+  for (const keyword of keywords.slice(0, 9)) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "chip";
+    button.dataset.tag = keyword.word;
+    button.textContent = `${keyword.word} ${keyword.count}`;
+    button.setAttribute("aria-pressed", String(state.tag === keyword.word));
+    button.addEventListener("click", () => {
+      state.tag = state.tag === keyword.word ? "" : keyword.word;
+      state.visible = PAGE_SIZE;
+      renderChips();
+      renderGrid();
+    });
+    els.trendChips.append(button);
+  }
+}
+
+function renderHealth() {
+  const feed = state.feed;
+  if (!feed || !Array.isArray(feed.sources) || !feed.sources.length) {
+    els.healthPanel.hidden = true;
+    return;
+  }
+  const health = feed.health || {};
+  const statusLabel = {
+    ok: "正常",
+    degraded: "降级",
+    blocked: "中断",
+    planned: "计划中",
+    disabled: "未启用",
+  };
+  els.healthSummary.textContent = `${statusLabel[health.status] || health.status || "未知"} · ${
+    feed.generated_at ? formatWhen(feed.generated_at) : "尚未成功"
   }`;
-  els.sourceList.replaceChildren();
-  for (const source of sources) {
+  els.healthList.replaceChildren();
+  for (const source of feed.sources) {
     const row = document.createElement("div");
-    row.className = "source-row";
-
+    row.className = "health-row";
     const dot = document.createElement("span");
-    dot.className = `source-dot ${source.status || ""}`;
+    dot.className = `health-dot ${source.status || ""}`;
     dot.setAttribute("aria-hidden", "true");
-
-    const text = document.createElement("div");
+    const copy = document.createElement("div");
     const name = document.createElement("strong");
-    name.textContent = source.name || source.id;
+    name.textContent = source.name || source.source;
     const detail = document.createElement("small");
-    let statusText = "";
-    if (source.status === "ok") statusText = `成功 · ${source.accepted || 0} 条`;
-    else if (source.status === "failed") {
-      statusText = `失败${source.retained ? ` · 保留 ${source.retained} 条旧数据` : ""}`;
-    } else if (source.status === "skipped") statusText = "跳过";
-    else if (source.status === "disabled") statusText = "未启用";
-    else statusText = source.status || "未知";
-    detail.textContent = source.error
-      ? `${statusText} · ${String(source.error).slice(0, 180)}`
-      : statusText;
-    text.append(name, detail);
-
+    const bits = [statusLabel[source.status] || source.status || "未知"];
+    if (source.error) bits.push(source.error);
+    else if (source.source === "reddit") bits.push("官方公开 Atom/RSS");
+    else if (source.source === "tieba") bits.push("公开热点页；详情页 403，已降级");
+    else if (source.source === "trends") bits.push("用于候选关键词，不直接生成图片");
+    else if (source.status === "planned") bits.push("尚未实现，不会显示为运行中");
+    detail.textContent = bits.filter(Boolean).join(" · ");
+    copy.append(name, detail);
     const count = document.createElement("span");
-    count.className = "source-count";
-    count.textContent = source.status === "ok" ? `${source.accepted || 0} 条` : "";
-
-    row.append(dot, text, count);
-    els.sourceList.append(row);
+    count.className = "health-count";
+    count.textContent = source.item_count ? `${source.item_count} 条` : "";
+    row.append(dot, copy, count);
+    els.healthList.append(row);
   }
-  els.sourcePanel.hidden = false;
-  // Keep the testable count in the summary line useful even if run metadata is absent.
-  if (!run.sources_total) els.sourceSummary.textContent = `${ok}/${total} 正常`;
+  els.healthPanel.hidden = false;
 }
 
-function createSkeletonCard() {
-  const card = document.createElement("article");
-  card.className = "card skeleton-card";
-  card.setAttribute("aria-hidden", "true");
-  for (const className of ["skeleton-line short", "skeleton-line title", "skeleton-line", "skeleton-line medium"]) {
-    const line = document.createElement("div");
-    line.className = className;
-    card.append(line);
+function renderFilterState() {
+  $$(".mode-btn").forEach((button) => {
+    button.setAttribute("aria-selected", String(button.dataset.mode === state.mode));
+  });
+  $$(".filter-btn[data-source]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.source === state.source));
+  });
+  els.favOnly.setAttribute("aria-pressed", String(state.favoritesOnly));
+  els.hideSeen.setAttribute("aria-pressed", String(state.hideSeen));
+  els.shuffleBtn.hidden = state.mode !== "random";
+  els.clearSearch.hidden = !els.searchInput.value;
+}
+
+function createCard(item, index) {
+  const card = els.template.content.firstElementChild.cloneNode(true);
+  card.dataset.id = item.id;
+  card.dataset.source = item.source;
+  card.classList.toggle("is-favorite", state.favorites.has(item.id));
+  card.classList.toggle("is-seen", state.seen.has(item.id));
+  card.style.setProperty("--i", String(Math.min(index, 12)));
+
+  const image = $(".card-media img", card);
+  image.alt = item.title || "";
+  image.loading = "lazy";
+  image.decoding = "async";
+  image.referrerPolicy = "no-referrer";
+  if (item.image_width && item.image_height) {
+    image.width = item.image_width;
+    image.height = item.image_height;
+    image.style.aspectRatio = `${item.image_width} / ${item.image_height}`;
   }
+  image.src = item.thumbnail_url || item.image_url;
+  image.addEventListener("load", () => {
+    image.dataset.loading = "false";
+  });
+  image.addEventListener("error", () => {
+    image.hidden = true;
+    const fallback = $(".media-fallback", card);
+    fallback.hidden = false;
+    const fallbackLink = $("a", fallback);
+    fallbackLink.href = item.post_url;
+  });
+
+  const source = $(".source-pill", card);
+  source.textContent = sourceLabel(item.source);
+  source.dataset.source = item.source;
+
+  const related = $(".related-pill", card);
+  if (item.group_size > 1) {
+    related.hidden = false;
+    related.textContent = `同图 +${item.group_size - 1}`;
+  }
+
+  const seen = $(".seen-pill", card);
+  seen.hidden = !state.seen.has(item.id);
+
+  const favButton = $(".fav-btn", card);
+  favButton.dataset.id = item.id;
+  favButton.setAttribute("aria-pressed", String(state.favorites.has(item.id)));
+  favButton.setAttribute("aria-label", state.favorites.has(item.id) ? "取消收藏" : "收藏");
+  favButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    toggleFavorite(item.id);
+  });
+
+  $(".card-title", card).textContent = item.title;
+  const summary = $(".card-summary", card);
+  summary.textContent = item.summary || "";
+
+  $(".community", card).textContent = item.community || sourceLabel(item.source);
+  $(".time", card).textContent = item.created_at ? formatWhen(item.created_at) : `收录 ${formatWhen(item.collected_at)}`;
+  const comments = $(".comments", card);
+  if (typeof item.comment_count === "number") {
+    comments.textContent = `${formatNumber(item.comment_count)} 评论`;
+  } else if (item.score !== null && item.score !== undefined) {
+    comments.textContent = `${formatNumber(item.score)} 分`;
+  } else {
+    comments.hidden = true;
+  }
+
+  const tags = $(".card-tags", card);
+  const visibleTags = (item.tags || [])
+    .filter((tag) => tag !== "reddit" && tag !== "贴吧" && tag !== item.community)
+    .slice(0, 3);
+  visibleTags.forEach((tag) => {
+    const element = document.createElement("span");
+    element.className = "tag";
+    element.textContent = tag;
+    tags.append(element);
+  });
+
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a, button")) return;
+    openLightbox(item);
+  });
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openLightbox(item);
+    }
+  });
+  card.tabIndex = 0;
+  card.setAttribute("role", "button");
+  card.setAttribute("aria-label", `${item.title}，打开大图和原帖`);
   return card;
 }
 
-function renderLoading() {
-  els.feed.setAttribute("aria-busy", "true");
-  els.feed.replaceChildren(createSkeletonCard(), createSkeletonCard(), createSkeletonCard());
-  els.empty.hidden = true;
-  els.loadMoreWrap.hidden = true;
-  els.resultMeta.textContent = "正在整理信息流…";
+function renderEmptyState(items) {
+  const filtered = items.length;
+  if (state.error) {
+    renderEmpty("图库暂时失联", "没有加载到 data/gallery.json。如果你刚部署，请确认 Pages 已生成数据文件。", "重新加载", () => loadFeed(true));
+    return;
+  }
+  if (!state.feed) {
+    renderEmpty("还没有信号", "采集器尚未生成图库数据，稍后再来看看。", null, null);
+    return;
+  }
+  if (!allItems().length) {
+    renderEmpty("还没有真实图片", "首次采集可能尚未完成；没有数据时不会展示假图。", "重新加载", () => loadFeed(true));
+    return;
+  }
+  if (state.favoritesOnly) {
+    renderEmpty("收藏夹是空的", "点卡片右上角的爱心，把喜欢的图保存在这台手机上。", "回到图库", resetFilters);
+    return;
+  }
+  if (filtered === 0 && (state.query || state.tag || state.source !== "all" || state.hideSeen)) {
+    renderEmpty("没有匹配的图", "当前筛选条件太窄了，清除筛选再看看。", "清除筛选", resetFilters);
+    return;
+  }
+  renderEmpty("暂时没有更多图", "本轮采集没有新增内容，稍后会自动尝试。", "重新加载", () => loadFeed(true));
 }
 
 function renderEmpty(title, text, actionLabel, action) {
@@ -501,234 +651,97 @@ function renderEmpty(title, text, actionLabel, action) {
   els.empty.hidden = false;
 }
 
-function resetAndShowAll() {
-  state.filter = "latest";
+function resetFilters() {
+  state.source = "all";
   state.query = "";
+  state.tag = "";
   state.favoritesOnly = false;
+  state.hideSeen = false;
   state.visible = PAGE_SIZE;
   els.searchInput.value = "";
   els.clearSearch.hidden = true;
-  els.favToggle.setAttribute("aria-pressed", "false");
-  syncTabs();
-  renderFeed();
+  updateFavoriteCount();
+  renderChips();
+  renderFilterState();
+  renderGrid();
 }
 
-function renderEmptyState(items) {
-  if (state.error) {
-    renderEmpty(
-      "雷达暂时失联",
-      "没有加载到 data/feed.json。若页面刚部署，请确认 Pages 已生成数据文件；也可以稍后重试。",
-      "重新加载",
-      () => loadFeed(true)
-    );
-    return;
-  }
-  if (!state.feed) {
-    renderEmpty("还没有信号", "数据文件尚未准备好，稍后再来看看。", null, null);
-    return;
-  }
-  if (!state.feed.items.length) {
-    renderEmpty(
-      "雷达还没有收到内容",
-      "首次自动采集可能尚未完成；若数据源暂时不可用，页面会保留空状态而不是伪造热点。",
-      "重新加载",
-      () => loadFeed(true)
-    );
-    return;
-  }
-  if (state.favoritesOnly) {
-    renderEmpty(
-      "收藏夹还是空的",
-      "在任意卡片右上角点书签，内容会保存在这台手机的浏览器里。",
-      "回到信息流",
-      () => {
-        state.favoritesOnly = false;
-        els.favToggle.setAttribute("aria-pressed", "false");
-        state.visible = PAGE_SIZE;
-        renderFeed();
-      }
-    );
-    return;
-  }
-  if (state.query) {
-    renderEmpty(
-      "没有找到匹配内容",
-      `当前分类里没有「${state.query}」。可以试试在全部内容中搜索，或换一个关键词。`,
-      "搜索全部内容",
-      resetAndShowAll
-    );
-    return;
-  }
-  if (state.filter === "meme") {
-    renderEmpty(
-      "今天还没有新的热梗",
-      "本次采集没有发现符合关键词的新热梗。可以先去「综合热点」或「最新更新」看看。",
-      "查看最新更新",
-      () => {
-        state.filter = "latest";
-        state.visible = PAGE_SIZE;
-        syncTabs();
-        renderFeed();
-      }
-    );
-    return;
-  }
-  renderEmpty(
-    "这个分类还没有内容",
-    "本次采集没有拿到这一类的数据，自动任务会在下一次运行时重试。",
-    "查看最新更新",
-    resetAndShowAll
-  );
-}
-
-function createCard(item, index) {
-  const card = els.template.content.firstElementChild.cloneNode(true);
-  card.dataset.category = item.category || "hot";
-  card.dataset.stale = item.source_stale ? "true" : "false";
-  card.style.setProperty("--i", String(Math.min(index, 12)));
-
-  $(".cat-badge", card).textContent = CATEGORY_LABELS[item.category] || "热点";
-
-  const link = $(".card-link", card);
-  link.href = item.url;
-  link.setAttribute("aria-label", `${item.title}，在新标签页打开原文`);
-
-  $(".card-title", card).textContent = item.title;
-  const summary = $(".card-summary", card);
-  summary.textContent = item.summary || "";
-
-  const thumb = $(".card-thumb", card);
-  if (item.image && (item.source_kind === "video" || item.source_kind === "article")) {
-    thumb.src = item.image;
-    thumb.alt = "";
-    thumb.hidden = false;
-    thumb.addEventListener("error", () => {
-      thumb.hidden = true;
-    });
-  }
-
-  const context = $(".card-context", card);
-  if (item.context) {
-    context.hidden = false;
-    context.append(document.createTextNode("在「"));
-    if (item.context_url) {
-      const contextLink = document.createElement("a");
-      contextLink.href = item.context_url;
-      contextLink.target = "_blank";
-      contextLink.rel = "noopener noreferrer nofollow";
-      contextLink.textContent = item.context;
-      context.append(contextLink);
-    } else {
-      context.append(document.createTextNode(item.context));
-    }
-    context.append(document.createTextNode("」下"));
-  }
-
-  const related = $(".card-related", card);
-  if (item.group_size > 1 && Array.isArray(item.related) && item.related.length) {
-    related.hidden = false;
-    const label = document.createElement("span");
-    label.className = "related-label";
-    label.textContent = `同一事件还有 ${item.group_size - 1} 条相关来源`;
-    related.append(label);
-    item.related.slice(0, 4).forEach((entry) => {
-      const anchor = document.createElement("a");
-      anchor.className = "related-link";
-      anchor.href = entry.url;
-      anchor.target = "_blank";
-      anchor.rel = "noopener noreferrer nofollow";
-      anchor.textContent = `${entry.source_name}：${String(entry.title || "").slice(0, 36)}`;
-      related.append(anchor);
-    });
-  }
-
-  $(".source-name", card).textContent = item.source_name || "未知来源";
-  $(".item-time", card).textContent = formatItemTime(item);
-
-  const heat = $(".heat-pill", card);
-  const heatText = itemHeatText(item);
-  if (heatText) {
-    heat.textContent = heatText;
-    heat.hidden = false;
-  }
-
-  if (item.source_stale) {
-    const stale = document.createElement("span");
-    stale.className = "stale-tag";
-    stale.textContent = "上次数据";
-    $(".card-meta", card).insertBefore(stale, heat);
-  }
-
-  const bookmark = $(".bookmark", card);
-  bookmark.dataset.id = item.id;
-  bookmark.setAttribute("aria-pressed", String(state.favorites.has(item.id)));
-  bookmark.setAttribute("aria-label", state.favorites.has(item.id) ? "取消收藏" : "收藏");
-
-  return card;
-}
-
-function updateResultMeta(items) {
-  const shown = Math.min(items.length, state.visible);
+function updateResultMeta(items, shown) {
   const bits = [];
-  if (state.favoritesOnly) bits.push(`收藏 ${items.length} 条`);
-  else if (state.query) bits.push(`匹配 ${items.length} 条`);
-  else bits.push(`本类 ${items.length} 条`);
-  if (items.length > shown) bits.push(`当前显示 ${shown} 条`);
-  if (state.sort === "rank") bits.push("按来源榜位");
+  if (state.favoritesOnly) bits.push(`收藏 ${items.length} 张`);
+  else bits.push(`共 ${items.length} 张`);
+  if (state.query) bits.push(`搜索「${state.query}」`);
+  if (state.tag) bits.push(`标签「${state.tag}」`);
+  if (state.source !== "all") bits.push(sourceLabel(state.source));
+  if (state.hideSeen) bits.push("隐藏已看");
+  if (items.length > shown) bits.push(`已显示 ${shown}`);
+  if (state.mode === "random") bits.push("随机顺序");
   els.resultMeta.textContent = bits.join(" · ");
-  els.rankHint.hidden = state.sort !== "rank";
 }
 
-function renderFeed() {
+function renderGrid() {
   const items = filteredItems();
-  els.feed.replaceChildren();
-  els.feed.setAttribute("aria-busy", "false");
+  els.grid.replaceChildren();
+  els.grid.setAttribute("aria-busy", "false");
   els.empty.hidden = true;
   els.loadMoreWrap.hidden = true;
-  updateResultMeta(items);
-
-  if (state.error || !state.feed || !items.length) {
+  if (state.error || !state.feed || !allItems().length) {
+    updateResultMeta(items, 0);
     renderEmptyState(items);
     return;
   }
-
+  if (!items.length) {
+    updateResultMeta(items, 0);
+    renderEmptyState(items);
+    return;
+  }
+  const shown = Math.min(state.visible, items.length);
+  updateResultMeta(items, shown);
   const fragment = document.createDocumentFragment();
-  items.slice(0, state.visible).forEach((item, index) => {
-    fragment.append(createCard(item, index));
-  });
-  els.feed.append(fragment);
-  updateBookmarkButtons();
-  els.loadMoreWrap.hidden = state.visible >= items.length;
-}
-
-function syncTabs() {
-  $$(".tab").forEach((tab) => {
-    tab.setAttribute("aria-selected", String(tab.dataset.filter === state.filter));
-  });
-  $$(".sort-btn").forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.sort === state.sort));
-  });
-  els.favToggle.setAttribute("aria-pressed", String(state.favoritesOnly));
+  items.slice(0, shown).forEach((item, index) => fragment.append(createCard(item, index)));
+  els.grid.append(fragment);
+  els.loadMoreWrap.hidden = shown >= items.length;
 }
 
 function renderAll() {
   renderHero();
-  renderNotice();
-  renderSourcePanel();
-  syncTabs();
-  renderFeed();
+  renderBanner();
+  renderChips();
+  renderHealth();
+  renderFilterState();
+  renderGrid();
+}
+
+function renderLoading() {
+  els.grid.setAttribute("aria-busy", "true");
+  els.grid.replaceChildren();
+  for (let index = 0; index < 4; index += 1) {
+    const card = document.createElement("div");
+    card.className = "skeleton-card";
+    const image = document.createElement("div");
+    image.className = `skeleton-img${index % 2 ? " tall" : ""}`;
+    const line = document.createElement("div");
+    line.className = "skeleton-line";
+    const short = document.createElement("div");
+    short.className = "skeleton-line short";
+    card.append(image, line, short);
+    els.grid.append(card);
+  }
+  els.empty.hidden = true;
+  els.loadMoreWrap.hidden = true;
+  els.resultMeta.textContent = "正在整理图片…";
 }
 
 function readCache() {
-  const raw = safeStorageGet(CACHE_KEY);
+  const raw = safeGet(CACHE_KEY);
   if (!raw) return null;
   try {
-    const cached = JSON.parse(raw);
-    if (!cached || !Array.isArray(cached.items)) return null;
-    return cached;
+    const value = JSON.parse(raw);
+    if (value && Array.isArray(value.items)) return value;
   } catch (_error) {
     return null;
   }
+  return null;
 }
 
 async function loadFeed(force = false) {
@@ -736,17 +749,17 @@ async function loadFeed(force = false) {
   state.error = null;
   renderLoading();
   renderHero();
-  hideNotice();
+  hideBanner();
   try {
     const response = await fetch(`${FEED_URL}?ts=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    if (!data || !Array.isArray(data.items)) throw new Error("data/feed.json 格式不正确");
+    if (!data || !Array.isArray(data.items)) throw new Error("gallery.json 格式不正确");
     state.feed = data;
     state.fromCache = false;
     state.loading = false;
     state.visible = PAGE_SIZE;
-    safeStorageSet(CACHE_KEY, JSON.stringify(data));
+    safeSet(CACHE_KEY, JSON.stringify(data));
     renderAll();
   } catch (error) {
     const cached = readCache();
@@ -758,53 +771,150 @@ async function loadFeed(force = false) {
       renderAll();
     } else {
       state.feed = null;
-      state.fromCache = false;
       state.loading = false;
-      const message = error instanceof Error ? error.message : String(error);
-      state.error = new Error(message === "Failed to fetch" ? "网络请求失败" : message);
+      state.error = error instanceof Error ? new Error(error.message === "Failed to fetch" ? "网络请求失败" : error.message) : new Error(String(error));
       renderAll();
     }
   }
   if (force && state.fromCache) showToast("仍无法连接，继续显示本机缓存");
 }
 
+function openLightbox(item) {
+  state.currentItem = item;
+  markSeen(item.id, true);
+  els.lightbox.hidden = false;
+  document.body.classList.add("is-locked");
+  els.lightboxSource.textContent = sourceLabel(item.source);
+  els.lightboxSource.dataset.source = item.source;
+  els.lightboxCommunity.textContent = item.community || "";
+  els.lightboxTime.textContent = item.created_at ? formatWhen(item.created_at) : `收录 ${formatWhen(item.collected_at)}`;
+  els.lightboxTitle.textContent = item.title;
+  els.lightboxSummary.textContent = item.summary || "原帖没有额外正文摘要。";
+  els.lightboxTags.replaceChildren();
+  (item.tags || []).slice(0, 8).forEach((tag) => {
+    const element = document.createElement("span");
+    element.className = "tag";
+    element.textContent = tag;
+    els.lightboxTags.append(element);
+  });
+  els.lightboxPost.href = item.post_url;
+  els.lightboxFallbackLink.href = item.post_url;
+  els.lightboxImage.hidden = false;
+  els.lightboxFallback.hidden = true;
+  els.lightboxLoading.hidden = false;
+  els.lightboxMedia.classList.remove("is-loaded");
+  let triedThumbnail = false;
+  els.lightboxImage.onload = () => {
+    els.lightboxMedia.classList.add("is-loaded");
+    els.lightboxLoading.hidden = true;
+  };
+  els.lightboxImage.onerror = () => {
+    if (!triedThumbnail && item.thumbnail_url && item.thumbnail_url !== item.image_url) {
+      triedThumbnail = true;
+      els.lightboxImage.src = item.thumbnail_url;
+      return;
+    }
+    els.lightboxImage.hidden = true;
+    els.lightboxLoading.hidden = true;
+    els.lightboxFallback.hidden = false;
+  };
+  els.lightboxImage.src = item.image_url;
+  els.lightboxImage.alt = item.title;
+  syncLightboxFavorite();
+  updateLightboxSeen();
+  const stats = [];
+  if (typeof item.comment_count === "number") stats.push(`评论 ${formatNumber(item.comment_count)}`);
+  if (typeof item.score === "number") stats.push(`得分 ${formatNumber(item.score)}`);
+  if (!stats.length) stats.push(item.source === "reddit" ? "Reddit RSS 未提供互动数" : "来源未提供互动数");
+  if (item.time_source === "collection") stats.push("发布时间未公开，按收录时间排序");
+  els.lightboxStats.textContent = stats.join(" · ");
+  els.lightboxRelated.replaceChildren();
+  if (item.group_size > 1 && Array.isArray(item.related) && item.related.length) {
+    els.lightboxRelated.hidden = false;
+    const label = document.createElement("span");
+    label.textContent = `同一图片还有 ${item.group_size - 1} 条相关记录：`;
+    els.lightboxRelated.append(label);
+    item.related.forEach((entry, index) => {
+      if (index) els.lightboxRelated.append(document.createTextNode(" · "));
+      const link = document.createElement("a");
+      link.href = entry.post_url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer nofollow";
+      link.textContent = `${sourceLabel(entry.source)} ${entry.title || ""}`.slice(0, 60);
+      els.lightboxRelated.append(link);
+    });
+  } else {
+    els.lightboxRelated.hidden = true;
+  }
+  els.lightboxClose.focus();
+}
+
+function syncLightboxFavorite() {
+  if (!state.currentItem) return;
+  const active = state.favorites.has(state.currentItem.id);
+  els.lightboxFav.textContent = active ? "已收藏" : "收藏";
+  els.lightboxFav.classList.toggle("is-active", active);
+  els.lightboxFav.setAttribute("aria-pressed", String(active));
+}
+
+function updateLightboxSeen() {
+  if (!state.currentItem) return;
+  const seen = state.seen.has(state.currentItem.id);
+  els.lightboxSeen.textContent = seen ? "已看" : "标为已看";
+  els.lightboxSeen.setAttribute("aria-pressed", String(seen));
+}
+
+function closeLightbox() {
+  els.lightbox.hidden = true;
+  document.body.classList.remove("is-locked");
+  els.lightboxImage.removeAttribute("src");
+  els.lightboxMedia.classList.remove("is-loaded");
+  state.currentItem = null;
+  if (state.hideSeen) renderGrid();
+}
+
 function showToast(message) {
   window.clearTimeout(state.toastTimer);
   els.toast.textContent = message;
   els.toast.classList.add("is-visible");
-  state.toastTimer = window.setTimeout(() => {
-    els.toast.classList.remove("is-visible");
-  }, 1900);
+  state.toastTimer = window.setTimeout(() => els.toast.classList.remove("is-visible"), 1900);
 }
 
 function bindEvents() {
   els.themeToggle.addEventListener("click", cycleTheme);
-  els.favToggle.addEventListener("click", () => {
+
+  $$(".mode-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.mode = button.dataset.mode || "latest";
+      state.visible = PAGE_SIZE;
+      renderFilterState();
+      renderGrid();
+    });
+  });
+
+  $$(".filter-btn[data-source]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.source = button.dataset.source || "all";
+      state.visible = PAGE_SIZE;
+      renderFilterState();
+      renderGrid();
+    });
+  });
+
+  els.favOnly.addEventListener("click", () => {
     state.favoritesOnly = !state.favoritesOnly;
     state.visible = PAGE_SIZE;
-    els.favToggle.setAttribute("aria-pressed", String(state.favoritesOnly));
-    renderFeed();
-    showToast(state.favoritesOnly ? `只看收藏（${state.favorites.size}）` : "已回到信息流");
+    updateFavoriteCount();
+    renderFilterState();
+    renderGrid();
   });
 
-  $(".tabs").addEventListener("click", (event) => {
-    const tab = event.target.closest(".tab");
-    if (!tab) return;
-    state.filter = tab.dataset.filter || "latest";
-    state.favoritesOnly = false;
+  els.hideSeen.addEventListener("click", () => {
+    state.hideSeen = !state.hideSeen;
     state.visible = PAGE_SIZE;
-    els.favToggle.setAttribute("aria-pressed", "false");
-    syncTabs();
-    renderFeed();
-  });
-
-  $$(".sort-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.sort = button.dataset.sort || "latest";
-      state.visible = PAGE_SIZE;
-      syncTabs();
-      renderFeed();
-    });
+    updateFavoriteCount();
+    renderFilterState();
+    renderGrid();
   });
 
   els.searchInput.addEventListener("input", () => {
@@ -814,7 +924,7 @@ function bindEvents() {
     state.searchTimer = window.setTimeout(() => {
       state.query = value.trim();
       state.visible = PAGE_SIZE;
-      renderFeed();
+      renderGrid();
     }, 120);
   });
 
@@ -823,36 +933,80 @@ function bindEvents() {
     els.clearSearch.hidden = true;
     state.query = "";
     state.visible = PAGE_SIZE;
-    renderFeed();
+    renderGrid();
     els.searchInput.focus();
   });
 
-  els.feed.addEventListener("click", (event) => {
-    const button = event.target.closest(".bookmark");
-    if (!button) return;
-    event.preventDefault();
-    toggleFavorite(button.dataset.id);
+  els.shuffleBtn.addEventListener("click", () => {
+    state.randomSeed = (state.randomSeed + 7919) % 100000000;
+    state.visible = PAGE_SIZE;
+    renderGrid();
   });
 
   els.loadMore.addEventListener("click", () => {
     state.visible += PAGE_SIZE;
-    renderFeed();
+    renderGrid();
   });
 
-  window.addEventListener("storage", (event) => {
-    if (event.key === FAV_KEY) {
-      loadFavorites();
-      saveFavorites();
-      renderFeed();
-    }
+  els.lightboxClose.addEventListener("click", closeLightbox);
+  els.lightbox.addEventListener("click", (event) => {
+    if (event.target === els.lightbox) closeLightbox();
   });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !els.lightbox.hidden) closeLightbox();
+  });
+
+  els.lightboxFav.addEventListener("click", () => {
+    if (state.currentItem) toggleFavorite(state.currentItem.id);
+  });
+  els.lightboxSeen.addEventListener("click", () => {
+    if (!state.currentItem) return;
+    if (state.seen.has(state.currentItem.id)) {
+      state.seen.delete(state.currentItem.id);
+      saveSet(SEEN_KEY, state.seen);
+    } else {
+      state.seen.add(state.currentItem.id);
+      saveSet(SEEN_KEY, state.seen);
+    }
+    updateCardState(state.currentItem.id);
+    updateLightboxSeen();
+    showToast(state.seen.has(state.currentItem.id) ? "已标记为已看" : "已取消已看");
+  });
+
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    state.deferredPrompt = event;
+    els.installBtn.hidden = false;
+  });
+  els.installBtn.addEventListener("click", async () => {
+    if (!state.deferredPrompt) return;
+    state.deferredPrompt.prompt();
+    await state.deferredPrompt.userChoice;
+    state.deferredPrompt = null;
+    els.installBtn.hidden = true;
+  });
+  window.addEventListener("appinstalled", () => {
+    els.installBtn.hidden = true;
+    showToast("已添加到主屏幕");
+  });
+  if (window.matchMedia("(display-mode: standalone)").matches) els.installBtn.hidden = true;
+}
+
+async function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+  try {
+    await navigator.serviceWorker.register("sw.js", { scope: "./" });
+  } catch (error) {
+    // PWA is optional; the page still works without a service worker.
+    console.warn("service worker registration failed", error);
+  }
 }
 
 function init() {
   initTheme();
-  loadFavorites();
-  saveFavorites();
+  loadLocalState();
   bindEvents();
+  registerServiceWorker();
   loadFeed();
 }
 

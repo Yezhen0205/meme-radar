@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-27T14:08:55Z",
+  "status": "degraded",
+  "consecutive_failures": 0,
+  "last_success_at": "2026-10-27T14:08:55Z",
+  "alerts": [],
+  "sources": {
+    "reddit": {
+      "name": "reddit",
+      "status": "disabled",
+      "item_count": 0,
+      "error": "数据源在配置中关闭",
+      "consecutive_failures": 0,
+      "last_success_at": null,
+      "last_attempt_at": "2026-10-27T14:08:55Z",
+      "details": {
+        "reason": "disabled"
+      }
+    },
+    "tieba": {
+      "name": "tieba",
+      "status": "degraded",
+      "item_count": 29,
+      "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
+      "consecutive_failures": 0,
+      "last_success_at": "2026-10-27T14:08:55Z",
+      "last_attempt_at": "2026-10-27T14:08:55Z",
+      "details": {
+        "topics": [
+          {
+            "topic_id": 28368171,
+            "topic": "表情包大赛,滑稽出征寸草不生",
+            "status": "ok",
+            "threads": 10,
+            "added": 10
+          },
+          {
+            "topic_id": 28367998,
+            "topic": "图吧垃圾佬",
+            "status": "ok",
+            "threads": 10,
+            "added": 10
+          },
+          {
+            "topic_id": 28368174,
+            "topic": "胶佬炫技,高达爆改房车",
+            "status": "ok",
+            "threads": 9,
+            "added": 9
+          }
+        ],
+        "degraded_reason": "thread_detail_403"
+      }
+    },
+    "trends": {
+      "name": "公开热点榜",
+      "status": "ok",
+      "item_count": 9,
+      "error": null,
+      "consecutive_failures": 0,
+      "last_success_at": "2026-10-27T14:08:55Z",
+      "last_attempt_at": "2026-10-27T14:08:55Z",
+      "details": {}
+    },
+    "x": {
+      "name": "x",
+      "status": "planned",
+      "item_count": 0,
+      "error": null,
+      "consecutive_failures": 0,
+      "last_success_at": null,
+      "last_attempt_at": null,
+      "details": {
+        "reason": "not_implemented"
+      }
+    },
+    "bilibili": {
+      "name": "bilibili",
+      "status": "planned",
+      "item_count": 0,
+      "error": null,
+      "consecutive_failures": 0,
+      "last_success_at": null,
+      "last_attempt_at": null,
+      "details": {
+        "reason": "not_implemented"
+      }
+    },
+    "weibo": {
+      "name": "weibo",
+      "status": "planned",
+      "item_count": 0,
+      "error": null,
+      "consecutive_failures": 0,
+      "last_success_at": null,
+      "last_attempt_at": null,
+      "details": {
+        "reason": "not_implemented"
+      }
+    }
+  },
+  "history": [
+    {
+      "at": "2026-10-27T13:49:48Z",
+      "status": "degraded",
+      "items": 28,
+      "new": 29,
+      "sources": {
+        "reddit": "disabled",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "数据源在配置中关闭",
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-10-27T14:08:55Z",
+      "status": "degraded",
+      "items": 28,
+      "new": 1,
+      "sources": {
+        "reddit": "disabled",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "数据源在配置中关闭",
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    }
+  ]
+}

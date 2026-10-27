@@ -8,9 +8,11 @@ venv/
 .mypy_cache/
 .ruff_cache/
 
-# Generated Pages payload.  data/feed.json is the committed source of truth;
-# the site copy is produced by scripts/build_feed.py --stage.
+# Generated Pages payload. data/gallery.json and data/health.json are the
+# committed source of truth; the site copies are produced by build_gallery.py.
 site/data/feed.json
+site/data/gallery.json
+site/data/health.json
 
 # Local scratch / probes
 .probe/

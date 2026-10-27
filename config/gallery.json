@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "timezone": "Asia/Shanghai",
+  "request": {
+    "timeout_seconds": 20,
+    "retries": 1,
+    "backoff_seconds": 6.0,
+    "min_interval_seconds": 2.0,
+    "image_min_interval_seconds": 0.35,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+  },
+  "reddit": {
+    "enabled": true,
+    "communities": [
+      "okbuddyretard",
+      "196",
+      "AnimalsBeingDerps"
+    ],
+    "feed": "new",
+    "max_age_hours": 72,
+    "limit": 25
+  },
+  "tieba": {
+    "enabled": true,
+    "max_topics": 3,
+    "max_threads_per_topic": 10,
+    "topic_keywords": [
+      "表情包",
+      "梗",
+      "搞笑",
+      "沙雕",
+      "抽象",
+      "整活",
+      "乐子",
+      "图吧",
+      "胶佬",
+      "神回复",
+      "段子",
+      "meme",
+      "二次元",
+      "动漫",
+      "游戏",
+      "离谱",
+      "翻车",
+      "名场面",
+      "吐槽"
+    ]
+  },
+  "trends": {
+    "enabled": true,
+    "sources": [
+      "weibo_hot",
+      "baidu_hot",
+      "toutiao_hot"
+    ],
+    "max_keywords": 12
+  },
+  "limits": {
+    "max_items": 300,
+    "retention_hours": 336,
+    "image_check_limit": 60,
+    "image_hash_limit": 35,
+    "image_max_bytes": 3145728
+  },
+  "planned": [
+    "x",
+    "bilibili",
+    "weibo"
+  ]
+}

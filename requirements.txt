@@ -1,5 +1,9 @@
-# Meme Radar runtime dependencies
+# Meme Radar gallery runtime dependencies
 #
-# Intentionally empty: the collector and site builder use only the Python 3.12
-# standard library.  Keeping this file makes the GitHub Actions setup explicit
-# and avoids pulling a large third-party stack into a public-data project.
+# The original text collector used only the standard library.  The image
+# gallery adds:
+# - Pillow: decode images and compute a perceptual dHash
+# - lxml: parse the public Tieba hot-topic HTML structure
+Pillow>=11,<13
+lxml>=5,<7
+jieba>=0.42,<1
