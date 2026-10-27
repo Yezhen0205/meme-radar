@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-27T14:14:51Z",
+  "updated_at": "2026-10-27T14:19:24Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-10-27T14:14:51Z",
+  "last_success_at": "2026-10-27T14:19:24Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 21,
+      "item_count": 23,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-27T14:14:51Z",
-      "last_attempt_at": "2026-10-27T14:14:51Z",
+      "last_success_at": "2026-10-27T14:19:24Z",
+      "last_attempt_at": "2026-10-27T14:19:24Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,8 +23,8 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 21,
-        "no_image": 4,
+        "with_images": 23,
+        "no_image": 2,
         "skipped_old": 0
       }
     },
@@ -34,8 +34,8 @@
       "item_count": 29,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-27T14:14:51Z",
-      "last_attempt_at": "2026-10-27T14:14:51Z",
+      "last_success_at": "2026-10-27T14:19:24Z",
+      "last_attempt_at": "2026-10-27T14:19:24Z",
       "details": {
         "topics": [
           {
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-27T14:14:51Z",
-      "last_attempt_at": "2026-10-27T14:14:51Z",
+      "last_success_at": "2026-10-27T14:19:24Z",
+      "last_attempt_at": "2026-10-27T14:19:24Z",
       "details": {}
     },
     "x": {
@@ -148,6 +148,21 @@
       "status": "degraded",
       "items": 49,
       "new": 22,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-10-27T14:19:24Z",
+      "status": "degraded",
+      "items": 53,
+      "new": 5,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
