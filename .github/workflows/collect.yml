@@ -42,12 +42,19 @@ jobs:
       # Deliberately continue after a collector failure so one pipeline cannot
       # erase or block the other data file.  Each collector writes its own file.
       - name: Collect text feed
+        id: text
         continue-on-error: true
         run: python -m collector.collect --output data/text.json
 
       - name: Collect image gallery
+        id: gallery
         continue-on-error: true
         run: python -m gallery.collect
+
+      - name: Warn when a collector process failed
+        if: steps.text.outcome == 'failure' || steps.gallery.outcome == 'failure'
+        run: |
+          echo "::warning title=Meme Radar collector process::A collector process failed; its previous data file is retained and the other collector continues."
 
       - name: Validate and stage gallery
         run: python scripts/build_gallery.py --check --stage --summary
