@@ -1,21 +1,31 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-27T14:08:55Z",
+  "updated_at": "2026-10-27T14:14:51Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-10-27T14:08:55Z",
+  "last_success_at": "2026-10-27T14:14:51Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
-      "status": "disabled",
-      "item_count": 0,
-      "error": "数据源在配置中关闭",
+      "status": "ok",
+      "item_count": 21,
+      "error": null,
       "consecutive_failures": 0,
-      "last_success_at": null,
-      "last_attempt_at": "2026-10-27T14:08:55Z",
+      "last_success_at": "2026-10-27T14:14:51Z",
+      "last_attempt_at": "2026-10-27T14:14:51Z",
       "details": {
-        "reason": "disabled"
+        "communities": [
+          "okbuddyretard",
+          "196",
+          "AnimalsBeingDerps"
+        ],
+        "feed": "new",
+        "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
+        "entries": 25,
+        "with_images": 21,
+        "no_image": 4,
+        "skipped_old": 0
       }
     },
     "tieba": {
@@ -24,8 +34,8 @@
       "item_count": 29,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-27T14:08:55Z",
-      "last_attempt_at": "2026-10-27T14:08:55Z",
+      "last_success_at": "2026-10-27T14:14:51Z",
+      "last_attempt_at": "2026-10-27T14:14:51Z",
       "details": {
         "topics": [
           {
@@ -56,11 +66,11 @@
     "trends": {
       "name": "公开热点榜",
       "status": "ok",
-      "item_count": 9,
+      "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-27T14:08:55Z",
-      "last_attempt_at": "2026-10-27T14:08:55Z",
+      "last_success_at": "2026-10-27T14:14:51Z",
+      "last_attempt_at": "2026-10-27T14:14:51Z",
       "details": {}
     },
     "x": {
@@ -129,6 +139,21 @@
       },
       "errors": [
         "数据源在配置中关闭",
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-10-27T14:14:51Z",
+      "status": "degraded",
+      "items": 49,
+      "new": 22,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
         "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
       ],
       "broken_images": 0

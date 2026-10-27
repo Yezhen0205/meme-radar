@@ -6,29 +6,39 @@
     "tagline": "Reddit × 百度贴吧，真实的梗图瀑布流。"
   },
   "timezone": "Asia/Shanghai",
-  "generated_at": "2026-10-27T14:08:55Z",
-  "checked_at": "2026-10-27T14:08:55Z",
+  "generated_at": "2026-10-27T14:14:51Z",
+  "checked_at": "2026-10-27T14:14:51Z",
   "stale": false,
   "stale_reason": null,
   "partial": true,
   "health": {
     "schema_version": 1,
-    "updated_at": "2026-10-27T14:08:55Z",
+    "updated_at": "2026-10-27T14:14:51Z",
     "status": "degraded",
     "consecutive_failures": 0,
-    "last_success_at": "2026-10-27T14:08:55Z",
+    "last_success_at": "2026-10-27T14:14:51Z",
     "alerts": [],
     "sources": {
       "reddit": {
         "name": "reddit",
-        "status": "disabled",
-        "item_count": 0,
-        "error": "数据源在配置中关闭",
+        "status": "ok",
+        "item_count": 21,
+        "error": null,
         "consecutive_failures": 0,
-        "last_success_at": null,
-        "last_attempt_at": "2026-10-27T14:08:55Z",
+        "last_success_at": "2026-10-27T14:14:51Z",
+        "last_attempt_at": "2026-10-27T14:14:51Z",
         "details": {
-          "reason": "disabled"
+          "communities": [
+            "okbuddyretard",
+            "196",
+            "AnimalsBeingDerps"
+          ],
+          "feed": "new",
+          "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
+          "entries": 25,
+          "with_images": 21,
+          "no_image": 4,
+          "skipped_old": 0
         }
       },
       "tieba": {
@@ -37,8 +47,8 @@
         "item_count": 29,
         "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
         "consecutive_failures": 0,
-        "last_success_at": "2026-10-27T14:08:55Z",
-        "last_attempt_at": "2026-10-27T14:08:55Z",
+        "last_success_at": "2026-10-27T14:14:51Z",
+        "last_attempt_at": "2026-10-27T14:14:51Z",
         "details": {
           "topics": [
             {
@@ -69,11 +79,11 @@
       "trends": {
         "name": "公开热点榜",
         "status": "ok",
-        "item_count": 9,
+        "item_count": 12,
         "error": null,
         "consecutive_failures": 0,
-        "last_success_at": "2026-10-27T14:08:55Z",
-        "last_attempt_at": "2026-10-27T14:08:55Z",
+        "last_success_at": "2026-10-27T14:14:51Z",
+        "last_attempt_at": "2026-10-27T14:14:51Z",
         "details": {}
       },
       "x": {
@@ -145,6 +155,21 @@
           "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
         ],
         "broken_images": 0
+      },
+      {
+        "at": "2026-10-27T14:14:51Z",
+        "status": "degraded",
+        "items": 49,
+        "new": 22,
+        "sources": {
+          "reddit": "ok",
+          "tieba": "degraded",
+          "trends": "ok"
+        },
+        "errors": [
+          "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+        ],
+        "broken_images": 0
       }
     ]
   },
@@ -152,7 +177,7 @@
     "status": "ok",
     "keywords": [
       {
-        "word": "姆巴佩",
+        "word": "姆巴",
         "count": 23,
         "sources": [
           "hot"
@@ -168,7 +193,7 @@
         "score": 7
       },
       {
-        "word": "孙颖莎",
+        "word": "道歉",
         "count": 4,
         "sources": [
           "hot"
@@ -184,7 +209,7 @@
         "score": 4
       },
       {
-        "word": "央视",
+        "word": "总统",
         "count": 4,
         "sources": [
           "hot"
@@ -192,36 +217,60 @@
         "score": 4
       },
       {
-        "word": "西甲致歉",
-        "count": 2,
+        "word": "外交部",
+        "count": 3,
         "sources": [
           "hot"
         ],
-        "score": 2
+        "score": 3
       },
       {
-        "word": "光明日报",
-        "count": 2,
+        "word": "良方",
+        "count": 3,
         "sources": [
           "hot"
         ],
-        "score": 2
+        "score": 3
       },
       {
-        "word": "交涉",
-        "count": 2,
+        "word": "小城",
+        "count": 3,
         "sources": [
           "hot"
         ],
-        "score": 2
+        "score": 3
       },
       {
-        "word": "不实",
-        "count": 2,
+        "word": "致歉",
+        "count": 3,
         "sources": [
           "hot"
         ],
-        "score": 2
+        "score": 3
+      },
+      {
+        "word": "丈夫",
+        "count": 3,
+        "sources": [
+          "hot"
+        ],
+        "score": 3
+      },
+      {
+        "word": "取关",
+        "count": 3,
+        "sources": [
+          "hot"
+        ],
+        "score": 3
+      },
+      {
+        "word": "可能",
+        "count": 3,
+        "sources": [
+          "hot"
+        ],
+        "score": 3
       }
     ],
     "sources": [
@@ -249,15 +298,27 @@
   "sources": [
     {
       "source": "reddit",
-      "status": "disabled",
-      "item_count": 0,
-      "error": "数据源在配置中关闭",
+      "status": "ok",
+      "item_count": 21,
+      "error": null,
       "details": {
-        "reason": "disabled"
+        "communities": [
+          "okbuddyretard",
+          "196",
+          "AnimalsBeingDerps"
+        ],
+        "feed": "new",
+        "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
+        "entries": 25,
+        "with_images": 21,
+        "no_image": 4,
+        "skipped_old": 0
       },
       "stats": {
-        "fetched": 0,
-        "with_images": 0
+        "fetched": 25,
+        "with_images": 21,
+        "no_image": 4,
+        "skipped_old": 0
       },
       "name": "Reddit"
     },
@@ -303,7 +364,7 @@
       "source": "trends",
       "name": "公开热点榜",
       "status": "ok",
-      "item_count": 9,
+      "item_count": 12,
       "error": null,
       "details": {
         "sources": [
@@ -328,7 +389,7 @@
         ]
       },
       "stats": {
-        "keywords": 9
+        "keywords": 12
       }
     },
     {
@@ -368,16 +429,16 @@
   "run": {
     "ok": true,
     "status": "degraded",
-    "items_new": 1,
-    "items_updated": 5,
-    "items_total": 28,
+    "items_new": 22,
+    "items_updated": 4,
+    "items_total": 49,
     "duplicate_posts": 0,
     "groups": 1,
-    "images_checked": 29,
+    "images_checked": 50,
     "images_broken": 0,
-    "images_hashed": 3,
-    "duration_ms": 0,
-    "sources_ok": 1,
+    "images_hashed": 22,
+    "duration_ms": 36963,
+    "sources_ok": 2,
     "sources_blocked": 0
   },
   "settings": {
@@ -386,6 +447,118 @@
     "image_check_limit": 60
   },
   "items": [
+    {
+      "id": "tieba:308c55f4d4d53983",
+      "source": "tieba",
+      "source_id": "11130337039",
+      "source_name": "百度贴吧",
+      "community": "图拉丁吧",
+      "title": "我宣布！图吧2026年度垃圾佬评选正式开始！#图吧垃圾佬#",
+      "summary": "今年这帮垃圾佬整的活，一个比一个逆天。 楼主爬了全站垃圾佬的帖，按血赚程度排了个序，本帖可能是全贴吧最全的垃圾佬年度封神榜。来，大伙一起给他们打昏👇 5分：神中神，分币不花捡个祖宗，垃圾佬天花板 4分：血赚，看得我连夜想冲废品站 3分：中规中矩##，如捡 2分：乐色，捡了个寂寞 1分：史，这也好意思叫捡漏？ 0分：史中史，加钱都不如直接买新的",
+      "post_url": "https://tieba.baidu.com/p/11130337039",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=01bbc509f73533faf5b6932698d2fdca/d21b0ef41bd5ad6ec5a728edc7cb39dbb6fd3c5e.jpg?tbpicau=2026-10-29-05_1b3d0285aa642da6e2729b8cfb27c310",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=229043b0af50352ab161270a63788acf/d21b0ef41bd5ad6ec5a728edc7cb39dbb6fd3c5e.jpg?tbpicau=2026-10-29-05_d4d52923533002f6c03cfd56ba23d23a",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=01bbc509f73533faf5b6932698d2fdca/d21b0ef41bd5ad6ec5a728edc7cb39dbb6fd3c5e.jpg?tbpicau=2026-10-29-05_1b3d0285aa642da6e2729b8cfb27c310",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=229043b0af50352ab161270a63788acf/d21b0ef41bd5ad6ec5a728edc7cb39dbb6fd3c5e.jpg?tbpicau=2026-10-29-05_d4d52923533002f6c03cfd56ba23d23a",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=ef29b2d830094b36db921be593cd7c00/9925bc315c6034a8805bf4868d13495409237678.jpg?tbpicau=2026-10-29-05_2a1cb0837c2d714dbb5455d9e67f6076",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=dc8c02c34cd162d985ee601e21e4d8d1/9925bc315c6034a8805bf4868d13495409237678.jpg?tbpicau=2026-10-29-05_083fe3332d63cbaf29ff8302c7743189",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d17f489a8def76093c0b99971edca301/e0fe9925bc315c60e92327e8cbb1cb1349547707.jpg?tbpicau=2026-10-29-05_05ba15ae1a8e7842dbdc20126b429616",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=d7f07b3f3df40ad115e4c5e1671760e2/e0fe9925bc315c60e92327e8cbb1cb1349547707.jpg?tbpicau=2026-10-29-05_c420f8aecc93758fdd40612251b8068b",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-10-27T13:49:48Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 183,
+      "tags": [
+        "贴吧",
+        "图吧垃圾佬",
+        "图拉丁吧"
+      ],
+      "content_hash": "db329a05350ddd3167c5ac5ec5ac0e1236b95383",
+      "image_hash": "b4339be661c8381b",
+      "image_id": "18e1759d25e84105",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T13:49:48Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 580,
+      "rank_score": 152.5,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "15ee62d1a7f2",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "image_fallback": null,
+      "trending": [
+        "可能"
+      ]
+    },
+    {
+      "id": "tieba:1bd9a6b6ac8ad615",
+      "source": "tieba",
+      "source_id": "11130724384",
+      "source_name": "百度贴吧",
+      "community": "高达模型吧",
+      "title": "如果万代这个脸改成这样",
+      "summary": "出MG那我真可能考虑买了😋",
+      "post_url": "https://tieba.baidu.com/p/11130724384",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=de8bc8e9da82d158bb8259b9b00b19d5/3f9a80eef01f3a2922779bc9df25bc315d607c4c.jpg?tbpicau=2026-10-29-05_ce3e320c9f08829ecae8a05c46e0da8d",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0cb920828fea15ce41eee20b863b4bce/3f9a80eef01f3a2922779bc9df25bc315d607c4c.jpg?tbpicau=2026-10-29-05_6f317d0ec0d269301c08469776fab8d5",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=de8bc8e9da82d158bb8259b9b00b19d5/3f9a80eef01f3a2922779bc9df25bc315d607c4c.jpg?tbpicau=2026-10-29-05_ce3e320c9f08829ecae8a05c46e0da8d",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0cb920828fea15ce41eee20b863b4bce/3f9a80eef01f3a2922779bc9df25bc315d607c4c.jpg?tbpicau=2026-10-29-05_6f317d0ec0d269301c08469776fab8d5",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-10-27T13:49:48Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 120,
+      "tags": [
+        "贴吧",
+        "胶佬炫技,高达爆改房车",
+        "高达模型吧"
+      ],
+      "content_hash": "88d4f4041f68169f8e87d7da0193e5f71e815e2d",
+      "image_hash": "0210c6d4c4e6e4e4",
+      "image_id": "7beb490765d92375",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:08:55Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 387,
+      "rank_score": 149.2,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "2f1ef286eaff",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "image_fallback": null,
+      "trending": [
+        "可能"
+      ]
+    },
     {
       "id": "tieba:4c53e153c0966277",
       "source": "tieba",
@@ -478,7 +651,7 @@
       "collected_at": "2026-10-27T13:49:48Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 478,
+      "comment_count": 481,
       "tags": [
         "贴吧",
         "表情包大赛,滑稽出征寸草不生",
@@ -707,7 +880,7 @@
       "collected_at": "2026-10-27T13:49:48Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 259,
+      "comment_count": 261,
       "tags": [
         "贴吧",
         "表情包大赛,滑稽出征寸草不生",
@@ -755,7 +928,7 @@
       "collected_at": "2026-10-27T13:49:48Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 247,
+      "comment_count": 249,
       "tags": [
         "贴吧",
         "表情包大赛,滑稽出征寸草不生",
@@ -778,6 +951,7 @@
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -831,7 +1005,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1032,
-      "rank_score": 141.3,
+      "rank_score": 141.2,
       "rank_basis": "recency+comments",
       "group_id": "10704e93a2ca",
       "group_size": 1,
@@ -891,7 +1065,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 773,
-      "rank_score": 141.2,
+      "rank_score": 141.1,
       "rank_basis": "recency+comments",
       "group_id": "20cd31da0a80",
       "group_size": 1,
@@ -951,69 +1125,9 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1038,
-      "rank_score": 140.9,
+      "rank_score": 140.8,
       "rank_basis": "recency+comments",
       "group_id": "46a36e5fe70f",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "image_fallback": null,
-      "trending": []
-    },
-    {
-      "id": "tieba:308c55f4d4d53983",
-      "source": "tieba",
-      "source_id": "11130337039",
-      "source_name": "百度贴吧",
-      "community": "图拉丁吧",
-      "title": "我宣布！图吧2026年度垃圾佬评选正式开始！#图吧垃圾佬#",
-      "summary": "今年这帮垃圾佬整的活，一个比一个逆天。 楼主爬了全站垃圾佬的帖，按血赚程度排了个序，本帖可能是全贴吧最全的垃圾佬年度封神榜。来，大伙一起给他们打昏👇 5分：神中神，分币不花捡个祖宗，垃圾佬天花板 4分：血赚，看得我连夜想冲废品站 3分：中规中矩##，如捡 2分：乐色，捡了个寂寞 1分：史，这也好意思叫捡漏？ 0分：史中史，加钱都不如直接买新的",
-      "post_url": "https://tieba.baidu.com/p/11130337039",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=01bbc509f73533faf5b6932698d2fdca/d21b0ef41bd5ad6ec5a728edc7cb39dbb6fd3c5e.jpg?tbpicau=2026-10-29-05_1b3d0285aa642da6e2729b8cfb27c310",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=229043b0af50352ab161270a63788acf/d21b0ef41bd5ad6ec5a728edc7cb39dbb6fd3c5e.jpg?tbpicau=2026-10-29-05_d4d52923533002f6c03cfd56ba23d23a",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=01bbc509f73533faf5b6932698d2fdca/d21b0ef41bd5ad6ec5a728edc7cb39dbb6fd3c5e.jpg?tbpicau=2026-10-29-05_1b3d0285aa642da6e2729b8cfb27c310",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=229043b0af50352ab161270a63788acf/d21b0ef41bd5ad6ec5a728edc7cb39dbb6fd3c5e.jpg?tbpicau=2026-10-29-05_d4d52923533002f6c03cfd56ba23d23a",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=ef29b2d830094b36db921be593cd7c00/9925bc315c6034a8805bf4868d13495409237678.jpg?tbpicau=2026-10-29-05_2a1cb0837c2d714dbb5455d9e67f6076",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=dc8c02c34cd162d985ee601e21e4d8d1/9925bc315c6034a8805bf4868d13495409237678.jpg?tbpicau=2026-10-29-05_083fe3332d63cbaf29ff8302c7743189",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d17f489a8def76093c0b99971edca301/e0fe9925bc315c60e92327e8cbb1cb1349547707.jpg?tbpicau=2026-10-29-05_05ba15ae1a8e7842dbdc20126b429616",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=d7f07b3f3df40ad115e4c5e1671760e2/e0fe9925bc315c60e92327e8cbb1cb1349547707.jpg?tbpicau=2026-10-29-05_c420f8aecc93758fdd40612251b8068b",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-10-27T13:49:48Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 183,
-      "tags": [
-        "贴吧",
-        "图吧垃圾佬",
-        "图拉丁吧"
-      ],
-      "content_hash": "db329a05350ddd3167c5ac5ec5ac0e1236b95383",
-      "image_hash": "b4339be661c8381b",
-      "image_id": "18e1759d25e84105",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-10-27T13:49:48Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 580,
-      "rank_score": 140.6,
-      "rank_basis": "recency+comments",
-      "group_id": "15ee62d1a7f2",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -1043,7 +1157,7 @@
       "collected_at": "2026-10-27T13:49:48Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 178,
+      "comment_count": 179,
       "tags": [
         "贴吧",
         "表情包大赛,滑稽出征寸草不生",
@@ -1059,7 +1173,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 387,
-      "rank_score": 140.4,
+      "rank_score": 140.3,
       "rank_basis": "recency+comments",
       "group_id": "188f5738d873",
       "group_size": 1,
@@ -1126,53 +1240,6 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
-    },
-    {
-      "id": "tieba:1bd9a6b6ac8ad615",
-      "source": "tieba",
-      "source_id": "11130724384",
-      "source_name": "百度贴吧",
-      "community": "高达模型吧",
-      "title": "如果万代这个脸改成这样",
-      "summary": "出MG那我真可能考虑买了😋",
-      "post_url": "https://tieba.baidu.com/p/11130724384",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=de8bc8e9da82d158bb8259b9b00b19d5/3f9a80eef01f3a2922779bc9df25bc315d607c4c.jpg?tbpicau=2026-10-29-05_ce3e320c9f08829ecae8a05c46e0da8d",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0cb920828fea15ce41eee20b863b4bce/3f9a80eef01f3a2922779bc9df25bc315d607c4c.jpg?tbpicau=2026-10-29-05_6f317d0ec0d269301c08469776fab8d5",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=de8bc8e9da82d158bb8259b9b00b19d5/3f9a80eef01f3a2922779bc9df25bc315d607c4c.jpg?tbpicau=2026-10-29-05_ce3e320c9f08829ecae8a05c46e0da8d",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0cb920828fea15ce41eee20b863b4bce/3f9a80eef01f3a2922779bc9df25bc315d607c4c.jpg?tbpicau=2026-10-29-05_6f317d0ec0d269301c08469776fab8d5",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-10-27T13:49:48Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 120,
-      "tags": [
-        "贴吧",
-        "胶佬炫技,高达爆改房车",
-        "高达模型吧"
-      ],
-      "content_hash": "88d4f4041f68169f8e87d7da0193e5f71e815e2d",
-      "image_hash": "0210c6d4c4e6e4e4",
-      "image_id": "7beb490765d92375",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-10-27T14:08:55Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 387,
-      "rank_score": 137.3,
-      "rank_basis": "recency+comments",
-      "group_id": "2f1ef286eaff",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
       "trending": []
     },
     {
@@ -1286,7 +1353,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 134.9,
+      "rank_score": 134.8,
       "rank_basis": "recency+comments",
       "group_id": "7d8b192a07eb",
       "group_size": 1,
@@ -1335,7 +1402,7 @@
       "image_error": null,
       "image_width": 320,
       "image_height": 320,
-      "rank_score": 131.6,
+      "rank_score": 131.5,
       "rank_basis": "recency+comments",
       "group_id": "d0148a9cebeb",
       "group_size": 1,
@@ -1571,7 +1638,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1032,
-      "rank_score": 129.6,
+      "rank_score": 129.5,
       "rank_basis": "recency+comments",
       "group_id": "6531f6888179",
       "group_size": 1,
@@ -1631,7 +1698,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 869,
-      "rank_score": 125.9,
+      "rank_score": 125.8,
       "rank_basis": "recency+comments",
       "group_id": "bb074d6113c2",
       "group_size": 1,
@@ -1871,7 +1938,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 108.4,
+      "rank_score": 108.3,
       "rank_basis": "recency+comments",
       "group_id": "1c95f2158cc7",
       "group_size": 1,
@@ -1992,6 +2059,993 @@
       "related": [],
       "source_stale": false,
       "image_fallback": null,
+      "trending": []
+    },
+    {
+      "id": "reddit:b10740940a939e6d",
+      "source": "reddit",
+      "source_id": "1xgtnp6",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Rule",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgtnp6/rule/",
+      "image_url": "https://preview.redd.it/l0map34sp0yh1.jpeg?width=216&crop=smart&auto=webp&s=2a768a345722926fa556121eb73522ebbc38853f",
+      "thumbnail_url": "https://preview.redd.it/l0map34sp0yh1.jpeg?width=216&crop=smart&auto=webp&s=2a768a345722926fa556121eb73522ebbc38853f",
+      "images": [
+        {
+          "url": "https://preview.redd.it/l0map34sp0yh1.jpeg?width=216&crop=smart&auto=webp&s=2a768a345722926fa556121eb73522ebbc38853f",
+          "thumbnail_url": "https://preview.redd.it/l0map34sp0yh1.jpeg?width=216&crop=smart&auto=webp&s=2a768a345722926fa556121eb73522ebbc38853f",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T14:13:12Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "40bde0ba751a99d4b6594d82d3476a9bd6049d93",
+      "image_hash": "3b3f8e9c4b4a929c",
+      "image_id": "ee04f2dd49674034",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 216,
+      "image_height": 235,
+      "rank_score": 100.0,
+      "rank_basis": "recency",
+      "group_id": "46f7d0b748b2",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:9ef68dbe6a6932d2",
+      "source": "reddit",
+      "source_id": "1xgtlww",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "pain and suffering for the AA fans",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgtlww/pain_and_suffering_for_the_aa_fans/",
+      "image_url": "https://preview.redd.it/p32mht3fp0yh1.png?width=640&crop=smart&auto=webp&s=74f1b8abc5b4388b39ead87a817f12998b6725c0",
+      "thumbnail_url": "https://preview.redd.it/p32mht3fp0yh1.png?width=640&crop=smart&auto=webp&s=74f1b8abc5b4388b39ead87a817f12998b6725c0",
+      "images": [
+        {
+          "url": "https://preview.redd.it/p32mht3fp0yh1.png?width=640&crop=smart&auto=webp&s=74f1b8abc5b4388b39ead87a817f12998b6725c0",
+          "thumbnail_url": "https://preview.redd.it/p32mht3fp0yh1.png?width=640&crop=smart&auto=webp&s=74f1b8abc5b4388b39ead87a817f12998b6725c0",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T14:11:12Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "47b3dad0849baa5fb8e44df85a442ac34ab18bd7",
+      "image_hash": "c4ac2ca48c18d0c4",
+      "image_id": "cb12289b5c44b8c8",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 590,
+      "rank_score": 100.0,
+      "rank_basis": "recency",
+      "group_id": "7b3cc87b01f8",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:d4d13808e78bfdb4",
+      "source": "reddit",
+      "source_id": "1xgtfo8",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "everyday story...",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgtfo8/everyday_story/",
+      "image_url": "https://preview.redd.it/mgs8uii5o0yh1.jpeg?width=640&crop=smart&auto=webp&s=eeec855848a3f9e8bd1e747cbbca349e2d307ca3",
+      "thumbnail_url": "https://preview.redd.it/mgs8uii5o0yh1.jpeg?width=640&crop=smart&auto=webp&s=eeec855848a3f9e8bd1e747cbbca349e2d307ca3",
+      "images": [
+        {
+          "url": "https://preview.redd.it/mgs8uii5o0yh1.jpeg?width=640&crop=smart&auto=webp&s=eeec855848a3f9e8bd1e747cbbca349e2d307ca3",
+          "thumbnail_url": "https://preview.redd.it/mgs8uii5o0yh1.jpeg?width=640&crop=smart&auto=webp&s=eeec855848a3f9e8bd1e747cbbca349e2d307ca3",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T14:04:24Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "11e431630434471e677cb411021241b99748d44b",
+      "image_hash": "00b0361a79801000",
+      "image_id": "bddc9aec7bfefc35",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 1134,
+      "rank_score": 99.9,
+      "rank_basis": "recency",
+      "group_id": "294195c3ceb7",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:70a431ea0b41d39b",
+      "source": "reddit",
+      "source_id": "1xgtbu1",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Rule",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgtbu1/rule/",
+      "image_url": "https://preview.redd.it/62bf2zrin0yh1.jpeg?width=216&crop=smart&auto=webp&s=57c918bf37b837c0f3a01b225577a8ace31d3bb5",
+      "thumbnail_url": "https://preview.redd.it/62bf2zrin0yh1.jpeg?width=216&crop=smart&auto=webp&s=57c918bf37b837c0f3a01b225577a8ace31d3bb5",
+      "images": [
+        {
+          "url": "https://preview.redd.it/62bf2zrin0yh1.jpeg?width=216&crop=smart&auto=webp&s=57c918bf37b837c0f3a01b225577a8ace31d3bb5",
+          "thumbnail_url": "https://preview.redd.it/62bf2zrin0yh1.jpeg?width=216&crop=smart&auto=webp&s=57c918bf37b837c0f3a01b225577a8ace31d3bb5",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T14:00:24Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "28ebcb381fe49296e25cca1c9f53f9ff510f8d02",
+      "image_hash": "0090b80402d49486",
+      "image_id": "89ed4239681efd36",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 216,
+      "image_height": 110,
+      "rank_score": 99.9,
+      "rank_basis": "recency",
+      "group_id": "d6da32654a72",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:03ce34bf66fa4c05",
+      "source": "reddit",
+      "source_id": "1xgt9b6",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "This year’s pumpkin rule",
+      "summary": "Ronova eyes pumpkin [留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgt9b6/this_years_pumpkin_rule/",
+      "image_url": "https://preview.redd.it/jgux67p0n0yh1.jpeg?width=140&height=140&crop=1:1,smart&auto=webp&s=410becc5f89bea5e9f3a82777dd55fbd3d1b3b95",
+      "thumbnail_url": "https://preview.redd.it/jgux67p0n0yh1.jpeg?width=140&height=140&crop=1:1,smart&auto=webp&s=410becc5f89bea5e9f3a82777dd55fbd3d1b3b95",
+      "images": [
+        {
+          "url": "https://preview.redd.it/jgux67p0n0yh1.jpeg?width=140&height=140&crop=1:1,smart&auto=webp&s=410becc5f89bea5e9f3a82777dd55fbd3d1b3b95",
+          "thumbnail_url": "https://preview.redd.it/jgux67p0n0yh1.jpeg?width=140&height=140&crop=1:1,smart&auto=webp&s=410becc5f89bea5e9f3a82777dd55fbd3d1b3b95",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T13:57:41Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "9eba11265c847ef1ea42fa0ad062f43f8cc8fd22",
+      "image_hash": "83cc4d1e0f01060e",
+      "image_id": "deba5d24d027b270",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 140,
+      "image_height": 140,
+      "rank_score": 99.8,
+      "rank_basis": "recency",
+      "group_id": "150a9ea7d908",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:71956a0ae036ea9d",
+      "source": "reddit",
+      "source_id": "1xgs0r8",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Some of these guys really live up to their acronym",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgs0r8/some_of_these_guys_really_live_up_to_their_acronym/",
+      "image_url": "https://preview.redd.it/sq06nzfwd0yh1.png?width=640&crop=smart&auto=webp&s=c8a93a0ae2a9a9191a72172bf4fcc3b9fb217c61",
+      "thumbnail_url": "https://preview.redd.it/sq06nzfwd0yh1.png?width=640&crop=smart&auto=webp&s=c8a93a0ae2a9a9191a72172bf4fcc3b9fb217c61",
+      "images": [
+        {
+          "url": "https://preview.redd.it/sq06nzfwd0yh1.png?width=640&crop=smart&auto=webp&s=c8a93a0ae2a9a9191a72172bf4fcc3b9fb217c61",
+          "thumbnail_url": "https://preview.redd.it/sq06nzfwd0yh1.png?width=640&crop=smart&auto=webp&s=c8a93a0ae2a9a9191a72172bf4fcc3b9fb217c61",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T13:06:30Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "49a3f42374ccec173f56631a9855efc0b394bcac",
+      "image_hash": "9999d96b368c1696",
+      "image_id": "c9d77214507d5b2c",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 650,
+      "rank_score": 99.3,
+      "rank_basis": "recency",
+      "group_id": "0dda9c270be8",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:4d9fb2c61918d8f1",
+      "source": "reddit",
+      "source_id": "1xgrvst",
+      "source_name": "Reddit",
+      "community": "r/okbuddyretard",
+      "title": "Helo",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/okbuddyretard/comments/1xgrvst/helo/",
+      "image_url": "https://preview.redd.it/jvj6bxmvc0yh1.jpeg?width=640&crop=smart&auto=webp&s=db1c3e9c210d09692c464ce1a126d1ab79ead14c",
+      "thumbnail_url": "https://preview.redd.it/jvj6bxmvc0yh1.jpeg?width=640&crop=smart&auto=webp&s=db1c3e9c210d09692c464ce1a126d1ab79ead14c",
+      "images": [
+        {
+          "url": "https://preview.redd.it/jvj6bxmvc0yh1.jpeg?width=640&crop=smart&auto=webp&s=db1c3e9c210d09692c464ce1a126d1ab79ead14c",
+          "thumbnail_url": "https://preview.redd.it/jvj6bxmvc0yh1.jpeg?width=640&crop=smart&auto=webp&s=db1c3e9c210d09692c464ce1a126d1ab79ead14c",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T13:00:44Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/okbuddyretard",
+        "reddit",
+        "okbuddyretard"
+      ],
+      "content_hash": "493472fe94b9f816ba0916770c4ef66145cc7443",
+      "image_hash": "16323930783c1a97",
+      "image_id": "0066b3e7044afe68",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 359,
+      "rank_score": 99.3,
+      "rank_basis": "recency",
+      "group_id": "8e4c25734b89",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:a36511bf851ac282",
+      "source": "reddit",
+      "source_id": "1xgrkf2",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "At least I'd farm aura rule",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgrkf2/at_least_id_farm_aura_rule/",
+      "image_url": "https://preview.redd.it/j189yu8da0yh1.jpeg?width=320&crop=smart&auto=webp&s=772c798b7a3b1384a41d900be7a27e3e9c8e2c7b",
+      "thumbnail_url": "https://preview.redd.it/j189yu8da0yh1.jpeg?width=320&crop=smart&auto=webp&s=772c798b7a3b1384a41d900be7a27e3e9c8e2c7b",
+      "images": [
+        {
+          "url": "https://preview.redd.it/j189yu8da0yh1.jpeg?width=320&crop=smart&auto=webp&s=772c798b7a3b1384a41d900be7a27e3e9c8e2c7b",
+          "thumbnail_url": "https://preview.redd.it/j189yu8da0yh1.jpeg?width=320&crop=smart&auto=webp&s=772c798b7a3b1384a41d900be7a27e3e9c8e2c7b",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T12:46:42Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "b7ba7c8d2136047885a4f4dc99f6a55fceae59e8",
+      "image_hash": "dcec64e0f1d4dc7c",
+      "image_id": "b31ccad5288784da",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 320,
+      "image_height": 572,
+      "rank_score": 99.1,
+      "rank_basis": "recency",
+      "group_id": "4e8eef4ad34d",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:a7cd5e5f0cfd0b3f",
+      "source": "reddit",
+      "source_id": "1xgramd",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Rule",
+      "summary": "What i think every time i hear or see people say \"it gets better\". Almost 30 and it hasn't gotten better, just got different. [留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgramd/rule/",
+      "image_url": "https://preview.redd.it/ogqoyep180yh1.jpeg?width=640&crop=smart&auto=webp&s=016cd1f227b1134343871fbee07a8e367b944580",
+      "thumbnail_url": "https://preview.redd.it/ogqoyep180yh1.jpeg?width=640&crop=smart&auto=webp&s=016cd1f227b1134343871fbee07a8e367b944580",
+      "images": [
+        {
+          "url": "https://preview.redd.it/ogqoyep180yh1.jpeg?width=640&crop=smart&auto=webp&s=016cd1f227b1134343871fbee07a8e367b944580",
+          "thumbnail_url": "https://preview.redd.it/ogqoyep180yh1.jpeg?width=640&crop=smart&auto=webp&s=016cd1f227b1134343871fbee07a8e367b944580",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T12:33:40Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "e191053343243f6078a553226d14586a5ef7da17",
+      "image_hash": "3070b2b230927078",
+      "image_id": "bebf53867b552c98",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 477,
+      "rank_score": 99.0,
+      "rank_basis": "recency",
+      "group_id": "90a9ef8c66d1",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:acf2423de81ff654",
+      "source": "reddit",
+      "source_id": "1xgqvkp",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "science",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgqvkp/science/",
+      "image_url": "https://preview.redd.it/skfoflhg40yh1.jpeg?width=320&crop=smart&auto=webp&s=4e4572534ff8631f1ed6c5695fa827993939a4a9",
+      "thumbnail_url": "https://preview.redd.it/skfoflhg40yh1.jpeg?width=320&crop=smart&auto=webp&s=4e4572534ff8631f1ed6c5695fa827993939a4a9",
+      "images": [
+        {
+          "url": "https://preview.redd.it/skfoflhg40yh1.jpeg?width=320&crop=smart&auto=webp&s=4e4572534ff8631f1ed6c5695fa827993939a4a9",
+          "thumbnail_url": "https://preview.redd.it/skfoflhg40yh1.jpeg?width=320&crop=smart&auto=webp&s=4e4572534ff8631f1ed6c5695fa827993939a4a9",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T12:13:37Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "0f8e5733d9e8e75f4c2e10abd12cd4f3cf9760d9",
+      "image_hash": "8080200a04caa250",
+      "image_id": "e7a11b15d2e9c13a",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 320,
+      "image_height": 346,
+      "rank_score": 98.8,
+      "rank_basis": "recency",
+      "group_id": "903de000726e",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:c7cc36da1f69d7f3",
+      "source": "reddit",
+      "source_id": "1xgquzh",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Fruitger Aero Rule",
+      "summary": "another day another waking up miserable until (if) i find something sufficient enough to distract me until i attempt to fall asleep again. maybe i should take my therapist up on that psychiatrist referral even though ssris seem scary as fuck [留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgquzh/fruitger_aero_rule/",
+      "image_url": "https://preview.redd.it/pqvpjigb40yh1.jpeg?width=640&crop=smart&auto=webp&s=e6260f8df30e22991aab3bbe930cbf7b261d3ff7",
+      "thumbnail_url": "https://preview.redd.it/pqvpjigb40yh1.jpeg?width=640&crop=smart&auto=webp&s=e6260f8df30e22991aab3bbe930cbf7b261d3ff7",
+      "images": [
+        {
+          "url": "https://preview.redd.it/pqvpjigb40yh1.jpeg?width=640&crop=smart&auto=webp&s=e6260f8df30e22991aab3bbe930cbf7b261d3ff7",
+          "thumbnail_url": "https://preview.redd.it/pqvpjigb40yh1.jpeg?width=640&crop=smart&auto=webp&s=e6260f8df30e22991aab3bbe930cbf7b261d3ff7",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T12:12:46Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "877b53ee85b5700ec059fef308808c30afd1f8a5",
+      "image_hash": "ec3117375b757f6f",
+      "image_id": "6edec17532248b3e",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 613,
+      "rank_score": 98.8,
+      "rank_basis": "recency",
+      "group_id": "d75ccf134668",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:99a27fe9c8f6d1d8",
+      "source": "reddit",
+      "source_id": "1xgqs4n",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "hyperfixation rule",
+      "summary": "i really like numbers and i really like emergent systems in video games so ive been playing victoria 3 lately and i really like it, but i feel it is also too simple in certain areas. if you have any recommendations of real time strategy economic simulator games that are not vic 3 then please let me knowwww 🥺 https://preview.redd.it/gge567fl30yh1.png?width=1…",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgqs4n/hyperfixation_rule/",
+      "image_url": "https://preview.redd.it/gge567fl30yh1.png?width=140&height=120&auto=webp&s=e7d79c6ddaf196dbfc5c8b6c215da3d8f04f194c",
+      "thumbnail_url": "https://preview.redd.it/gge567fl30yh1.png?width=140&height=120&auto=webp&s=e7d79c6ddaf196dbfc5c8b6c215da3d8f04f194c",
+      "images": [
+        {
+          "url": "https://preview.redd.it/gge567fl30yh1.png?width=140&height=120&auto=webp&s=e7d79c6ddaf196dbfc5c8b6c215da3d8f04f194c",
+          "thumbnail_url": "https://preview.redd.it/gge567fl30yh1.png?width=140&height=120&auto=webp&s=e7d79c6ddaf196dbfc5c8b6c215da3d8f04f194c",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T12:08:59Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "b74e1087a530b2260093054cf30d9469c23f1755",
+      "image_hash": "fcc2d6194b47a69f",
+      "image_id": "39b3225010d3c86c",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 140,
+      "image_height": 120,
+      "rank_score": 98.8,
+      "rank_basis": "recency",
+      "group_id": "ef275e42f881",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:73391a61545744df",
+      "source": "reddit",
+      "source_id": "1xgqmvz",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Rules for gerls",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgqmvz/rules_for_gerls/",
+      "image_url": "https://preview.redd.it/fcqk6oqd20yh1.jpeg?width=640&crop=smart&auto=webp&s=85d4070adf7933b0b49f5d789ecde4df42ba1dbc",
+      "thumbnail_url": "https://preview.redd.it/fcqk6oqd20yh1.jpeg?width=640&crop=smart&auto=webp&s=85d4070adf7933b0b49f5d789ecde4df42ba1dbc",
+      "images": [
+        {
+          "url": "https://preview.redd.it/fcqk6oqd20yh1.jpeg?width=640&crop=smart&auto=webp&s=85d4070adf7933b0b49f5d789ecde4df42ba1dbc",
+          "thumbnail_url": "https://preview.redd.it/fcqk6oqd20yh1.jpeg?width=640&crop=smart&auto=webp&s=85d4070adf7933b0b49f5d789ecde4df42ba1dbc",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T12:01:56Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "a181e9035502e35ce674896a82744eb9f857c4c9",
+      "image_hash": "80888c8cc290928a",
+      "image_id": "fdabd755be089ad3",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 640,
+      "rank_score": 98.7,
+      "rank_basis": "recency",
+      "group_id": "53d792acc8fa",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:d0c406f11ce2ef4a",
+      "source": "reddit",
+      "source_id": "1xgqmie",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "British Mr Crabs rule",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgqmie/british_mr_crabs_rule/",
+      "image_url": "https://preview.redd.it/wvbg958a20yh1.jpeg?width=640&crop=smart&auto=webp&s=9ac855e82eb82cf8e45b51b167ce663739b29743",
+      "thumbnail_url": "https://preview.redd.it/wvbg958a20yh1.jpeg?width=640&crop=smart&auto=webp&s=9ac855e82eb82cf8e45b51b167ce663739b29743",
+      "images": [
+        {
+          "url": "https://preview.redd.it/wvbg958a20yh1.jpeg?width=640&crop=smart&auto=webp&s=9ac855e82eb82cf8e45b51b167ce663739b29743",
+          "thumbnail_url": "https://preview.redd.it/wvbg958a20yh1.jpeg?width=640&crop=smart&auto=webp&s=9ac855e82eb82cf8e45b51b167ce663739b29743",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T12:01:26Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "88ed7a331454f3616e9e369eaa7a2ec385001ed5",
+      "image_hash": "2f0f33330f0b2023",
+      "image_id": "d6376550b5fa1aa4",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 720,
+      "rank_score": 98.7,
+      "rank_basis": "recency",
+      "group_id": "6a28e5c9eba2",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:0226ef949747f4b6",
+      "source": "reddit",
+      "source_id": "1xgqlsk",
+      "source_name": "Reddit",
+      "community": "r/okbuddyretard",
+      "title": "Perhaps",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/okbuddyretard/comments/1xgqlsk/perhaps/",
+      "image_url": "https://preview.redd.it/q9664fs420yh1.jpeg?width=320&crop=smart&auto=webp&s=3488a4fe5a1d1510e292d91bde02c3418379a662",
+      "thumbnail_url": "https://preview.redd.it/q9664fs420yh1.jpeg?width=320&crop=smart&auto=webp&s=3488a4fe5a1d1510e292d91bde02c3418379a662",
+      "images": [
+        {
+          "url": "https://preview.redd.it/q9664fs420yh1.jpeg?width=320&crop=smart&auto=webp&s=3488a4fe5a1d1510e292d91bde02c3418379a662",
+          "thumbnail_url": "https://preview.redd.it/q9664fs420yh1.jpeg?width=320&crop=smart&auto=webp&s=3488a4fe5a1d1510e292d91bde02c3418379a662",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T12:00:40Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/okbuddyretard",
+        "reddit",
+        "okbuddyretard"
+      ],
+      "content_hash": "e6ff878a384db48f13cebb51493d6734124db890",
+      "image_hash": "4238fcdce0e6e0e0",
+      "image_id": "2a09e5bc50052f7d",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 320,
+      "image_height": 349,
+      "rank_score": 98.7,
+      "rank_basis": "recency",
+      "group_id": "b8ded69ee8d1",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:eb0beef39dd92916",
+      "source": "reddit",
+      "source_id": "1xgq4bb",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Rule Stranding",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgq4bb/rule_stranding/",
+      "image_url": "https://preview.redd.it/vwlha10sxzxh1.jpeg?width=320&crop=smart&auto=webp&s=31afc0ae0470523a639758ebee050d83f27d1931",
+      "thumbnail_url": "https://preview.redd.it/vwlha10sxzxh1.jpeg?width=320&crop=smart&auto=webp&s=31afc0ae0470523a639758ebee050d83f27d1931",
+      "images": [
+        {
+          "url": "https://preview.redd.it/vwlha10sxzxh1.jpeg?width=320&crop=smart&auto=webp&s=31afc0ae0470523a639758ebee050d83f27d1931",
+          "thumbnail_url": "https://preview.redd.it/vwlha10sxzxh1.jpeg?width=320&crop=smart&auto=webp&s=31afc0ae0470523a639758ebee050d83f27d1931",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T11:36:06Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "f4900577f375ccf67d9bda585465858a0687eca8",
+      "image_hash": "66e1348d8c4ccc1c",
+      "image_id": "7b819d1b26a30ef3",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 320,
+      "image_height": 313,
+      "rank_score": 98.4,
+      "rank_basis": "recency",
+      "group_id": "3c2d938419b8",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:7340ce978c51ddc9",
+      "source": "reddit",
+      "source_id": "1xgponx",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Rules",
+      "summary": "agony [留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgponx/rules/",
+      "image_url": "https://preview.redd.it/bwpof5bltzxh1.jpeg?width=640&crop=smart&auto=webp&s=92cf1bed7353912a38436c788a20ff6476a4a86a",
+      "thumbnail_url": "https://preview.redd.it/bwpof5bltzxh1.jpeg?width=640&crop=smart&auto=webp&s=92cf1bed7353912a38436c788a20ff6476a4a86a",
+      "images": [
+        {
+          "url": "https://preview.redd.it/bwpof5bltzxh1.jpeg?width=640&crop=smart&auto=webp&s=92cf1bed7353912a38436c788a20ff6476a4a86a",
+          "thumbnail_url": "https://preview.redd.it/bwpof5bltzxh1.jpeg?width=640&crop=smart&auto=webp&s=92cf1bed7353912a38436c788a20ff6476a4a86a",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T11:12:58Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "fe0eadcf97161a9a20a14288212c492b5aef4633",
+      "image_hash": "d296b6b4d6b63696",
+      "image_id": "c94f31b7c56887ca",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 624,
+      "rank_score": 98.2,
+      "rank_basis": "recency",
+      "group_id": "4fedd2e5b003",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:6b6ed3b33d40ae7a",
+      "source": "reddit",
+      "source_id": "1xgpdfo",
+      "source_name": "Reddit",
+      "community": "r/okbuddyretard",
+      "title": "Title",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/okbuddyretard/comments/1xgpdfo/title/",
+      "image_url": "https://external-preview.redd.it/MTYzM2RxcHFxenhoMVvHUhjdWJNxTOlFs4OddN0BV7JtMeKzAOgBEV8Ob2TR.png?width=320&crop=smart&auto=webp&s=df18e5c4ace2a260061b4f06e0aef56ec9f3972f",
+      "thumbnail_url": "https://external-preview.redd.it/MTYzM2RxcHFxenhoMVvHUhjdWJNxTOlFs4OddN0BV7JtMeKzAOgBEV8Ob2TR.png?width=320&crop=smart&auto=webp&s=df18e5c4ace2a260061b4f06e0aef56ec9f3972f",
+      "images": [
+        {
+          "url": "https://external-preview.redd.it/MTYzM2RxcHFxenhoMVvHUhjdWJNxTOlFs4OddN0BV7JtMeKzAOgBEV8Ob2TR.png?width=320&crop=smart&auto=webp&s=df18e5c4ace2a260061b4f06e0aef56ec9f3972f",
+          "thumbnail_url": "https://external-preview.redd.it/MTYzM2RxcHFxenhoMVvHUhjdWJNxTOlFs4OddN0BV7JtMeKzAOgBEV8Ob2TR.png?width=320&crop=smart&auto=webp&s=df18e5c4ace2a260061b4f06e0aef56ec9f3972f",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T10:56:42Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/okbuddyretard",
+        "reddit",
+        "okbuddyretard"
+      ],
+      "content_hash": "37490ae356a0e26a047a689b4a3f0f8011f9ebbe",
+      "image_hash": "393929adad274dcd",
+      "image_id": "7b4cc8008a6ade6d",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 320,
+      "image_height": 251,
+      "rank_score": 98.0,
+      "rank_basis": "recency",
+      "group_id": "460711c2ddfe",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:923dbbf557383c08",
+      "source": "reddit",
+      "source_id": "1xgolgb",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "love",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgolgb/love/",
+      "image_url": "https://preview.redd.it/9btswqgxizxh1.jpeg?width=320&crop=smart&auto=webp&s=86de4024eb46bb067961cedcfdaee18999ed8503",
+      "thumbnail_url": "https://preview.redd.it/9btswqgxizxh1.jpeg?width=320&crop=smart&auto=webp&s=86de4024eb46bb067961cedcfdaee18999ed8503",
+      "images": [
+        {
+          "url": "https://preview.redd.it/9btswqgxizxh1.jpeg?width=320&crop=smart&auto=webp&s=86de4024eb46bb067961cedcfdaee18999ed8503",
+          "thumbnail_url": "https://preview.redd.it/9btswqgxizxh1.jpeg?width=320&crop=smart&auto=webp&s=86de4024eb46bb067961cedcfdaee18999ed8503",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T10:12:56Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "a245dbe7408f2e4f8ebf6f40f594da8e54a96891",
+      "image_hash": "a7a6b791c589c4c4",
+      "image_id": "f528c34ad57c7910",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 320,
+      "image_height": 344,
+      "rank_score": 97.6,
+      "rank_basis": "recency",
+      "group_id": "089b7fa52959",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:95d3cd037f05e7ea",
+      "source": "reddit",
+      "source_id": "1xgocl9",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Rule",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgocl9/rule/",
+      "image_url": "https://external-preview.redd.it/Y29yd3JoNmJnenhoMeOwxEKY_BwUmvv0yJlvuSQnrkHkZJuTTKSVmRt4UrhV.png?width=108&crop=smart&auto=webp&s=802924665becab2b00a342363cb7ef5d8d62cdd5",
+      "thumbnail_url": "https://external-preview.redd.it/Y29yd3JoNmJnenhoMeOwxEKY_BwUmvv0yJlvuSQnrkHkZJuTTKSVmRt4UrhV.png?width=108&crop=smart&auto=webp&s=802924665becab2b00a342363cb7ef5d8d62cdd5",
+      "images": [
+        {
+          "url": "https://external-preview.redd.it/Y29yd3JoNmJnenhoMeOwxEKY_BwUmvv0yJlvuSQnrkHkZJuTTKSVmRt4UrhV.png?width=108&crop=smart&auto=webp&s=802924665becab2b00a342363cb7ef5d8d62cdd5",
+          "thumbnail_url": "https://external-preview.redd.it/Y29yd3JoNmJnenhoMeOwxEKY_BwUmvv0yJlvuSQnrkHkZJuTTKSVmRt4UrhV.png?width=108&crop=smart&auto=webp&s=802924665becab2b00a342363cb7ef5d8d62cdd5",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T09:58:35Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "e6cd770186269f17d3b45461452cf79f60997410",
+      "image_hash": "0000000000000000",
+      "image_id": "637c080dd2dbc747",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 108,
+      "image_height": 71,
+      "rank_score": 97.5,
+      "rank_basis": "recency",
+      "group_id": "b02132081808",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:8a61e48a8211c742",
+      "source": "reddit",
+      "source_id": "1xgobzl",
+      "source_name": "Reddit",
+      "community": "r/okbuddyretard",
+      "title": "Bruh",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/okbuddyretard/comments/1xgobzl/bruh/",
+      "image_url": "https://preview.redd.it/19iz7jo6gzxh1.jpeg?width=640&crop=smart&auto=webp&s=c2a938bb78fa855e026f2984ffc34c05b4de4c59",
+      "thumbnail_url": "https://preview.redd.it/19iz7jo6gzxh1.jpeg?width=640&crop=smart&auto=webp&s=c2a938bb78fa855e026f2984ffc34c05b4de4c59",
+      "images": [
+        {
+          "url": "https://preview.redd.it/19iz7jo6gzxh1.jpeg?width=640&crop=smart&auto=webp&s=c2a938bb78fa855e026f2984ffc34c05b4de4c59",
+          "thumbnail_url": "https://preview.redd.it/19iz7jo6gzxh1.jpeg?width=640&crop=smart&auto=webp&s=c2a938bb78fa855e026f2984ffc34c05b4de4c59",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T09:57:30Z",
+      "collected_at": "2026-10-27T14:14:51Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/okbuddyretard",
+        "reddit",
+        "okbuddyretard"
+      ],
+      "content_hash": "b1768705240da83f87090a6432525ebfe2be4e02",
+      "image_hash": "3919cbd17363a7a3",
+      "image_id": "efeffdc3798a081e",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:14:51Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 652,
+      "rank_score": 97.4,
+      "rank_basis": "recency",
+      "group_id": "f78c457d9dc4",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
       "trending": []
     }
   ]
