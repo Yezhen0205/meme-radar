@@ -6,17 +6,17 @@
     "tagline": "Reddit × 百度贴吧，真实的梗图瀑布流。"
   },
   "timezone": "Asia/Shanghai",
-  "generated_at": "2026-10-27T14:19:24Z",
-  "checked_at": "2026-10-27T14:19:24Z",
+  "generated_at": "2026-10-27T14:28:38Z",
+  "checked_at": "2026-10-27T14:28:38Z",
   "stale": false,
   "stale_reason": null,
   "partial": true,
   "health": {
     "schema_version": 1,
-    "updated_at": "2026-10-27T14:19:24Z",
+    "updated_at": "2026-10-27T14:28:38Z",
     "status": "degraded",
     "consecutive_failures": 0,
-    "last_success_at": "2026-10-27T14:19:24Z",
+    "last_success_at": "2026-10-27T14:28:38Z",
     "alerts": [],
     "sources": {
       "reddit": {
@@ -25,8 +25,8 @@
         "item_count": 23,
         "error": null,
         "consecutive_failures": 0,
-        "last_success_at": "2026-10-27T14:19:24Z",
-        "last_attempt_at": "2026-10-27T14:19:24Z",
+        "last_success_at": "2026-10-27T14:28:38Z",
+        "last_attempt_at": "2026-10-27T14:28:38Z",
         "details": {
           "communities": [
             "okbuddyretard",
@@ -47,8 +47,8 @@
         "item_count": 29,
         "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
         "consecutive_failures": 0,
-        "last_success_at": "2026-10-27T14:19:24Z",
-        "last_attempt_at": "2026-10-27T14:19:24Z",
+        "last_success_at": "2026-10-27T14:28:38Z",
+        "last_attempt_at": "2026-10-27T14:28:38Z",
         "details": {
           "topics": [
             {
@@ -82,8 +82,8 @@
         "item_count": 12,
         "error": null,
         "consecutive_failures": 0,
-        "last_success_at": "2026-10-27T14:19:24Z",
-        "last_attempt_at": "2026-10-27T14:19:24Z",
+        "last_success_at": "2026-10-27T14:28:38Z",
+        "last_attempt_at": "2026-10-27T14:28:38Z",
         "details": {}
       },
       "x": {
@@ -185,6 +185,21 @@
           "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
         ],
         "broken_images": 0
+      },
+      {
+        "at": "2026-10-27T14:28:38Z",
+        "status": "degraded",
+        "items": 55,
+        "new": 4,
+        "sources": {
+          "reddit": "ok",
+          "tieba": "degraded",
+          "trends": "ok"
+        },
+        "errors": [
+          "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+        ],
+        "broken_images": 0
       }
     ]
   },
@@ -224,28 +239,20 @@
         "score": 4
       },
       {
+        "word": "妻子",
+        "count": 3,
+        "sources": [
+          "hot"
+        ],
+        "score": 3
+      },
+      {
         "word": "致歉",
         "count": 3,
         "sources": [
           "hot"
         ],
         "score": 3
-      },
-      {
-        "word": "全面",
-        "count": 3,
-        "sources": [
-          "hot"
-        ],
-        "score": 3
-      },
-      {
-        "word": "k100",
-        "count": 2,
-        "sources": [
-          "hot"
-        ],
-        "score": 2
       },
       {
         "word": "光明日报",
@@ -286,6 +293,14 @@
           "hot"
         ],
         "score": 2
+      },
+      {
+        "word": "新闻网",
+        "count": 2,
+        "sources": [
+          "hot"
+        ],
+        "score": 2
       }
     ],
     "sources": [
@@ -314,7 +329,7 @@
     {
       "source": "reddit",
       "status": "ok",
-      "item_count": 23,
+      "item_count": 27,
       "error": null,
       "details": {
         "communities": [
@@ -340,7 +355,7 @@
     {
       "source": "tieba",
       "status": "degraded",
-      "item_count": 29,
+      "item_count": 28,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "details": {
         "topics": [
@@ -444,15 +459,15 @@
   "run": {
     "ok": true,
     "status": "degraded",
-    "items_new": 5,
-    "items_updated": 19,
-    "items_total": 53,
+    "items_new": 4,
+    "items_updated": 3,
+    "items_total": 55,
     "duplicate_posts": 0,
-    "groups": 1,
+    "groups": 2,
     "images_checked": 52,
     "images_broken": 0,
-    "images_hashed": 22,
-    "duration_ms": 48828,
+    "images_hashed": 5,
+    "duration_ms": 28501,
     "sources_ok": 2,
     "sources_blocked": 0
   },
@@ -514,7 +529,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 776,
-      "rank_score": 144.7,
+      "rank_score": 144.6,
       "rank_basis": "recency+comments",
       "group_id": "7db845f1a8ba",
       "group_size": 2,
@@ -554,7 +569,7 @@
       "collected_at": "2026-10-27T13:49:48Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 483,
+      "comment_count": 488,
       "tags": [
         "贴吧",
         "表情包大赛,滑稽出征寸草不生",
@@ -570,7 +585,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 387,
-      "rank_score": 144.7,
+      "rank_score": 144.6,
       "rank_basis": "recency+comments",
       "group_id": "b5606126a10c",
       "group_size": 1,
@@ -630,7 +645,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1289,
-      "rank_score": 144.7,
+      "rank_score": 144.6,
       "rank_basis": "recency+comments",
       "group_id": "467fd575e1f2",
       "group_size": 1,
@@ -690,7 +705,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 773,
-      "rank_score": 144.7,
+      "rank_score": 144.6,
       "rank_basis": "recency+comments",
       "group_id": "29e9e11f1106",
       "group_size": 1,
@@ -751,7 +766,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 534,
-      "rank_score": 143.5,
+      "rank_score": 143.4,
       "rank_basis": "recency+comments",
       "group_id": "cb43f5ed4157",
       "group_size": 1,
@@ -783,7 +798,7 @@
       "collected_at": "2026-10-27T13:49:48Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 264,
+      "comment_count": 266,
       "tags": [
         "贴吧",
         "表情包大赛,滑稽出征寸草不生",
@@ -848,7 +863,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 580,
-      "rank_score": 142.9,
+      "rank_score": 142.8,
       "rank_basis": "recency+comments",
       "group_id": "c7f313b0534b",
       "group_size": 1,
@@ -908,7 +923,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1032,
-      "rank_score": 141.2,
+      "rank_score": 141.1,
       "rank_basis": "recency+comments",
       "group_id": "10704e93a2ca",
       "group_size": 1,
@@ -968,7 +983,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 773,
-      "rank_score": 141.1,
+      "rank_score": 141.0,
       "rank_basis": "recency+comments",
       "group_id": "20cd31da0a80",
       "group_size": 1,
@@ -1028,7 +1043,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1038,
-      "rank_score": 140.8,
+      "rank_score": 140.7,
       "rank_basis": "recency+comments",
       "group_id": "46a36e5fe70f",
       "group_size": 1,
@@ -1088,7 +1103,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 580,
-      "rank_score": 140.5,
+      "rank_score": 140.4,
       "rank_basis": "recency+comments",
       "group_id": "15ee62d1a7f2",
       "group_size": 1,
@@ -1106,12 +1121,12 @@
       "title": "最受欢迎表情包角色32强第八战",
       "summary": "这场比赛是牢大vs熊大",
       "post_url": "https://tieba.baidu.com/p/11142323752",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d556bfc35dd5ad6eaaf964e2b1cb39a3/0a55b319ebc4b74544e4331189fc1e178a821540.jpg?tbpicau=2026-10-29-05_392c5fa9111d70863510aec9e2473464",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=be752a6709c2d562f208d2efd72ae1d2/0a55b319ebc4b74544e4331189fc1e178a821540.jpg?tbpicau=2026-10-29-05_a60e7bbe21ae00727dad3f7a9beaf3ca",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d556bfc35dd5ad6eaaf964e2b1cb39a3/a62e3764034f78f0f07b1ef43f310a55b2191c8c.jpg?tbpicau=2026-10-29-05_6bc0ca7cbb50845923d1b725ddf0f676",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=be752a6709c2d562f208d2efd72ae1d2/a62e3764034f78f0f07b1ef43f310a55b2191c8c.jpg?tbpicau=2026-10-29-05_6ffa053aa5263bc22557dde63d220975",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d556bfc35dd5ad6eaaf964e2b1cb39a3/0a55b319ebc4b74544e4331189fc1e178a821540.jpg?tbpicau=2026-10-29-05_392c5fa9111d70863510aec9e2473464",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=be752a6709c2d562f208d2efd72ae1d2/0a55b319ebc4b74544e4331189fc1e178a821540.jpg?tbpicau=2026-10-29-05_a60e7bbe21ae00727dad3f7a9beaf3ca",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d556bfc35dd5ad6eaaf964e2b1cb39a3/a62e3764034f78f0f07b1ef43f310a55b2191c8c.jpg?tbpicau=2026-10-29-05_6bc0ca7cbb50845923d1b725ddf0f676",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=be752a6709c2d562f208d2efd72ae1d2/a62e3764034f78f0f07b1ef43f310a55b2191c8c.jpg?tbpicau=2026-10-29-05_6ffa053aa5263bc22557dde63d220975",
           "width": null,
           "height": null
         }
@@ -1120,19 +1135,19 @@
       "collected_at": "2026-10-27T13:49:48Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 179,
+      "comment_count": 180,
       "tags": [
         "贴吧",
         "表情包大赛,滑稽出征寸草不生",
         "吊图吧"
       ],
-      "content_hash": "81e53b4d685335cf1364a354b3aa0ac49389d0de",
+      "content_hash": "5848061c46901e30621a9e5c32370a03d1528fb2",
       "image_hash": "323248c4c399393c",
-      "image_id": "c5ffdc96ce1520d9",
+      "image_id": "926a0da147a7c776",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-10-27T13:49:48Z",
+      "image_checked_at": "2026-10-27T14:28:38Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 387,
@@ -1142,7 +1157,6 @@
       "group_size": 1,
       "related": [],
       "source_stale": false,
-      "image_fallback": null,
       "trending": []
     },
     {
@@ -1196,7 +1210,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1031,
-      "rank_score": 138.7,
+      "rank_score": 138.6,
       "rank_basis": "recency+comments",
       "group_id": "6ad6e92aac81",
       "group_size": 1,
@@ -1244,7 +1258,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 387,
-      "rank_score": 137.2,
+      "rank_score": 137.1,
       "rank_basis": "recency+comments",
       "group_id": "2f1ef286eaff",
       "group_size": 1,
@@ -1304,7 +1318,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 436,
-      "rank_score": 136.9,
+      "rank_score": 136.8,
       "rank_basis": "recency+comments",
       "group_id": "9e7465e3e424",
       "group_size": 1,
@@ -1364,7 +1378,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 134.8,
+      "rank_score": 134.7,
       "rank_basis": "recency+comments",
       "group_id": "7d8b192a07eb",
       "group_size": 1,
@@ -1473,7 +1487,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 131.3,
+      "rank_score": 131.2,
       "rank_basis": "recency+comments",
       "group_id": "115e1be32a07",
       "group_size": 1,
@@ -1534,7 +1548,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 580,
-      "rank_score": 131.0,
+      "rank_score": 130.9,
       "rank_basis": "recency+comments",
       "group_id": "1cf9cd0cce4d",
       "group_size": 1,
@@ -1589,7 +1603,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 360,
-      "rank_score": 130.1,
+      "rank_score": 130.0,
       "rank_basis": "recency+comments",
       "group_id": "091166aaf1bc",
       "group_size": 1,
@@ -1649,7 +1663,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1032,
-      "rank_score": 129.5,
+      "rank_score": 129.4,
       "rank_basis": "recency+comments",
       "group_id": "6531f6888179",
       "group_size": 1,
@@ -1709,7 +1723,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 869,
-      "rank_score": 125.8,
+      "rank_score": 125.7,
       "rank_basis": "recency+comments",
       "group_id": "bb074d6113c2",
       "group_size": 1,
@@ -1769,7 +1783,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 773,
-      "rank_score": 113.7,
+      "rank_score": 113.6,
       "rank_basis": "recency+comments",
       "group_id": "29f65d06e60e",
       "group_size": 1,
@@ -1949,7 +1963,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 108.3,
+      "rank_score": 108.2,
       "rank_basis": "recency+comments",
       "group_id": "1c95f2158cc7",
       "group_size": 1,
@@ -2003,7 +2017,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 772,
-      "rank_score": 105.1,
+      "rank_score": 105.0,
       "rank_basis": "recency+comments",
       "group_id": "8640b44a05d4",
       "group_size": 1,
@@ -2063,9 +2077,116 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1031,
-      "rank_score": 105.1,
+      "rank_score": 105.0,
       "rank_basis": "recency+comments",
       "group_id": "89c8544c808d",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "image_fallback": null,
+      "trending": []
+    },
+    {
+      "id": "reddit:2429f3753866b61b",
+      "source": "reddit",
+      "source_id": "1xgtygg",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "GTA 6 Rule",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgtygg/gta_6_rule/",
+      "image_url": "https://i.redd.it/fdyz5uexr0yh1.jpeg",
+      "thumbnail_url": "https://preview.redd.it/fdyz5uexr0yh1.jpeg?width=640&crop=smart&auto=webp&s=9749cc3dca77a1460129c6598bdbb3a46b7ab0c1",
+      "images": [
+        {
+          "url": "https://i.redd.it/fdyz5uexr0yh1.jpeg",
+          "thumbnail_url": "https://i.redd.it/fdyz5uexr0yh1.jpeg",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://preview.redd.it/fdyz5uexr0yh1.jpeg?width=640&crop=smart&auto=webp&s=9749cc3dca77a1460129c6598bdbb3a46b7ab0c1",
+          "thumbnail_url": "https://preview.redd.it/fdyz5uexr0yh1.jpeg?width=640&crop=smart&auto=webp&s=9749cc3dca77a1460129c6598bdbb3a46b7ab0c1",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T14:25:05Z",
+      "collected_at": "2026-10-27T14:28:38Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "0e39f7850a872bc9991793eddf4f8f1acae2128a",
+      "image_hash": "e9e90c211d1accaa",
+      "image_id": "190b5b1e125b45a9",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:28:38Z",
+      "image_error": null,
+      "image_width": 1080,
+      "image_height": 646,
+      "rank_score": 100.0,
+      "rank_basis": "recency",
+      "group_id": "0fa703b65b3e",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "reddit:3908fc784ee57a10",
+      "source": "reddit",
+      "source_id": "1xgtxbi",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Oasis of Rule",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xgtxbi/oasis_of_rule/",
+      "image_url": "https://i.redd.it/crd32q7nr0yh1.jpeg",
+      "thumbnail_url": "https://preview.redd.it/crd32q7nr0yh1.jpeg?width=640&crop=smart&auto=webp&s=ba6b55b1ac39df9d925ac648b46ba152f70b0c09",
+      "images": [
+        {
+          "url": "https://i.redd.it/crd32q7nr0yh1.jpeg",
+          "thumbnail_url": "https://i.redd.it/crd32q7nr0yh1.jpeg",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://preview.redd.it/crd32q7nr0yh1.jpeg?width=640&crop=smart&auto=webp&s=ba6b55b1ac39df9d925ac648b46ba152f70b0c09",
+          "thumbnail_url": "https://preview.redd.it/crd32q7nr0yh1.jpeg?width=640&crop=smart&auto=webp&s=ba6b55b1ac39df9d925ac648b46ba152f70b0c09",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-10-27T14:23:54Z",
+      "collected_at": "2026-10-27T14:28:38Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "2c969d1c7697dcf11fe66b57a6894a4482db2973",
+      "image_hash": "5b3b2135037b717d",
+      "image_id": "62b6a02ef800acd0",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-10-27T14:28:38Z",
+      "image_error": null,
+      "image_width": 1536,
+      "image_height": 1500,
+      "rank_score": 100.0,
+      "rank_basis": "recency",
+      "group_id": "6951e13954ce",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -2116,12 +2237,13 @@
       "image_error": null,
       "image_width": 1200,
       "image_height": 675,
-      "rank_score": 100.0,
+      "rank_score": 99.9,
       "rank_basis": "recency",
       "group_id": "470a39c04e61",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2169,12 +2291,13 @@
       "image_error": null,
       "image_width": 533,
       "image_height": 455,
-      "rank_score": 100.0,
+      "rank_score": 99.9,
       "rank_basis": "recency",
       "group_id": "3e897050e478",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2222,12 +2345,13 @@
       "image_error": null,
       "image_width": 289,
       "image_height": 315,
-      "rank_score": 99.9,
+      "rank_score": 99.8,
       "rank_basis": "recency",
       "group_id": "708ba2dd24f2",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2275,12 +2399,13 @@
       "image_error": null,
       "image_width": 821,
       "image_height": 757,
-      "rank_score": 99.9,
+      "rank_score": 99.8,
       "rank_basis": "recency",
       "group_id": "7b3cc87b01f8",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2328,12 +2453,13 @@
       "image_error": null,
       "image_width": 736,
       "image_height": 1305,
-      "rank_score": 99.9,
+      "rank_score": 99.8,
       "rank_basis": "recency",
       "group_id": "294195c3ceb7",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2381,12 +2507,13 @@
       "image_error": null,
       "image_width": 306,
       "image_height": 157,
-      "rank_score": 99.8,
+      "rank_score": 99.7,
       "rank_basis": "recency",
       "group_id": "665f001c7b6a",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2428,7 +2555,7 @@
       "image_error": null,
       "image_width": 140,
       "image_height": 140,
-      "rank_score": 99.8,
+      "rank_score": 99.7,
       "rank_basis": "recency",
       "group_id": "150a9ea7d908",
       "group_size": 1,
@@ -2482,12 +2609,13 @@
       "image_error": null,
       "image_width": 1113,
       "image_height": 1131,
-      "rank_score": 99.3,
+      "rank_score": 99.2,
       "rank_basis": "recency",
       "group_id": "0dda9c270be8",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2535,12 +2663,13 @@
       "image_error": null,
       "image_width": 889,
       "image_height": 500,
-      "rank_score": 99.2,
+      "rank_score": 99.1,
       "rank_basis": "recency",
       "group_id": "8e4c25734b89",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2588,12 +2717,13 @@
       "image_error": null,
       "image_width": 500,
       "image_height": 894,
-      "rank_score": 99.1,
+      "rank_score": 99.0,
       "rank_basis": "recency",
       "group_id": "a7b8d714c254",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2641,12 +2771,13 @@
       "image_error": null,
       "image_width": 960,
       "image_height": 716,
-      "rank_score": 99.0,
+      "rank_score": 98.9,
       "rank_basis": "recency",
       "group_id": "8be1db5598b5",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2694,12 +2825,13 @@
       "image_error": null,
       "image_width": 627,
       "image_height": 679,
-      "rank_score": 98.8,
+      "rank_score": 98.7,
       "rank_basis": "recency",
       "group_id": "13df7404cf8e",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2753,6 +2885,7 @@
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2794,7 +2927,7 @@
       "image_error": null,
       "image_width": 140,
       "image_height": 120,
-      "rank_score": 98.7,
+      "rank_score": 98.6,
       "rank_basis": "recency",
       "group_id": "ef275e42f881",
       "group_size": 1,
@@ -2848,12 +2981,13 @@
       "image_error": null,
       "image_width": 2048,
       "image_height": 2048,
-      "rank_score": 98.6,
+      "rank_score": 98.5,
       "rank_basis": "recency",
       "group_id": "53d792acc8fa",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2901,12 +3035,13 @@
       "image_error": null,
       "image_width": 1320,
       "image_height": 1485,
-      "rank_score": 98.6,
+      "rank_score": 98.5,
       "rank_basis": "recency",
       "group_id": "6a28e5c9eba2",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -2954,12 +3089,13 @@
       "image_error": null,
       "image_width": 447,
       "image_height": 488,
-      "rank_score": 98.6,
+      "rank_score": 98.5,
       "rank_basis": "recency",
       "group_id": "b8ded69ee8d1",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -3007,12 +3143,13 @@
       "image_error": null,
       "image_width": 511,
       "image_height": 500,
-      "rank_score": 98.4,
+      "rank_score": 98.3,
       "rank_basis": "recency",
       "group_id": "3c2d938419b8",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -3054,12 +3191,13 @@
       "image_error": null,
       "image_width": 1134,
       "image_height": 756,
-      "rank_score": 98.2,
+      "rank_score": 98.1,
       "rank_basis": "recency",
       "group_id": "3ba364bbafeb",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -3107,12 +3245,13 @@
       "image_error": null,
       "image_width": 745,
       "image_height": 727,
-      "rank_score": 98.2,
+      "rank_score": 98.1,
       "rank_basis": "recency",
       "group_id": "4fedd2e5b003",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -3154,7 +3293,7 @@
       "image_error": null,
       "image_width": 320,
       "image_height": 251,
-      "rank_score": 98.0,
+      "rank_score": 97.9,
       "rank_basis": "recency",
       "group_id": "460711c2ddfe",
       "group_size": 1,
@@ -3208,7 +3347,7 @@
       "image_error": null,
       "image_width": 632,
       "image_height": 680,
-      "rank_score": 97.6,
+      "rank_score": 97.5,
       "rank_basis": "recency",
       "group_id": "089b7fa52959",
       "group_size": 1,
@@ -3255,7 +3394,7 @@
       "image_error": null,
       "image_width": 383,
       "image_height": 327,
-      "rank_score": 97.4,
+      "rank_score": 97.3,
       "rank_basis": "recency",
       "group_id": "95cd92aae9be",
       "group_size": 1,
@@ -3302,11 +3441,19 @@
       "image_error": null,
       "image_width": 108,
       "image_height": 71,
-      "rank_score": 97.4,
+      "rank_score": 97.3,
       "rank_basis": "recency",
       "group_id": "b02132081808",
-      "group_size": 1,
-      "related": [],
+      "group_size": 2,
+      "related": [
+        {
+          "source": "reddit",
+          "source_name": "Reddit",
+          "post_url": "https://www.reddit.com/r/196/comments/1xgtz70/writers_poorly_disguised_fetish/",
+          "image_url": "https://external-preview.redd.it/azk1bnA2czJzMHloMeayDNelO9DBAWwleFUE3ktyYuvJkteg42d8x9z9CFnv.png?width=640&crop=smart&auto=webp&s=e45729a6398e63c341c8443e01abdf97ae44113b",
+          "title": "Writers poorly disguised fetish"
+        }
+      ],
       "source_stale": false,
       "trending": []
     },
@@ -3349,7 +3496,7 @@
       "image_error": null,
       "image_width": 640,
       "image_height": 652,
-      "rank_score": 97.4,
+      "rank_score": 97.3,
       "rank_basis": "recency",
       "group_id": "f78c457d9dc4",
       "group_size": 1,

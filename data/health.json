@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-27T14:19:24Z",
+  "updated_at": "2026-10-27T14:28:38Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-10-27T14:19:24Z",
+  "last_success_at": "2026-10-27T14:28:38Z",
   "alerts": [],
   "sources": {
     "reddit": {
@@ -12,8 +12,8 @@
       "item_count": 23,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-27T14:19:24Z",
-      "last_attempt_at": "2026-10-27T14:19:24Z",
+      "last_success_at": "2026-10-27T14:28:38Z",
+      "last_attempt_at": "2026-10-27T14:28:38Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -34,8 +34,8 @@
       "item_count": 29,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-27T14:19:24Z",
-      "last_attempt_at": "2026-10-27T14:19:24Z",
+      "last_success_at": "2026-10-27T14:28:38Z",
+      "last_attempt_at": "2026-10-27T14:28:38Z",
       "details": {
         "topics": [
           {
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-27T14:19:24Z",
-      "last_attempt_at": "2026-10-27T14:19:24Z",
+      "last_success_at": "2026-10-27T14:28:38Z",
+      "last_attempt_at": "2026-10-27T14:28:38Z",
       "details": {}
     },
     "x": {
@@ -163,6 +163,21 @@
       "status": "degraded",
       "items": 53,
       "new": 5,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-10-27T14:28:38Z",
+      "status": "degraded",
+      "items": 55,
+      "new": 4,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
