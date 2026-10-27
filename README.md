@@ -8,7 +8,15 @@
 - **不伪造点赞、评论、排名或“模拟采集”数据**
 - 采集与页面均为静态文件，靠 GitHub Actions 定时更新、GitHub Pages 托管
 
-> 当前状态：代码、采集器、移动端页面与本地真实采集已完成；GitHub 仓库和 Pages 地址在首次部署后写入此处。源码地址：`https://github.com/Yezhen0205/meme-radar`；阅读器：`https://yezhen0205.github.io/meme-radar/`（首次 Actions 部署完成后生效）。
+> 当前状态：代码、采集器、移动端页面、GitHub Actions 与 Pages 均已实际部署并验证。源码：`https://github.com/Yezhen0205/meme-radar`；阅读器：`https://yezhen0205.github.io/meme-radar/`。
+
+### 部署验收（2026-10-27 21:22 CST）
+
+- GitHub Actions 手动运行 [40511269345](https://github.com/Yezhen0205/meme-radar/actions/runs/40511269345)：`collect` 与 `deploy` 均成功；
+- 云端一次真实采集：8/8 数据源成功，337 条原始条目，保留 321 条；
+- Pages：`https://yezhen0205.github.io/meme-radar/` 返回 HTTP 200；
+- 使用 Chromium 以 390×844 安卓视口实际加载线上页面：17 张热梗卡片、8 个数据源状态、0 个控制台错误；
+- 数据提交 `33af5fc` 由 Actions 机器人产生，仅修改 `data/feed.json`。
 
 ---
 
@@ -19,7 +27,7 @@
 | 数据源 | 实际内容 | 热度口径 | 本地实测（2026-10-27） |
 | --- | --- | --- | --- |
 | 哔哩哔哩热门 | 公开热门视频（标题、简介、UP 主、封面） | 播放量，来源内榜位 | 50 条 |
-| 哔哩哔哩评论区 | 热门视频下的公开热评；对高讨论热评再取一层公开回复 | 点赞数，来源内榜位 | 59 条（12 条热评 + 47 条回复） |
+| 哔哩哔哩评论区 | 热门视频下的公开热评；对高讨论热评再取一层公开回复 | 点赞数，来源内榜位 | 53 条（11 条热评 + 42 条回复） |
 | 微博热搜 | 热搜词与热搜指数 | 微博提供的热搜指数，来源内榜位 | 50 条 |
 | 百度热搜 | 热搜词 | 接口未提供数值热度，只展示榜位 | 50 条 |
 | 贴吧热榜 | 热门话题、摘要、讨论数 | 讨论数，来源内榜位 | 30 条 |
@@ -27,7 +35,7 @@
 | 抖音热榜 | 热榜词、热度 | 抖音热度，来源内榜位 | 50 条 |
 | 知乎日报 | 日报编辑精选文章（不是知乎热榜） | 无热度，只展示日报顺序 | 4 条 |
 
-一次完整本地采集得到 **343 条原始条目**，经同日事件归类和上限控制后保留 **327 条**：热梗 17、神回复 47、评论金句 12、综合热点 251。当前快照没有完全重复的 URL；有 13 组同一事件的多来源报道被合并展示。
+最近一次 GitHub Actions 采集得到 **337 条原始条目**，经同日事件归类和上限控制后保留 **321 条**：热梗 17、神回复 42、评论金句 11、综合热点 251。当前快照没有完全重复的 URL；有 14 组同一事件的多来源报道被合并展示。
 
 ### 实际测试后跳过的源
 
@@ -158,16 +166,16 @@ python -m unittest discover -s tests -t . -v
 ```json
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T12:51:19Z",
-  "checked_at": "2026-10-27T12:51:19Z",
+  "generated_at": "2026-10-27T13:21:22Z",
+  "checked_at": "2026-10-27T13:21:22Z",
   "stale": false,
   "run": {
     "ok": true,
     "partial": false,
     "sources_ok": 8,
     "sources_failed": 0,
-    "items_raw": 343,
-    "items_final": 327
+    "items_raw": 337,
+    "items_final": 321
   },
   "sources": [
     {
@@ -192,7 +200,7 @@ python -m unittest discover -s tests -t . -v
       "url": "https://www.bilibili.com/video/…",
       "published_at": "2026-10-27T07:45:29Z",
       "published_precision": "datetime",
-      "collected_at": "2026-10-27T12:51:19Z",
+      "collected_at": "2026-10-27T13:21:22Z",
       "category": "meme",
       "tags": ["B站热门", "短片", "热梗"],
       "heat": {
