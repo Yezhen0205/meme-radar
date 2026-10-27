@@ -25,7 +25,8 @@ class RedditRssTests(unittest.TestCase):
         self.assertEqual(item["community"], "r/okbuddyretard")
         self.assertEqual(item["score"], None)
         self.assertEqual(item["comment_count"], None)
-        self.assertTrue(item["image_url"].startswith("https://preview.redd.it/"))
+        self.assertTrue(item["image_url"].startswith("https://i.redd.it/"))
+        self.assertTrue(item["thumbnail_url"].startswith("https://preview.redd.it/"))
         self.assertTrue(item["post_url"].startswith("https://www.reddit.com/r/okbuddyretard/comments/"))
 
     def test_old_items_are_skipped_by_age(self):

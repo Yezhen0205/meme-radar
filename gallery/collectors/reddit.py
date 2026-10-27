@@ -22,6 +22,10 @@ LOGGER = logging.getLogger("meme_radar.gallery.reddit")
 ATOM = "{http://www.w3.org/2005/Atom}"
 MEDIA = "{http://search.yahoo.com/mrss/}"
 _IMAGE_TAG = re.compile(r"<img[^>]+src=[\"']([^\"']+)[\"']", flags=re.I)
+_ORIGINAL_IMAGE_LINK = re.compile(
+    r"<a[^>]+href=[\"'](https?://i\.redd\.it/[^\"']+)[\"'][^>]*>",
+    flags=re.I,
+)
 _COMMENTS = re.compile(r"/comments/([^/]+)/")
 _SUBREDDIT = re.compile(r"/r/([^/]+)/", flags=re.I)
 _SUBMITTED = re.compile(r"submitted by\s+/u/\S+.*", flags=re.I)
@@ -37,11 +41,14 @@ def _strip_html(value: str) -> str:
 
 
 def _extract_images(content: str, thumbnail: str) -> list[str]:
-    images = [html.unescape(value) for value in _IMAGE_TAG.findall(content or "")]
+    # RSS often links the original i.redd.it image from an anchor while the
+    # <img> is only a 216px/140px preview.  Prefer the original when present.
+    original = [html.unescape(value) for value in _ORIGINAL_IMAGE_LINK.findall(content or "")]
+    previews = [html.unescape(value) for value in _IMAGE_TAG.findall(content or "")]
     if thumbnail:
-        images.append(html.unescape(thumbnail))
+        previews.append(html.unescape(thumbnail))
     result = []
-    for image in images:
+    for image in original + previews:
         if image.startswith("//"):
             image = "https:" + image
         if image.startswith(("http://", "https://")) and image not in result:

@@ -70,6 +70,15 @@ STOPWORDS = {
     "央视",
     "官方通报",
     "通报",
+    "总统",
+    "外交部",
+    "良方",
+    "小城",
+    "丈夫",
+    "取关",
+    "可能",
+    "姆巴",
+    "佩",
 }
 FALLBACK_TERMS = [
     "表情包",
@@ -143,19 +152,18 @@ def _tokens(text: str) -> set[str]:
     text = re.sub(r"#[^#\s]{1,40}#", " ", text)
     text = re.sub(r"[^\w\u4e00-\u9fff]+", " ", text, flags=re.UNICODE)
     result: set[str] = set()
+    lowered = text.lower()
+    for term in FALLBACK_TERMS:
+        if term.lower() in lowered and term not in STOPWORDS:
+            result.add(term)
     if jieba is not None:
         for word in jieba.lcut(text):
             word = word.strip().lower()
             if len(word) >= 2 and word not in STOPWORDS and not re.fullmatch(r"[\d_]+", word):
                 result.add(word)
         return result
-    # Fallback if jieba is unavailable: curated meme/trend vocabulary plus
-    # complete short phrases.  No sliding n-grams, which produce fragments such
-    # as "交部回应" and "应姆巴佩" and are not useful keywords.
-    lowered = text.lower()
-    for term in FALLBACK_TERMS:
-        if term.lower() in lowered:
-            result.add(term)
+    # Fallback if jieba is unavailable: complete short phrases without sliding
+    # n-grams, which produce fragments such as "交部回应".
     for word in re.findall(r"[A-Za-z]{3,}", text):
         if word.lower() not in STOPWORDS:
             result.add(word.lower())
@@ -184,7 +192,7 @@ def extract_keywords(titles: list[str], limit: int = 12) -> list[dict]:
         longer_same = [
             other
             for other in counts
-            if other != word and word in other and counts[other] == count
+            if other != word and word in other and counts[other] >= count
         ]
         if longer_same:
             continue
