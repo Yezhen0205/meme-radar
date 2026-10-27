@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated Pages payload.  data/feed.json is the committed source of truth;
+# the site copy is produced by scripts/build_feed.py --stage.
+site/data/feed.json
+
+# Local scratch / probes
+.probe/
+tmp/
+*.log
+
+# Environment and credentials (never commit these)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Node (only used for optional local browser checks)
+node_modules/

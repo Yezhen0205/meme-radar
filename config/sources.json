@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "timezone": "Asia/Shanghai",
+  "request": {
+    "timeout_seconds": 15,
+    "retries": 1,
+    "backoff_seconds": 2.0,
+    "min_interval_seconds": 1.2,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+  },
+  "feed": {
+    "max_items": 360,
+    "retention_hours": 168,
+    "today_hours": 24
+  },
+  "sources": [
+    {
+      "id": "bilibili",
+      "name": "哔哩哔哩热门",
+      "adapter": "bilibili_popular",
+      "enabled": true,
+      "url": "https://api.bilibili.com/x/web-interface/popular?ps=50&pn=1",
+      "referer": "https://www.bilibili.com/",
+      "limit": 50,
+      "rank_label": "热门"
+    },
+    {
+      "id": "bilibili_comments",
+      "name": "哔哩哔哩评论区",
+      "adapter": "bilibili_comments",
+      "enabled": true,
+      "depends_on": "bilibili",
+      "videos": 4,
+      "comments_per_video": 10,
+      "subreplies_per_video": 6,
+      "min_comment_likes": 20,
+      "min_reply_likes": 10,
+      "rank_label": "热评"
+    },
+    {
+      "id": "weibo_hot",
+      "name": "微博热搜",
+      "adapter": "weibo_hot",
+      "enabled": true,
+      "url": "https://weibo.com/ajax/side/hotSearch",
+      "referer": "https://weibo.com/",
+      "limit": 50,
+      "rank_label": "热搜"
+    },
+    {
+      "id": "baidu_hot",
+      "name": "百度热搜",
+      "adapter": "baidu_hot",
+      "enabled": true,
+      "url": "https://top.baidu.com/api/board?platform=wise&tab=realtime",
+      "referer": "https://top.baidu.com/",
+      "limit": 50,
+      "rank_label": "热搜"
+    },
+    {
+      "id": "tieba_hot",
+      "name": "贴吧热榜",
+      "adapter": "tieba_hot",
+      "enabled": true,
+      "url": "https://tieba.baidu.com/hottopic/browse/topicList",
+      "referer": "https://tieba.baidu.com/",
+      "limit": 30,
+      "rank_label": "话题"
+    },
+    {
+      "id": "toutiao_hot",
+      "name": "头条热榜",
+      "adapter": "toutiao_hot",
+      "enabled": true,
+      "url": "https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc",
+      "referer": "https://www.toutiao.com/",
+      "limit": 50,
+      "rank_label": "热榜"
+    },
+    {
+      "id": "douyin_hot",
+      "name": "抖音热榜",
+      "adapter": "douyin_hot",
+      "enabled": true,
+      "url": "https://www.douyin.com/aweme/v1/web/hot/search/list/",
+      "referer": "https://www.douyin.com/",
+      "limit": 50,
+      "rank_label": "热榜"
+    },
+    {
+      "id": "zhihu_daily",
+      "name": "知乎日报",
+      "adapter": "zhihu_daily",
+      "enabled": true,
+      "url": "https://daily.zhihu.com/api/4/news/latest",
+      "referer": "https://daily.zhihu.com/",
+      "limit": 10,
+      "rank_label": "日报"
+    }
+  ]
+}
