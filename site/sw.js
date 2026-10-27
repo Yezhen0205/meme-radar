@@ -1,5 +1,5 @@
 /* Meme Radar PWA shell. Gallery JSON is network-first, assets cache-first. */
-const CACHE = "meme-radar-gallery-v2";
+const CACHE = "meme-radar-gallery-v3";
 const SHELL = [
   "./",
   "./index.html",

@@ -31,6 +31,7 @@ const state = {
   toastTimer: 0,
   searchTimer: 0,
   deferredPrompt: null,
+  imageFailures: new Set(),
 };
 
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -46,6 +47,7 @@ const els = {
   loadMore: $("#loadMore"),
   resultMeta: $("#resultMeta"),
   banner: $("#banner"),
+  imageNote: $("#imageNote"),
   statusPill: $("#statusPill"),
   heroMeta: $("#heroMeta"),
   statTotal: $("#statTotal"),
@@ -392,6 +394,22 @@ function hideBanner() {
   els.banner.replaceChildren();
 }
 
+function renderImageNote() {
+  if (!state.imageFailures.size) {
+    els.imageNote.hidden = true;
+    els.imageNote.textContent = "";
+    return;
+  }
+  els.imageNote.hidden = false;
+  els.imageNote.textContent = `${state.imageFailures.size} 张图片在当前网络无法加载（多为 Reddit 图片域或已过期链接），卡片已显示原帖入口；这不是伪造成功。`;
+}
+
+function markImageFailure(id) {
+  if (!id) return;
+  state.imageFailures.add(id);
+  renderImageNote();
+}
+
 function openHealth() {
   if (els.healthPanel.hidden) return;
   const details = $("details", els.healthPanel);
@@ -546,6 +564,7 @@ function createCard(item, index) {
     fallback.hidden = false;
     const fallbackLink = $("a", fallback);
     fallbackLink.href = item.post_url;
+    markImageFailure(item.id);
   });
 
   const source = $(".source-pill", card);
@@ -706,6 +725,7 @@ function renderGrid() {
 function renderAll() {
   renderHero();
   renderBanner();
+  renderImageNote();
   renderChips();
   renderHealth();
   renderFilterState();
@@ -759,6 +779,7 @@ async function loadFeed(force = false) {
     state.fromCache = false;
     state.loading = false;
     state.visible = PAGE_SIZE;
+    state.imageFailures.clear();
     safeSet(CACHE_KEY, JSON.stringify(data));
     renderAll();
   } catch (error) {
@@ -768,6 +789,7 @@ async function loadFeed(force = false) {
       state.fromCache = true;
       state.loading = false;
       state.visible = PAGE_SIZE;
+      state.imageFailures.clear();
       renderAll();
     } else {
       state.feed = null;
@@ -817,6 +839,7 @@ function openLightbox(item) {
     els.lightboxImage.hidden = true;
     els.lightboxLoading.hidden = true;
     els.lightboxFallback.hidden = false;
+    markImageFailure(item.id);
   };
   els.lightboxImage.src = item.image_url;
   els.lightboxImage.alt = item.title;

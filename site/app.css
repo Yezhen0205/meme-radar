@@ -387,6 +387,17 @@ summary:focus-visible {
   text-underline-offset: 3px;
 }
 
+.image-note {
+  margin: -4px 0 12px;
+  padding: 8px 11px;
+  color: var(--ink-3);
+  background: color-mix(in srgb, var(--surface-2) 72%, transparent);
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  font-size: 0.64rem;
+  line-height: 1.55;
+}
+
 .discovery {
   padding: 4px 0 2px;
 }

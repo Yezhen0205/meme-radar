@@ -257,6 +257,7 @@ def build_feed(
         result = results[source]
         entry = result.public()
         entry["name"] = "Reddit" if source == "reddit" else "百度贴吧"
+        entry["item_count"] = sum(1 for item in items if item.get("source") == source)
         sources_public.append(entry)
     sources_public.append(
         {
