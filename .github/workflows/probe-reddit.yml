@@ -1,0 +1,64 @@
+name: Probe public sources
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe Reddit and Tieba from GitHub's network
+        run: |
+          python - <<'PY'
+          import json
+          import ssl
+          import urllib.error
+          import urllib.request
+
+          UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+          ctx = ssl.create_default_context()
+
+          def get(name, url, ref=None, range_header=None):
+              headers = {
+                  "User-Agent": UA,
+                  "Accept": "application/json,text/html,image/*,*/*",
+                  "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8",
+              }
+              if ref:
+                  headers["Referer"] = ref
+              if range_header:
+                  headers["Range"] = range_header
+              req = urllib.request.Request(url, headers=headers)
+              try:
+                  with urllib.request.urlopen(req, timeout=30, context=ctx) as response:
+                      body = response.read(5000)
+                      print(json.dumps({
+                          "name": name,
+                          "status": response.status,
+                          "content_type": response.headers.get("Content-Type"),
+                          "bytes_read": len(body),
+                          "final": response.geturl(),
+                          "head": body[:120].decode("utf-8", "replace"),
+                      }, ensure_ascii=True))
+                      return response.status, body
+              except urllib.error.HTTPError as exc:
+                  print(json.dumps({"name": name, "status": exc.code, "error": "HTTPError", "body": exc.read(300).decode("utf-8", "replace")}, ensure_ascii=True))
+              except Exception as exc:
+                  print(json.dumps({"name": name, "status": None, "error": type(exc).__name__, "detail": str(exc)[:200]}, ensure_ascii=True))
+              return None, b""
+
+          for sub in ("196", "okbuddyretard", "AnimalsBeingDerps"):
+              get("reddit_" + sub, "https://www.reddit.com/r/%s/hot.json?limit=10&raw_json=1" % sub, "https://www.reddit.com/")
+
+          get("tieba_hottopic", "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28368171", "https://tieba.baidu.com/")
+          get(
+              "tieba_image",
+              "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=44e71174bdf2b211e42e874cfabb1405/51da81cb39dbb6fd06b992214f24ab18962b37d2.jpg?tbpicau=2026-10-29-05_9f3526b773e3de1ab6ee9cbd0d68618b",
+              "https://tieba.baidu.com/",
+              "bytes=0-2047",
+          )
+          PY
