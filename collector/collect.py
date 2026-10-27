@@ -200,7 +200,9 @@ def collect(
     # that has never succeeded.
     merged_items = list(new_items)
     for status in statuses:
-        if status["status"] == "ok":
+        # A deliberately disabled source should disappear; only failures and
+        # dependency skips fall back to their last good snapshot.
+        if status["status"] not in {"failed", "skipped"}:
             continue
         retained = _previous_items_for_source(previous, status["id"], now, retention_hours)
         if retained:

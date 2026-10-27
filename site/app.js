@@ -839,10 +839,6 @@ function bindEvents() {
     renderFeed();
   });
 
-  els.sourcePanel.addEventListener("click", () => {
-    // Native details interaction is enough; this keeps the disclosure keyboard-friendly.
-  });
-
   window.addEventListener("storage", (event) => {
     if (event.key === FAV_KEY) {
       loadFavorites();

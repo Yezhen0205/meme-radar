@@ -147,6 +147,19 @@ class CollectMergeTests(unittest.TestCase):
         self.assertEqual(feed["run"]["sources_failed"], 1)
         self.assertEqual(feed["run"]["sources_using_previous"], 1)
 
+    def test_disabled_source_is_not_retained(self):
+        old_item = item("被停用源的数据", native_id="old")
+        previous = previous_feed(old_item)
+        config = config_for("weibo_hot")
+        config["sources"][0]["enabled"] = False
+        client = HttpClient(timeout=1, retries=0, min_interval=0)
+
+        feed, code = collect(config, previous, now=NOW, client=client)
+
+        self.assertEqual(code, 1)
+        self.assertEqual(feed["items"], [])
+        self.assertTrue(feed["stale"])
+
     def test_unchanged_second_run_reuses_previous_feed_object(self):
         new_item = item("稳定的内容", native_id="stable")
         client = HttpClient(timeout=1, retries=0, min_interval=0)
