@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28T03:33:05Z",
+  "updated_at": "2026-10-28T11:58:15Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-10-28T03:33:05Z",
+  "last_success_at": "2026-10-28T11:58:15Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 22,
+      "item_count": 21,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-28T03:33:05Z",
-      "last_attempt_at": "2026-10-28T03:33:05Z",
+      "last_success_at": "2026-10-28T11:58:15Z",
+      "last_attempt_at": "2026-10-28T11:58:15Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,41 +23,41 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 22,
-        "no_image": 3,
+        "with_images": 21,
+        "no_image": 4,
         "skipped_old": 0
       }
     },
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 28,
+      "item_count": 23,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-28T03:33:05Z",
-      "last_attempt_at": "2026-10-28T03:33:05Z",
+      "last_success_at": "2026-10-28T11:58:15Z",
+      "last_attempt_at": "2026-10-28T11:58:15Z",
       "details": {
         "topics": [
+          {
+            "topic_id": 28368230,
+            "topic": "熊猫人登场,表情包顶流花落谁家",
+            "status": "ok",
+            "threads": 10,
+            "added": 10
+          },
           {
             "topic_id": 28368171,
             "topic": "表情包大赛,滑稽出征寸草不生",
             "status": "ok",
             "threads": 10,
-            "added": 10
+            "added": 3
           },
           {
-            "topic_id": 28367998,
-            "topic": "图吧垃圾佬",
+            "topic_id": 28368178,
+            "topic": "吧友整活姆巴佩梗图",
             "status": "ok",
             "threads": 10,
             "added": 10
-          },
-          {
-            "topic_id": 28368174,
-            "topic": "胶佬炫技,高达爆改房车",
-            "status": "ok",
-            "threads": 8,
-            "added": 8
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-28T03:33:05Z",
-      "last_attempt_at": "2026-10-28T03:33:05Z",
+      "last_success_at": "2026-10-28T11:58:15Z",
+      "last_attempt_at": "2026-10-28T11:58:15Z",
       "details": {}
     },
     "x": {
@@ -238,6 +238,21 @@
       "status": "degraded",
       "items": 109,
       "new": 23,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-10-28T11:58:15Z",
+      "status": "degraded",
+      "items": 144,
+      "new": 36,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
