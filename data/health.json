@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28T22:19:35Z",
+  "updated_at": "2026-10-29T03:54:23Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-10-28T22:19:35Z",
+  "last_success_at": "2026-10-29T03:54:23Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 25,
+      "item_count": 23,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-28T22:19:35Z",
-      "last_attempt_at": "2026-10-28T22:19:35Z",
+      "last_success_at": "2026-10-29T03:54:23Z",
+      "last_attempt_at": "2026-10-29T03:54:23Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,34 +23,27 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 25,
-        "no_image": 0,
+        "with_images": 23,
+        "no_image": 2,
         "skipped_old": 0
       }
     },
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 24,
+      "item_count": 19,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-28T22:19:35Z",
-      "last_attempt_at": "2026-10-28T22:19:35Z",
+      "last_success_at": "2026-10-29T03:54:23Z",
+      "last_attempt_at": "2026-10-29T03:54:23Z",
       "details": {
         "topics": [
           {
             "topic_id": 28368230,
             "topic": "熊猫人登场,表情包顶流花落谁家",
             "status": "ok",
-            "threads": 10,
-            "added": 10
-          },
-          {
-            "topic_id": 28368171,
-            "topic": "表情包大赛,滑稽出征寸草不生",
-            "status": "ok",
-            "threads": 10,
-            "added": 4
+            "threads": 3,
+            "added": 3
           },
           {
             "topic_id": 28368178,
@@ -58,6 +51,13 @@
             "status": "ok",
             "threads": 10,
             "added": 10
+          },
+          {
+            "topic_id": 28368392,
+            "topic": "影之刃零首发,编译吐槽两开花",
+            "status": "ok",
+            "threads": 6,
+            "added": 6
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-28T22:19:35Z",
-      "last_attempt_at": "2026-10-28T22:19:35Z",
+      "last_success_at": "2026-10-29T03:54:23Z",
+      "last_attempt_at": "2026-10-29T03:54:23Z",
       "details": {}
     },
     "x": {
@@ -283,6 +283,21 @@
       "status": "degraded",
       "items": 196,
       "new": 26,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-10-29T03:54:23Z",
+      "status": "degraded",
+      "items": 223,
+      "new": 30,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
