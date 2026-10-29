@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T03:54:23Z",
+  "updated_at": "2026-10-29T12:06:45Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-10-29T03:54:23Z",
+  "last_success_at": "2026-10-29T12:06:45Z",
   "alerts": [],
   "sources": {
     "reddit": {
@@ -12,8 +12,8 @@
       "item_count": 23,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-29T03:54:23Z",
-      "last_attempt_at": "2026-10-29T03:54:23Z",
+      "last_success_at": "2026-10-29T12:06:45Z",
+      "last_attempt_at": "2026-10-29T12:06:45Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -31,33 +31,33 @@
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 19,
+      "item_count": 21,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-29T03:54:23Z",
-      "last_attempt_at": "2026-10-29T03:54:23Z",
+      "last_success_at": "2026-10-29T12:06:45Z",
+      "last_attempt_at": "2026-10-29T12:06:45Z",
       "details": {
         "topics": [
           {
-            "topic_id": 28368230,
-            "topic": "熊猫人登场,表情包顶流花落谁家",
-            "status": "ok",
-            "threads": 3,
-            "added": 3
-          },
-          {
-            "topic_id": 28368178,
-            "topic": "吧友整活姆巴佩梗图",
+            "topic_id": 28368437,
+            "topic": "表情包大赛32强,收官之战",
             "status": "ok",
             "threads": 10,
             "added": 10
           },
           {
-            "topic_id": 28368392,
-            "topic": "影之刃零首发,编译吐槽两开花",
+            "topic_id": 28368230,
+            "topic": "熊猫人登场,表情包顶流花落谁家",
             "status": "ok",
-            "threads": 6,
-            "added": 6
+            "threads": 10,
+            "added": 2
+          },
+          {
+            "topic_id": 28368394,
+            "topic": "四格meme介绍我的本命角色",
+            "status": "ok",
+            "threads": 9,
+            "added": 9
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-29T03:54:23Z",
-      "last_attempt_at": "2026-10-29T03:54:23Z",
+      "last_success_at": "2026-10-29T12:06:45Z",
+      "last_attempt_at": "2026-10-29T12:06:45Z",
       "details": {}
     },
     "x": {
@@ -298,6 +298,21 @@
       "status": "degraded",
       "items": 223,
       "new": 30,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-10-29T12:06:45Z",
+      "status": "degraded",
+      "items": 259,
+      "new": 37,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
