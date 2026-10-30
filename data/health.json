@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-30T03:56:28Z",
+  "updated_at": "2026-10-30T11:58:59Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-10-30T03:56:28Z",
+  "last_success_at": "2026-10-30T11:58:59Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 24,
+      "item_count": 23,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-30T03:56:28Z",
-      "last_attempt_at": "2026-10-30T03:56:28Z",
+      "last_success_at": "2026-10-30T11:58:59Z",
+      "last_attempt_at": "2026-10-30T11:58:59Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,27 +23,34 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 24,
-        "no_image": 1,
+        "with_images": 23,
+        "no_image": 2,
         "skipped_old": 0
       }
     },
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 27,
+      "item_count": 19,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-30T03:56:28Z",
-      "last_attempt_at": "2026-10-30T03:56:28Z",
+      "last_success_at": "2026-10-30T11:58:59Z",
+      "last_attempt_at": "2026-10-30T11:58:59Z",
       "details": {
         "topics": [
+          {
+            "topic_id": 28368582,
+            "topic": "16强开打,谁是最靓表情包",
+            "status": "ok",
+            "threads": 10,
+            "added": 10
+          },
           {
             "topic_id": 28368437,
             "topic": "表情包大赛32强,收官之战",
             "status": "ok",
             "threads": 10,
-            "added": 10
+            "added": 0
           },
           {
             "topic_id": 28368394,
@@ -51,13 +58,6 @@
             "status": "ok",
             "threads": 9,
             "added": 9
-          },
-          {
-            "topic_id": 28368460,
-            "topic": "四格meme介绍影之刃零",
-            "status": "ok",
-            "threads": 10,
-            "added": 8
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-30T03:56:28Z",
-      "last_attempt_at": "2026-10-30T03:56:28Z",
+      "last_success_at": "2026-10-30T11:58:59Z",
+      "last_attempt_at": "2026-10-30T11:58:59Z",
       "details": {}
     },
     "x": {
@@ -343,6 +343,21 @@
       "status": "degraded",
       "items": 300,
       "new": 34,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-10-30T11:58:59Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 25,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
