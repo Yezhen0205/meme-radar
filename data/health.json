@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T03:41:05Z",
+  "updated_at": "2026-10-31T11:32:47Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-10-31T03:41:05Z",
+  "last_success_at": "2026-10-31T11:32:47Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 25,
+      "item_count": 22,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-31T03:41:05Z",
-      "last_attempt_at": "2026-10-31T03:41:05Z",
+      "last_success_at": "2026-10-31T11:32:47Z",
+      "last_attempt_at": "2026-10-31T11:32:47Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,8 +23,8 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 25,
-        "no_image": 0,
+        "with_images": 22,
+        "no_image": 3,
         "skipped_old": 0
       }
     },
@@ -34,30 +34,30 @@
       "item_count": 20,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-31T03:41:05Z",
-      "last_attempt_at": "2026-10-31T03:41:05Z",
+      "last_success_at": "2026-10-31T11:32:47Z",
+      "last_attempt_at": "2026-10-31T11:32:47Z",
       "details": {
         "topics": [
           {
-            "topic_id": 28368582,
-            "topic": "16强开打,谁是最靓表情包",
+            "topic_id": 28368643,
+            "topic": "表情包大赛,16进8生死局",
             "status": "ok",
             "threads": 10,
             "added": 10
           },
           {
-            "topic_id": 28368437,
-            "topic": "表情包大赛32强,收官之战",
+            "topic_id": 28368582,
+            "topic": "16强开打,谁是最靓表情包",
             "status": "ok",
             "threads": 10,
-            "added": 1
+            "added": 2
           },
           {
-            "topic_id": 28368394,
-            "topic": "四格meme介绍我的本命角色",
+            "topic_id": 28368632,
+            "topic": "抗吧批瑞士轮赛制:抽签游戏",
             "status": "ok",
-            "threads": 9,
-            "added": 9
+            "threads": 8,
+            "added": 8
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-10-31T03:41:05Z",
-      "last_attempt_at": "2026-10-31T03:41:05Z",
+      "last_success_at": "2026-10-31T11:32:47Z",
+      "last_attempt_at": "2026-10-31T11:32:47Z",
       "details": {}
     },
     "x": {
@@ -111,22 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-10-27T13:49:48Z",
-      "status": "degraded",
-      "items": 28,
-      "new": 29,
-      "sources": {
-        "reddit": "disabled",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "数据源在配置中关闭",
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-10-27T14:08:55Z",
       "status": "degraded",
@@ -403,6 +387,21 @@
       "status": "degraded",
       "items": 300,
       "new": 26,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-10-31T11:32:47Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 32,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
