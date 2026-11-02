@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-01T21:36:01Z",
+  "updated_at": "2026-11-02T03:52:53Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-01T21:36:01Z",
+  "last_success_at": "2026-11-02T03:52:53Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 25,
+      "item_count": 23,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-01T21:36:01Z",
-      "last_attempt_at": "2026-11-01T21:36:01Z",
+      "last_success_at": "2026-11-02T03:52:53Z",
+      "last_attempt_at": "2026-11-02T03:52:53Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,19 +23,19 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 25,
-        "no_image": 0,
+        "with_images": 23,
+        "no_image": 2,
         "skipped_old": 0
       }
     },
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 20,
+      "item_count": 27,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-01T21:36:01Z",
-      "last_attempt_at": "2026-11-01T21:36:01Z",
+      "last_success_at": "2026-11-02T03:52:53Z",
+      "last_attempt_at": "2026-11-02T03:52:53Z",
       "details": {
         "topics": [
           {
@@ -46,18 +46,18 @@
             "added": 10
           },
           {
-            "topic_id": 28368582,
-            "topic": "16强开打,谁是最靓表情包",
-            "status": "ok",
-            "threads": 10,
-            "added": 2
-          },
-          {
             "topic_id": 28368632,
             "topic": "抗吧批瑞士轮赛制:抽签游戏",
             "status": "ok",
             "threads": 8,
             "added": 8
+          },
+          {
+            "topic_id": 28368733,
+            "topic": "吧友甩Steam数据,影之刃零进前六",
+            "status": "ok",
+            "threads": 9,
+            "added": 9
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-01T21:36:01Z",
-      "last_attempt_at": "2026-11-01T21:36:01Z",
+      "last_success_at": "2026-11-02T03:52:53Z",
+      "last_attempt_at": "2026-11-02T03:52:53Z",
       "details": {}
     },
     "x": {
@@ -111,21 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-10-27T14:58:55Z",
-      "status": "degraded",
-      "items": 61,
-      "new": 2,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-10-27T21:42:36Z",
       "status": "degraded",
@@ -401,6 +386,21 @@
       "status": "degraded",
       "items": 300,
       "new": 26,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-02T03:52:53Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 33,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
