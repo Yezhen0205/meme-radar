@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-02T14:30:24Z",
+  "updated_at": "2026-11-03T00:20:09Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-02T14:30:24Z",
+  "last_success_at": "2026-11-03T00:20:09Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 25,
+      "item_count": 23,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-02T14:30:24Z",
-      "last_attempt_at": "2026-11-02T14:30:24Z",
+      "last_success_at": "2026-11-03T00:20:09Z",
+      "last_attempt_at": "2026-11-03T00:20:09Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,19 +23,19 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 25,
-        "no_image": 0,
+        "with_images": 23,
+        "no_image": 2,
         "skipped_old": 0
       }
     },
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 21,
+      "item_count": 27,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-02T14:30:24Z",
-      "last_attempt_at": "2026-11-02T14:30:24Z",
+      "last_success_at": "2026-11-03T00:20:09Z",
+      "last_attempt_at": "2026-11-03T00:20:09Z",
       "details": {
         "topics": [
           {
@@ -46,11 +46,11 @@
             "added": 10
           },
           {
-            "topic_id": 28368643,
-            "topic": "表情包大赛,16进8生死局",
+            "topic_id": 28368883,
+            "topic": "左手爆Nice金句,成万能公式",
             "status": "ok",
-            "threads": 10,
-            "added": 2
+            "threads": 8,
+            "added": 8
           },
           {
             "topic_id": 28368861,
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-02T14:30:24Z",
-      "last_attempt_at": "2026-11-02T14:30:24Z",
+      "last_success_at": "2026-11-03T00:20:09Z",
+      "last_attempt_at": "2026-11-03T00:20:09Z",
       "details": {}
     },
     "x": {
@@ -111,21 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-10-28T03:33:05Z",
-      "status": "degraded",
-      "items": 109,
-      "new": 23,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-10-28T11:58:15Z",
       "status": "degraded",
@@ -398,6 +383,21 @@
     },
     {
       "at": "2026-11-02T14:30:24Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 37,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-03T00:20:09Z",
       "status": "degraded",
       "items": 300,
       "new": 37,
