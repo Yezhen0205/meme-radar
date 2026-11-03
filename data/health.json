@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T00:20:09Z",
+  "updated_at": "2026-11-03T13:27:37Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-03T00:20:09Z",
+  "last_success_at": "2026-11-03T13:27:37Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 23,
+      "item_count": 20,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-03T00:20:09Z",
-      "last_attempt_at": "2026-11-03T00:20:09Z",
+      "last_success_at": "2026-11-03T13:27:37Z",
+      "last_attempt_at": "2026-11-03T13:27:37Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,41 +23,41 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 23,
-        "no_image": 2,
+        "with_images": 20,
+        "no_image": 5,
         "skipped_old": 0
       }
     },
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 27,
+      "item_count": 20,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-03T00:20:09Z",
-      "last_attempt_at": "2026-11-03T00:20:09Z",
+      "last_success_at": "2026-11-03T13:27:37Z",
+      "last_attempt_at": "2026-11-03T13:27:37Z",
       "details": {
         "topics": [
           {
-            "topic_id": 28368865,
-            "topic": "表情包终极对决,大肥鱼vs滑稽",
+            "topic_id": 28368905,
+            "topic": "谁才是表情包顶流,4强开战",
             "status": "ok",
             "threads": 10,
             "added": 10
           },
           {
-            "topic_id": 28368883,
-            "topic": "左手爆Nice金句,成万能公式",
-            "status": "ok",
-            "threads": 8,
-            "added": 8
-          },
-          {
-            "topic_id": 28368861,
-            "topic": "罗技再骂顾客是狗,吧友开炮",
+            "topic_id": 28368892,
+            "topic": "S8表情包绝迹,抗吧怀旧晒图",
             "status": "ok",
             "threads": 9,
             "added": 9
+          },
+          {
+            "topic_id": 28368865,
+            "topic": "表情包终极对决,大肥鱼vs滑稽",
+            "status": "ok",
+            "threads": 10,
+            "added": 1
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-03T00:20:09Z",
-      "last_attempt_at": "2026-11-03T00:20:09Z",
+      "last_success_at": "2026-11-03T13:27:37Z",
+      "last_attempt_at": "2026-11-03T13:27:37Z",
       "details": {}
     },
     "x": {
@@ -111,21 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-10-28T11:58:15Z",
-      "status": "degraded",
-      "items": 144,
-      "new": 36,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-10-28T17:58:44Z",
       "status": "degraded",
@@ -401,6 +386,21 @@
       "status": "degraded",
       "items": 300,
       "new": 37,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-03T13:27:37Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 30,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
