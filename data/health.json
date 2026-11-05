@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T04:41:44Z",
+  "updated_at": "2026-11-05T13:51:12Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-05T04:41:44Z",
+  "last_success_at": "2026-11-05T13:51:12Z",
   "alerts": [],
   "sources": {
     "reddit": {
@@ -12,8 +12,8 @@
       "item_count": 24,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-05T04:41:44Z",
-      "last_attempt_at": "2026-11-05T04:41:44Z",
+      "last_success_at": "2026-11-05T13:51:12Z",
+      "last_attempt_at": "2026-11-05T13:51:12Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -31,11 +31,11 @@
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 20,
+      "item_count": 28,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-05T04:41:44Z",
-      "last_attempt_at": "2026-11-05T04:41:44Z",
+      "last_success_at": "2026-11-05T13:51:12Z",
+      "last_attempt_at": "2026-11-05T13:51:12Z",
       "details": {
         "topics": [
           {
@@ -46,18 +46,18 @@
             "added": 10
           },
           {
-            "topic_id": 28368905,
-            "topic": "谁才是表情包顶流,4强开战",
+            "topic_id": 28368946,
+            "topic": "吧友玩梗厉娜,造句太上头",
             "status": "ok",
-            "threads": 10,
-            "added": 1
+            "threads": 8,
+            "added": 8
           },
           {
-            "topic_id": 28368892,
-            "topic": "S8表情包绝迹,抗吧怀旧晒图",
+            "topic_id": 28369218,
+            "topic": "吧友用纸折出一座恐龙博物馆",
             "status": "ok",
-            "threads": 9,
-            "added": 9
+            "threads": 10,
+            "added": 10
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-05T04:41:44Z",
-      "last_attempt_at": "2026-11-05T04:41:44Z",
+      "last_success_at": "2026-11-05T13:51:12Z",
+      "last_attempt_at": "2026-11-05T13:51:12Z",
       "details": {}
     },
     "x": {
@@ -111,21 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-10-30T03:56:28Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 34,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-10-30T11:58:59Z",
       "status": "degraded",
@@ -410,6 +395,21 @@
         "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
       ],
       "broken_images": 0
+    },
+    {
+      "at": "2026-11-05T13:51:12Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 45,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 1
     }
   ]
 }
