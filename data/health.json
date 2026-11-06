@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T13:36:35Z",
+  "updated_at": "2026-11-06T22:38:06Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-06T13:36:35Z",
+  "last_success_at": "2026-11-06T22:38:06Z",
   "alerts": [],
   "sources": {
     "reddit": {
@@ -12,8 +12,8 @@
       "item_count": 22,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-06T13:36:35Z",
-      "last_attempt_at": "2026-11-06T13:36:35Z",
+      "last_success_at": "2026-11-06T22:38:06Z",
+      "last_attempt_at": "2026-11-06T22:38:06Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -31,11 +31,11 @@
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 25,
+      "item_count": 24,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-06T13:36:35Z",
-      "last_attempt_at": "2026-11-06T13:36:35Z",
+      "last_success_at": "2026-11-06T22:38:06Z",
+      "last_attempt_at": "2026-11-06T22:38:06Z",
       "details": {
         "topics": [
           {
@@ -56,8 +56,8 @@
             "topic_id": 28369328,
             "topic": "时之笛重制版开分96登顶最佳",
             "status": "ok",
-            "threads": 6,
-            "added": 6
+            "threads": 5,
+            "added": 5
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-06T13:36:35Z",
-      "last_attempt_at": "2026-11-06T13:36:35Z",
+      "last_success_at": "2026-11-06T22:38:06Z",
+      "last_attempt_at": "2026-11-06T22:38:06Z",
       "details": {}
     },
     "x": {
@@ -111,21 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-10-31T03:41:05Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 26,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-10-31T11:32:47Z",
       "status": "degraded",
@@ -401,6 +386,21 @@
       "status": "degraded",
       "items": 300,
       "new": 31,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-06T22:38:06Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 22,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
