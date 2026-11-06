@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T23:09:21Z",
+  "updated_at": "2026-11-06T04:41:05Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-05T23:09:21Z",
+  "last_success_at": "2026-11-06T04:41:05Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 25,
+      "item_count": 22,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-05T23:09:21Z",
-      "last_attempt_at": "2026-11-05T23:09:21Z",
+      "last_success_at": "2026-11-06T04:41:05Z",
+      "last_attempt_at": "2026-11-06T04:41:05Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,19 +23,19 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 25,
-        "no_image": 0,
+        "with_images": 22,
+        "no_image": 3,
         "skipped_old": 0
       }
     },
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 28,
+      "item_count": 26,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-05T23:09:21Z",
-      "last_attempt_at": "2026-11-05T23:09:21Z",
+      "last_success_at": "2026-11-06T04:41:05Z",
+      "last_attempt_at": "2026-11-06T04:41:05Z",
       "details": {
         "topics": [
           {
@@ -46,18 +46,18 @@
             "added": 10
           },
           {
-            "topic_id": 28368946,
-            "topic": "吧友玩梗厉娜,造句太上头",
-            "status": "ok",
-            "threads": 8,
-            "added": 8
-          },
-          {
-            "topic_id": 28369218,
-            "topic": "吧友用纸折出一座恐龙博物馆",
+            "topic_id": 28369305,
+            "topic": "抗吧整活S赛金庸宇宙",
             "status": "ok",
             "threads": 10,
             "added": 10
+          },
+          {
+            "topic_id": 28369328,
+            "topic": "时之笛重制版开分96登顶最佳",
+            "status": "ok",
+            "threads": 6,
+            "added": 6
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-05T23:09:21Z",
-      "last_attempt_at": "2026-11-05T23:09:21Z",
+      "last_success_at": "2026-11-06T04:41:05Z",
+      "last_attempt_at": "2026-11-06T04:41:05Z",
       "details": {}
     },
     "x": {
@@ -111,21 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-10-30T17:50:27Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 25,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-10-30T21:52:16Z",
       "status": "degraded",
@@ -401,6 +386,21 @@
       "status": "degraded",
       "items": 300,
       "new": 27,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-06T04:41:05Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 39,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
