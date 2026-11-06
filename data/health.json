@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T04:41:05Z",
+  "updated_at": "2026-11-06T13:36:35Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-06T04:41:05Z",
+  "last_success_at": "2026-11-06T13:36:35Z",
   "alerts": [],
   "sources": {
     "reddit": {
@@ -12,8 +12,8 @@
       "item_count": 22,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-06T04:41:05Z",
-      "last_attempt_at": "2026-11-06T04:41:05Z",
+      "last_success_at": "2026-11-06T13:36:35Z",
+      "last_attempt_at": "2026-11-06T13:36:35Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -31,26 +31,26 @@
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 26,
+      "item_count": 25,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-06T04:41:05Z",
-      "last_attempt_at": "2026-11-06T04:41:05Z",
+      "last_success_at": "2026-11-06T13:36:35Z",
+      "last_attempt_at": "2026-11-06T13:36:35Z",
       "details": {
         "topics": [
-          {
-            "topic_id": 28369088,
-            "topic": "表情包大赛冠军争夺战",
-            "status": "ok",
-            "threads": 10,
-            "added": 10
-          },
           {
             "topic_id": 28369305,
             "topic": "抗吧整活S赛金庸宇宙",
             "status": "ok",
             "threads": 10,
             "added": 10
+          },
+          {
+            "topic_id": 28369375,
+            "topic": "抗吧彩排LPL夺冠剧本真燃",
+            "status": "ok",
+            "threads": 9,
+            "added": 9
           },
           {
             "topic_id": 28369328,
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-06T04:41:05Z",
-      "last_attempt_at": "2026-11-06T04:41:05Z",
+      "last_success_at": "2026-11-06T13:36:35Z",
+      "last_attempt_at": "2026-11-06T13:36:35Z",
       "details": {}
     },
     "x": {
@@ -111,21 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-10-30T21:52:16Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 23,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-10-31T03:41:05Z",
       "status": "degraded",
@@ -401,6 +386,21 @@
       "status": "degraded",
       "items": 300,
       "new": 39,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-06T13:36:35Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 31,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
