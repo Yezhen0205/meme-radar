@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-07T12:17:14Z",
+  "updated_at": "2026-11-07T21:19:47Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-07T12:17:14Z",
+  "last_success_at": "2026-11-07T21:19:47Z",
   "alerts": [],
   "sources": {
     "reddit": {
@@ -12,8 +12,8 @@
       "item_count": 23,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-07T12:17:14Z",
-      "last_attempt_at": "2026-11-07T12:17:14Z",
+      "last_success_at": "2026-11-07T21:19:47Z",
+      "last_attempt_at": "2026-11-07T21:19:47Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -34,8 +34,8 @@
       "item_count": 21,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-07T12:17:14Z",
-      "last_attempt_at": "2026-11-07T12:17:14Z",
+      "last_success_at": "2026-11-07T21:19:47Z",
+      "last_attempt_at": "2026-11-07T21:19:47Z",
       "details": {
         "topics": [
           {
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-07T12:17:14Z",
-      "last_attempt_at": "2026-11-07T12:17:14Z",
+      "last_success_at": "2026-11-07T21:19:47Z",
+      "last_attempt_at": "2026-11-07T21:19:47Z",
       "details": {}
     },
     "x": {
@@ -111,21 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-10-31T20:53:02Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 26,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-11-01T03:48:14Z",
       "status": "degraded",
@@ -401,6 +386,21 @@
       "status": "degraded",
       "items": 300,
       "new": 28,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-07T21:19:47Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 23,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
