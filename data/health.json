@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T01:04:26Z",
+  "updated_at": "2026-11-10T14:07:52Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-10T01:04:26Z",
+  "last_success_at": "2026-11-10T14:07:52Z",
   "alerts": [],
   "sources": {
     "reddit": {
@@ -12,8 +12,8 @@
       "item_count": 24,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-10T01:04:26Z",
-      "last_attempt_at": "2026-11-10T01:04:26Z",
+      "last_success_at": "2026-11-10T14:07:52Z",
+      "last_attempt_at": "2026-11-10T14:07:52Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -31,19 +31,19 @@
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 10,
+      "item_count": 8,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-10T01:04:26Z",
-      "last_attempt_at": "2026-11-10T01:04:26Z",
+      "last_success_at": "2026-11-10T14:07:52Z",
+      "last_attempt_at": "2026-11-10T14:07:52Z",
       "details": {
         "topics": [
           {
-            "topic_id": 28369414,
-            "topic": "抗吧整活S16爆改遮天",
+            "topic_id": 28369673,
+            "topic": "Knight换爱音头像玄学冲冠",
             "status": "ok",
-            "threads": 10,
-            "added": 10
+            "threads": 8,
+            "added": 8
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -55,8 +55,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-10T01:04:26Z",
-      "last_attempt_at": "2026-11-10T01:04:26Z",
+      "last_success_at": "2026-11-10T14:07:52Z",
+      "last_attempt_at": "2026-11-10T14:07:52Z",
       "details": {}
     },
     "x": {
@@ -97,21 +97,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-11-03T13:27:37Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 30,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-11-03T22:47:30Z",
       "status": "degraded",
@@ -387,6 +372,21 @@
       "status": "degraded",
       "items": 300,
       "new": 24,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-10T14:07:52Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 32,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
