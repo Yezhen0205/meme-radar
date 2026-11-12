@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T23:56:29Z",
+  "updated_at": "2026-11-12T05:34:57Z",
   "status": "degraded",
   "consecutive_failures": 0,
-  "last_success_at": "2026-11-11T23:56:29Z",
+  "last_success_at": "2026-11-12T05:34:57Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "ok",
-      "item_count": 23,
+      "item_count": 24,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-11T23:56:29Z",
-      "last_attempt_at": "2026-11-11T23:56:29Z",
+      "last_success_at": "2026-11-12T05:34:57Z",
+      "last_attempt_at": "2026-11-12T05:34:57Z",
       "details": {
         "communities": [
           "okbuddyretard",
@@ -23,8 +23,8 @@
         "feed": "new",
         "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "entries": 25,
-        "with_images": 23,
-        "no_image": 2,
+        "with_images": 24,
+        "no_image": 1,
         "skipped_old": 0
       }
     },
@@ -34,10 +34,17 @@
       "item_count": 19,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-11T23:56:29Z",
-      "last_attempt_at": "2026-11-11T23:56:29Z",
+      "last_success_at": "2026-11-12T05:34:57Z",
+      "last_attempt_at": "2026-11-12T05:34:57Z",
       "details": {
         "topics": [
+          {
+            "topic_id": 28369782,
+            "topic": "英国人吐槽中国医院不如泰国",
+            "status": "ok",
+            "threads": 10,
+            "added": 10
+          },
           {
             "topic_id": 28369376,
             "topic": "2026TGA提名游戏预测",
@@ -46,18 +53,11 @@
             "added": 0
           },
           {
-            "topic_id": 28369673,
-            "topic": "Knight换爱音头像玄学冲冠",
+            "topic_id": 28369779,
+            "topic": "日本动画巨头中国版权卖不动了",
             "status": "ok",
             "threads": 9,
             "added": 9
-          },
-          {
-            "topic_id": 28369764,
-            "topic": "双十一凑单就服垃圾佬",
-            "status": "ok",
-            "threads": 10,
-            "added": 10
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +69,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-11T23:56:29Z",
-      "last_attempt_at": "2026-11-11T23:56:29Z",
+      "last_success_at": "2026-11-12T05:34:57Z",
+      "last_attempt_at": "2026-11-12T05:34:57Z",
       "details": {}
     },
     "x": {
@@ -111,21 +111,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-11-05T04:41:44Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 25,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-11-05T13:51:12Z",
       "status": "degraded",
@@ -401,6 +386,21 @@
       "status": "degraded",
       "items": 300,
       "new": 24,
+      "sources": {
+        "reddit": "ok",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-12T05:34:57Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 43,
       "sources": {
         "reddit": "ok",
         "tieba": "degraded",
