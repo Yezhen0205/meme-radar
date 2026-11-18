@@ -1,19 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T14:56:48Z",
+  "updated_at": "2026-11-18T23:47:54Z",
   "status": "degraded",
-  "consecutive_failures": 2,
-  "last_success_at": "2026-11-18T14:56:48Z",
-  "alerts": [],
+  "consecutive_failures": 3,
+  "last_success_at": "2026-11-18T23:47:54Z",
+  "alerts": [
+    "reddit 已连续 3 轮失败"
+  ],
   "sources": {
     "reddit": {
       "name": "reddit",
       "status": "blocked",
       "item_count": 0,
       "error": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
-      "consecutive_failures": 2,
+      "consecutive_failures": 3,
       "last_success_at": "2026-11-17T15:21:48Z",
-      "last_attempt_at": "2026-11-18T14:56:48Z",
+      "last_attempt_at": "2026-11-18T23:47:54Z",
       "details": {
         "reason": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss"
       }
@@ -24,8 +26,8 @@
       "item_count": 24,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-18T14:56:48Z",
-      "last_attempt_at": "2026-11-18T14:56:48Z",
+      "last_success_at": "2026-11-18T23:47:54Z",
+      "last_attempt_at": "2026-11-18T23:47:54Z",
       "details": {
         "topics": [
           {
@@ -59,8 +61,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-18T14:56:48Z",
-      "last_attempt_at": "2026-11-18T14:56:48Z",
+      "last_success_at": "2026-11-18T23:47:54Z",
+      "last_attempt_at": "2026-11-18T23:47:54Z",
       "details": {}
     },
     "x": {
@@ -101,21 +103,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-11-11T13:24:22Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 33,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-11-11T23:56:29Z",
       "status": "degraded",
@@ -392,6 +379,22 @@
       "status": "degraded",
       "items": 300,
       "new": 3,
+      "sources": {
+        "reddit": "blocked",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-18T23:47:54Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 0,
       "sources": {
         "reddit": "blocked",
         "tieba": "degraded",
