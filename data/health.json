@@ -1,43 +1,40 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T15:21:48Z",
+  "updated_at": "2026-11-18T00:22:18Z",
   "status": "degraded",
-  "consecutive_failures": 0,
-  "last_success_at": "2026-11-17T15:21:48Z",
+  "consecutive_failures": 1,
+  "last_success_at": "2026-11-18T00:22:18Z",
   "alerts": [],
   "sources": {
     "reddit": {
       "name": "reddit",
-      "status": "ok",
-      "item_count": 24,
-      "error": null,
-      "consecutive_failures": 0,
+      "status": "blocked",
+      "item_count": 0,
+      "error": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
+      "consecutive_failures": 1,
       "last_success_at": "2026-11-17T15:21:48Z",
-      "last_attempt_at": "2026-11-17T15:21:48Z",
+      "last_attempt_at": "2026-11-18T00:22:18Z",
       "details": {
-        "communities": [
-          "okbuddyretard",
-          "196",
-          "AnimalsBeingDerps"
-        ],
-        "feed": "new",
-        "rss_url": "https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
-        "entries": 25,
-        "with_images": 24,
-        "no_image": 1,
-        "skipped_old": 0
+        "reason": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss"
       }
     },
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 24,
+      "item_count": 23,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-17T15:21:48Z",
-      "last_attempt_at": "2026-11-17T15:21:48Z",
+      "last_success_at": "2026-11-18T00:22:18Z",
+      "last_attempt_at": "2026-11-18T00:22:18Z",
       "details": {
         "topics": [
+          {
+            "topic_id": 28369926,
+            "topic": "影之刃零入围TGA年度游戏",
+            "status": "ok",
+            "threads": 8,
+            "added": 8
+          },
           {
             "topic_id": 28369904,
             "topic": "吧友考古暴力摩托刘沛松梗起源",
@@ -51,13 +48,6 @@
             "status": "ok",
             "threads": 8,
             "added": 8
-          },
-          {
-            "topic_id": 28369925,
-            "topic": "灯光秀写爸爸我爱你判违规",
-            "status": "ok",
-            "threads": 9,
-            "added": 9
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -69,8 +59,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-17T15:21:48Z",
-      "last_attempt_at": "2026-11-17T15:21:48Z",
+      "last_success_at": "2026-11-18T00:22:18Z",
+      "last_attempt_at": "2026-11-18T00:22:18Z",
       "details": {}
     },
     "x": {
@@ -111,21 +101,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-11-10T22:44:10Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 21,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-11-11T04:09:24Z",
       "status": "degraded",
@@ -407,6 +382,22 @@
         "trends": "ok"
       },
       "errors": [
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-18T00:22:18Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 8,
+      "sources": {
+        "reddit": "blocked",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
         "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
       ],
       "broken_images": 0
