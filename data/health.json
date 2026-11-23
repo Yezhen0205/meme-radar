@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-23T05:12:52Z",
+  "updated_at": "2026-11-23T17:04:49Z",
   "status": "degraded",
-  "consecutive_failures": 15,
-  "last_success_at": "2026-11-23T05:12:52Z",
+  "consecutive_failures": 16,
+  "last_success_at": "2026-11-23T17:04:49Z",
   "alerts": [
-    "reddit 已连续 15 轮失败"
+    "reddit 已连续 16 轮失败"
   ],
   "sources": {
     "reddit": {
@@ -13,9 +13,9 @@
       "status": "blocked",
       "item_count": 0,
       "error": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
-      "consecutive_failures": 15,
+      "consecutive_failures": 16,
       "last_success_at": "2026-11-17T15:21:48Z",
-      "last_attempt_at": "2026-11-23T05:12:52Z",
+      "last_attempt_at": "2026-11-23T17:04:49Z",
       "details": {
         "reason": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss"
       }
@@ -23,11 +23,11 @@
     "tieba": {
       "name": "tieba",
       "status": "degraded",
-      "item_count": 23,
+      "item_count": 20,
       "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-23T05:12:52Z",
-      "last_attempt_at": "2026-11-23T05:12:52Z",
+      "last_success_at": "2026-11-23T17:04:49Z",
+      "last_attempt_at": "2026-11-23T17:04:49Z",
       "details": {
         "topics": [
           {
@@ -38,18 +38,18 @@
             "added": 8
           },
           {
-            "topic_id": 28370106,
-            "topic": "大师支招打T1要选带刀英雄",
+            "topic_id": 28369942,
+            "topic": "TGA2026",
             "status": "ok",
             "threads": 6,
             "added": 6
           },
           {
-            "topic_id": 28370086,
-            "topic": "一下走仨教练T1就剩Easyhoon",
+            "topic_id": 28370106,
+            "topic": "大师支招打T1要选带刀英雄",
             "status": "ok",
-            "threads": 9,
-            "added": 9
+            "threads": 6,
+            "added": 6
           }
         ],
         "degraded_reason": "thread_detail_403"
@@ -61,8 +61,8 @@
       "item_count": 12,
       "error": null,
       "consecutive_failures": 0,
-      "last_success_at": "2026-11-23T05:12:52Z",
-      "last_attempt_at": "2026-11-23T05:12:52Z",
+      "last_success_at": "2026-11-23T17:04:49Z",
+      "last_attempt_at": "2026-11-23T17:04:49Z",
       "details": {}
     },
     "x": {
@@ -103,21 +103,6 @@
     }
   },
   "history": [
-    {
-      "at": "2026-11-15T22:23:17Z",
-      "status": "degraded",
-      "items": 300,
-      "new": 24,
-      "sources": {
-        "reddit": "ok",
-        "tieba": "degraded",
-        "trends": "ok"
-      },
-      "errors": [
-        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-      ],
-      "broken_images": 0
-    },
     {
       "at": "2026-11-16T04:18:23Z",
       "status": "degraded",
@@ -407,6 +392,22 @@
       "status": "degraded",
       "items": 300,
       "new": 3,
+      "sources": {
+        "reddit": "blocked",
+        "tieba": "degraded",
+        "trends": "ok"
+      },
+      "errors": [
+        "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
+        "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+      ],
+      "broken_images": 0
+    },
+    {
+      "at": "2026-11-23T17:04:49Z",
+      "status": "degraded",
+      "items": 300,
+      "new": 6,
       "sources": {
         "reddit": "blocked",
         "tieba": "degraded",
