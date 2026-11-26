@@ -6,19 +6,19 @@
     "tagline": "Reddit × 百度贴吧，真实的梗图瀑布流。"
   },
   "timezone": "Asia/Shanghai",
-  "generated_at": "2026-11-25T16:38:59Z",
-  "checked_at": "2026-11-25T16:38:59Z",
+  "generated_at": "2026-11-26T01:27:17Z",
+  "checked_at": "2026-11-26T01:27:17Z",
   "stale": false,
   "stale_reason": "reddit 本次不可用，保留其历史数据",
   "partial": true,
   "health": {
     "schema_version": 1,
-    "updated_at": "2026-11-25T16:38:59Z",
+    "updated_at": "2026-11-26T01:27:17Z",
     "status": "degraded",
-    "consecutive_failures": 20,
-    "last_success_at": "2026-11-25T16:38:59Z",
+    "consecutive_failures": 21,
+    "last_success_at": "2026-11-26T01:27:17Z",
     "alerts": [
-      "reddit 已连续 20 轮失败"
+      "reddit 已连续 21 轮失败"
     ],
     "sources": {
       "reddit": {
@@ -26,9 +26,9 @@
         "status": "blocked",
         "item_count": 0,
         "error": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
-        "consecutive_failures": 20,
+        "consecutive_failures": 21,
         "last_success_at": "2026-11-17T15:21:48Z",
-        "last_attempt_at": "2026-11-25T16:38:59Z",
+        "last_attempt_at": "2026-11-26T01:27:17Z",
         "details": {
           "reason": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss"
         }
@@ -39,8 +39,8 @@
         "item_count": 23,
         "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
         "consecutive_failures": 0,
-        "last_success_at": "2026-11-25T16:38:59Z",
-        "last_attempt_at": "2026-11-25T16:38:59Z",
+        "last_success_at": "2026-11-26T01:27:17Z",
+        "last_attempt_at": "2026-11-26T01:27:17Z",
         "details": {
           "topics": [
             {
@@ -74,8 +74,8 @@
         "item_count": 12,
         "error": null,
         "consecutive_failures": 0,
-        "last_success_at": "2026-11-25T16:38:59Z",
-        "last_attempt_at": "2026-11-25T16:38:59Z",
+        "last_success_at": "2026-11-26T01:27:17Z",
+        "last_attempt_at": "2026-11-26T01:27:17Z",
         "details": {}
       },
       "x": {
@@ -116,22 +116,6 @@
       }
     },
     "history": [
-      {
-        "at": "2026-11-18T00:22:18Z",
-        "status": "degraded",
-        "items": 300,
-        "new": 8,
-        "sources": {
-          "reddit": "blocked",
-          "tieba": "degraded",
-          "trends": "ok"
-        },
-        "errors": [
-          "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
-          "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-        ],
-        "broken_images": 0
-      },
       {
         "at": "2026-11-18T14:56:48Z",
         "status": "degraded",
@@ -435,6 +419,22 @@
           "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
         ],
         "broken_images": 0
+      },
+      {
+        "at": "2026-11-26T01:27:17Z",
+        "status": "degraded",
+        "items": 299,
+        "new": 2,
+        "sources": {
+          "reddit": "blocked",
+          "tieba": "degraded",
+          "trends": "ok"
+        },
+        "errors": [
+          "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
+          "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+        ],
+        "broken_images": 0
       }
     ]
   },
@@ -450,7 +450,7 @@
         "score": 6
       },
       {
-        "word": "黄金",
+        "word": "蔡磊",
         "count": 5,
         "sources": [
           "hot"
@@ -458,7 +458,7 @@
         "score": 5
       },
       {
-        "word": "正在",
+        "word": "詹姆斯",
         "count": 4,
         "sources": [
           "hot"
@@ -466,7 +466,23 @@
         "score": 4
       },
       {
-        "word": "空间站",
+        "word": "AI",
+        "count": 4,
+        "sources": [
+          "hot"
+        ],
+        "score": 4
+      },
+      {
+        "word": "ai",
+        "count": 4,
+        "sources": [
+          "hot"
+        ],
+        "score": 4
+      },
+      {
+        "word": "巴基斯坦",
         "count": 3,
         "sources": [
           "hot"
@@ -474,47 +490,7 @@
         "score": 3
       },
       {
-        "word": "华为",
-        "count": 3,
-        "sources": [
-          "hot"
-        ],
-        "score": 3
-      },
-      {
-        "word": "宣布",
-        "count": 3,
-        "sources": [
-          "hot"
-        ],
-        "score": 3
-      },
-      {
-        "word": "保洁",
-        "count": 3,
-        "sources": [
-          "hot"
-        ],
-        "score": 3
-      },
-      {
-        "word": "大叔",
-        "count": 3,
-        "sources": [
-          "hot"
-        ],
-        "score": 3
-      },
-      {
-        "word": "天宫",
-        "count": 3,
-        "sources": [
-          "hot"
-        ],
-        "score": 3
-      },
-      {
-        "word": "金价",
+        "word": "天霸",
         "count": 3,
         "sources": [
           "hot"
@@ -530,12 +506,36 @@
         "score": 3
       },
       {
-        "word": "青龙",
+        "word": "市场",
         "count": 3,
         "sources": [
           "hot"
         ],
         "score": 3
+      },
+      {
+        "word": "手机",
+        "count": 3,
+        "sources": [
+          "hot"
+        ],
+        "score": 3
+      },
+      {
+        "word": "正在",
+        "count": 3,
+        "sources": [
+          "hot"
+        ],
+        "score": 3
+      },
+      {
+        "word": "滨海新区",
+        "count": 2,
+        "sources": [
+          "hot"
+        ],
+        "score": 2
       }
     ],
     "sources": [
@@ -682,15 +682,15 @@
   "run": {
     "ok": false,
     "status": "degraded",
-    "items_new": 6,
+    "items_new": 2,
     "items_updated": 15,
     "items_total": 299,
     "duplicate_posts": 0,
     "groups": 1,
     "images_checked": 23,
     "images_broken": 0,
-    "images_hashed": 23,
-    "duration_ms": 114344,
+    "images_hashed": 13,
+    "duration_ms": 55023,
     "sources_ok": 1,
     "sources_blocked": 1
   },
@@ -700,6 +700,119 @@
     "image_check_limit": 60
   },
   "items": [
+    {
+      "id": "tieba:0510b6462703c74f",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11226082863",
+      "source_name": "百度贴吧",
+      "community": "gta6吧",
+      "title": "我一直好奇gta这么多部为什么不做新地区地图",
+      "summary": "",
+      "post_url": "https://tieba.baidu.com/p/11226082863",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=876a094acdd4b31cf03c94b3b7d7276f/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-28-05_8a15846c9772c6360d67894eafd179b6",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bd481cfed93df8dca63d8d93fd2a03b6/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-28-05_9b7828b5fbf72d332604efa41707e660",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=876a094acdd4b31cf03c94b3b7d7276f/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-28-05_8a15846c9772c6360d67894eafd179b6",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bd481cfed93df8dca63d8d93fd2a03b6/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-28-05_9b7828b5fbf72d332604efa41707e660",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-25T16:38:59Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 83,
+      "tags": [
+        "贴吧",
+        "吧友自制GTA6互动地图",
+        "gta6吧"
+      ],
+      "content_hash": "8c0a50e3c892b86ed128f92c97de4331890aea86",
+      "image_hash": "c6872686c6662131",
+      "image_id": "384fe7252a58e8ed",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-26T01:27:17Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 538,
+      "rank_score": 129.4,
+      "rank_basis": "recency+comments",
+      "group_id": "7a10f8ddcbf7",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:977a4ee0e3122c3d",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11200270304",
+      "source_name": "百度贴吧",
+      "community": "gta6吧",
+      "title": "我做的 GTA6 地图又更新了，点开地标能看附近",
+      "summary": "前两天有兄弟问北部的细节，我又补了卡拉加山东侧水坝、港口水塔、伦托岛北侧跨海桥这类地标，这次一共加了 6 个点。 点开地标，下方有「附近点位」就能直接跳过去，不用再在地图上来回找。手机首屏能搜，默认开 2D，想看山谷再点 3D。现在的位置是社区估算，有哪块想看细一点欢迎说。 地图入口：网页链接",
+      "post_url": "https://tieba.baidu.com/p/11200270304",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=17f17f9a4af431adbcd243317b36ac0f/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_5a84c34026cbcc52564000cf6dcd3083",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cb40b2ad4c7b02080cc93de352e283ee/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_de29a8d914be2b904cfab98d6c147074",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=17f17f9a4af431adbcd243317b36ac0f/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_5a84c34026cbcc52564000cf6dcd3083",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cb40b2ad4c7b02080cc93de352e283ee/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_de29a8d914be2b904cfab98d6c147074",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=76e4a3cc77adcbef01347e0e9caf2e0e/2df5e0fe9925bc31fa269b9018df8db1cb1370bb.jpg?tbpicau=2026-11-28-05_cb686fda59f545c8eb3fd15deff31572",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bbd3a54344087bf47dec55ebc2e82611/2df5e0fe9925bc31fa269b9018df8db1cb1370bb.jpg?tbpicau=2026-11-28-05_e6405a86ffc82ab47c3e4d26efcb3f29",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=99eb64d730094b36db921be593cc7c00/9925bc315c6034a8f69922898d134954092376bb.jpg?tbpicau=2026-11-28-05_66aec0a8a0b9b9c9daced348c348d73c",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=aa4ed4cc4cd162d985ee601e21e4d8d1/9925bc315c6034a8f69922898d134954092376bb.jpg?tbpicau=2026-11-28-05_25dd26e3dd4acad7c04c2d916069d418",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-25T16:38:59Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 15,
+      "tags": [
+        "贴吧",
+        "吧友自制GTA6互动地图",
+        "gta6吧"
+      ],
+      "content_hash": "73d1072a411685ef490f22aa774454a12f357c72",
+      "image_hash": "f2879158334fcbc3",
+      "image_id": "0c5d878c231d46b6",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 1106,
+      "rank_score": 128.4,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "2e410fe93f87",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "image_fallback": null,
+      "trending": [
+        "手机"
+      ]
+    },
     {
       "id": "tieba:1e381781ca52dc84",
       "content_type": "image",
@@ -711,12 +824,12 @@
       "title": "史上最佳，但不是r星的最佳",
       "summary": "作为新西兰人七点首发玩到两点，先说结论，感觉整体的体验像是大表哥现代ProMax版，无论是商店购买，还是号称大部分房子都可以进的室内寻宝，还有陌生人交互，都没有跳出大表哥的游戏逻辑。 1.画质上，真没的说，我深知本世代主机孱弱的性能，能在这个基础上达到这样的光影和细节，离不开团队的精心打磨，哪怕是一些场景不足25帧的体验，最多是让我放慢了游戏节奏，也没有到完全影响玩游戏的程度。 2.取悦露西亚的几个生活小任务也非常",
       "post_url": "https://tieba.baidu.com/p/11209409304",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3e8ed40bc144ebf86d716437e9f8d736/b2b7d0a20cf431ad9e01ae310d36acaf2fdd98e3.jpg?tbpicau=2026-11-27-05_b2a34706f3820d61dcf2c492f9a16779",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=fa2da1094c55b3199cf980777392f31b/b2b7d0a20cf431ad9e01ae310d36acaf2fdd98e3.jpg?tbpicau=2026-11-27-05_a9b4c4eb68ed8cda949cf17a17579047",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3e8ed40bc144ebf86d716437e9f8d736/b2b7d0a20cf431ad9e01ae310d36acaf2fdd98e3.jpg?tbpicau=2026-11-28-05_154d8922e9f06be086c9d7bde6db80ef",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=fa2da1094c55b3199cf980777392f31b/b2b7d0a20cf431ad9e01ae310d36acaf2fdd98e3.jpg?tbpicau=2026-11-28-05_63dc25e913a8d6e648b3682d01c806d2",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3e8ed40bc144ebf86d716437e9f8d736/b2b7d0a20cf431ad9e01ae310d36acaf2fdd98e3.jpg?tbpicau=2026-11-27-05_b2a34706f3820d61dcf2c492f9a16779",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=fa2da1094c55b3199cf980777392f31b/b2b7d0a20cf431ad9e01ae310d36acaf2fdd98e3.jpg?tbpicau=2026-11-27-05_a9b4c4eb68ed8cda949cf17a17579047",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3e8ed40bc144ebf86d716437e9f8d736/b2b7d0a20cf431ad9e01ae310d36acaf2fdd98e3.jpg?tbpicau=2026-11-28-05_154d8922e9f06be086c9d7bde6db80ef",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=fa2da1094c55b3199cf980777392f31b/b2b7d0a20cf431ad9e01ae310d36acaf2fdd98e3.jpg?tbpicau=2026-11-28-05_63dc25e913a8d6e648b3682d01c806d2",
           "width": null,
           "height": null
         }
@@ -731,68 +844,19 @@
         "吧友自制GTA6互动地图",
         "gta6吧"
       ],
-      "content_hash": "540d024ffb52f134a1239f2b4ea0b4216e138706",
+      "content_hash": "abf5a6e6e5c5e663d1e49d49a17802f526cc8af9",
       "image_hash": "01c7c7078787b170",
-      "image_id": "53a0e065a4e9f0d8",
+      "image_id": "a7b8b23b5caac763",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_checked_at": "2026-11-26T01:27:17Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 773,
-      "rank_score": 133.3,
+      "rank_score": 128.1,
       "rank_basis": "recency+comments",
       "group_id": "65c466cf9c5d",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:0510b6462703c74f",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11226082863",
-      "source_name": "百度贴吧",
-      "community": "gta6吧",
-      "title": "我一直好奇gta这么多部为什么不做新地区地图",
-      "summary": "",
-      "post_url": "https://tieba.baidu.com/p/11226082863",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=876a094acdd4b31cf03c94b3b7d7276f/093024a85edf8db106946e6d4f23dd54574e74d5.jpg?tbpicau=2026-11-27-05_9d9667911248ab2646a1d01d802d5b96",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bd481cfed93df8dca63d8d93fd2a03b6/093024a85edf8db106946e6d4f23dd54574e74d5.jpg?tbpicau=2026-11-27-05_7d4dfcc8af904dd4a8dc17812ceda7d7",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=876a094acdd4b31cf03c94b3b7d7276f/093024a85edf8db106946e6d4f23dd54574e74d5.jpg?tbpicau=2026-11-27-05_9d9667911248ab2646a1d01d802d5b96",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bd481cfed93df8dca63d8d93fd2a03b6/093024a85edf8db106946e6d4f23dd54574e74d5.jpg?tbpicau=2026-11-27-05_7d4dfcc8af904dd4a8dc17812ceda7d7",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-25T16:38:59Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 57,
-      "tags": [
-        "贴吧",
-        "吧友自制GTA6互动地图",
-        "gta6吧"
-      ],
-      "content_hash": "0a1505c9ae8856a2b36890413cd125f2f606696d",
-      "image_hash": "c6872686c6662131",
-      "image_id": "bdf8f58f553af5ed",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 538,
-      "rank_score": 131.7,
-      "rank_basis": "recency+comments",
-      "group_id": "7a10f8ddcbf7",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -809,12 +873,12 @@
       "title": "blg夺冠应该叫什么",
       "summary": "ig夺冠叫登封，fpx夺冠叫涅槃 ，edg夺冠叫骑士之路，那么blg夺冠该叫什么？",
       "post_url": "https://tieba.baidu.com/p/11223314931",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=39bb96888d1349547e1ee86c664f92dd/baa1cd11728b4710de76d3c585cec3fdfc032359.jpg?tbpicau=2026-11-27-05_e381ec4908b5a298dfa99cf3ece4cfbe",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=366bc2c0912a60595210e318180f45a6/baa1cd11728b4710de76d3c585cec3fdfc032359.jpg?tbpicau=2026-11-27-05_e7e97836b9daa6f264475b8c0b18332b",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=39bb96888d1349547e1ee86c664f92dd/baa1cd11728b4710de76d3c585cec3fdfc032359.jpg?tbpicau=2026-11-28-05_c3195973809f78d87366b07f0c243f57",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=366bc2c0912a60595210e318180f45a6/baa1cd11728b4710de76d3c585cec3fdfc032359.jpg?tbpicau=2026-11-28-05_52c6554bca64486827bd04a3b310acd4",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=39bb96888d1349547e1ee86c664f92dd/baa1cd11728b4710de76d3c585cec3fdfc032359.jpg?tbpicau=2026-11-27-05_e381ec4908b5a298dfa99cf3ece4cfbe",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=366bc2c0912a60595210e318180f45a6/baa1cd11728b4710de76d3c585cec3fdfc032359.jpg?tbpicau=2026-11-27-05_e7e97836b9daa6f264475b8c0b18332b",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=39bb96888d1349547e1ee86c664f92dd/baa1cd11728b4710de76d3c585cec3fdfc032359.jpg?tbpicau=2026-11-28-05_c3195973809f78d87366b07f0c243f57",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=366bc2c0912a60595210e318180f45a6/baa1cd11728b4710de76d3c585cec3fdfc032359.jpg?tbpicau=2026-11-28-05_52c6554bca64486827bd04a3b310acd4",
           "width": null,
           "height": null
         }
@@ -829,17 +893,17 @@
         "抗吧整活BLG受封大典",
         "抗压背锅吧"
       ],
-      "content_hash": "d8f9551b7d852212d04f0da27690c623663987d9",
+      "content_hash": "2fd6ab0f757b4835a2ccb419f8fa5471b30afd5a",
       "image_hash": "4c4c061b59452613",
-      "image_id": "12b7d31d095ddbfd",
+      "image_id": "b28094f0941caffe",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-25T01:49:28Z",
+      "image_checked_at": "2026-11-26T01:27:17Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 608,
-      "rank_score": 130.8,
+      "rank_score": 125.6,
       "rank_basis": "recency+comments",
       "group_id": "223e6bddb6a0",
       "group_size": 1,
@@ -900,7 +964,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 667,
-      "rank_score": 127.4,
+      "rank_score": 122.1,
       "rank_basis": "recency+comments",
       "group_id": "d6fb3ef82ef7",
       "group_size": 1,
@@ -950,7 +1014,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 794,
-      "rank_score": 126.0,
+      "rank_score": 120.8,
       "rank_basis": "recency+comments",
       "group_id": "06cfa59be745",
       "group_size": 3,
@@ -971,6 +1035,7 @@
         }
       ],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -1014,13 +1079,74 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 608,
-      "rank_score": 123.3,
+      "rank_score": 118.1,
       "rank_basis": "recency+comments",
       "group_id": "05d997780d05",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "image_fallback": null,
+      "trending": []
+    },
+    {
+      "id": "tieba:a22c8d4855d210f9",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11222917031",
+      "source_name": "百度贴吧",
+      "community": "抗压背锅吧",
+      "title": "受封大典！BLG夺冠路上历代成员论功行赏🏆",
+      "summary": "盘点23年起势至今的成员，抗抗们来打分，谁是国公，谁是罪臣？太多披皮反串的啦，来点正义史官🧐 - 国公（功勋卓著，3分） - 候伯（功大于过，4分） - 良将（功过相抵，3分） - 庸吏（平平无奇，2分） - 戴罪（过大于功，1分） - 罪臣（千古罪人，0分）",
+      "post_url": "https://tieba.baidu.com/p/11222917031",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2b6ad528348b4710ce2ffdc4f3cfc3b2/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-28-05_e8e4e0dd01ad837723104ee8e60c1381",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e7c2530feaaf2eddd4f14bebbd2b70d4/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-28-05_55fbc3471756b2af45b9ed86f4334a74",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2b6ad528348b4710ce2ffdc4f3cfc3b2/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-28-05_e8e4e0dd01ad837723104ee8e60c1381",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e7c2530feaaf2eddd4f14bebbd2b70d4/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-28-05_55fbc3471756b2af45b9ed86f4334a74",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=72d616cd5dd5ad6eaaf964e2b1ca39a3/0a55b319ebc4b745e3649a1f89fc1e178b8215c2.jpg?tbpicau=2026-11-28-05_2fab3f2769696f71919691f2c6b88acf",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=19f5836909c2d562f208d2efd72ae1d2/0a55b319ebc4b745e3649a1f89fc1e178b8215c2.jpg?tbpicau=2026-11-28-05_f6b36e8d5799d944b911e0e11fefad04",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=11f3e0e59700baa1ba2c47b37711b9b1/42a7d933c895d1432385c92a35f082025baf07c3.jpg?tbpicau=2026-11-28-05_b3e69c80c50c07415fed70507f4f984e",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=823a29948def76093c0b9b9d1ee6d2f1/42a7d933c895d1432385c92a35f082025baf07c3.jpg?tbpicau=2026-11-28-05_d879881df234f6a13ac2f7206e2426dd",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-24T03:42:26Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 3861,
+      "tags": [
+        "贴吧",
+        "抗吧整活BLG受封大典",
+        "抗压背锅吧"
+      ],
+      "content_hash": "950e15db9fd0270c9b5bda8ef81d2c65e9b3da71",
+      "image_hash": "1f0d0c0a63793c2d",
+      "image_id": "cc10c7fa2ade2c16",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-26T01:27:17Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 387,
+      "rank_score": 117.8,
+      "rank_basis": "recency+comments",
+      "group_id": "1a814a26ab3b",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
       "trending": []
     },
     {
@@ -1076,73 +1202,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 773,
-      "rank_score": 123.0,
+      "rank_score": 117.8,
       "rank_basis": "recency+comments",
       "group_id": "dc0593352a6b",
       "group_size": 1,
       "related": [],
       "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:a22c8d4855d210f9",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11222917031",
-      "source_name": "百度贴吧",
-      "community": "抗压背锅吧",
-      "title": "受封大典！BLG夺冠路上历代成员论功行赏🏆",
-      "summary": "盘点23年起势至今的成员，抗抗们来打分，谁是国公，谁是罪臣？太多披皮反串的啦，来点正义史官🧐 - 国公（功勋卓著，3分） - 候伯（功大于过，4分） - 良将（功过相抵，3分） - 庸吏（平平无奇，2分） - 戴罪（过大于功，1分） - 罪臣（千古罪人，0分）",
-      "post_url": "https://tieba.baidu.com/p/11222917031",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2b6ad528348b4710ce2ffdc4f3cfc3b2/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-27-05_3ac220f1a23cd6c20bb05892ae3dae19",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e7c2530feaaf2eddd4f14bebbd2b70d4/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-27-05_b0deee7be3625a2866a001f297f927e3",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2b6ad528348b4710ce2ffdc4f3cfc3b2/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-27-05_3ac220f1a23cd6c20bb05892ae3dae19",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e7c2530feaaf2eddd4f14bebbd2b70d4/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-27-05_b0deee7be3625a2866a001f297f927e3",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=72d616cd5dd5ad6eaaf964e2b1ca39a3/0a55b319ebc4b745e3649a1f89fc1e178b8215c2.jpg?tbpicau=2026-11-27-05_25a283730bd1723454e00ee200257162",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=19f5836909c2d562f208d2efd72ae1d2/0a55b319ebc4b745e3649a1f89fc1e178b8215c2.jpg?tbpicau=2026-11-27-05_942edb847733bae89a2ca243141b3efe",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=11f3e0e59700baa1ba2c47b37711b9b1/42a7d933c895d1432385c92a35f082025baf07c3.jpg?tbpicau=2026-11-27-05_9afaf2141498f395efc09d145d4afe94",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=823a29948def76093c0b9b9d1ee6d2f1/42a7d933c895d1432385c92a35f082025baf07c3.jpg?tbpicau=2026-11-27-05_bd96b0ad46b3dd9d00382d738be7a489",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-24T03:42:26Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 3771,
-      "tags": [
-        "贴吧",
-        "抗吧整活BLG受封大典",
-        "抗压背锅吧"
-      ],
-      "content_hash": "a57f4726963ec2ca14c926765e885e76305e6722",
-      "image_hash": "1f0d0c0a63793c2d",
-      "image_id": "0fa69c4db47b7953",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T01:49:28Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 387,
-      "rank_score": 123.0,
-      "rank_basis": "recency+comments",
-      "group_id": "1a814a26ab3b",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -1176,7 +1242,7 @@
       "collected_at": "2026-11-24T03:42:26Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 747,
+      "comment_count": 748,
       "tags": [
         "贴吧",
         "抗吧整活BLG受封大典",
@@ -1192,12 +1258,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 605,
-      "rank_score": 123.0,
+      "rank_score": 117.8,
       "rank_basis": "recency+comments",
       "group_id": "8ca84d98857d",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -1237,7 +1304,7 @@
       "collected_at": "2026-11-24T03:42:26Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 1564,
+      "comment_count": 1578,
       "tags": [
         "贴吧",
         "抗吧整活BLG受封大典",
@@ -1253,12 +1320,13 @@
       "image_error": null,
       "image_width": 474,
       "image_height": 552,
-      "rank_score": 123.0,
+      "rank_score": 117.8,
       "rank_basis": "recency+comments",
       "group_id": "246a6f11ac2a",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -1272,12 +1340,12 @@
       "title": "BLG真太子啊",
       "summary": "第一个合同里有私人飞机的选手要来了",
       "post_url": "https://tieba.baidu.com/p/11218615233",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=8181a3d54efa513d51aa6cd60d6d554c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-27-05_9c99ea9c21959b501c69c755eb6be29a",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=192aa821d12bd40742c7d1ff4bb2ef6c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-27-05_1684eb61ac59677f2986f0ab0bb0558e",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=8181a3d54efa513d51aa6cd60d6d554c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-28-05_aea779c0ccb0b56501950854fa89baeb",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=192aa821d12bd40742c7d1ff4bb2ef6c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-28-05_1ee34e709a54da418a333abf71d537d6",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=8181a3d54efa513d51aa6cd60d6d554c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-27-05_9c99ea9c21959b501c69c755eb6be29a",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=192aa821d12bd40742c7d1ff4bb2ef6c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-27-05_1684eb61ac59677f2986f0ab0bb0558e",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=8181a3d54efa513d51aa6cd60d6d554c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-28-05_aea779c0ccb0b56501950854fa89baeb",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=192aa821d12bd40742c7d1ff4bb2ef6c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-28-05_1ee34e709a54da418a333abf71d537d6",
           "width": null,
           "height": null
         }
@@ -1286,23 +1354,23 @@
       "collected_at": "2026-11-24T03:42:26Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 626,
+      "comment_count": 634,
       "tags": [
         "贴吧",
         "抗吧整活BLG受封大典",
         "抗压背锅吧"
       ],
-      "content_hash": "4332f0acfb8e2889681477f455d0e8501b2ce3cf",
+      "content_hash": "08cc2a167713adf10e14c36fc3844ba31fbd42bf",
       "image_hash": "06a43270b22a9212",
-      "image_id": "05c004a4eafb9bc7",
+      "image_id": "bab310f9551ff8b0",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-24T16:50:52Z",
+      "image_checked_at": "2026-11-26T01:27:17Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 916,
-      "rank_score": 123.0,
+      "rank_score": 117.8,
       "rank_basis": "recency+comments",
       "group_id": "5bfcb9e68abc",
       "group_size": 1,
@@ -1321,12 +1389,12 @@
       "title": "如何评价文俊涌泉之恨？暴力输出pigwei 之前想砍死他！",
       "summary": "blg geng决赛开之前 原话：过去了 现在已经不想砍死他了 怪我们非要打到第五把",
       "post_url": "https://tieba.baidu.com/p/11220286308",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=67f86ee9b103918fd7d13dc2613c264b/38be48fafbedab64079074c9b136afc378311e0e.jpg?tbpicau=2026-11-27-05_870b87588c6a1922f0a02dc637c9c85f",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=b2225e5f96160924dc25a019e43c44c7/38be48fafbedab64079074c9b136afc378311e0e.jpg?tbpicau=2026-11-27-05_a5babbc155c72e89bbbc387b43eb14b8",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=67f86ee9b103918fd7d13dc2613c264b/d42a2834349b033b5f6ac5d353ce36d3d439bddc.jpg?tbpicau=2026-11-28-05_a1f9f92feb4392f4ef3536db33e4df81",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=b2225e5f96160924dc25a019e43c44c7/d42a2834349b033b5f6ac5d353ce36d3d439bddc.jpg?tbpicau=2026-11-28-05_85cbedcf02d3487287712ae00f4a2d92",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=67f86ee9b103918fd7d13dc2613c264b/38be48fafbedab64079074c9b136afc378311e0e.jpg?tbpicau=2026-11-27-05_870b87588c6a1922f0a02dc637c9c85f",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=b2225e5f96160924dc25a019e43c44c7/38be48fafbedab64079074c9b136afc378311e0e.jpg?tbpicau=2026-11-27-05_a5babbc155c72e89bbbc387b43eb14b8",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=67f86ee9b103918fd7d13dc2613c264b/d42a2834349b033b5f6ac5d353ce36d3d439bddc.jpg?tbpicau=2026-11-28-05_a1f9f92feb4392f4ef3536db33e4df81",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=b2225e5f96160924dc25a019e43c44c7/d42a2834349b033b5f6ac5d353ce36d3d439bddc.jpg?tbpicau=2026-11-28-05_85cbedcf02d3487287712ae00f4a2d92",
           "width": null,
           "height": null
         }
@@ -1341,80 +1409,19 @@
         "抗吧整活BLG受封大典",
         "抗压背锅吧"
       ],
-      "content_hash": "31003acd050d17b5e93e72a920302cc1f4807e34",
+      "content_hash": "972eb002cb8c6c8a36f623049bded2332e14a2c2",
       "image_hash": "352767656d392921",
-      "image_id": "021cf972c4d10842",
+      "image_id": "a5d8bb7f7c6d3599",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_checked_at": "2026-11-26T01:27:17Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 264,
-      "rank_score": 122.4,
+      "rank_score": 117.2,
       "rank_basis": "recency+comments",
       "group_id": "5bbd3d146f5f",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:977a4ee0e3122c3d",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11200270304",
-      "source_name": "百度贴吧",
-      "community": "gta6吧",
-      "title": "我做的 GTA6 地图又更新了，点开地标能看附近",
-      "summary": "前两天有兄弟问北部的细节，我又补了卡拉加山东侧水坝、港口水塔、伦托岛北侧跨海桥这类地标，这次一共加了 6 个点。 点开地标，下方有「附近点位」就能直接跳过去，不用再在地图上来回找。手机首屏能搜，默认开 2D，想看山谷再点 3D。现在的位置是社区估算，有哪块想看细一点欢迎说。 地图入口：网页链接",
-      "post_url": "https://tieba.baidu.com/p/11200270304",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=17f17f9a4af431adbcd243317b36ac0f/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_5a84c34026cbcc52564000cf6dcd3083",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cb40b2ad4c7b02080cc93de352e283ee/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_de29a8d914be2b904cfab98d6c147074",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=17f17f9a4af431adbcd243317b36ac0f/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_5a84c34026cbcc52564000cf6dcd3083",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cb40b2ad4c7b02080cc93de352e283ee/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_de29a8d914be2b904cfab98d6c147074",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=76e4a3cc77adcbef01347e0e9caf2e0e/2df5e0fe9925bc31fa269b9018df8db1cb1370bb.jpg?tbpicau=2026-11-28-05_cb686fda59f545c8eb3fd15deff31572",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bbd3a54344087bf47dec55ebc2e82611/2df5e0fe9925bc31fa269b9018df8db1cb1370bb.jpg?tbpicau=2026-11-28-05_e6405a86ffc82ab47c3e4d26efcb3f29",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=99eb64d730094b36db921be593cc7c00/9925bc315c6034a8f69922898d134954092376bb.jpg?tbpicau=2026-11-28-05_66aec0a8a0b9b9c9daced348c348d73c",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=aa4ed4cc4cd162d985ee601e21e4d8d1/9925bc315c6034a8f69922898d134954092376bb.jpg?tbpicau=2026-11-28-05_25dd26e3dd4acad7c04c2d916069d418",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-25T16:38:59Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 15,
-      "tags": [
-        "贴吧",
-        "吧友自制GTA6互动地图",
-        "gta6吧"
-      ],
-      "content_hash": "73d1072a411685ef490f22aa774454a12f357c72",
-      "image_hash": "f2879158334fcbc3",
-      "image_id": "0c5d878c231d46b6",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 1106,
-      "rank_score": 121.7,
-      "rank_basis": "recency+comments",
-      "group_id": "2e410fe93f87",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -1445,7 +1452,7 @@
       "collected_at": "2026-11-24T03:42:26Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 218,
+      "comment_count": 219,
       "tags": [
         "贴吧",
         "抗吧整活BLG受封大典",
@@ -1461,12 +1468,13 @@
       "image_error": null,
       "image_width": 579,
       "image_height": 326,
-      "rank_score": 120.1,
+      "rank_score": 114.9,
       "rank_basis": "recency+comments",
       "group_id": "b6e00f17ec53",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -1510,13 +1518,64 @@
       "image_error": null,
       "image_width": null,
       "image_height": null,
-      "rank_score": 115.7,
+      "rank_score": 110.5,
       "rank_basis": "recency+comments",
       "group_id": "8aaf3af5a4c7",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "trending": []
+    },
+    {
+      "id": "tieba:4ba3fe06121f067c",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11219232707",
+      "source_name": "百度贴吧",
+      "community": "斗破苍穹吧",
+      "title": "双帝之战看完了",
+      "summary": "各位感觉如何？",
+      "post_url": "https://tieba.baidu.com/p/11219232707",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=da73dc8d0ced2e73fce98624b701a16d/3d6d55fbb2fb4316812b497366a4462309f7d387.jpg?tbpicau=2026-11-28-05_2097e2016559995f48f97c4c56563da3",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=8b00cf0436cf3bc7e800cfeee13bcb9c/3d6d55fbb2fb4316812b497366a4462309f7d387.jpg?tbpicau=2026-11-28-05_ead1fab84f6bbb16888a9e8110a9e081",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=da73dc8d0ced2e73fce98624b701a16d/3d6d55fbb2fb4316812b497366a4462309f7d387.jpg?tbpicau=2026-11-28-05_2097e2016559995f48f97c4c56563da3",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=8b00cf0436cf3bc7e800cfeee13bcb9c/3d6d55fbb2fb4316812b497366a4462309f7d387.jpg?tbpicau=2026-11-28-05_ead1fab84f6bbb16888a9e8110a9e081",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-22T23:06:03Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 208,
+      "tags": [
+        "贴吧",
+        "吧友吐槽双帝之战剧场版滥用AI",
+        "斗破苍穹吧"
+      ],
+      "content_hash": "f9752c85acdce67c028c67384f1fccd640abadeb",
+      "image_hash": "1ff4a9b81c4caa26",
+      "image_id": "dbbe846e483940f1",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-26T01:27:17Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 1025,
+      "rank_score": 109.5,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "32d492a00768",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": [
+        "AI"
+      ]
     },
     {
       "id": "tieba:13dea3780b4533b3",
@@ -1559,7 +1618,7 @@
       "image_error": null,
       "image_width": null,
       "image_height": null,
-      "rank_score": 114.5,
+      "rank_score": 109.2,
       "rank_basis": "recency+comments",
       "group_id": "2c9989a8e89c",
       "group_size": 1,
@@ -1567,6 +1626,69 @@
       "source_stale": false,
       "image_fallback": null,
       "trending": []
+    },
+    {
+      "id": "tieba:a48b9f70264dac27",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11219226192",
+      "source_name": "百度贴吧",
+      "community": "斗破苍穹吧",
+      "title": "《双帝之战》大结局观后感。",
+      "summary": "整体节奏太紧凑，文戏相比原著缩减了很多，有些设定也改了很多，90分钟本身就无法还原原文的详细剧情，古帝洞府原文九星斗圣之间的战斗详情几乎全没了（比如虚无帝境灵魂没了，古元打虚无+活死人没了，萧炎打活死人没了）主要围绕打帝丹和双帝之战。论斗帝前的战斗表现力，古元和烛坤都拉跨，尤其是古元，烛坤追杀萧炎的时候，古元居然站在旁边看戏，或者被烛坤随手攻击震退。当然虚无吞炎更拉跨，直接被帝品雏丹一招重创，击飞还被",
+      "post_url": "https://tieba.baidu.com/p/11219226192",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e3c162308f3d70cf4cfaaa05c8ddd1ba/e6cd7b899e510fb393db479e9f33c895d0430cfc.jpg?tbpicau=2026-11-28-05_597708d83ec1e30433b339046722921d",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3dbba80d1f82b2b7a79f3bc60196bad2/e6cd7b899e510fb393db479e9f33c895d0430cfc.jpg?tbpicau=2026-11-28-05_d1db0692ce4eb82f87e73c50d84bb5ce",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e3c162308f3d70cf4cfaaa05c8ddd1ba/e6cd7b899e510fb393db479e9f33c895d0430cfc.jpg?tbpicau=2026-11-28-05_597708d83ec1e30433b339046722921d",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3dbba80d1f82b2b7a79f3bc60196bad2/e6cd7b899e510fb393db479e9f33c895d0430cfc.jpg?tbpicau=2026-11-28-05_d1db0692ce4eb82f87e73c50d84bb5ce",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=72ffbf988b11728b302d8c2af8fdc3b3/c895d143ad4bd113d00f873b1cafa40f4afb05fc.jpg?tbpicau=2026-11-28-05_7df68f7af945bdf28f04851e076829e9",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=681073300d36acaf59e094fe4ce2fc2d/c895d143ad4bd113d00f873b1cafa40f4afb05fc.jpg?tbpicau=2026-11-28-05_37cf6b67ffd29f7d620f47d20ee39aa9",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b2e090f397c8a786be2a4a065708c9c7/0924ab18972bd407a205e3f43d899e510eb309fc.jpg?tbpicau=2026-11-28-05_dea752174ef456dfe6826e1098c647d5",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=5d7f60014ad79123e0e096769d0f28bf/0924ab18972bd407a205e3f43d899e510eb309fc.jpg?tbpicau=2026-11-28-05_5377870767a5e54aac4d84c91b33769e",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-22T23:06:03Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 160,
+      "tags": [
+        "贴吧",
+        "吧友吐槽双帝之战剧场版滥用AI",
+        "斗破苍穹吧"
+      ],
+      "content_hash": "e90e54449f8e80f2e637d77d11961480415a72f6",
+      "image_hash": "b2366e6f3f372533",
+      "image_id": "7d1f3cc54263b3b7",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-26T01:27:17Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 243,
+      "rank_score": 107.5,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "6f34363000f0",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": [
+        "AI"
+      ]
     },
     {
       "id": "tieba:dab8b966f0343dd5",
@@ -1611,7 +1733,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 2409,
-      "rank_score": 112.6,
+      "rank_score": 107.4,
       "rank_basis": "recency+comments",
       "group_id": "c3cf66d7f65e",
       "group_size": 1,
@@ -1619,6 +1741,64 @@
       "source_stale": false,
       "image_fallback": null,
       "trending": []
+    },
+    {
+      "id": "tieba:03616f3ea8e96d71",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11219549195",
+      "source_name": "百度贴吧",
+      "community": "斗破苍穹吧",
+      "title": "三年之约vs双帝之战",
+      "summary": "哪边质量更好",
+      "post_url": "https://tieba.baidu.com/p/11219549195",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=04ec3777631f95caa6f592bef9167fc5/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_ad6870f70a4b63cbc4f2c865f91a851b",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=00f5b7478c8065387beaa611a7e6d079/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_cc9133568ad01a02d7d7b5b119bdec62",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=04ec3777631f95caa6f592bef9167fc5/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_ad6870f70a4b63cbc4f2c865f91a851b",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=00f5b7478c8065387beaa611a7e6d079/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_cc9133568ad01a02d7d7b5b119bdec62",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e5d860308f3d70cf4cfaaa05c8ddd1ba/e6cd7b899e510fb395c2459e9f33c895d0430cdb.jpg?tbpicau=2026-11-28-05_5815d74d8ef611194954801d3162d8d8",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3ba2aa0d1f82b2b7a79f3bc60196bad2/e6cd7b899e510fb395c2459e9f33c895d0430cdb.jpg?tbpicau=2026-11-28-05_4403efb29cb2e94f289a345a76b8c6bc",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-22T23:06:03Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 150,
+      "tags": [
+        "贴吧",
+        "吧友吐槽双帝之战剧场版滥用AI",
+        "斗破苍穹吧"
+      ],
+      "content_hash": "b292c7383334308fd0ae188fee35d4e7d1623394",
+      "image_hash": "870f1733331f7149",
+      "image_id": "590f9746442184b0",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 870,
+      "rank_score": 107.0,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "783bc3e5ddd6",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "image_fallback": null,
+      "trending": [
+        "AI"
+      ]
     },
     {
       "id": "tieba:2a8ac3ae04e97ac1",
@@ -1667,7 +1847,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1289,
-      "rank_score": 111.0,
+      "rank_score": 105.8,
       "rank_basis": "recency+comments",
       "group_id": "38df57e447cc",
       "group_size": 1,
@@ -1675,6 +1855,127 @@
       "source_stale": false,
       "image_fallback": null,
       "trending": []
+    },
+    {
+      "id": "tieba:d8ba7c316f9c3487",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11219162638",
+      "source_name": "百度贴吧",
+      "community": "国产动画片吧",
+      "title": "双帝之战你们看完了吗",
+      "summary": "感觉怎么样，评价一下",
+      "post_url": "https://tieba.baidu.com/p/11219162638",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=da9c9e6909c2d562f208d0e5d71090f3/6c81800a19d8bc3ed29136c3c48ba61ea8d34519.jpg?tbpicau=2026-11-28-05_a64ef7ff389ba8a586cb4377f12389b4",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3a4a385413fbb2fb342b5a107f715199/6c81800a19d8bc3ed29136c3c48ba61ea8d34519.jpg?tbpicau=2026-11-28-05_0d822ea8b86616d110ad09de584f4015",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=da9c9e6909c2d562f208d0e5d71090f3/6c81800a19d8bc3ed29136c3c48ba61ea8d34519.jpg?tbpicau=2026-11-28-05_a64ef7ff389ba8a586cb4377f12389b4",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3a4a385413fbb2fb342b5a107f715199/6c81800a19d8bc3ed29136c3c48ba61ea8d34519.jpg?tbpicau=2026-11-28-05_0d822ea8b86616d110ad09de584f4015",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=f315ce2a0f540923aa696376a259d1dc/cd11728b4710b912b658c6f785fdfc0392452219.jpg?tbpicau=2026-11-28-05_293550ccb747e8dc843a79edba086597",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=a75dd2132659252da3171f0604a07206/cd11728b4710b912b658c6f785fdfc0392452219.jpg?tbpicau=2026-11-28-05_ed7a824a86cee246e342f0b228049ec7",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e081b9081a6034a829e2b889fb1249d9/3bc79f3df8dcd100c305c828348b4710b9122f19.jpg?tbpicau=2026-11-28-05_f111ec5b429c6e13b3dd6c7aac2676a4",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7597827dadf81a4c2632eecbe7111164/3bc79f3df8dcd100c305c828348b4710b9122f19.jpg?tbpicau=2026-11-28-05_1dbf00b5c0fcc3e1cf5eb0a135516b12",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-22T23:06:03Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 94,
+      "tags": [
+        "贴吧",
+        "吧友吐槽双帝之战剧场版滥用AI",
+        "国产动画片吧"
+      ],
+      "content_hash": "a177a0ea73af8fb16fb2836ede76336151b85340",
+      "image_hash": "0127130b0f070707",
+      "image_id": "4efd0b44c5a41830",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-26T01:27:17Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 243,
+      "rank_score": 103.3,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "fc4cf591833f",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tieba:b37150a4043536ac",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11219130230",
+      "source_name": "百度贴吧",
+      "community": "斗破苍穹吧",
+      "title": "结尾这小孩是萧霖？",
+      "summary": "追了斗破九年了，小说看了不下十几遍了，动漫做得好不好也终于完结了！ 《斗破苍穹·双帝之战》作为九年动画的收官之作，在视觉层面交出了不错的答卷。双帝对决的特效经费充足，异火流转、空间崩塌的场面极具冲击力，补足了原著这段决战描写偏少、节奏仓促的短板，把中州之巅这场宿命大战的磅礴感具象化，单论打斗场面，是整部动画的高光。 但作品的短板同样明显。受时长限制，配角戏份被大量压缩，前期动画长期存在的人设割裂、情",
+      "post_url": "https://tieba.baidu.com/p/11219130230",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=cf6ad72248f41bd5da53e8fc61db81a0/79310a55b319ebc405314690c426cffc1e171669.jpg?tbpicau=2026-11-28-05_0b79da6a03d029c7214b9c249a6ed2a0",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9d5abc01dd504fc2a25fb207d5e6962c/79310a55b319ebc405314690c426cffc1e171669.jpg?tbpicau=2026-11-28-05_bd0b887d5c004fd0e3fe471918583e13",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=cf6ad72248f41bd5da53e8fc61db81a0/79310a55b319ebc405314690c426cffc1e171669.jpg?tbpicau=2026-11-28-05_0b79da6a03d029c7214b9c249a6ed2a0",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9d5abc01dd504fc2a25fb207d5e6962c/79310a55b319ebc405314690c426cffc1e171669.jpg?tbpicau=2026-11-28-05_bd0b887d5c004fd0e3fe471918583e13",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=15b67827941b0ef46ce89856edc551a1/afc379310a55b3195ab0b27c05a98226cffc1769.jpg?tbpicau=2026-11-28-05_35ca015b118a80b4a012e7eae22d9fb8",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=87a52a17ff389b5038ffe250b50e94e0/afc379310a55b3195ab0b27c05a98226cffc1769.jpg?tbpicau=2026-11-28-05_9ae3f724f8a4c101bdaf6cd7c37f29d6",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-22T23:06:03Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 88,
+      "tags": [
+        "贴吧",
+        "吧友吐槽双帝之战剧场版滥用AI",
+        "斗破苍穹吧"
+      ],
+      "content_hash": "a3792e03071acb82d40b89aadb6155b024c67d41",
+      "image_hash": "30265246a3b33331",
+      "image_id": "7056fd470c4ae163",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 435,
+      "rank_score": 102.8,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "0e5ed58ca2e2",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "image_fallback": null,
+      "trending": [
+        "AI"
+      ]
     },
     {
       "id": "tieba:99d583e80ddcaa90",
@@ -1723,7 +2024,7 @@
       "image_error": null,
       "image_width": 579,
       "image_height": 322,
-      "rank_score": 107.4,
+      "rank_score": 102.2,
       "rank_basis": "recency+comments",
       "group_id": "25a09db61cd0",
       "group_size": 1,
@@ -1731,6 +2032,191 @@
       "source_stale": false,
       "image_fallback": null,
       "trending": []
+    },
+    {
+      "id": "tieba:13f3cd0db13de437",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11219141678",
+      "source_name": "百度贴吧",
+      "community": "斗破苍穹吧",
+      "title": "斗破双帝之战剧场版观后感，老粉来交流下",
+      "summary": "刚看完双帝之战剧场版，简单说下看法。 打斗特效很顶，双帝对决的场面很有那味儿，圆了看书时的期待。 但时长不够，不少剧情压缩得比较快，部分细节处理比较仓促。 有燃点也有遗憾，想问下各位原著粉，你们觉得这次做得怎么样？",
+      "post_url": "https://tieba.baidu.com/p/11219141678",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=482d5be6cbb1cb133e693c1bed5556da/d100baa1cd11728b3b95bc2b8efcc3cec3fd2c7a.jpg?tbpicau=2026-11-28-05_2cf42edb9d95ac0bf7465113242dfc4c",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=66c954369ff9d72a1764121fe4115909/d100baa1cd11728b3b95bc2b8efcc3cec3fd2c7a.jpg?tbpicau=2026-11-28-05_79e978ae7acabb464d52d29d175759e1",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=482d5be6cbb1cb133e693c1bed5556da/d100baa1cd11728b3b95bc2b8efcc3cec3fd2c7a.jpg?tbpicau=2026-11-28-05_2cf42edb9d95ac0bf7465113242dfc4c",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=66c954369ff9d72a1764121fe4115909/d100baa1cd11728b3b95bc2b8efcc3cec3fd2c7a.jpg?tbpicau=2026-11-28-05_79e978ae7acabb464d52d29d175759e1",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=27e5319118df8db1bc2e7c6c3922dddb/f8dcd100baa1cd11090e4229ff12c8fcc3ce2d7a.jpg?tbpicau=2026-11-28-05_82531c8369cc5f6eb0993ccc583f0189",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=907d1f75170fd9f9a017576b1516a517/f8dcd100baa1cd11090e4229ff12c8fcc3ce2d7a.jpg?tbpicau=2026-11-28-05_a7167794a593090ab8fae3e0bf90442c",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-22T23:06:03Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 80,
+      "tags": [
+        "贴吧",
+        "吧友吐槽双帝之战剧场版滥用AI",
+        "斗破苍穹吧"
+      ],
+      "content_hash": "adacbf74b7de3d2615ffdad5862b351d1f03f0fe",
+      "image_hash": "11962b8b8b4ccc8e",
+      "image_id": "27eab0c4fa434da4",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-26T01:27:17Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 765,
+      "rank_score": 102.1,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "97b430bde721",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tieba:ae68e77ae02c4e70",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11219047312",
+      "source_name": "百度贴吧",
+      "community": "bilibili吧",
+      "title": "千年大计毁于层层外包",
+      "summary": "双帝之战最强势力魂族败北，千年布局，为了集齐古玉晋级斗帝，称霸斗气大陆，从此我不吃牛肉。原本最容易得手的没落萧族所持的古玉，个个都觉得“区区蝼蚁不值得大佬亲自下场”，层层派活，越往下越不重视，情报一路缩水，出事了怕被上头责罚还隐瞒情报，每次派去对付主角的人反而变成了促进主角成长的经验包，愣是把本是蝼蚁的主角给培养成了心腹大患，最后彻底翻车 千年谋划，输在转包链太长、责任没人担、情报过时缺失。老板在",
+      "post_url": "https://tieba.baidu.com/p/11219047312",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b724ae21d12bd40742c7d3f54b899e9c/f603738da97739120d1bb568be198618367ae2fe.jpg?tbpicau=2026-11-28-05_f5d14fa0b30501133dea3621a4070fca",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=2316f8c3e951f3dec3b2bb66a4d58122/f603738da97739120d1bb568be198618367ae2fe.jpg?tbpicau=2026-11-28-05_f99ca34e695128a91ae70d5593227932",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b724ae21d12bd40742c7d3f54b899e9c/f603738da97739120d1bb568be198618367ae2fe.jpg?tbpicau=2026-11-28-05_f5d14fa0b30501133dea3621a4070fca",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=2316f8c3e951f3dec3b2bb66a4d58122/f603738da97739120d1bb568be198618367ae2fe.jpg?tbpicau=2026-11-28-05_f99ca34e695128a91ae70d5593227932",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=bf899b6849b30f24359aec0bf895d192/f8198618367adab48eed2b4acdd4b31c8701e4fe.jpg?tbpicau=2026-11-28-05_1eccd0dbc286ea31c3e14dbf8a8ce61b",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=50eef5267c292df597c3ae178c0a2d5d/f8198618367adab48eed2b4acdd4b31c8701e4fe.jpg?tbpicau=2026-11-28-05_1e2876310b030a4ab22821b436cd82e6",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=0dfd575f96160924dc25a213e407359b/8a82b9014a90f603c88dac4e7f12b31bb051edfe.jpg?tbpicau=2026-11-28-05_03b45d6ddb95d248b23b5578c6fe5c50",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cdc6a2d6881b9d168ac79863c3e5c5b2/8a82b9014a90f603c88dac4e7f12b31bb051edfe.jpg?tbpicau=2026-11-28-05_d39a4c221496855e05b4df2dc6875a15",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-22T23:06:03Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 68,
+      "tags": [
+        "贴吧",
+        "吧友吐槽双帝之战剧场版滥用AI",
+        "bilibili吧"
+      ],
+      "content_hash": "96637ceb52ec9c3676cf06d5c4082e598eb47356",
+      "image_hash": "31292b6d69abba92",
+      "image_id": "24641841e1bce534",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 237,
+      "rank_score": 100.8,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "f02301e27b27",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "image_fallback": null,
+      "trending": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tieba:54e00903b4888038",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11219152228",
+      "source_name": "百度贴吧",
+      "community": "斗破苍穹吧",
+      "title": "剧场版看完了，先来盘点下古元的表现吧",
+      "summary": "还以为前面是藏拙，现在看来果然最弱九星 1.烛昆要杀萧炎，古元加炎雷被烛昆随手一击打的倒飞 2.消炎即将自爆，古元和其他人一样在旁边干看着喊不要 3.洞府当中古元加老龙皇合力半天打不动魂天帝。让虚无吞炎成功收到帝丹 4.魂天帝吞下帝丹之后古元就更不行了，护体斗气都打不穿，魂天帝一瞪眼古元烛昆直接倒飞出去 后面魂天帝成帝了就不盘点了。",
+      "post_url": "https://tieba.baidu.com/p/11219152228",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=af790dc3173d26972ed3085565fab24f/5bb5c9ea15ce36d3daacb3397cf33a87e950b10a.jpg?tbpicau=2026-11-28-05_6d67605fa7c3d3ceb8ccb3bd111d8c42",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=a48d9212920735fa91f04cbbae6a7e8e/5bb5c9ea15ce36d3daacb3397cf33a87e950b10a.jpg?tbpicau=2026-11-28-05_cbb5cd5d39e4a13a4c6e3028d61574e6",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=af790dc3173d26972ed3085565fab24f/5bb5c9ea15ce36d3daacb3397cf33a87e950b10a.jpg?tbpicau=2026-11-28-05_6d67605fa7c3d3ceb8ccb3bd111d8c42",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=a48d9212920735fa91f04cbbae6a7e8e/5bb5c9ea15ce36d3daacb3397cf33a87e950b10a.jpg?tbpicau=2026-11-28-05_cbb5cd5d39e4a13a4c6e3028d61574e6",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=fa9694b6e6ec08fa260013af69ef3d4d/349b033b5bb5c9ea185b33ea9339b6003af3b30a.jpg?tbpicau=2026-11-28-05_1c42a94802a734202977f62280ffdf51",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=dd830c1ded18972ba33a02c8d6f60ab4/349b033b5bb5c9ea185b33ea9339b6003af3b30a.jpg?tbpicau=2026-11-28-05_ab74652f48a9dbdb99d4da222476e9e8",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=194aacd5cc13632715edc23ba18ea056/d72a6059252dd42a20a131a2453b5bb5c9eab80a.jpg?tbpicau=2026-11-28-05_3f3b06b8c38cc268333dd80847638ca4",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=594f84f27fdbb6fd255be724391fda25/d72a6059252dd42a20a131a2453b5bb5c9eab80a.jpg?tbpicau=2026-11-28-05_6593abf5df51af0e398eeb3fd6b9c281",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-22T23:06:03Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 61,
+      "tags": [
+        "贴吧",
+        "吧友吐槽双帝之战剧场版滥用AI",
+        "斗破苍穹吧"
+      ],
+      "content_hash": "55260a206d04df5ad5f8611994a612f20e158726",
+      "image_hash": "21273866563287c4",
+      "image_id": "480fce03afe9343c",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 580,
+      "rank_score": 100.0,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "05d883f8fafb",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "image_fallback": null,
+      "trending": [
+        "AI"
+      ]
     },
     {
       "id": "tieba:b6dfe9bd85c1ae39",
@@ -1779,58 +2265,9 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 321,
-      "rank_score": 103.7,
+      "rank_score": 98.5,
       "rank_basis": "recency+comments",
       "group_id": "77ad3532de21",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:4ba3fe06121f067c",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11219232707",
-      "source_name": "百度贴吧",
-      "community": "斗破苍穹吧",
-      "title": "双帝之战看完了",
-      "summary": "各位感觉如何？",
-      "post_url": "https://tieba.baidu.com/p/11219232707",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=da73dc8d0ced2e73fce98624b701a16d/3d6d55fbb2fb4316812b497366a4462309f7d387.jpg?tbpicau=2026-11-27-05_b2e02747b4d12b4d4376614c220b8183",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=8b00cf0436cf3bc7e800cfeee13bcb9c/3d6d55fbb2fb4316812b497366a4462309f7d387.jpg?tbpicau=2026-11-27-05_2e2c039607f908d7fd194f851df21e28",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=da73dc8d0ced2e73fce98624b701a16d/3d6d55fbb2fb4316812b497366a4462309f7d387.jpg?tbpicau=2026-11-27-05_b2e02747b4d12b4d4376614c220b8183",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=8b00cf0436cf3bc7e800cfeee13bcb9c/3d6d55fbb2fb4316812b497366a4462309f7d387.jpg?tbpicau=2026-11-27-05_2e2c039607f908d7fd194f851df21e28",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-22T23:06:03Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 206,
-      "tags": [
-        "贴吧",
-        "吧友吐槽双帝之战剧场版滥用AI",
-        "斗破苍穹吧"
-      ],
-      "content_hash": "3aa8256b65319878442cd5f01a2d457b574fc951",
-      "image_hash": "1ff4a9b81c4caa26",
-      "image_id": "02f7b6f2ea9492f2",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T01:49:28Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 1025,
-      "rank_score": 102.7,
-      "rank_basis": "recency+comments",
-      "group_id": "32d492a00768",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -1877,74 +2314,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 935,
-      "rank_score": 100.7,
+      "rank_score": 95.5,
       "rank_basis": "recency+comments",
       "group_id": "c517416f872a",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
-    },
-    {
-      "id": "tieba:a48b9f70264dac27",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11219226192",
-      "source_name": "百度贴吧",
-      "community": "斗破苍穹吧",
-      "title": "《双帝之战》大结局观后感。",
-      "summary": "整体节奏太紧凑，文戏相比原著缩减了很多，有些设定也改了很多，90分钟本身就无法还原原文的详细剧情，古帝洞府原文九星斗圣之间的战斗详情几乎全没了（比如虚无帝境灵魂没了，古元打虚无+活死人没了，萧炎打活死人没了）主要围绕打帝丹和双帝之战。论斗帝前的战斗表现力，古元和烛坤都拉跨，尤其是古元，烛坤追杀萧炎的时候，古元居然站在旁边看戏，或者被烛坤随手攻击震退。当然虚无吞炎更拉跨，直接被帝品雏丹一招重创，击飞还被",
-      "post_url": "https://tieba.baidu.com/p/11219226192",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e3c162308f3d70cf4cfaaa05c8ddd1ba/e6cd7b899e510fb393db479e9f33c895d0430cfc.jpg?tbpicau=2026-11-27-05_6cef00c49616e6fb0944109c2c7aa564",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3dbba80d1f82b2b7a79f3bc60196bad2/e6cd7b899e510fb393db479e9f33c895d0430cfc.jpg?tbpicau=2026-11-27-05_291f425809f700d612640ba92927bc58",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e3c162308f3d70cf4cfaaa05c8ddd1ba/e6cd7b899e510fb393db479e9f33c895d0430cfc.jpg?tbpicau=2026-11-27-05_6cef00c49616e6fb0944109c2c7aa564",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3dbba80d1f82b2b7a79f3bc60196bad2/e6cd7b899e510fb393db479e9f33c895d0430cfc.jpg?tbpicau=2026-11-27-05_291f425809f700d612640ba92927bc58",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=72ffbf988b11728b302d8c2af8fdc3b3/c895d143ad4bd113d00f873b1cafa40f4afb05fc.jpg?tbpicau=2026-11-27-05_a514600dfb55997b01b3f34c43188fe0",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=681073300d36acaf59e094fe4ce2fc2d/c895d143ad4bd113d00f873b1cafa40f4afb05fc.jpg?tbpicau=2026-11-27-05_1ccf893b4892cd0fc284ba49f3514b49",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b2e090f397c8a786be2a4a065708c9c7/0924ab18972bd407a205e3f43d899e510eb309fc.jpg?tbpicau=2026-11-27-05_2230f7be5d79a0a9c20e4629c3c13400",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=5d7f60014ad79123e0e096769d0f28bf/0924ab18972bd407a205e3f43d899e510eb309fc.jpg?tbpicau=2026-11-27-05_8a7e1060a90bc6975d01b7cd55eb1861",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-22T23:06:03Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 159,
-      "tags": [
-        "贴吧",
-        "吧友吐槽双帝之战剧场版滥用AI",
-        "斗破苍穹吧"
-      ],
-      "content_hash": "149a8892240ea06630404129dc86d599a05a6ac9",
-      "image_hash": "b2366e6f3f372533",
-      "image_id": "fd6c9fc28afc93e2",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-24T16:50:52Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 243,
-      "rank_score": 100.7,
-      "rank_basis": "recency+comments",
-      "group_id": "6f34363000f0",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
       "trending": []
     },
     {
@@ -2000,300 +2376,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 100.5,
+      "rank_score": 95.3,
       "rank_basis": "recency+comments",
       "group_id": "b1f78e60099a",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
-    },
-    {
-      "id": "tieba:03616f3ea8e96d71",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11219549195",
-      "source_name": "百度贴吧",
-      "community": "斗破苍穹吧",
-      "title": "三年之约vs双帝之战",
-      "summary": "哪边质量更好",
-      "post_url": "https://tieba.baidu.com/p/11219549195",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=04ec3777631f95caa6f592bef9167fc5/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_ad6870f70a4b63cbc4f2c865f91a851b",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=00f5b7478c8065387beaa611a7e6d079/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_cc9133568ad01a02d7d7b5b119bdec62",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=04ec3777631f95caa6f592bef9167fc5/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_ad6870f70a4b63cbc4f2c865f91a851b",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=00f5b7478c8065387beaa611a7e6d079/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_cc9133568ad01a02d7d7b5b119bdec62",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e5d860308f3d70cf4cfaaa05c8ddd1ba/e6cd7b899e510fb395c2459e9f33c895d0430cdb.jpg?tbpicau=2026-11-28-05_5815d74d8ef611194954801d3162d8d8",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3ba2aa0d1f82b2b7a79f3bc60196bad2/e6cd7b899e510fb395c2459e9f33c895d0430cdb.jpg?tbpicau=2026-11-28-05_4403efb29cb2e94f289a345a76b8c6bc",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-22T23:06:03Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 149,
-      "tags": [
-        "贴吧",
-        "吧友吐槽双帝之战剧场版滥用AI",
-        "斗破苍穹吧"
-      ],
-      "content_hash": "b292c7383334308fd0ae188fee35d4e7d1623394",
-      "image_hash": "870f1733331f7149",
-      "image_id": "590f9746442184b0",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 870,
-      "rank_score": 100.2,
-      "rank_basis": "recency+comments",
-      "group_id": "783bc3e5ddd6",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:d8ba7c316f9c3487",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11219162638",
-      "source_name": "百度贴吧",
-      "community": "国产动画片吧",
-      "title": "双帝之战你们看完了吗",
-      "summary": "感觉怎么样，评价一下",
-      "post_url": "https://tieba.baidu.com/p/11219162638",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=da9c9e6909c2d562f208d0e5d71090f3/6c81800a19d8bc3ed29136c3c48ba61ea8d34519.jpg?tbpicau=2026-11-27-05_6d96bfebec4ae10aa9bb1f1934665aec",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3a4a385413fbb2fb342b5a107f715199/6c81800a19d8bc3ed29136c3c48ba61ea8d34519.jpg?tbpicau=2026-11-27-05_aadaa222b97418aeb5fb3062db513ecf",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=da9c9e6909c2d562f208d0e5d71090f3/6c81800a19d8bc3ed29136c3c48ba61ea8d34519.jpg?tbpicau=2026-11-27-05_6d96bfebec4ae10aa9bb1f1934665aec",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3a4a385413fbb2fb342b5a107f715199/6c81800a19d8bc3ed29136c3c48ba61ea8d34519.jpg?tbpicau=2026-11-27-05_aadaa222b97418aeb5fb3062db513ecf",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=f315ce2a0f540923aa696376a259d1dc/cd11728b4710b912b658c6f785fdfc0392452219.jpg?tbpicau=2026-11-27-05_e14cfda09793bb3028653097294194c2",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=a75dd2132659252da3171f0604a07206/cd11728b4710b912b658c6f785fdfc0392452219.jpg?tbpicau=2026-11-27-05_cce5883f22b7fcd3f79c49936de7baa9",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e081b9081a6034a829e2b889fb1249d9/3bc79f3df8dcd100c305c828348b4710b9122f19.jpg?tbpicau=2026-11-27-05_446fa21e3cf7fe69c043a4fee1250882",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7597827dadf81a4c2632eecbe7111164/3bc79f3df8dcd100c305c828348b4710b9122f19.jpg?tbpicau=2026-11-27-05_fe1abff681b66d4e8f95288bbe3b5cf9",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-22T23:06:03Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 94,
-      "tags": [
-        "贴吧",
-        "吧友吐槽双帝之战剧场版滥用AI",
-        "国产动画片吧"
-      ],
-      "content_hash": "9fb23ec32bff3d25ade7f41f263197b9db9e5312",
-      "image_hash": "0127130b0f070707",
-      "image_id": "fbb19eed1700e908",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-24T16:50:52Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 243,
-      "rank_score": 96.6,
-      "rank_basis": "recency+comments",
-      "group_id": "fc4cf591833f",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:b37150a4043536ac",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11219130230",
-      "source_name": "百度贴吧",
-      "community": "斗破苍穹吧",
-      "title": "结尾这小孩是萧霖？",
-      "summary": "追了斗破九年了，小说看了不下十几遍了，动漫做得好不好也终于完结了！ 《斗破苍穹·双帝之战》作为九年动画的收官之作，在视觉层面交出了不错的答卷。双帝对决的特效经费充足，异火流转、空间崩塌的场面极具冲击力，补足了原著这段决战描写偏少、节奏仓促的短板，把中州之巅这场宿命大战的磅礴感具象化，单论打斗场面，是整部动画的高光。 但作品的短板同样明显。受时长限制，配角戏份被大量压缩，前期动画长期存在的人设割裂、情",
-      "post_url": "https://tieba.baidu.com/p/11219130230",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=cf6ad72248f41bd5da53e8fc61db81a0/79310a55b319ebc405314690c426cffc1e171669.jpg?tbpicau=2026-11-28-05_0b79da6a03d029c7214b9c249a6ed2a0",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9d5abc01dd504fc2a25fb207d5e6962c/79310a55b319ebc405314690c426cffc1e171669.jpg?tbpicau=2026-11-28-05_bd0b887d5c004fd0e3fe471918583e13",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=cf6ad72248f41bd5da53e8fc61db81a0/79310a55b319ebc405314690c426cffc1e171669.jpg?tbpicau=2026-11-28-05_0b79da6a03d029c7214b9c249a6ed2a0",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9d5abc01dd504fc2a25fb207d5e6962c/79310a55b319ebc405314690c426cffc1e171669.jpg?tbpicau=2026-11-28-05_bd0b887d5c004fd0e3fe471918583e13",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=15b67827941b0ef46ce89856edc551a1/afc379310a55b3195ab0b27c05a98226cffc1769.jpg?tbpicau=2026-11-28-05_35ca015b118a80b4a012e7eae22d9fb8",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=87a52a17ff389b5038ffe250b50e94e0/afc379310a55b3195ab0b27c05a98226cffc1769.jpg?tbpicau=2026-11-28-05_9ae3f724f8a4c101bdaf6cd7c37f29d6",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-22T23:06:03Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 88,
-      "tags": [
-        "贴吧",
-        "吧友吐槽双帝之战剧场版滥用AI",
-        "斗破苍穹吧"
-      ],
-      "content_hash": "a3792e03071acb82d40b89aadb6155b024c67d41",
-      "image_hash": "30265246a3b33331",
-      "image_id": "7056fd470c4ae163",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 435,
-      "rank_score": 96.1,
-      "rank_basis": "recency+comments",
-      "group_id": "0e5ed58ca2e2",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:13f3cd0db13de437",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11219141678",
-      "source_name": "百度贴吧",
-      "community": "斗破苍穹吧",
-      "title": "斗破双帝之战剧场版观后感，老粉来交流下",
-      "summary": "刚看完双帝之战剧场版，简单说下看法。 打斗特效很顶，双帝对决的场面很有那味儿，圆了看书时的期待。 但时长不够，不少剧情压缩得比较快，部分细节处理比较仓促。 有燃点也有遗憾，想问下各位原著粉，你们觉得这次做得怎么样？",
-      "post_url": "https://tieba.baidu.com/p/11219141678",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=482d5be6cbb1cb133e693c1bed5556da/d100baa1cd11728b3b95bc2b8efcc3cec3fd2c7a.jpg?tbpicau=2026-11-27-05_81b0a00595d52ef0a6cb948620a0b57d",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=66c954369ff9d72a1764121fe4115909/d100baa1cd11728b3b95bc2b8efcc3cec3fd2c7a.jpg?tbpicau=2026-11-27-05_49ae3e28db18e6a1d77f55c1473ed1aa",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=482d5be6cbb1cb133e693c1bed5556da/d100baa1cd11728b3b95bc2b8efcc3cec3fd2c7a.jpg?tbpicau=2026-11-27-05_81b0a00595d52ef0a6cb948620a0b57d",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=66c954369ff9d72a1764121fe4115909/d100baa1cd11728b3b95bc2b8efcc3cec3fd2c7a.jpg?tbpicau=2026-11-27-05_49ae3e28db18e6a1d77f55c1473ed1aa",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=27e5319118df8db1bc2e7c6c3922dddb/f8dcd100baa1cd11090e4229ff12c8fcc3ce2d7a.jpg?tbpicau=2026-11-27-05_b4937bd11439fe7f3b694cf2eb1083fe",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=907d1f75170fd9f9a017576b1516a517/f8dcd100baa1cd11090e4229ff12c8fcc3ce2d7a.jpg?tbpicau=2026-11-27-05_335baf8a68b1b5019afe60a170311cf8",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-22T23:06:03Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 80,
-      "tags": [
-        "贴吧",
-        "吧友吐槽双帝之战剧场版滥用AI",
-        "斗破苍穹吧"
-      ],
-      "content_hash": "8dc34f19c2b41bff58aa654d6ff2071f7385d981",
-      "image_hash": "11962b8b8b4ccc8e",
-      "image_id": "a7cf74c7ba641fcf",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-24T16:50:52Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 765,
-      "rank_score": 95.3,
-      "rank_basis": "recency+comments",
-      "group_id": "97b430bde721",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:ae68e77ae02c4e70",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11219047312",
-      "source_name": "百度贴吧",
-      "community": "bilibili吧",
-      "title": "千年大计毁于层层外包",
-      "summary": "双帝之战最强势力魂族败北，千年布局，为了集齐古玉晋级斗帝，称霸斗气大陆，从此我不吃牛肉。原本最容易得手的没落萧族所持的古玉，个个都觉得“区区蝼蚁不值得大佬亲自下场”，层层派活，越往下越不重视，情报一路缩水，出事了怕被上头责罚还隐瞒情报，每次派去对付主角的人反而变成了促进主角成长的经验包，愣是把本是蝼蚁的主角给培养成了心腹大患，最后彻底翻车 千年谋划，输在转包链太长、责任没人担、情报过时缺失。老板在",
-      "post_url": "https://tieba.baidu.com/p/11219047312",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b724ae21d12bd40742c7d3f54b899e9c/f603738da97739120d1bb568be198618367ae2fe.jpg?tbpicau=2026-11-28-05_f5d14fa0b30501133dea3621a4070fca",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=2316f8c3e951f3dec3b2bb66a4d58122/f603738da97739120d1bb568be198618367ae2fe.jpg?tbpicau=2026-11-28-05_f99ca34e695128a91ae70d5593227932",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b724ae21d12bd40742c7d3f54b899e9c/f603738da97739120d1bb568be198618367ae2fe.jpg?tbpicau=2026-11-28-05_f5d14fa0b30501133dea3621a4070fca",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=2316f8c3e951f3dec3b2bb66a4d58122/f603738da97739120d1bb568be198618367ae2fe.jpg?tbpicau=2026-11-28-05_f99ca34e695128a91ae70d5593227932",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=bf899b6849b30f24359aec0bf895d192/f8198618367adab48eed2b4acdd4b31c8701e4fe.jpg?tbpicau=2026-11-28-05_1eccd0dbc286ea31c3e14dbf8a8ce61b",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=50eef5267c292df597c3ae178c0a2d5d/f8198618367adab48eed2b4acdd4b31c8701e4fe.jpg?tbpicau=2026-11-28-05_1e2876310b030a4ab22821b436cd82e6",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=0dfd575f96160924dc25a213e407359b/8a82b9014a90f603c88dac4e7f12b31bb051edfe.jpg?tbpicau=2026-11-28-05_03b45d6ddb95d248b23b5578c6fe5c50",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cdc6a2d6881b9d168ac79863c3e5c5b2/8a82b9014a90f603c88dac4e7f12b31bb051edfe.jpg?tbpicau=2026-11-28-05_d39a4c221496855e05b4df2dc6875a15",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-22T23:06:03Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 68,
-      "tags": [
-        "贴吧",
-        "吧友吐槽双帝之战剧场版滥用AI",
-        "bilibili吧"
-      ],
-      "content_hash": "96637ceb52ec9c3676cf06d5c4082e598eb47356",
-      "image_hash": "31292b6d69abba92",
-      "image_id": "24641841e1bce534",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 237,
-      "rank_score": 94.1,
-      "rank_basis": "recency+comments",
-      "group_id": "f02301e27b27",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
       "trending": []
     },
     {
@@ -2349,7 +2438,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1257,
-      "rank_score": 93.4,
+      "rank_score": 88.1,
       "rank_basis": "recency+comments",
       "group_id": "5bb09ff6c812",
       "group_size": 1,
@@ -2399,74 +2488,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 911,
-      "rank_score": 93.4,
+      "rank_score": 88.1,
       "rank_basis": "recency+comments",
       "group_id": "e626a963e9ff",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "image_fallback": null,
-      "trending": []
-    },
-    {
-      "id": "tieba:54e00903b4888038",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11219152228",
-      "source_name": "百度贴吧",
-      "community": "斗破苍穹吧",
-      "title": "剧场版看完了，先来盘点下古元的表现吧",
-      "summary": "还以为前面是藏拙，现在看来果然最弱九星 1.烛昆要杀萧炎，古元加炎雷被烛昆随手一击打的倒飞 2.消炎即将自爆，古元和其他人一样在旁边干看着喊不要 3.洞府当中古元加老龙皇合力半天打不动魂天帝。让虚无吞炎成功收到帝丹 4.魂天帝吞下帝丹之后古元就更不行了，护体斗气都打不穿，魂天帝一瞪眼古元烛昆直接倒飞出去 后面魂天帝成帝了就不盘点了。",
-      "post_url": "https://tieba.baidu.com/p/11219152228",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=af790dc3173d26972ed3085565fab24f/5bb5c9ea15ce36d3daacb3397cf33a87e950b10a.jpg?tbpicau=2026-11-28-05_6d67605fa7c3d3ceb8ccb3bd111d8c42",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=a48d9212920735fa91f04cbbae6a7e8e/5bb5c9ea15ce36d3daacb3397cf33a87e950b10a.jpg?tbpicau=2026-11-28-05_cbb5cd5d39e4a13a4c6e3028d61574e6",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=af790dc3173d26972ed3085565fab24f/5bb5c9ea15ce36d3daacb3397cf33a87e950b10a.jpg?tbpicau=2026-11-28-05_6d67605fa7c3d3ceb8ccb3bd111d8c42",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=a48d9212920735fa91f04cbbae6a7e8e/5bb5c9ea15ce36d3daacb3397cf33a87e950b10a.jpg?tbpicau=2026-11-28-05_cbb5cd5d39e4a13a4c6e3028d61574e6",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=fa9694b6e6ec08fa260013af69ef3d4d/349b033b5bb5c9ea185b33ea9339b6003af3b30a.jpg?tbpicau=2026-11-28-05_1c42a94802a734202977f62280ffdf51",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=dd830c1ded18972ba33a02c8d6f60ab4/349b033b5bb5c9ea185b33ea9339b6003af3b30a.jpg?tbpicau=2026-11-28-05_ab74652f48a9dbdb99d4da222476e9e8",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=194aacd5cc13632715edc23ba18ea056/d72a6059252dd42a20a131a2453b5bb5c9eab80a.jpg?tbpicau=2026-11-28-05_3f3b06b8c38cc268333dd80847638ca4",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=594f84f27fdbb6fd255be724391fda25/d72a6059252dd42a20a131a2453b5bb5c9eab80a.jpg?tbpicau=2026-11-28-05_6593abf5df51af0e398eeb3fd6b9c281",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-22T23:06:03Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 61,
-      "tags": [
-        "贴吧",
-        "吧友吐槽双帝之战剧场版滥用AI",
-        "斗破苍穹吧"
-      ],
-      "content_hash": "55260a206d04df5ad5f8611994a612f20e158726",
-      "image_hash": "21273866563287c4",
-      "image_id": "480fce03afe9343c",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 580,
-      "rank_score": 93.2,
-      "rank_basis": "recency+comments",
-      "group_id": "05d883f8fafb",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
       "trending": []
     },
     {
@@ -2516,7 +2544,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1006,
-      "rank_score": 90.7,
+      "rank_score": 85.4,
       "rank_basis": "recency+comments",
       "group_id": "0e619e678e7c",
       "group_size": 1,
@@ -2565,7 +2593,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1289,
-      "rank_score": 90.3,
+      "rank_score": 85.1,
       "rank_basis": "recency+comments",
       "group_id": "6e14e7fd342f",
       "group_size": 1,
@@ -2626,7 +2654,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 725,
-      "rank_score": 86.3,
+      "rank_score": 81.0,
       "rank_basis": "recency+comments",
       "group_id": "172846165167",
       "group_size": 1,
@@ -2675,13 +2703,64 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 712,
-      "rank_score": 81.8,
+      "rank_score": 76.6,
       "rank_basis": "recency+comments",
       "group_id": "72c34c3f3011",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "trending": []
+    },
+    {
+      "id": "tieba:58794b65bd2001d4",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11197891062",
+      "source_name": "百度贴吧",
+      "community": "gta6吧",
+      "title": "夜手搓了一个受够了弹窗广告站，连夜手搓一个GTA6互动地图",
+      "summary": "吧友们好，眼看11月19号《GTA 6》就要正式解锁了！🌴🚗 每次玩开放世界找全收集和彩蛋，最烦那些满屏弹窗广告、强制登录还要下App的攻略网站，躺在沙发上用手机查点位卡得要死。 作为一个强迫症程序员，这周末干脆自己动手用 React 撸了一个【极速纯净版 · 雷奥奈达（Leonida）互动地图 + 手柄秘籍查询器】，纯用爱发电分享给各位开荒的兄弟： 1. 真·零广告、免登录：浏览器打开秒加载，手机和电脑端都能丝滑缩放。2. 底图与区域：目前采用外",
+      "post_url": "https://tieba.baidu.com/p/11197891062",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4247203a1cafa40f3cc6ced59b65038c/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-28-05_c8ba70198a6085db1ef07dbaa357d30f",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bc06692b0f540923aa69617ca263a034/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-28-05_422f2fab92554a55e9ff241b45235164",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4247203a1cafa40f3cc6ced59b65038c/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-28-05_c8ba70198a6085db1ef07dbaa357d30f",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bc06692b0f540923aa69617ca263a034/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-28-05_422f2fab92554a55e9ff241b45235164",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T14:44:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 224,
+      "tags": [
+        "贴吧",
+        "吧友自制GTA6互动地图",
+        "gta6吧"
+      ],
+      "content_hash": "77c498b3c4d8d74614a9e48ed3a66e90b4890eaa",
+      "image_hash": "8d0f9f9e9d0d1f0d",
+      "image_id": "609e105ff66aed83",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-26T01:27:17Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 363,
+      "rank_score": 76.5,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "141110556c9f",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": [
+        "手机"
+      ]
     },
     {
       "id": "tieba:1322b0f2cd7aef5f",
@@ -2724,7 +2803,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 387,
-      "rank_score": 81.0,
+      "rank_score": 75.8,
       "rank_basis": "recency+comments",
       "group_id": "dc1aa4829ae4",
       "group_size": 1,
@@ -2785,7 +2864,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 911,
-      "rank_score": 81.0,
+      "rank_score": 75.8,
       "rank_basis": "recency+comments",
       "group_id": "4fd729d1e40b",
       "group_size": 1,
@@ -2846,7 +2925,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 2379,
-      "rank_score": 81.0,
+      "rank_score": 75.8,
       "rank_basis": "recency+comments",
       "group_id": "47e4a7ff53d9",
       "group_size": 1,
@@ -2907,7 +2986,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 725,
-      "rank_score": 81.0,
+      "rank_score": 75.8,
       "rank_basis": "recency+comments",
       "group_id": "8cb3b2d49f73",
       "group_size": 1,
@@ -2962,7 +3041,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 420,
-      "rank_score": 81.0,
+      "rank_score": 75.8,
       "rank_basis": "recency+comments",
       "group_id": "988fb3a27b9f",
       "group_size": 1,
@@ -3023,7 +3102,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 786,
-      "rank_score": 80.6,
+      "rank_score": 75.4,
       "rank_basis": "recency+comments",
       "group_id": "582710d9416f",
       "group_size": 1,
@@ -3072,7 +3151,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 80.0,
+      "rank_score": 74.7,
       "rank_basis": "recency+comments",
       "group_id": "94a5e2c5aea4",
       "group_size": 1,
@@ -3121,7 +3200,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 725,
-      "rank_score": 78.0,
+      "rank_score": 72.8,
       "rank_basis": "recency+comments",
       "group_id": "286c7133fb3f",
       "group_size": 1,
@@ -3182,7 +3261,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 74.6,
+      "rank_score": 69.4,
       "rank_basis": "recency+comments",
       "group_id": "1982ff3bb7f5",
       "group_size": 1,
@@ -3231,7 +3310,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 644,
-      "rank_score": 74.4,
+      "rank_score": 69.1,
       "rank_basis": "recency+comments",
       "group_id": "fe7ff568e230",
       "group_size": 1,
@@ -3292,7 +3371,7 @@
       "image_error": null,
       "image_width": 579,
       "image_height": 397,
-      "rank_score": 73.5,
+      "rank_score": 68.3,
       "rank_basis": "recency+comments",
       "group_id": "32e76fbce321",
       "group_size": 1,
@@ -3353,7 +3432,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 72.4,
+      "rank_score": 67.2,
       "rank_basis": "recency+comments",
       "group_id": "ed3d2f75e2ba",
       "group_size": 1,
@@ -3414,7 +3493,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 72.4,
+      "rank_score": 67.2,
       "rank_basis": "recency+comments",
       "group_id": "f5b881d7289e",
       "group_size": 1,
@@ -3475,7 +3554,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 72.4,
+      "rank_score": 67.2,
       "rank_basis": "recency+comments",
       "group_id": "8e9a20c2e854",
       "group_size": 1,
@@ -3525,7 +3604,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 596,
-      "rank_score": 72.1,
+      "rank_score": 66.9,
       "rank_basis": "recency+comments",
       "group_id": "00e2f1536a1e",
       "group_size": 1,
@@ -3574,7 +3653,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1276,
-      "rank_score": 71.1,
+      "rank_score": 65.9,
       "rank_basis": "recency+comments",
       "group_id": "684ae1af3e84",
       "group_size": 1,
@@ -3623,7 +3702,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1025,
-      "rank_score": 70.9,
+      "rank_score": 65.6,
       "rank_basis": "recency+comments",
       "group_id": "3f2c58b82623",
       "group_size": 1,
@@ -3672,7 +3751,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 268,
-      "rank_score": 70.7,
+      "rank_score": 65.4,
       "rank_basis": "recency+comments",
       "group_id": "bcdb3569e9a5",
       "group_size": 1,
@@ -3727,58 +3806,9 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 267,
-      "rank_score": 69.7,
+      "rank_score": 64.5,
       "rank_basis": "recency+comments",
       "group_id": "9564a2d7272e",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:58794b65bd2001d4",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11197891062",
-      "source_name": "百度贴吧",
-      "community": "gta6吧",
-      "title": "夜手搓了一个受够了弹窗广告站，连夜手搓一个GTA6互动地图",
-      "summary": "吧友们好，眼看11月19号《GTA 6》就要正式解锁了！🌴🚗 每次玩开放世界找全收集和彩蛋，最烦那些满屏弹窗广告、强制登录还要下App的攻略网站，躺在沙发上用手机查点位卡得要死。 作为一个强迫症程序员，这周末干脆自己动手用 React 撸了一个【极速纯净版 · 雷奥奈达（Leonida）互动地图 + 手柄秘籍查询器】，纯用爱发电分享给各位开荒的兄弟： 1. 真·零广告、免登录：浏览器打开秒加载，手机和电脑端都能丝滑缩放。2. 底图与区域：目前采用外",
-      "post_url": "https://tieba.baidu.com/p/11197891062",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4247203a1cafa40f3cc6ced59b65038c/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-27-05_9f75f8647232fd1443eb0a21e305281b",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bc06692b0f540923aa69617ca263a034/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-27-05_e43a1d6fce288ff3b6d54fdf68db767a",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4247203a1cafa40f3cc6ced59b65038c/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-27-05_9f75f8647232fd1443eb0a21e305281b",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bc06692b0f540923aa69617ca263a034/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-27-05_e43a1d6fce288ff3b6d54fdf68db767a",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T14:44:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 218,
-      "tags": [
-        "贴吧",
-        "吧友自制GTA6互动地图",
-        "gta6吧"
-      ],
-      "content_hash": "d78983a41edd2f149b98a85253af8492a584c418",
-      "image_hash": "8d0f9f9e9d0d1f0d",
-      "image_id": "69287528407cdcfb",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 363,
-      "rank_score": 69.6,
-      "rank_basis": "recency+comments",
-      "group_id": "141110556c9f",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -3825,7 +3855,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 67.7,
+      "rank_score": 62.4,
       "rank_basis": "recency+comments",
       "group_id": "dc820d281857",
       "group_size": 1,
@@ -3875,7 +3905,7 @@
       "image_error": null,
       "image_width": 579,
       "image_height": 262,
-      "rank_score": 66.2,
+      "rank_score": 61.0,
       "rank_basis": "recency+comments",
       "group_id": "c5748de8a9c3",
       "group_size": 1,
@@ -3936,7 +3966,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 497,
-      "rank_score": 64.4,
+      "rank_score": 59.2,
       "rank_basis": "recency+comments",
       "group_id": "42b1bbdc43fa",
       "group_size": 1,
@@ -3985,7 +4015,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 63.8,
+      "rank_score": 58.5,
       "rank_basis": "recency+comments",
       "group_id": "5cd076672fa6",
       "group_size": 1,
@@ -4046,7 +4076,7 @@
       "image_error": null,
       "image_width": null,
       "image_height": null,
-      "rank_score": 63.8,
+      "rank_score": 58.5,
       "rank_basis": "recency+comments",
       "group_id": "74a4157f5e21",
       "group_size": 1,
@@ -4107,13 +4137,64 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 62.4,
+      "rank_score": 57.1,
       "rank_basis": "recency+comments",
       "group_id": "3b4658eadaa2",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "trending": []
+    },
+    {
+      "id": "tieba:8a16e43eb8616253",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11157536868",
+      "source_name": "百度贴吧",
+      "community": "bilibili吧",
+      "title": "蒸蒸日上？2025年日本动画产业市场规模出来了",
+      "summary": "相较于2024年的3.84万亿日元，2025年来到了4.45万亿日元，增长了15.8% 日本市场（19065亿日元） 海外市场（25426亿日元） 但是离2033年产业战略的20万亿日元目标差的还多啊但说实话每年这么涨，2033年10万亿日元有戏啊",
+      "post_url": "https://tieba.baidu.com/p/11157536868",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=52eef804c144ebf86d716437e9f8d736/b2b7d0a20cf431adf261823e0d36acaf2edd9802.jpg?tbpicau=2026-11-18-05_5cfceab2acf8f9ffe0f4a2de1f90924c",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=964d8d064c55b3199cf980777392f31b/b2b7d0a20cf431adf261823e0d36acaf2edd9802.jpg?tbpicau=2026-11-18-05_631ba05cf6985a868ec2563a183f3397",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=52eef804c144ebf86d716437e9f8d736/b2b7d0a20cf431adf261823e0d36acaf2edd9802.jpg?tbpicau=2026-11-18-05_5cfceab2acf8f9ffe0f4a2de1f90924c",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=964d8d064c55b3199cf980777392f31b/b2b7d0a20cf431adf261823e0d36acaf2edd9802.jpg?tbpicau=2026-11-18-05_631ba05cf6985a868ec2563a183f3397",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-12T05:34:57Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 287,
+      "tags": [
+        "贴吧",
+        "日本动画巨头中国版权卖不动了",
+        "bilibili吧"
+      ],
+      "content_hash": "30ca5c26a9382e2a0dd123ad59a3a4f009e26c17",
+      "image_hash": null,
+      "image_id": "d0060cb2f16831f9",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-15T22:23:17Z",
+      "image_error": null,
+      "image_width": null,
+      "image_height": null,
+      "rank_score": 56.3,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "d0060cb2f168",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": [
+        "市场"
+      ]
     },
     {
       "id": "tieba:2a63bfc11fe42bd1",
@@ -4156,7 +4237,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 387,
-      "rank_score": 60.4,
+      "rank_score": 55.2,
       "rank_basis": "recency+comments",
       "group_id": "540d5e0be884",
       "group_size": 1,
@@ -4217,64 +4298,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 346,
-      "rank_score": 60.1,
+      "rank_score": 54.8,
       "rank_basis": "recency+comments",
       "group_id": "14d28eebee5d",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "trending": []
-    },
-    {
-      "id": "tieba:f2329caf10826427",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11201584694",
-      "source_name": "百度贴吧",
-      "community": "bilibili吧",
-      "title": "哈利波特魔法觉醒停止运营",
-      "summary": "能活到现在已经可以了",
-      "post_url": "https://tieba.baidu.com/p/11201584694",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c054bcc2173d26972ed3085565fab24f/5bb5c9ea15ce36d3b58102387cf33a87e950b135.jpg?tbpicau=2026-11-19-05_82892258dc8b18b1975192e9d7a4cf4d",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cba02313920735fa91f04cbbae6a7e8e/5bb5c9ea15ce36d3b58102387cf33a87e950b135.jpg?tbpicau=2026-11-19-05_539a6c5752f66fa35a7e0d83871cc2eb",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c054bcc2173d26972ed3085565fab24f/5bb5c9ea15ce36d3b58102387cf33a87e950b135.jpg?tbpicau=2026-11-19-05_82892258dc8b18b1975192e9d7a4cf4d",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cba02313920735fa91f04cbbae6a7e8e/5bb5c9ea15ce36d3b58102387cf33a87e950b135.jpg?tbpicau=2026-11-19-05_539a6c5752f66fa35a7e0d83871cc2eb",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-17T01:26:48Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 359,
-      "tags": [
-        "贴吧",
-        "哈利波特魔法觉醒宣布停服",
-        "bilibili吧"
-      ],
-      "content_hash": "4671e4e75e9f28994d37b02b2937556c13d093ed",
-      "image_hash": null,
-      "image_id": "bb847c87c8d13f4f",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-17T01:26:48Z",
-      "image_error": null,
-      "image_width": null,
-      "image_height": null,
-      "rank_score": 57.0,
-      "rank_basis": "recency+comments+trend",
-      "group_id": "bb847c87c8d1",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": [
-        "宣布"
-      ]
     },
     {
       "id": "tieba:148ac0c085f540cb",
@@ -4329,13 +4359,64 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 56.4,
+      "rank_score": 51.1,
       "rank_basis": "recency+comments",
       "group_id": "de924c94dcee",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "trending": []
+    },
+    {
+      "id": "tieba:262d226d62bb82bf",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11205822431",
+      "source_name": "百度贴吧",
+      "community": "异环吧",
+      "title": "《异环》入选TGA最佳手机游戏提名",
+      "summary": "最佳移动游戏 – 《明日方舟：终末地》 – 《怪物猎人：旅人》 – 《异环》 – 《Pokémon Champions》 – 《燕云十六声》",
+      "post_url": "https://tieba.baidu.com/p/11205822431",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=9643f039673fb80e0cd161df06d02ffb/dd54564e9258d109247455ba9758ccbf6c814d27.jpg?tbpicau=2026-11-23-05_3376c57866a5a1f33d314fff86c7c341",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=f48dabe8b103918fd7d13fc8610657aa/dd54564e9258d109247455ba9758ccbf6c814d27.jpg?tbpicau=2026-11-23-05_038998692ddea2a10ebd760faffbec35",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=9643f039673fb80e0cd161df06d02ffb/dd54564e9258d109247455ba9758ccbf6c814d27.jpg?tbpicau=2026-11-23-05_3376c57866a5a1f33d314fff86c7c341",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=f48dabe8b103918fd7d13fc8610657aa/dd54564e9258d109247455ba9758ccbf6c814d27.jpg?tbpicau=2026-11-23-05_038998692ddea2a10ebd760faffbec35",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-18T00:22:18Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 145,
+      "tags": [
+        "贴吧",
+        "影之刃零入围TGA年度游戏",
+        "异环吧"
+      ],
+      "content_hash": "e4ceab0d4caa20020bf881ec8ed4d3935fd2d4ab",
+      "image_hash": "c70f884b2b2b3b34",
+      "image_id": "8481885bef83907d",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-20T23:34:41Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 415,
+      "rank_score": 51.0,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "44bc8c868ffe",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": [
+        "手机"
+      ]
     },
     {
       "id": "tieba:a5a2654a50df028c",
@@ -4378,58 +4459,9 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1073,
-      "rank_score": 54.5,
+      "rank_score": 49.3,
       "rank_basis": "recency+comments",
       "group_id": "8ec68daf083b",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:e8be8714ce303e2c",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11216975180",
-      "source_name": "百度贴吧",
-      "community": "抗压背锅吧",
-      "title": "三地鼠离队视频里已经有宙斯画面了，哪来的什么反转",
-      "summary": "信营销号的这辈子有了",
-      "post_url": "https://tieba.baidu.com/p/11216975180",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2352aec3f4fb43161a1f7a7210a44642/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_1e717df43682f8b3c51e982d45803e2a",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65b6656949b30f24359aee01f8aea07e/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_462c4ee9e1dbf4c7e17850aa903b7573",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2352aec3f4fb43161a1f7a7210a44642/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_1e717df43682f8b3c51e982d45803e2a",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65b6656949b30f24359aee01f8aea07e/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_462c4ee9e1dbf4c7e17850aa903b7573",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-21T14:00:30Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 4,
-      "tags": [
-        "贴吧",
-        "一下走仨教练T1就剩Easyhoon",
-        "抗压背锅吧"
-      ],
-      "content_hash": "d57e4ffbc1ec5fac147544f71e48f9c0d621e61c",
-      "image_hash": "233b333371734747",
-      "image_id": "c9dd85c64e79d2ab",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-21T22:41:00Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 261,
-      "rank_score": 53.9,
-      "rank_basis": "recency+comments",
-      "group_id": "281cbd330951",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -4476,13 +4508,113 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 53.9,
+      "rank_score": 48.7,
       "rank_basis": "recency+comments",
       "group_id": "143a88d280ac",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "trending": []
+    },
+    {
+      "id": "tieba:e8be8714ce303e2c",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11216975180",
+      "source_name": "百度贴吧",
+      "community": "抗压背锅吧",
+      "title": "三地鼠离队视频里已经有宙斯画面了，哪来的什么反转",
+      "summary": "信营销号的这辈子有了",
+      "post_url": "https://tieba.baidu.com/p/11216975180",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2352aec3f4fb43161a1f7a7210a44642/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_1e717df43682f8b3c51e982d45803e2a",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65b6656949b30f24359aee01f8aea07e/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_462c4ee9e1dbf4c7e17850aa903b7573",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2352aec3f4fb43161a1f7a7210a44642/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_1e717df43682f8b3c51e982d45803e2a",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65b6656949b30f24359aee01f8aea07e/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_462c4ee9e1dbf4c7e17850aa903b7573",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-21T14:00:30Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 4,
+      "tags": [
+        "贴吧",
+        "一下走仨教练T1就剩Easyhoon",
+        "抗压背锅吧"
+      ],
+      "content_hash": "d57e4ffbc1ec5fac147544f71e48f9c0d621e61c",
+      "image_hash": "233b333371734747",
+      "image_id": "c9dd85c64e79d2ab",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-21T22:41:00Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 261,
+      "rank_score": 48.6,
+      "rank_basis": "recency+comments",
+      "group_id": "281cbd330951",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:ad83a4f9fdba5a2c",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11204395832",
+      "source_name": "百度贴吧",
+      "community": "星穹铁道内鬼吧",
+      "title": "TGA今晚公布提名，我要给小库库打个预防针，鸣潮大概率颗粒无收",
+      "summary": "首先是最佳移动奖项，这个鸣潮能进提名就是赢，获奖是完全没有希望的。在欧美主流媒体预测中今年几乎百分百是终末地(去年预测就是赛马娘)。 不要感到奇怪，这可能还真是终末地应得的。除了玩家之声以外，所有奖项都由媒体评选，而最佳移动的媒体评奖权重为：是否新游>是否在移动端有独特创新>是否在移动端体验舒适>是否有较高的市场评价。可以看出来，终末地今年在这些维度都是断档碾压所有其他游戏的，大部分主流媒体已经透露",
+      "post_url": "https://tieba.baidu.com/p/11204395832",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6840f712805c1038247ececa8211931c/4fc2d5628535e5dd660152d730c6a7efce1b628d.jpg?tbpicau=2026-11-20-05_05c4e9b101cd1383bab72c4ec3090554",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=5ba488d568738bd4c421b03391b0f6eb/4fc2d5628535e5dd660152d730c6a7efce1b628d.jpg?tbpicau=2026-11-20-05_17af7d0e6aa5e90ce30ee9f250e33c93",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6840f712805c1038247ececa8211931c/4fc2d5628535e5dd660152d730c6a7efce1b628d.jpg?tbpicau=2026-11-20-05_05c4e9b101cd1383bab72c4ec3090554",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=5ba488d568738bd4c421b03391b0f6eb/4fc2d5628535e5dd660152d730c6a7efce1b628d.jpg?tbpicau=2026-11-20-05_17af7d0e6aa5e90ce30ee9f250e33c93",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-18T00:22:18Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 103,
+      "tags": [
+        "贴吧",
+        "影之刃零入围TGA年度游戏",
+        "星穹铁道内鬼吧"
+      ],
+      "content_hash": "e898b7ef747da6ea8c8468386747173e974c0e69",
+      "image_hash": "4d663272c9a72416",
+      "image_id": "fae6a8d32401ccb5",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-18T00:22:18Z",
+      "image_error": null,
+      "image_width": 579,
+      "image_height": 293,
+      "rank_score": 48.3,
+      "rank_basis": "recency+comments+trend",
+      "group_id": "74b1c189ecd3",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": [
+        "市场"
+      ]
     },
     {
       "id": "tieba:58aa78c6443de118",
@@ -4525,58 +4657,9 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 689,
-      "rank_score": 53.2,
+      "rank_score": 48.0,
       "rank_basis": "recency+comments",
       "group_id": "6a471a843168",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:82761d35c0effb33",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "10985142913",
-      "source_name": "百度贴吧",
-      "community": "steam吧",
-      "title": "这够不够逆天",
-      "summary": "我感觉可以进十佳逆天打机环境排行榜",
-      "post_url": "https://tieba.baidu.com/p/10985142913",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3667a8c04cd162d985ee621421dea950/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_e3accf2c3dfaa60bba0d50214fc813d9",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4971012f48f41bd5da53eaf661e1f0f6/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_283340e3003d8d1e393fec67ec65fe20",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3667a8c04cd162d985ee621421dea950/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_e3accf2c3dfaa60bba0d50214fc813d9",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4971012f48f41bd5da53eaf661e1f0f6/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_283340e3003d8d1e393fec67ec65fe20",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T14:44:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 12,
-      "tags": [
-        "贴吧",
-        "GTA玩家整活晒打机环境",
-        "steam吧"
-      ],
-      "content_hash": "c0d44739e0dd0c6d77eaa87822c6aff83afd545e",
-      "image_hash": "e061e23f93b33b2b",
-      "image_id": "c915707d94a3e6d4",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-22T23:06:03Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 773,
-      "rank_score": 47.5,
-      "rank_basis": "recency+comments",
-      "group_id": "f26755e2d1b1",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -4840,6 +4923,55 @@
       "rank_score": 45.0,
       "rank_basis": "recency+comments",
       "group_id": "5268eeda339b",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:f2329caf10826427",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11201584694",
+      "source_name": "百度贴吧",
+      "community": "bilibili吧",
+      "title": "哈利波特魔法觉醒停止运营",
+      "summary": "能活到现在已经可以了",
+      "post_url": "https://tieba.baidu.com/p/11201584694",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c054bcc2173d26972ed3085565fab24f/5bb5c9ea15ce36d3b58102387cf33a87e950b135.jpg?tbpicau=2026-11-19-05_82892258dc8b18b1975192e9d7a4cf4d",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cba02313920735fa91f04cbbae6a7e8e/5bb5c9ea15ce36d3b58102387cf33a87e950b135.jpg?tbpicau=2026-11-19-05_539a6c5752f66fa35a7e0d83871cc2eb",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c054bcc2173d26972ed3085565fab24f/5bb5c9ea15ce36d3b58102387cf33a87e950b135.jpg?tbpicau=2026-11-19-05_82892258dc8b18b1975192e9d7a4cf4d",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cba02313920735fa91f04cbbae6a7e8e/5bb5c9ea15ce36d3b58102387cf33a87e950b135.jpg?tbpicau=2026-11-19-05_539a6c5752f66fa35a7e0d83871cc2eb",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-17T01:26:48Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 359,
+      "tags": [
+        "贴吧",
+        "哈利波特魔法觉醒宣布停服",
+        "bilibili吧"
+      ],
+      "content_hash": "4671e4e75e9f28994d37b02b2937556c13d093ed",
+      "image_hash": null,
+      "image_id": "bb847c87c8d13f4f",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-17T01:26:48Z",
+      "image_error": null,
+      "image_width": null,
+      "image_height": null,
+      "rank_score": 45.0,
+      "rank_basis": "recency+comments",
+      "group_id": "bb847c87c8d1",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -5642,55 +5774,6 @@
       "trending": []
     },
     {
-      "id": "tieba:8a16e43eb8616253",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11157536868",
-      "source_name": "百度贴吧",
-      "community": "bilibili吧",
-      "title": "蒸蒸日上？2025年日本动画产业市场规模出来了",
-      "summary": "相较于2024年的3.84万亿日元，2025年来到了4.45万亿日元，增长了15.8% 日本市场（19065亿日元） 海外市场（25426亿日元） 但是离2033年产业战略的20万亿日元目标差的还多啊但说实话每年这么涨，2033年10万亿日元有戏啊",
-      "post_url": "https://tieba.baidu.com/p/11157536868",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=52eef804c144ebf86d716437e9f8d736/b2b7d0a20cf431adf261823e0d36acaf2edd9802.jpg?tbpicau=2026-11-18-05_5cfceab2acf8f9ffe0f4a2de1f90924c",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=964d8d064c55b3199cf980777392f31b/b2b7d0a20cf431adf261823e0d36acaf2edd9802.jpg?tbpicau=2026-11-18-05_631ba05cf6985a868ec2563a183f3397",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=52eef804c144ebf86d716437e9f8d736/b2b7d0a20cf431adf261823e0d36acaf2edd9802.jpg?tbpicau=2026-11-18-05_5cfceab2acf8f9ffe0f4a2de1f90924c",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=964d8d064c55b3199cf980777392f31b/b2b7d0a20cf431adf261823e0d36acaf2edd9802.jpg?tbpicau=2026-11-18-05_631ba05cf6985a868ec2563a183f3397",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-12T05:34:57Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 287,
-      "tags": [
-        "贴吧",
-        "日本动画巨头中国版权卖不动了",
-        "bilibili吧"
-      ],
-      "content_hash": "30ca5c26a9382e2a0dd123ad59a3a4f009e26c17",
-      "image_hash": null,
-      "image_id": "d0060cb2f16831f9",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-15T22:23:17Z",
-      "image_error": null,
-      "image_width": null,
-      "image_height": null,
-      "rank_score": 44.3,
-      "rank_basis": "recency+comments",
-      "group_id": "d0060cb2f168",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
       "id": "tieba:d45f437c8acd8245",
       "content_type": "image",
       "authenticity": "real",
@@ -5783,6 +5866,55 @@
       "rank_score": 42.3,
       "rank_basis": "recency+comments",
       "group_id": "508bf99e1dc1",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:82761d35c0effb33",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "10985142913",
+      "source_name": "百度贴吧",
+      "community": "steam吧",
+      "title": "这够不够逆天",
+      "summary": "我感觉可以进十佳逆天打机环境排行榜",
+      "post_url": "https://tieba.baidu.com/p/10985142913",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3667a8c04cd162d985ee621421dea950/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_e3accf2c3dfaa60bba0d50214fc813d9",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4971012f48f41bd5da53eaf661e1f0f6/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_283340e3003d8d1e393fec67ec65fe20",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3667a8c04cd162d985ee621421dea950/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_e3accf2c3dfaa60bba0d50214fc813d9",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4971012f48f41bd5da53eaf661e1f0f6/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_283340e3003d8d1e393fec67ec65fe20",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T14:44:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 12,
+      "tags": [
+        "贴吧",
+        "GTA玩家整活晒打机环境",
+        "steam吧"
+      ],
+      "content_hash": "c0d44739e0dd0c6d77eaa87822c6aff83afd545e",
+      "image_hash": "e061e23f93b33b2b",
+      "image_id": "c915707d94a3e6d4",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-22T23:06:03Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 773,
+      "rank_score": 42.2,
+      "rank_basis": "recency+comments",
+      "group_id": "f26755e2d1b1",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -6446,55 +6578,6 @@
       ]
     },
     {
-      "id": "tieba:262d226d62bb82bf",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11205822431",
-      "source_name": "百度贴吧",
-      "community": "异环吧",
-      "title": "《异环》入选TGA最佳手机游戏提名",
-      "summary": "最佳移动游戏 – 《明日方舟：终末地》 – 《怪物猎人：旅人》 – 《异环》 – 《Pokémon Champions》 – 《燕云十六声》",
-      "post_url": "https://tieba.baidu.com/p/11205822431",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=9643f039673fb80e0cd161df06d02ffb/dd54564e9258d109247455ba9758ccbf6c814d27.jpg?tbpicau=2026-11-23-05_3376c57866a5a1f33d314fff86c7c341",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=f48dabe8b103918fd7d13fc8610657aa/dd54564e9258d109247455ba9758ccbf6c814d27.jpg?tbpicau=2026-11-23-05_038998692ddea2a10ebd760faffbec35",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=9643f039673fb80e0cd161df06d02ffb/dd54564e9258d109247455ba9758ccbf6c814d27.jpg?tbpicau=2026-11-23-05_3376c57866a5a1f33d314fff86c7c341",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=f48dabe8b103918fd7d13fc8610657aa/dd54564e9258d109247455ba9758ccbf6c814d27.jpg?tbpicau=2026-11-23-05_038998692ddea2a10ebd760faffbec35",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-18T00:22:18Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 145,
-      "tags": [
-        "贴吧",
-        "影之刃零入围TGA年度游戏",
-        "异环吧"
-      ],
-      "content_hash": "e4ceab0d4caa20020bf881ec8ed4d3935fd2d4ab",
-      "image_hash": "c70f884b2b2b3b34",
-      "image_id": "8481885bef83907d",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-20T23:34:41Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 415,
-      "rank_score": 39.0,
-      "rank_basis": "recency+comments",
-      "group_id": "44bc8c868ffe",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
       "id": "tieba:dede7129a6987d28",
       "content_type": "image",
       "authenticity": "real",
@@ -6597,57 +6680,6 @@
       "related": [],
       "source_stale": false,
       "trending": []
-    },
-    {
-      "id": "tieba:b4a99cdb7b158e14",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11201498494",
-      "source_name": "百度贴吧",
-      "community": "哈利波特魔法觉醒吧",
-      "title": "本来是款很好的游戏的",
-      "summary": "结果还是被氪金毁了",
-      "post_url": "https://tieba.baidu.com/p/11201498494",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b7b08ebfaf50352ab16125006343fb1a/b9389b504fc2d562087651e5a11190ef76c66cb8.jpg?tbpicau=2026-11-19-05_2abd950a1f87d7ffe9f87a8966381242",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0b5b82429cb44aed594ebce68327f63c/b9389b504fc2d562087651e5a11190ef76c66cb8.jpg?tbpicau=2026-11-19-05_85244d7edd1a856dbf0854036abdc844",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b7b08ebfaf50352ab16125006343fb1a/b9389b504fc2d562087651e5a11190ef76c66cb8.jpg?tbpicau=2026-11-19-05_2abd950a1f87d7ffe9f87a8966381242",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0b5b82429cb44aed594ebce68327f63c/b9389b504fc2d562087651e5a11190ef76c66cb8.jpg?tbpicau=2026-11-19-05_85244d7edd1a856dbf0854036abdc844",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-17T01:26:48Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 29,
-      "tags": [
-        "贴吧",
-        "哈利波特魔法觉醒宣布停服",
-        "哈利波特魔法觉醒吧"
-      ],
-      "content_hash": "ef75c77646a057b3faeab6ef3b0924221d7884fb",
-      "image_hash": null,
-      "image_id": "596b54d0b7766d11",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-17T01:26:48Z",
-      "image_error": null,
-      "image_width": null,
-      "image_height": null,
-      "rank_score": 38.6,
-      "rank_basis": "recency+comments+trend",
-      "group_id": "596b54d0b776",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": [
-        "宣布"
-      ]
     },
     {
       "id": "tieba:76e7e0232745e649",
@@ -6807,163 +6839,6 @@
       "related": [],
       "source_stale": false,
       "trending": []
-    },
-    {
-      "id": "tieba:85854260cb8dae96",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11201511212",
-      "source_name": "百度贴吧",
-      "community": "哈利波特魔法觉醒吧",
-      "title": "onp怎么就倒闭了",
-      "summary": "陪伴我高中三年时光的游戏，就这么似了 依稀记得当时还是高三大改版的时候退游的，出生网易啊",
-      "post_url": "https://tieba.baidu.com/p/11201511212",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=328e02c51466d0167e199e20a72ad498/1e178a82b9014a90fd56c7b5ef773912b31bee4a.jpg?tbpicau=2026-11-19-05_2849b1d9a2db018bd076a9a6ad644a0d",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9bbac2fee1efce1bea2bcac89f6a82e3/1e178a82b9014a90fd56c7b5ef773912b31bee4a.jpg?tbpicau=2026-11-19-05_7c5105a63c345974d850a1baebf5ea6b",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=328e02c51466d0167e199e20a72ad498/1e178a82b9014a90fd56c7b5ef773912b31bee4a.jpg?tbpicau=2026-11-19-05_2849b1d9a2db018bd076a9a6ad644a0d",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9bbac2fee1efce1bea2bcac89f6a82e3/1e178a82b9014a90fd56c7b5ef773912b31bee4a.jpg?tbpicau=2026-11-19-05_7c5105a63c345974d850a1baebf5ea6b",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-17T01:26:48Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 22,
-      "tags": [
-        "贴吧",
-        "哈利波特魔法觉醒宣布停服",
-        "哈利波特魔法觉醒吧"
-      ],
-      "content_hash": "ac51b6b0f0503d3d1966dd16fce7cebd86c637c5",
-      "image_hash": null,
-      "image_id": "0e4f917cb741c30a",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-17T01:26:48Z",
-      "image_error": null,
-      "image_width": null,
-      "image_height": null,
-      "rank_score": 36.5,
-      "rank_basis": "recency+comments+trend",
-      "group_id": "0e4f917cb741",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": [
-        "宣布"
-      ]
-    },
-    {
-      "id": "tieba:ad83a4f9fdba5a2c",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11204395832",
-      "source_name": "百度贴吧",
-      "community": "星穹铁道内鬼吧",
-      "title": "TGA今晚公布提名，我要给小库库打个预防针，鸣潮大概率颗粒无收",
-      "summary": "首先是最佳移动奖项，这个鸣潮能进提名就是赢，获奖是完全没有希望的。在欧美主流媒体预测中今年几乎百分百是终末地(去年预测就是赛马娘)。 不要感到奇怪，这可能还真是终末地应得的。除了玩家之声以外，所有奖项都由媒体评选，而最佳移动的媒体评奖权重为：是否新游>是否在移动端有独特创新>是否在移动端体验舒适>是否有较高的市场评价。可以看出来，终末地今年在这些维度都是断档碾压所有其他游戏的，大部分主流媒体已经透露",
-      "post_url": "https://tieba.baidu.com/p/11204395832",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6840f712805c1038247ececa8211931c/4fc2d5628535e5dd660152d730c6a7efce1b628d.jpg?tbpicau=2026-11-20-05_05c4e9b101cd1383bab72c4ec3090554",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=5ba488d568738bd4c421b03391b0f6eb/4fc2d5628535e5dd660152d730c6a7efce1b628d.jpg?tbpicau=2026-11-20-05_17af7d0e6aa5e90ce30ee9f250e33c93",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6840f712805c1038247ececa8211931c/4fc2d5628535e5dd660152d730c6a7efce1b628d.jpg?tbpicau=2026-11-20-05_05c4e9b101cd1383bab72c4ec3090554",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=5ba488d568738bd4c421b03391b0f6eb/4fc2d5628535e5dd660152d730c6a7efce1b628d.jpg?tbpicau=2026-11-20-05_17af7d0e6aa5e90ce30ee9f250e33c93",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-18T00:22:18Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 103,
-      "tags": [
-        "贴吧",
-        "影之刃零入围TGA年度游戏",
-        "星穹铁道内鬼吧"
-      ],
-      "content_hash": "e898b7ef747da6ea8c8468386747173e974c0e69",
-      "image_hash": "4d663272c9a72416",
-      "image_id": "fae6a8d32401ccb5",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-18T00:22:18Z",
-      "image_error": null,
-      "image_width": 579,
-      "image_height": 293,
-      "rank_score": 36.3,
-      "rank_basis": "recency+comments",
-      "group_id": "74b1c189ecd3",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:eb6e10e457116b2a",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11201542643",
-      "source_name": "百度贴吧",
-      "community": "哈利波特魔法觉醒吧",
-      "title": "游戏倒闭了，公告刚发的",
-      "summary": "别收号了",
-      "post_url": "https://tieba.baidu.com/p/11201542643",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=a75260126e34349b74066e8df9eb1521/a3cc7cd98d1001e9bb7e9507fe0e7bec54e7977c.jpg?tbpicau=2026-11-19-05_f7ffffe3177ae1a9c4ad4a10f5bdc388",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9c683ebaff014a90813e44bf994c482f/a3cc7cd98d1001e9bb7e9507fe0e7bec54e7977c.jpg?tbpicau=2026-11-19-05_5ba409646cb0f680df741d2dde9c7b94",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=a75260126e34349b74066e8df9eb1521/a3cc7cd98d1001e9bb7e9507fe0e7bec54e7977c.jpg?tbpicau=2026-11-19-05_f7ffffe3177ae1a9c4ad4a10f5bdc388",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9c683ebaff014a90813e44bf994c482f/a3cc7cd98d1001e9bb7e9507fe0e7bec54e7977c.jpg?tbpicau=2026-11-19-05_5ba409646cb0f680df741d2dde9c7b94",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6623e4379ff9d72a17641015e42b282a/cbef76094b36acaf52b216f43ad98d1001e99c6c.jpg?tbpicau=2026-11-19-05_7c6eb3e98b0ab9dd72de77ef6d3da095",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=97ab027d05a98226b8c12925bab9c83c/cbef76094b36acaf52b216f43ad98d1001e99c6c.jpg?tbpicau=2026-11-19-05_84d4b0df5de72d84ece93463536625c6",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-17T01:26:48Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 21,
-      "tags": [
-        "贴吧",
-        "哈利波特魔法觉醒宣布停服",
-        "哈利波特魔法觉醒吧"
-      ],
-      "content_hash": "719327fa4ca1ceea5db8d4d372b2f89d45d0f029",
-      "image_hash": null,
-      "image_id": "01e8a75a336af271",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-17T01:26:48Z",
-      "image_error": null,
-      "image_width": null,
-      "image_height": null,
-      "rank_score": 36.2,
-      "rank_basis": "recency+comments+trend",
-      "group_id": "01e8a75a336a",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": [
-        "宣布"
-      ]
     },
     {
       "id": "tieba:88eccbd860f0cccb",
@@ -7670,69 +7545,6 @@
       "trending": []
     },
     {
-      "id": "tieba:79075d8c463d5d70",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11201526991",
-      "source_name": "百度贴吧",
-      "community": "哈利波特魔法觉醒吧",
-      "title": "我跳了兄弟们",
-      "summary": "我今年回游就氪了三千 什么叫你要停服了",
-      "post_url": "https://tieba.baidu.com/p/11201526991",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e59f54c6df25bc312b5d01906ede8de7/c93d70cf3bc79f3d30b66538fca1cd11728b2967.jpg?tbpicau=2026-11-19-05_6e223b6e5c1550e5aea59019aa64c2d3",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3e4edf584a3387449cc52d7e6134a8c4/c93d70cf3bc79f3d30b66538fca1cd11728b2967.jpg?tbpicau=2026-11-19-05_c6fe4e4c4d18f54eb7f87f00b1e01836",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e59f54c6df25bc312b5d01906ede8de7/c93d70cf3bc79f3d30b66538fca1cd11728b2967.jpg?tbpicau=2026-11-19-05_6e223b6e5c1550e5aea59019aa64c2d3",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3e4edf584a3387449cc52d7e6134a8c4/c93d70cf3bc79f3d30b66538fca1cd11728b2967.jpg?tbpicau=2026-11-19-05_c6fe4e4c4d18f54eb7f87f00b1e01836",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=36758e116bf5e0feee1889096c6134e5/7f3e6709c93d70cffdad2b05bedcd100baa12b67.jpg?tbpicau=2026-11-19-05_f2d328778c69ba3868e3c6e0907f8b3f",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7863df5bb0246b607b0eb076dbc36b71/7f3e6709c93d70cffdad2b05bedcd100baa12b67.jpg?tbpicau=2026-11-19-05_1b316a3a233dde36b13463894b6d8cb9",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=31b400b7ca5494ee87220f111df4e0e1/95cad1c8a786c917bd54d3318f3d70cf3bc75767.jpg?tbpicau=2026-11-19-05_f41f22c8746a1a1732d71202e1ec29e2",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=15a0cff34c46f21fc9345c51c61f1a5d/95cad1c8a786c917bd54d3318f3d70cf3bc75767.jpg?tbpicau=2026-11-19-05_6e61ab0dc7906ca605aede8232f918b4",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-17T01:26:48Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 9,
-      "tags": [
-        "贴吧",
-        "哈利波特魔法觉醒宣布停服",
-        "哈利波特魔法觉醒吧"
-      ],
-      "content_hash": "0f05ab71b8a169553f6ecf881d68295dab0dec9c",
-      "image_hash": null,
-      "image_id": "b8682cb9825027b0",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-17T01:26:48Z",
-      "image_error": null,
-      "image_width": null,
-      "image_height": null,
-      "rank_score": 30.0,
-      "rank_basis": "recency+comments+trend",
-      "group_id": "b8682cb98250",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": [
-        "宣布"
-      ]
-    },
-    {
       "id": "tieba:51684506d5888c3d",
       "content_type": "image",
       "authenticity": "real",
@@ -8118,6 +7930,55 @@
       "trending": []
     },
     {
+      "id": "tieba:b4a99cdb7b158e14",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11201498494",
+      "source_name": "百度贴吧",
+      "community": "哈利波特魔法觉醒吧",
+      "title": "本来是款很好的游戏的",
+      "summary": "结果还是被氪金毁了",
+      "post_url": "https://tieba.baidu.com/p/11201498494",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b7b08ebfaf50352ab16125006343fb1a/b9389b504fc2d562087651e5a11190ef76c66cb8.jpg?tbpicau=2026-11-19-05_2abd950a1f87d7ffe9f87a8966381242",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0b5b82429cb44aed594ebce68327f63c/b9389b504fc2d562087651e5a11190ef76c66cb8.jpg?tbpicau=2026-11-19-05_85244d7edd1a856dbf0854036abdc844",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b7b08ebfaf50352ab16125006343fb1a/b9389b504fc2d562087651e5a11190ef76c66cb8.jpg?tbpicau=2026-11-19-05_2abd950a1f87d7ffe9f87a8966381242",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0b5b82429cb44aed594ebce68327f63c/b9389b504fc2d562087651e5a11190ef76c66cb8.jpg?tbpicau=2026-11-19-05_85244d7edd1a856dbf0854036abdc844",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-17T01:26:48Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 29,
+      "tags": [
+        "贴吧",
+        "哈利波特魔法觉醒宣布停服",
+        "哈利波特魔法觉醒吧"
+      ],
+      "content_hash": "ef75c77646a057b3faeab6ef3b0924221d7884fb",
+      "image_hash": null,
+      "image_id": "596b54d0b7766d11",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-17T01:26:48Z",
+      "image_error": null,
+      "image_width": null,
+      "image_height": null,
+      "rank_score": 26.6,
+      "rank_basis": "recency+comments",
+      "group_id": "596b54d0b776",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
       "id": "tieba:bc671e92099362d8",
       "content_type": "image",
       "authenticity": "real",
@@ -8214,7 +8075,7 @@
       "related": [],
       "source_stale": false,
       "trending": [
-        "宣布"
+        "手机"
       ]
     },
     {
@@ -8261,6 +8122,110 @@
       "rank_score": 25.5,
       "rank_basis": "recency+comments",
       "group_id": "599519df8d4c",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:85854260cb8dae96",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11201511212",
+      "source_name": "百度贴吧",
+      "community": "哈利波特魔法觉醒吧",
+      "title": "onp怎么就倒闭了",
+      "summary": "陪伴我高中三年时光的游戏，就这么似了 依稀记得当时还是高三大改版的时候退游的，出生网易啊",
+      "post_url": "https://tieba.baidu.com/p/11201511212",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=328e02c51466d0167e199e20a72ad498/1e178a82b9014a90fd56c7b5ef773912b31bee4a.jpg?tbpicau=2026-11-19-05_2849b1d9a2db018bd076a9a6ad644a0d",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9bbac2fee1efce1bea2bcac89f6a82e3/1e178a82b9014a90fd56c7b5ef773912b31bee4a.jpg?tbpicau=2026-11-19-05_7c5105a63c345974d850a1baebf5ea6b",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=328e02c51466d0167e199e20a72ad498/1e178a82b9014a90fd56c7b5ef773912b31bee4a.jpg?tbpicau=2026-11-19-05_2849b1d9a2db018bd076a9a6ad644a0d",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9bbac2fee1efce1bea2bcac89f6a82e3/1e178a82b9014a90fd56c7b5ef773912b31bee4a.jpg?tbpicau=2026-11-19-05_7c5105a63c345974d850a1baebf5ea6b",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-17T01:26:48Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 22,
+      "tags": [
+        "贴吧",
+        "哈利波特魔法觉醒宣布停服",
+        "哈利波特魔法觉醒吧"
+      ],
+      "content_hash": "ac51b6b0f0503d3d1966dd16fce7cebd86c637c5",
+      "image_hash": null,
+      "image_id": "0e4f917cb741c30a",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-17T01:26:48Z",
+      "image_error": null,
+      "image_width": null,
+      "image_height": null,
+      "rank_score": 24.5,
+      "rank_basis": "recency+comments",
+      "group_id": "0e4f917cb741",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:eb6e10e457116b2a",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11201542643",
+      "source_name": "百度贴吧",
+      "community": "哈利波特魔法觉醒吧",
+      "title": "游戏倒闭了，公告刚发的",
+      "summary": "别收号了",
+      "post_url": "https://tieba.baidu.com/p/11201542643",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=a75260126e34349b74066e8df9eb1521/a3cc7cd98d1001e9bb7e9507fe0e7bec54e7977c.jpg?tbpicau=2026-11-19-05_f7ffffe3177ae1a9c4ad4a10f5bdc388",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9c683ebaff014a90813e44bf994c482f/a3cc7cd98d1001e9bb7e9507fe0e7bec54e7977c.jpg?tbpicau=2026-11-19-05_5ba409646cb0f680df741d2dde9c7b94",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=a75260126e34349b74066e8df9eb1521/a3cc7cd98d1001e9bb7e9507fe0e7bec54e7977c.jpg?tbpicau=2026-11-19-05_f7ffffe3177ae1a9c4ad4a10f5bdc388",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9c683ebaff014a90813e44bf994c482f/a3cc7cd98d1001e9bb7e9507fe0e7bec54e7977c.jpg?tbpicau=2026-11-19-05_5ba409646cb0f680df741d2dde9c7b94",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6623e4379ff9d72a17641015e42b282a/cbef76094b36acaf52b216f43ad98d1001e99c6c.jpg?tbpicau=2026-11-19-05_7c6eb3e98b0ab9dd72de77ef6d3da095",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=97ab027d05a98226b8c12925bab9c83c/cbef76094b36acaf52b216f43ad98d1001e99c6c.jpg?tbpicau=2026-11-19-05_84d4b0df5de72d84ece93463536625c6",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-17T01:26:48Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 21,
+      "tags": [
+        "贴吧",
+        "哈利波特魔法觉醒宣布停服",
+        "哈利波特魔法觉醒吧"
+      ],
+      "content_hash": "719327fa4ca1ceea5db8d4d372b2f89d45d0f029",
+      "image_hash": null,
+      "image_id": "01e8a75a336af271",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-17T01:26:48Z",
+      "image_error": null,
+      "image_width": null,
+      "image_height": null,
+      "rank_score": 24.2,
+      "rank_basis": "recency+comments",
+      "group_id": "01e8a75a336a",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -8530,6 +8495,67 @@
       "trending": []
     },
     {
+      "id": "tieba:79075d8c463d5d70",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11201526991",
+      "source_name": "百度贴吧",
+      "community": "哈利波特魔法觉醒吧",
+      "title": "我跳了兄弟们",
+      "summary": "我今年回游就氪了三千 什么叫你要停服了",
+      "post_url": "https://tieba.baidu.com/p/11201526991",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e59f54c6df25bc312b5d01906ede8de7/c93d70cf3bc79f3d30b66538fca1cd11728b2967.jpg?tbpicau=2026-11-19-05_6e223b6e5c1550e5aea59019aa64c2d3",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3e4edf584a3387449cc52d7e6134a8c4/c93d70cf3bc79f3d30b66538fca1cd11728b2967.jpg?tbpicau=2026-11-19-05_c6fe4e4c4d18f54eb7f87f00b1e01836",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e59f54c6df25bc312b5d01906ede8de7/c93d70cf3bc79f3d30b66538fca1cd11728b2967.jpg?tbpicau=2026-11-19-05_6e223b6e5c1550e5aea59019aa64c2d3",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3e4edf584a3387449cc52d7e6134a8c4/c93d70cf3bc79f3d30b66538fca1cd11728b2967.jpg?tbpicau=2026-11-19-05_c6fe4e4c4d18f54eb7f87f00b1e01836",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=36758e116bf5e0feee1889096c6134e5/7f3e6709c93d70cffdad2b05bedcd100baa12b67.jpg?tbpicau=2026-11-19-05_f2d328778c69ba3868e3c6e0907f8b3f",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7863df5bb0246b607b0eb076dbc36b71/7f3e6709c93d70cffdad2b05bedcd100baa12b67.jpg?tbpicau=2026-11-19-05_1b316a3a233dde36b13463894b6d8cb9",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=31b400b7ca5494ee87220f111df4e0e1/95cad1c8a786c917bd54d3318f3d70cf3bc75767.jpg?tbpicau=2026-11-19-05_f41f22c8746a1a1732d71202e1ec29e2",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=15a0cff34c46f21fc9345c51c61f1a5d/95cad1c8a786c917bd54d3318f3d70cf3bc75767.jpg?tbpicau=2026-11-19-05_6e61ab0dc7906ca605aede8232f918b4",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-17T01:26:48Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 9,
+      "tags": [
+        "贴吧",
+        "哈利波特魔法觉醒宣布停服",
+        "哈利波特魔法觉醒吧"
+      ],
+      "content_hash": "0f05ab71b8a169553f6ecf881d68295dab0dec9c",
+      "image_hash": null,
+      "image_id": "b8682cb9825027b0",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-17T01:26:48Z",
+      "image_error": null,
+      "image_width": null,
+      "image_height": null,
+      "rank_score": 18.0,
+      "rank_basis": "recency+comments",
+      "group_id": "b8682cb98250",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
       "id": "tieba:bedfdae6dd2d4aba",
       "content_type": "image",
       "authenticity": "real",
@@ -8628,6 +8654,120 @@
       "trending": []
     },
     {
+      "id": "reddit:963beeb7ae1c57d2",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "reddit",
+      "source_id": "1xymumm",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "daily nebula/quasar to brighten your mood day 178",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xymumm/daily_nebulaquasar_to_brighten_your_mood_day_178/",
+      "image_url": "https://i.redd.it/j4moilaxu62i1.gif",
+      "thumbnail_url": "https://preview.redd.it/j4moilaxu62i1.gif?width=320&crop=smart&s=4fbdf971f3b92a42520852c7ca9c0a9c1ba70f80",
+      "images": [
+        {
+          "url": "https://i.redd.it/j4moilaxu62i1.gif",
+          "thumbnail_url": "https://i.redd.it/j4moilaxu62i1.gif",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://preview.redd.it/j4moilaxu62i1.gif?width=320&crop=smart&s=4fbdf971f3b92a42520852c7ca9c0a9c1ba70f80",
+          "thumbnail_url": "https://preview.redd.it/j4moilaxu62i1.gif?width=320&crop=smart&s=4fbdf971f3b92a42520852c7ca9c0a9c1ba70f80",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-11-17T15:09:10Z",
+      "collected_at": "2026-11-17T15:21:48Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "8e3d55ea111818a2476a5c7e8e130c8384c777e1",
+      "image_hash": null,
+      "image_id": "5d43e8ce14650357",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-17T15:21:48Z",
+      "image_error": null,
+      "image_width": null,
+      "image_height": null,
+      "rank_score": 12.0,
+      "rank_basis": "recency+trend",
+      "group_id": "5d43e8ce1465",
+      "group_size": 1,
+      "related": [],
+      "source_stale": true,
+      "trending": [
+        "ai"
+      ]
+    },
+    {
+      "id": "reddit:79ed416cc28104eb",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "reddit",
+      "source_id": "1xymb51",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Try to genuinely explain what you’ve learned from the last two video essays you watched",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xymb51/try_to_genuinely_explain_what_youve_learned_from/",
+      "image_url": "https://i.redd.it/majjyocgq62i1.png",
+      "thumbnail_url": "https://preview.redd.it/majjyocgq62i1.png?width=640&crop=smart&auto=webp&s=7c38183161bd6aca00260cc592f8b50f520cefc8",
+      "images": [
+        {
+          "url": "https://i.redd.it/majjyocgq62i1.png",
+          "thumbnail_url": "https://i.redd.it/majjyocgq62i1.png",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://preview.redd.it/majjyocgq62i1.png?width=640&crop=smart&auto=webp&s=7c38183161bd6aca00260cc592f8b50f520cefc8",
+          "thumbnail_url": "https://preview.redd.it/majjyocgq62i1.png?width=640&crop=smart&auto=webp&s=7c38183161bd6aca00260cc592f8b50f520cefc8",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-11-17T14:47:38Z",
+      "collected_at": "2026-11-17T15:21:48Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "30e219d02cbdf07517b07e886da090ee80875a5b",
+      "image_hash": "8283c28888903282",
+      "image_id": "af0295842e385c74",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-17T15:21:48Z",
+      "image_error": null,
+      "image_width": 810,
+      "image_height": 1080,
+      "rank_score": 12.0,
+      "rank_basis": "recency+trend",
+      "group_id": "389bdeaee0b8",
+      "group_size": 1,
+      "related": [],
+      "source_stale": true,
+      "trending": [
+        "ai"
+      ]
+    },
+    {
       "id": "tieba:7476adab38f26adf",
       "content_type": "image",
       "authenticity": "real",
@@ -8681,7 +8821,388 @@
       "related": [],
       "source_stale": false,
       "trending": [
-        "宣布"
+        "AI"
+      ]
+    },
+    {
+      "id": "reddit:1130ed0e1af812f2",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "reddit",
+      "source_id": "1xy5mpl",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Erotic Chicken Rule",
+      "summary": "i fucking hate my brain. we need to EAT to SURVIVE do you not understand this you little fucker. GIVE ME APPETITE [留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xy5mpl/erotic_chicken_rule/",
+      "image_url": "https://i.redd.it/w314bthqd22i1.jpeg",
+      "thumbnail_url": "https://preview.redd.it/w314bthqd22i1.jpeg?width=640&crop=smart&auto=webp&s=b0f9516299755894dae1392095badfc0b000f57e",
+      "images": [
+        {
+          "url": "https://i.redd.it/w314bthqd22i1.jpeg",
+          "thumbnail_url": "https://i.redd.it/w314bthqd22i1.jpeg",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://preview.redd.it/w314bthqd22i1.jpeg?width=640&crop=smart&auto=webp&s=b0f9516299755894dae1392095badfc0b000f57e",
+          "thumbnail_url": "https://preview.redd.it/w314bthqd22i1.jpeg?width=640&crop=smart&auto=webp&s=b0f9516299755894dae1392095badfc0b000f57e",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-11-17T00:05:39Z",
+      "collected_at": "2026-11-17T01:26:48Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "94d722f53f14e2cdb331a8cff9244f18da479ebf",
+      "image_hash": "f9d161c6d6595292",
+      "image_id": "ae24bce749e5c206",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-17T01:26:48Z",
+      "image_error": null,
+      "image_width": 640,
+      "image_height": 516,
+      "rank_score": 12.0,
+      "rank_basis": "recency+trend",
+      "group_id": "c2852c3168bf",
+      "group_size": 1,
+      "related": [],
+      "source_stale": true,
+      "trending": [
+        "ai"
+      ]
+    },
+    {
+      "id": "reddit:ca2a7a17968934fe",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "reddit",
+      "source_id": "1xxp0d5",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Wait Your Turn {rule} Boy",
+      "summary": "[image taken from internal meme archive] [留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xxp0d5/wait_your_turn_rule_boy/",
+      "image_url": "https://i.redd.it/zhiirz2z4z1i1.png",
+      "thumbnail_url": "https://preview.redd.it/zhiirz2z4z1i1.png?width=640&crop=smart&auto=webp&s=179c6f794c921d044e28572b285d0643deeefa2a",
+      "images": [
+        {
+          "url": "https://i.redd.it/zhiirz2z4z1i1.png",
+          "thumbnail_url": "https://i.redd.it/zhiirz2z4z1i1.png",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://preview.redd.it/zhiirz2z4z1i1.png?width=640&crop=smart&auto=webp&s=179c6f794c921d044e28572b285d0643deeefa2a",
+          "thumbnail_url": "https://preview.redd.it/zhiirz2z4z1i1.png?width=640&crop=smart&auto=webp&s=179c6f794c921d044e28572b285d0643deeefa2a",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-11-16T13:12:42Z",
+      "collected_at": "2026-11-16T14:30:52Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "b674fb79d4aad36b574bd5ac91ddd7ca640b4cfb",
+      "image_hash": "7b178f8f85b51b34",
+      "image_id": "866789e2abfee85a",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-16T14:30:52Z",
+      "image_error": null,
+      "image_width": 700,
+      "image_height": 909,
+      "rank_score": 12.0,
+      "rank_basis": "recency+trend",
+      "group_id": "b20938da0dc6",
+      "group_size": 1,
+      "related": [],
+      "source_stale": true,
+      "trending": [
+        "ai"
+      ]
+    },
+    {
+      "id": "reddit:6fbd068ae6006d18",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "reddit",
+      "source_id": "1xxnkcq",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "my favourite thumbnail",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xxnkcq/my_favourite_thumbnail/",
+      "image_url": "https://i.redd.it/jv6br6k6sy1i1.png",
+      "thumbnail_url": "https://preview.redd.it/jv6br6k6sy1i1.png?width=320&crop=smart&auto=webp&s=c7f4bba811ae78de7a9f0dcc0b8f9cb856e2c27d",
+      "images": [
+        {
+          "url": "https://i.redd.it/jv6br6k6sy1i1.png",
+          "thumbnail_url": "https://i.redd.it/jv6br6k6sy1i1.png",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://preview.redd.it/jv6br6k6sy1i1.png?width=320&crop=smart&auto=webp&s=c7f4bba811ae78de7a9f0dcc0b8f9cb856e2c27d",
+          "thumbnail_url": "https://preview.redd.it/jv6br6k6sy1i1.png?width=320&crop=smart&auto=webp&s=c7f4bba811ae78de7a9f0dcc0b8f9cb856e2c27d",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-11-16T11:59:51Z",
+      "collected_at": "2026-11-16T14:30:52Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "3a05c9bec7a6a81815ce3fd496c8678990e18a56",
+      "image_hash": "f0c69adcdcce8600",
+      "image_id": "cd5cbe42c5713d21",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-16T14:30:52Z",
+      "image_error": null,
+      "image_width": 596,
+      "image_height": 430,
+      "rank_score": 12.0,
+      "rank_basis": "recency+trend",
+      "group_id": "43b7dcbc7ad3",
+      "group_size": 1,
+      "related": [],
+      "source_stale": true,
+      "trending": [
+        "ai"
+      ]
+    },
+    {
+      "id": "reddit:6dcce2826a157c46",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "reddit",
+      "source_id": "1xxfh45",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "ruuld",
+      "summary": "awesom outerw ilds photo tw for sum bullshiit ufmm i keeo hitting mysrlf whenever i get rlly stressed? n thej i stop thinkin and i jus feel the pain but then it comes back so i hit moreuntil im too tired/it hurts too much is this normsl for someone with autism to do or am i fuckt up [留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xxfh45/ruuld/",
+      "image_url": "https://i.redd.it/2xyvpk7ddw1i1.jpeg",
+      "thumbnail_url": "https://i.redd.it/2xyvpk7ddw1i1.jpeg",
+      "images": [
+        {
+          "url": "https://i.redd.it/2xyvpk7ddw1i1.jpeg",
+          "thumbnail_url": "https://i.redd.it/2xyvpk7ddw1i1.jpeg",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-11-16T03:52:54Z",
+      "collected_at": "2026-11-16T04:18:23Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "92316e38f057fbc652393a2763790ad692727e13",
+      "image_hash": "30e2d1d9908cceca",
+      "image_id": "9f4c76c3b39d5402",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-16T04:18:23Z",
+      "image_error": null,
+      "image_width": 736,
+      "image_height": 736,
+      "rank_score": 12.0,
+      "rank_basis": "recency+trend",
+      "group_id": "1452641a539f",
+      "group_size": 1,
+      "related": [],
+      "source_stale": true,
+      "trending": [
+        "ai"
+      ]
+    },
+    {
+      "id": "reddit:61f5750932fbb59b",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "reddit",
+      "source_id": "1xwup46",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "New Rockstars at it again",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xwup46/new_rockstars_at_it_again/",
+      "image_url": "https://i.redd.it/ker3bvh6wr1i1.jpeg",
+      "thumbnail_url": "https://preview.redd.it/ker3bvh6wr1i1.jpeg?width=320&crop=smart&auto=webp&s=d5ff10262b61306d55181863913cf961ec1dc6be",
+      "images": [
+        {
+          "url": "https://i.redd.it/ker3bvh6wr1i1.jpeg",
+          "thumbnail_url": "https://i.redd.it/ker3bvh6wr1i1.jpeg",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://preview.redd.it/ker3bvh6wr1i1.jpeg?width=320&crop=smart&auto=webp&s=d5ff10262b61306d55181863913cf961ec1dc6be",
+          "thumbnail_url": "https://preview.redd.it/ker3bvh6wr1i1.jpeg?width=320&crop=smart&auto=webp&s=d5ff10262b61306d55181863913cf961ec1dc6be",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-11-15T12:49:26Z",
+      "collected_at": "2026-11-15T13:17:48Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "00c42c3552dbb6b4704006b9c12b6ea7ab6dcd6b",
+      "image_hash": "92535b565625258c",
+      "image_id": "bffc9ebda705cf7f",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-15T13:17:48Z",
+      "image_error": null,
+      "image_width": 480,
+      "image_height": 270,
+      "rank_score": 12.0,
+      "rank_basis": "recency+trend",
+      "group_id": "0a513f74ae58",
+      "group_size": 1,
+      "related": [],
+      "source_stale": true,
+      "trending": [
+        "ai"
+      ]
+    },
+    {
+      "id": "reddit:e3f3334720877d94",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "reddit",
+      "source_id": "1xwq3m4",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "Rate the haircut rule :3 (3rd picture was before it got cut)",
+      "summary": "[留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xwq3m4/rate_the_haircut_rule_3_3rd_picture_was_before_it/",
+      "image_url": "https://preview.redd.it/86uma20hiq1i1.jpeg?width=140&height=140&auto=webp&s=91169815c549e05404a208bc0af8ded4f1783ebf",
+      "thumbnail_url": "https://preview.redd.it/86uma20hiq1i1.jpeg?width=140&height=140&auto=webp&s=91169815c549e05404a208bc0af8ded4f1783ebf",
+      "images": [
+        {
+          "url": "https://preview.redd.it/86uma20hiq1i1.jpeg?width=140&height=140&auto=webp&s=91169815c549e05404a208bc0af8ded4f1783ebf",
+          "thumbnail_url": "https://preview.redd.it/86uma20hiq1i1.jpeg?width=140&height=140&auto=webp&s=91169815c549e05404a208bc0af8ded4f1783ebf",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-11-15T08:11:19Z",
+      "collected_at": "2026-11-15T13:17:48Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "ac89ffe19eb365a4a64edc2563453e22ab2c5603",
+      "image_hash": "717159e9b9339381",
+      "image_id": "c8df9fd839835cf7",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-15T13:17:48Z",
+      "image_error": null,
+      "image_width": 140,
+      "image_height": 140,
+      "rank_score": 12.0,
+      "rank_basis": "recency+trend",
+      "group_id": "8e3e21b11758",
+      "group_size": 1,
+      "related": [],
+      "source_stale": true,
+      "trending": [
+        "ai"
+      ]
+    },
+    {
+      "id": "reddit:0dd3ecd1e7cc66f5",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "reddit",
+      "source_id": "1xwkc9l",
+      "source_name": "Reddit",
+      "community": "r/196",
+      "title": "I need Dennis from Terrible Lizards so much omfg",
+      "summary": "Forgive me God for I have sinned, but GODDAMN I’ll do it again and again [留言]",
+      "post_url": "https://www.reddit.com/r/196/comments/1xwkc9l/i_need_dennis_from_terrible_lizards_so_much_omfg/",
+      "image_url": "https://i.redd.it/23k7jjaivo1i1.jpeg",
+      "thumbnail_url": "https://i.redd.it/23k7jjaivo1i1.jpeg",
+      "images": [
+        {
+          "url": "https://i.redd.it/23k7jjaivo1i1.jpeg",
+          "thumbnail_url": "https://i.redd.it/23k7jjaivo1i1.jpeg",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": "2026-11-15T02:42:41Z",
+      "collected_at": "2026-11-15T04:19:14Z",
+      "time_source": "source",
+      "score": null,
+      "comment_count": null,
+      "tags": [
+        "r/196",
+        "reddit",
+        "196"
+      ],
+      "content_hash": "653d8dd81f27234c3d6a3033f3f409141e696a26",
+      "image_hash": "4f4d22360e2687c7",
+      "image_id": "b34c16b1d53d155e",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-15T04:19:14Z",
+      "image_error": null,
+      "image_width": 4032,
+      "image_height": 3024,
+      "rank_score": 12.0,
+      "rank_basis": "recency+trend",
+      "group_id": "459c7116464c",
+      "group_size": 1,
+      "related": [],
+      "source_stale": true,
+      "trending": [
+        "ai"
       ]
     },
     {
@@ -8924,61 +9445,6 @@
       "rank_score": 0.0,
       "rank_basis": "recency",
       "group_id": "ef848744b47d",
-      "group_size": 1,
-      "related": [],
-      "source_stale": true,
-      "trending": []
-    },
-    {
-      "id": "reddit:963beeb7ae1c57d2",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "reddit",
-      "source_id": "1xymumm",
-      "source_name": "Reddit",
-      "community": "r/196",
-      "title": "daily nebula/quasar to brighten your mood day 178",
-      "summary": "[留言]",
-      "post_url": "https://www.reddit.com/r/196/comments/1xymumm/daily_nebulaquasar_to_brighten_your_mood_day_178/",
-      "image_url": "https://i.redd.it/j4moilaxu62i1.gif",
-      "thumbnail_url": "https://preview.redd.it/j4moilaxu62i1.gif?width=320&crop=smart&s=4fbdf971f3b92a42520852c7ca9c0a9c1ba70f80",
-      "images": [
-        {
-          "url": "https://i.redd.it/j4moilaxu62i1.gif",
-          "thumbnail_url": "https://i.redd.it/j4moilaxu62i1.gif",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://preview.redd.it/j4moilaxu62i1.gif?width=320&crop=smart&s=4fbdf971f3b92a42520852c7ca9c0a9c1ba70f80",
-          "thumbnail_url": "https://preview.redd.it/j4moilaxu62i1.gif?width=320&crop=smart&s=4fbdf971f3b92a42520852c7ca9c0a9c1ba70f80",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": "2026-11-17T15:09:10Z",
-      "collected_at": "2026-11-17T15:21:48Z",
-      "time_source": "source",
-      "score": null,
-      "comment_count": null,
-      "tags": [
-        "r/196",
-        "reddit",
-        "196"
-      ],
-      "content_hash": "8e3d55ea111818a2476a5c7e8e130c8384c777e1",
-      "image_hash": null,
-      "image_id": "5d43e8ce14650357",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-17T15:21:48Z",
-      "image_error": null,
-      "image_width": null,
-      "image_height": null,
-      "rank_score": 0.0,
-      "rank_basis": "recency",
-      "group_id": "5d43e8ce1465",
       "group_size": 1,
       "related": [],
       "source_stale": true,
@@ -9401,61 +9867,6 @@
       "rank_score": 0.0,
       "rank_basis": "recency",
       "group_id": "fd7f1a1a7708",
-      "group_size": 1,
-      "related": [],
-      "source_stale": true,
-      "trending": []
-    },
-    {
-      "id": "reddit:79ed416cc28104eb",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "reddit",
-      "source_id": "1xymb51",
-      "source_name": "Reddit",
-      "community": "r/196",
-      "title": "Try to genuinely explain what you’ve learned from the last two video essays you watched",
-      "summary": "[留言]",
-      "post_url": "https://www.reddit.com/r/196/comments/1xymb51/try_to_genuinely_explain_what_youve_learned_from/",
-      "image_url": "https://i.redd.it/majjyocgq62i1.png",
-      "thumbnail_url": "https://preview.redd.it/majjyocgq62i1.png?width=640&crop=smart&auto=webp&s=7c38183161bd6aca00260cc592f8b50f520cefc8",
-      "images": [
-        {
-          "url": "https://i.redd.it/majjyocgq62i1.png",
-          "thumbnail_url": "https://i.redd.it/majjyocgq62i1.png",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://preview.redd.it/majjyocgq62i1.png?width=640&crop=smart&auto=webp&s=7c38183161bd6aca00260cc592f8b50f520cefc8",
-          "thumbnail_url": "https://preview.redd.it/majjyocgq62i1.png?width=640&crop=smart&auto=webp&s=7c38183161bd6aca00260cc592f8b50f520cefc8",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": "2026-11-17T14:47:38Z",
-      "collected_at": "2026-11-17T15:21:48Z",
-      "time_source": "source",
-      "score": null,
-      "comment_count": null,
-      "tags": [
-        "r/196",
-        "reddit",
-        "196"
-      ],
-      "content_hash": "30e219d02cbdf07517b07e886da090ee80875a5b",
-      "image_hash": "8283c28888903282",
-      "image_id": "af0295842e385c74",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-17T15:21:48Z",
-      "image_error": null,
-      "image_width": 810,
-      "image_height": 1080,
-      "rank_score": 0.0,
-      "rank_basis": "recency",
-      "group_id": "389bdeaee0b8",
       "group_size": 1,
       "related": [],
       "source_stale": true,
@@ -10422,61 +10833,6 @@
       "rank_score": 0.0,
       "rank_basis": "recency",
       "group_id": "93feb0c64a76",
-      "group_size": 1,
-      "related": [],
-      "source_stale": true,
-      "trending": []
-    },
-    {
-      "id": "reddit:1130ed0e1af812f2",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "reddit",
-      "source_id": "1xy5mpl",
-      "source_name": "Reddit",
-      "community": "r/196",
-      "title": "Erotic Chicken Rule",
-      "summary": "i fucking hate my brain. we need to EAT to SURVIVE do you not understand this you little fucker. GIVE ME APPETITE [留言]",
-      "post_url": "https://www.reddit.com/r/196/comments/1xy5mpl/erotic_chicken_rule/",
-      "image_url": "https://i.redd.it/w314bthqd22i1.jpeg",
-      "thumbnail_url": "https://preview.redd.it/w314bthqd22i1.jpeg?width=640&crop=smart&auto=webp&s=b0f9516299755894dae1392095badfc0b000f57e",
-      "images": [
-        {
-          "url": "https://i.redd.it/w314bthqd22i1.jpeg",
-          "thumbnail_url": "https://i.redd.it/w314bthqd22i1.jpeg",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://preview.redd.it/w314bthqd22i1.jpeg?width=640&crop=smart&auto=webp&s=b0f9516299755894dae1392095badfc0b000f57e",
-          "thumbnail_url": "https://preview.redd.it/w314bthqd22i1.jpeg?width=640&crop=smart&auto=webp&s=b0f9516299755894dae1392095badfc0b000f57e",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": "2026-11-17T00:05:39Z",
-      "collected_at": "2026-11-17T01:26:48Z",
-      "time_source": "source",
-      "score": null,
-      "comment_count": null,
-      "tags": [
-        "r/196",
-        "reddit",
-        "196"
-      ],
-      "content_hash": "94d722f53f14e2cdb331a8cff9244f18da479ebf",
-      "image_hash": "f9d161c6d6595292",
-      "image_id": "ae24bce749e5c206",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-17T01:26:48Z",
-      "image_error": null,
-      "image_width": 640,
-      "image_height": 516,
-      "rank_score": 0.0,
-      "rank_basis": "recency",
-      "group_id": "c2852c3168bf",
       "group_size": 1,
       "related": [],
       "source_stale": true,
@@ -12079,61 +12435,6 @@
       "trending": []
     },
     {
-      "id": "reddit:ca2a7a17968934fe",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "reddit",
-      "source_id": "1xxp0d5",
-      "source_name": "Reddit",
-      "community": "r/196",
-      "title": "Wait Your Turn {rule} Boy",
-      "summary": "[image taken from internal meme archive] [留言]",
-      "post_url": "https://www.reddit.com/r/196/comments/1xxp0d5/wait_your_turn_rule_boy/",
-      "image_url": "https://i.redd.it/zhiirz2z4z1i1.png",
-      "thumbnail_url": "https://preview.redd.it/zhiirz2z4z1i1.png?width=640&crop=smart&auto=webp&s=179c6f794c921d044e28572b285d0643deeefa2a",
-      "images": [
-        {
-          "url": "https://i.redd.it/zhiirz2z4z1i1.png",
-          "thumbnail_url": "https://i.redd.it/zhiirz2z4z1i1.png",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://preview.redd.it/zhiirz2z4z1i1.png?width=640&crop=smart&auto=webp&s=179c6f794c921d044e28572b285d0643deeefa2a",
-          "thumbnail_url": "https://preview.redd.it/zhiirz2z4z1i1.png?width=640&crop=smart&auto=webp&s=179c6f794c921d044e28572b285d0643deeefa2a",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": "2026-11-16T13:12:42Z",
-      "collected_at": "2026-11-16T14:30:52Z",
-      "time_source": "source",
-      "score": null,
-      "comment_count": null,
-      "tags": [
-        "r/196",
-        "reddit",
-        "196"
-      ],
-      "content_hash": "b674fb79d4aad36b574bd5ac91ddd7ca640b4cfb",
-      "image_hash": "7b178f8f85b51b34",
-      "image_id": "866789e2abfee85a",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-16T14:30:52Z",
-      "image_error": null,
-      "image_width": 700,
-      "image_height": 909,
-      "rank_score": 0.0,
-      "rank_basis": "recency",
-      "group_id": "b20938da0dc6",
-      "group_size": 1,
-      "related": [],
-      "source_stale": true,
-      "trending": []
-    },
-    {
       "id": "reddit:b870cb2eff78659a",
       "content_type": "image",
       "authenticity": "real",
@@ -12348,61 +12649,6 @@
       "rank_score": 0.0,
       "rank_basis": "recency",
       "group_id": "0356bddad4db",
-      "group_size": 1,
-      "related": [],
-      "source_stale": true,
-      "trending": []
-    },
-    {
-      "id": "reddit:6fbd068ae6006d18",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "reddit",
-      "source_id": "1xxnkcq",
-      "source_name": "Reddit",
-      "community": "r/196",
-      "title": "my favourite thumbnail",
-      "summary": "[留言]",
-      "post_url": "https://www.reddit.com/r/196/comments/1xxnkcq/my_favourite_thumbnail/",
-      "image_url": "https://i.redd.it/jv6br6k6sy1i1.png",
-      "thumbnail_url": "https://preview.redd.it/jv6br6k6sy1i1.png?width=320&crop=smart&auto=webp&s=c7f4bba811ae78de7a9f0dcc0b8f9cb856e2c27d",
-      "images": [
-        {
-          "url": "https://i.redd.it/jv6br6k6sy1i1.png",
-          "thumbnail_url": "https://i.redd.it/jv6br6k6sy1i1.png",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://preview.redd.it/jv6br6k6sy1i1.png?width=320&crop=smart&auto=webp&s=c7f4bba811ae78de7a9f0dcc0b8f9cb856e2c27d",
-          "thumbnail_url": "https://preview.redd.it/jv6br6k6sy1i1.png?width=320&crop=smart&auto=webp&s=c7f4bba811ae78de7a9f0dcc0b8f9cb856e2c27d",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": "2026-11-16T11:59:51Z",
-      "collected_at": "2026-11-16T14:30:52Z",
-      "time_source": "source",
-      "score": null,
-      "comment_count": null,
-      "tags": [
-        "r/196",
-        "reddit",
-        "196"
-      ],
-      "content_hash": "3a05c9bec7a6a81815ce3fd496c8678990e18a56",
-      "image_hash": "f0c69adcdcce8600",
-      "image_id": "cd5cbe42c5713d21",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-16T14:30:52Z",
-      "image_error": null,
-      "image_width": 596,
-      "image_height": 430,
-      "rank_score": 0.0,
-      "rank_basis": "recency",
-      "group_id": "43b7dcbc7ad3",
       "group_size": 1,
       "related": [],
       "source_stale": true,
@@ -12678,55 +12924,6 @@
       "rank_score": 0.0,
       "rank_basis": "recency",
       "group_id": "5e882734ec23",
-      "group_size": 1,
-      "related": [],
-      "source_stale": true,
-      "trending": []
-    },
-    {
-      "id": "reddit:6dcce2826a157c46",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "reddit",
-      "source_id": "1xxfh45",
-      "source_name": "Reddit",
-      "community": "r/196",
-      "title": "ruuld",
-      "summary": "awesom outerw ilds photo tw for sum bullshiit ufmm i keeo hitting mysrlf whenever i get rlly stressed? n thej i stop thinkin and i jus feel the pain but then it comes back so i hit moreuntil im too tired/it hurts too much is this normsl for someone with autism to do or am i fuckt up [留言]",
-      "post_url": "https://www.reddit.com/r/196/comments/1xxfh45/ruuld/",
-      "image_url": "https://i.redd.it/2xyvpk7ddw1i1.jpeg",
-      "thumbnail_url": "https://i.redd.it/2xyvpk7ddw1i1.jpeg",
-      "images": [
-        {
-          "url": "https://i.redd.it/2xyvpk7ddw1i1.jpeg",
-          "thumbnail_url": "https://i.redd.it/2xyvpk7ddw1i1.jpeg",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": "2026-11-16T03:52:54Z",
-      "collected_at": "2026-11-16T04:18:23Z",
-      "time_source": "source",
-      "score": null,
-      "comment_count": null,
-      "tags": [
-        "r/196",
-        "reddit",
-        "196"
-      ],
-      "content_hash": "92316e38f057fbc652393a2763790ad692727e13",
-      "image_hash": "30e2d1d9908cceca",
-      "image_id": "9f4c76c3b39d5402",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-16T04:18:23Z",
-      "image_error": null,
-      "image_width": 736,
-      "image_height": 736,
-      "rank_score": 0.0,
-      "rank_basis": "recency",
-      "group_id": "1452641a539f",
       "group_size": 1,
       "related": [],
       "source_stale": true,
@@ -15332,61 +15529,6 @@
       "trending": []
     },
     {
-      "id": "reddit:61f5750932fbb59b",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "reddit",
-      "source_id": "1xwup46",
-      "source_name": "Reddit",
-      "community": "r/196",
-      "title": "New Rockstars at it again",
-      "summary": "[留言]",
-      "post_url": "https://www.reddit.com/r/196/comments/1xwup46/new_rockstars_at_it_again/",
-      "image_url": "https://i.redd.it/ker3bvh6wr1i1.jpeg",
-      "thumbnail_url": "https://preview.redd.it/ker3bvh6wr1i1.jpeg?width=320&crop=smart&auto=webp&s=d5ff10262b61306d55181863913cf961ec1dc6be",
-      "images": [
-        {
-          "url": "https://i.redd.it/ker3bvh6wr1i1.jpeg",
-          "thumbnail_url": "https://i.redd.it/ker3bvh6wr1i1.jpeg",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://preview.redd.it/ker3bvh6wr1i1.jpeg?width=320&crop=smart&auto=webp&s=d5ff10262b61306d55181863913cf961ec1dc6be",
-          "thumbnail_url": "https://preview.redd.it/ker3bvh6wr1i1.jpeg?width=320&crop=smart&auto=webp&s=d5ff10262b61306d55181863913cf961ec1dc6be",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": "2026-11-15T12:49:26Z",
-      "collected_at": "2026-11-15T13:17:48Z",
-      "time_source": "source",
-      "score": null,
-      "comment_count": null,
-      "tags": [
-        "r/196",
-        "reddit",
-        "196"
-      ],
-      "content_hash": "00c42c3552dbb6b4704006b9c12b6ea7ab6dcd6b",
-      "image_hash": "92535b565625258c",
-      "image_id": "bffc9ebda705cf7f",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-15T13:17:48Z",
-      "image_error": null,
-      "image_width": 480,
-      "image_height": 270,
-      "rank_score": 0.0,
-      "rank_basis": "recency",
-      "group_id": "0a513f74ae58",
-      "group_size": 1,
-      "related": [],
-      "source_stale": true,
-      "trending": []
-    },
-    {
       "id": "reddit:dbe3112fffe6d445",
       "content_type": "image",
       "authenticity": "real",
@@ -16139,55 +16281,6 @@
       "trending": []
     },
     {
-      "id": "reddit:e3f3334720877d94",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "reddit",
-      "source_id": "1xwq3m4",
-      "source_name": "Reddit",
-      "community": "r/196",
-      "title": "Rate the haircut rule :3 (3rd picture was before it got cut)",
-      "summary": "[留言]",
-      "post_url": "https://www.reddit.com/r/196/comments/1xwq3m4/rate_the_haircut_rule_3_3rd_picture_was_before_it/",
-      "image_url": "https://preview.redd.it/86uma20hiq1i1.jpeg?width=140&height=140&auto=webp&s=91169815c549e05404a208bc0af8ded4f1783ebf",
-      "thumbnail_url": "https://preview.redd.it/86uma20hiq1i1.jpeg?width=140&height=140&auto=webp&s=91169815c549e05404a208bc0af8ded4f1783ebf",
-      "images": [
-        {
-          "url": "https://preview.redd.it/86uma20hiq1i1.jpeg?width=140&height=140&auto=webp&s=91169815c549e05404a208bc0af8ded4f1783ebf",
-          "thumbnail_url": "https://preview.redd.it/86uma20hiq1i1.jpeg?width=140&height=140&auto=webp&s=91169815c549e05404a208bc0af8ded4f1783ebf",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": "2026-11-15T08:11:19Z",
-      "collected_at": "2026-11-15T13:17:48Z",
-      "time_source": "source",
-      "score": null,
-      "comment_count": null,
-      "tags": [
-        "r/196",
-        "reddit",
-        "196"
-      ],
-      "content_hash": "ac89ffe19eb365a4a64edc2563453e22ab2c5603",
-      "image_hash": "717159e9b9339381",
-      "image_id": "c8df9fd839835cf7",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-15T13:17:48Z",
-      "image_error": null,
-      "image_width": 140,
-      "image_height": 140,
-      "rank_score": 0.0,
-      "rank_basis": "recency",
-      "group_id": "8e3e21b11758",
-      "group_size": 1,
-      "related": [],
-      "source_stale": true,
-      "trending": []
-    },
-    {
       "id": "reddit:debd996f53f02046",
       "content_type": "image",
       "authenticity": "real",
@@ -16396,55 +16489,6 @@
       "rank_score": 0.0,
       "rank_basis": "recency",
       "group_id": "38cd7a708089",
-      "group_size": 1,
-      "related": [],
-      "source_stale": true,
-      "trending": []
-    },
-    {
-      "id": "reddit:0dd3ecd1e7cc66f5",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "reddit",
-      "source_id": "1xwkc9l",
-      "source_name": "Reddit",
-      "community": "r/196",
-      "title": "I need Dennis from Terrible Lizards so much omfg",
-      "summary": "Forgive me God for I have sinned, but GODDAMN I’ll do it again and again [留言]",
-      "post_url": "https://www.reddit.com/r/196/comments/1xwkc9l/i_need_dennis_from_terrible_lizards_so_much_omfg/",
-      "image_url": "https://i.redd.it/23k7jjaivo1i1.jpeg",
-      "thumbnail_url": "https://i.redd.it/23k7jjaivo1i1.jpeg",
-      "images": [
-        {
-          "url": "https://i.redd.it/23k7jjaivo1i1.jpeg",
-          "thumbnail_url": "https://i.redd.it/23k7jjaivo1i1.jpeg",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": "2026-11-15T02:42:41Z",
-      "collected_at": "2026-11-15T04:19:14Z",
-      "time_source": "source",
-      "score": null,
-      "comment_count": null,
-      "tags": [
-        "r/196",
-        "reddit",
-        "196"
-      ],
-      "content_hash": "653d8dd81f27234c3d6a3033f3f409141e696a26",
-      "image_hash": "4f4d22360e2687c7",
-      "image_id": "b34c16b1d53d155e",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-15T04:19:14Z",
-      "image_error": null,
-      "image_width": 4032,
-      "image_height": 3024,
-      "rank_score": 0.0,
-      "rank_basis": "recency",
-      "group_id": "459c7116464c",
       "group_size": 1,
       "related": [],
       "source_stale": true,
