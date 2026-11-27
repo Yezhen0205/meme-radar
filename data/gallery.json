@@ -6,19 +6,19 @@
     "tagline": "Reddit × 百度贴吧，真实的梗图瀑布流。"
   },
   "timezone": "Asia/Shanghai",
-  "generated_at": "2026-11-26T16:12:33Z",
-  "checked_at": "2026-11-26T16:12:33Z",
+  "generated_at": "2026-11-27T01:24:01Z",
+  "checked_at": "2026-11-27T01:24:01Z",
   "stale": false,
   "stale_reason": "reddit 本次不可用，保留其历史数据",
   "partial": true,
   "health": {
     "schema_version": 1,
-    "updated_at": "2026-11-26T16:12:33Z",
+    "updated_at": "2026-11-27T01:24:01Z",
     "status": "degraded",
-    "consecutive_failures": 22,
-    "last_success_at": "2026-11-26T16:12:33Z",
+    "consecutive_failures": 23,
+    "last_success_at": "2026-11-27T01:24:01Z",
     "alerts": [
-      "reddit 已连续 22 轮失败"
+      "reddit 已连续 23 轮失败"
     ],
     "sources": {
       "reddit": {
@@ -26,9 +26,9 @@
         "status": "blocked",
         "item_count": 0,
         "error": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
-        "consecutive_failures": 22,
+        "consecutive_failures": 23,
         "last_success_at": "2026-11-17T15:21:48Z",
-        "last_attempt_at": "2026-11-26T16:12:33Z",
+        "last_attempt_at": "2026-11-27T01:24:01Z",
         "details": {
           "reason": "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss"
         }
@@ -39,8 +39,8 @@
         "item_count": 22,
         "error": "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded",
         "consecutive_failures": 0,
-        "last_success_at": "2026-11-26T16:12:33Z",
-        "last_attempt_at": "2026-11-26T16:12:33Z",
+        "last_success_at": "2026-11-27T01:24:01Z",
+        "last_attempt_at": "2026-11-27T01:24:01Z",
         "details": {
           "topics": [
             {
@@ -74,8 +74,8 @@
         "item_count": 12,
         "error": null,
         "consecutive_failures": 0,
-        "last_success_at": "2026-11-26T16:12:33Z",
-        "last_attempt_at": "2026-11-26T16:12:33Z",
+        "last_success_at": "2026-11-27T01:24:01Z",
+        "last_attempt_at": "2026-11-27T01:24:01Z",
         "details": {}
       },
       "x": {
@@ -116,22 +116,6 @@
       }
     },
     "history": [
-      {
-        "at": "2026-11-18T23:47:54Z",
-        "status": "degraded",
-        "items": 300,
-        "new": 0,
-        "sources": {
-          "reddit": "blocked",
-          "tieba": "degraded",
-          "trends": "ok"
-        },
-        "errors": [
-          "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
-          "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
-        ],
-        "broken_images": 0
-      },
       {
         "at": "2026-11-19T05:29:52Z",
         "status": "degraded",
@@ -435,6 +419,22 @@
           "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
         ],
         "broken_images": 0
+      },
+      {
+        "at": "2026-11-27T01:24:01Z",
+        "status": "degraded",
+        "items": 282,
+        "new": 2,
+        "sources": {
+          "reddit": "blocked",
+          "tieba": "degraded",
+          "trends": "ok"
+        },
+        "errors": [
+          "HTTP 404 from https://www.reddit.com/r/okbuddyretard+196+AnimalsBeingDerps/new/.rss",
+          "帖子详情页对自动请求返回 403；当前使用公开热点页的帖子摘要、原帖链接和图片，已标记为 degraded"
+        ],
+        "broken_images": 0
       }
     ]
   },
@@ -442,15 +442,47 @@
     "status": "ok",
     "keywords": [
       {
-        "word": "董明珠",
-        "count": 6,
+        "word": "u17",
+        "count": 7,
         "sources": [
           "hot"
         ],
-        "score": 6
+        "score": 7
       },
       {
-        "word": "vs",
+        "word": "中国男篮",
+        "count": 5,
+        "sources": [
+          "hot"
+        ],
+        "score": 5
+      },
+      {
+        "word": "国足",
+        "count": 5,
+        "sources": [
+          "hot"
+        ],
+        "score": 5
+      },
+      {
+        "word": "松鼠",
+        "count": 4,
+        "sources": [
+          "hot"
+        ],
+        "score": 4
+      },
+      {
+        "word": "三只",
+        "count": 4,
+        "sources": [
+          "hot"
+        ],
+        "score": 4
+      },
+      {
+        "word": "员工",
         "count": 4,
         "sources": [
           "hot"
@@ -459,22 +491,6 @@
       },
       {
         "word": "沙特",
-        "count": 4,
-        "sources": [
-          "hot"
-        ],
-        "score": 4
-      },
-      {
-        "word": "华为",
-        "count": 4,
-        "sources": [
-          "hot"
-        ],
-        "score": 4
-      },
-      {
-        "word": "中国男篮",
         "count": 3,
         "sources": [
           "hot"
@@ -482,7 +498,7 @@
         "score": 3
       },
       {
-        "word": "u17",
+        "word": "留下",
         "count": 3,
         "sources": [
           "hot"
@@ -490,7 +506,7 @@
         "score": 3
       },
       {
-        "word": "中纪委",
+        "word": "失联",
         "count": 3,
         "sources": [
           "hot"
@@ -498,7 +514,7 @@
         "score": 3
       },
       {
-        "word": "海力士",
+        "word": "百亿",
         "count": 3,
         "sources": [
           "hot"
@@ -506,36 +522,20 @@
         "score": 3
       },
       {
-        "word": "三只",
-        "count": 3,
+        "word": "可可西里",
+        "count": 2,
         "sources": [
           "hot"
         ],
-        "score": 3
+        "score": 2
       },
       {
-        "word": "松鼠",
-        "count": 3,
+        "word": "紧日子",
+        "count": 2,
         "sources": [
           "hot"
         ],
-        "score": 3
-      },
-      {
-        "word": "城市",
-        "count": 3,
-        "sources": [
-          "hot"
-        ],
-        "score": 3
-      },
-      {
-        "word": "员工",
-        "count": 3,
-        "sources": [
-          "hot"
-        ],
-        "score": 3
+        "score": 2
       }
     ],
     "sources": [
@@ -682,15 +682,15 @@
   "run": {
     "ok": false,
     "status": "degraded",
-    "items_new": 4,
+    "items_new": 2,
     "items_updated": 16,
     "items_total": 282,
     "duplicate_posts": 0,
     "groups": 1,
     "images_checked": 22,
     "images_broken": 0,
-    "images_hashed": 22,
-    "duration_ms": 93715,
+    "images_hashed": 17,
+    "duration_ms": 67277,
     "sources_ok": 1,
     "sources_blocked": 1
   },
@@ -711,18 +711,18 @@
       "title": "TGA的含金量突然下降了",
       "summary": "到底发生什么了，tga含金量下降这么多",
       "post_url": "https://tieba.baidu.com/p/11213376759",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3583476809c2d562f208d0e5d71090f3/6c81800a19d8bc3e3d8eefc2c48ba61ea8d34530.jpg?tbpicau=2026-11-28-05_ea28c2262febe8e1111076acb2867f34",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=d555e15513fbb2fb342b5a107f715199/6c81800a19d8bc3e3d8eefc2c48ba61ea8d34530.jpg?tbpicau=2026-11-28-05_b6f1c371541a6b770e2fc2cb4305258c",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3583476809c2d562f208d0e5d71090f3/6c81800a19d8bc3e3d8eefc2c48ba61ea8d34530.jpg?tbpicau=2026-11-29-05_04b201faeac8637b0abe42e81180df38",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=d555e15513fbb2fb342b5a107f715199/6c81800a19d8bc3e3d8eefc2c48ba61ea8d34530.jpg?tbpicau=2026-11-29-05_b2c8f7a897b08c7ab6aa3cfdcade1c3c",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3583476809c2d562f208d0e5d71090f3/6c81800a19d8bc3e3d8eefc2c48ba61ea8d34530.jpg?tbpicau=2026-11-28-05_ea28c2262febe8e1111076acb2867f34",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=d555e15513fbb2fb342b5a107f715199/6c81800a19d8bc3e3d8eefc2c48ba61ea8d34530.jpg?tbpicau=2026-11-28-05_b6f1c371541a6b770e2fc2cb4305258c",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3583476809c2d562f208d0e5d71090f3/6c81800a19d8bc3e3d8eefc2c48ba61ea8d34530.jpg?tbpicau=2026-11-29-05_04b201faeac8637b0abe42e81180df38",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=d555e15513fbb2fb342b5a107f715199/6c81800a19d8bc3e3d8eefc2c48ba61ea8d34530.jpg?tbpicau=2026-11-29-05_b2c8f7a897b08c7ab6aa3cfdcade1c3c",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=ba19681e89fc1e17fdbf8c397a91f67c/62d9f2d3572c11df505c602b252762d0f703c22e.jpg?tbpicau=2026-11-28-05_e04c4e25e0d637e394f176e9f77f0294",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4885d9c2c48ba61edfeeca2d710fe637/62d9f2d3572c11df505c602b252762d0f703c22e.jpg?tbpicau=2026-11-28-05_5558a37c1a10d63f65be4f79f78f85f5",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=ba19681e89fc1e17fdbf8c397a91f67c/62d9f2d3572c11df505c602b252762d0f703c22e.jpg?tbpicau=2026-11-29-05_6cb8437af1240662c73db5872fc362f2",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4885d9c2c48ba61edfeeca2d710fe637/62d9f2d3572c11df505c602b252762d0f703c22e.jpg?tbpicau=2026-11-29-05_060090da3ce556ef8c3aaefe4ee2701e",
           "width": null,
           "height": null
         }
@@ -737,17 +737,17 @@
         "TGA2026",
         "反鸣潮吧"
       ],
-      "content_hash": "4e509c489c492440043cc14a2d9df2ec49b144b0",
+      "content_hash": "5b4fb95d2b30b9a86f1616ce95cb59e812a3365a",
       "image_hash": "0046d8d1e4f0d0ca",
-      "image_id": "4b0febf6204d4d9c",
+      "image_id": "7c3ad85451cf7970",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-26T16:12:33Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 579,
       "image_height": 351,
-      "rank_score": 133.8,
+      "rank_score": 128.3,
       "rank_basis": "recency+comments",
       "group_id": "96af18812fd8",
       "group_size": 1,
@@ -766,24 +766,24 @@
       "title": "壮哉我大影之刃零！！！",
       "summary": "五个提名 看到影之刃零直接欢呼 要知道今年这大作多到离谱，这下猴笑吧可不能拿小年为借口 也就是说什么“为了收视率” 想想也搞笑，之前在猴笑吧，他们谈论25年年度提名，那时候还说什么“天国拯救2能进年度提名就是很大的认可”，结果现在到了影之刃零就一口一个收视率。。。。 我说实话，就后面那个榜单里面的游戏很多进了照样给tga加很多收视率，热度压根不是借口。 而且我个人也不认为24年是什么小年，但确实今年太猛",
       "post_url": "https://tieba.baidu.com/p/11205837651",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=67ac542ebbfaaf5184e381b7bc5594ed/4134970a304e251f3c7d18f0e186c9177f3e5334.jpg?tbpicau=2026-11-28-05_ed151ba5a7e73564d9b109a808f88f2c",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=39e5511a340e0cf3a0f74cf93a7d8322/4134970a304e251f3c7d18f0e186c9177f3e5334.jpg?tbpicau=2026-11-28-05_4b3a27fcae7ea1c861da57695f14620d",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=67ac542ebbfaaf5184e381b7bc5594ed/4134970a304e251f3c7d18f0e186c9177f3e5334.jpg?tbpicau=2026-11-29-05_fd1980469946b61bc9350d881a8f18f8",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=39e5511a340e0cf3a0f74cf93a7d8322/4134970a304e251f3c7d18f0e186c9177f3e5334.jpg?tbpicau=2026-11-29-05_8d772a46b8f91d3b351c6c8e46bec6a1",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=67ac542ebbfaaf5184e381b7bc5594ed/4134970a304e251f3c7d18f0e186c9177f3e5334.jpg?tbpicau=2026-11-28-05_ed151ba5a7e73564d9b109a808f88f2c",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=39e5511a340e0cf3a0f74cf93a7d8322/4134970a304e251f3c7d18f0e186c9177f3e5334.jpg?tbpicau=2026-11-28-05_4b3a27fcae7ea1c861da57695f14620d",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=67ac542ebbfaaf5184e381b7bc5594ed/4134970a304e251f3c7d18f0e186c9177f3e5334.jpg?tbpicau=2026-11-29-05_fd1980469946b61bc9350d881a8f18f8",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=39e5511a340e0cf3a0f74cf93a7d8322/4134970a304e251f3c7d18f0e186c9177f3e5334.jpg?tbpicau=2026-11-29-05_8d772a46b8f91d3b351c6c8e46bec6a1",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=245939277c292df597c3ac1d8c305ce2/c9177f3e6709c93dc078f2ffd93df8dcd1005434.jpg?tbpicau=2026-11-28-05_63a1490b86796582c6443bd08067cdd0",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=42a877312d63f6241c5d3b01b77f9ac5/c9177f3e6709c93dc078f2ffd93df8dcd1005434.jpg?tbpicau=2026-11-28-05_f27959cf84b52eb3b1b7efefd25138ce",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=245939277c292df597c3ac1d8c305ce2/c9177f3e6709c93dc078f2ffd93df8dcd1005434.jpg?tbpicau=2026-11-29-05_0e914daee4690cfee09f69e5ab8f077f",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=42a877312d63f6241c5d3b01b77f9ac5/c9177f3e6709c93dc078f2ffd93df8dcd1005434.jpg?tbpicau=2026-11-29-05_1ac0fcb8637fa99e1d6a2aa807b0b231",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=889ee4cda6fe9925cb0c695804a95ee4/6709c93d70cf3bc72d8a31e49700baa1cd112a34.jpg?tbpicau=2026-11-28-05_344e3597f33ac833a0fa22cc998ac01e",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=d9d43f1c2d600c33f079dcca2a772032/6709c93d70cf3bc72d8a31e49700baa1cd112a34.jpg?tbpicau=2026-11-28-05_ed056670360f85346ee53c312b68f1e5",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=889ee4cda6fe9925cb0c695804a95ee4/6709c93d70cf3bc72d8a31e49700baa1cd112a34.jpg?tbpicau=2026-11-29-05_6315934c2293ad521c24891355df9c26",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=d9d43f1c2d600c33f079dcca2a772032/6709c93d70cf3bc72d8a31e49700baa1cd112a34.jpg?tbpicau=2026-11-29-05_fd15b67b32235b02a9df0a74b04f5aa2",
           "width": null,
           "height": null
         }
@@ -798,17 +798,17 @@
         "TGA2026",
         "影之刃吧"
       ],
-      "content_hash": "38fd78479201ed7d8f9d58bdadfb25a34027eff5",
+      "content_hash": "3472fde73e7ff1ac2e2438fac3caa9bfec292e77",
       "image_hash": "290f4b4b1771534d",
-      "image_id": "fc8603a6dd247a24",
+      "image_id": "724fcd1ab56650f2",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-26T16:12:33Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 260,
-      "rank_score": 132.1,
+      "rank_score": 126.7,
       "rank_basis": "recency+comments",
       "group_id": "6ddcdc1e1cb6",
       "group_size": 1,
@@ -827,12 +827,12 @@
       "title": "我一直好奇gta这么多部为什么不做新地区地图",
       "summary": "",
       "post_url": "https://tieba.baidu.com/p/11226082863",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=876a094acdd4b31cf03c94b3b7d7276f/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-28-05_8a15846c9772c6360d67894eafd179b6",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bd481cfed93df8dca63d8d93fd2a03b6/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-28-05_9b7828b5fbf72d332604efa41707e660",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=876a094acdd4b31cf03c94b3b7d7276f/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-29-05_dd037dcf9250acae66434a62dab55583",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bd481cfed93df8dca63d8d93fd2a03b6/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-29-05_0725e7c8bdcd1ec75a23a467c8cf0829",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=876a094acdd4b31cf03c94b3b7d7276f/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-28-05_8a15846c9772c6360d67894eafd179b6",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bd481cfed93df8dca63d8d93fd2a03b6/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-28-05_9b7828b5fbf72d332604efa41707e660",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=876a094acdd4b31cf03c94b3b7d7276f/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-29-05_dd037dcf9250acae66434a62dab55583",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bd481cfed93df8dca63d8d93fd2a03b6/b2fb43166d224f4aed23611a4ff790529822d105.jpg?tbpicau=2026-11-29-05_0725e7c8bdcd1ec75a23a467c8cf0829",
           "width": null,
           "height": null
         }
@@ -847,17 +847,17 @@
         "吧友自制GTA6互动地图",
         "gta6吧"
       ],
-      "content_hash": "8c0a50e3c892b86ed128f92c97de4331890aea86",
+      "content_hash": "ac4805e787b09f46a78e3768f71453a117ed31ca",
       "image_hash": "c6872686c6662131",
-      "image_id": "384fe7252a58e8ed",
+      "image_id": "59ada129b06d6e76",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-26T01:27:17Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 538,
-      "rank_score": 122.7,
+      "rank_score": 117.3,
       "rank_basis": "recency+comments",
       "group_id": "7a10f8ddcbf7",
       "group_size": 1,
@@ -906,12 +906,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 773,
-      "rank_score": 119.3,
+      "rank_score": 113.8,
       "rank_basis": "recency+comments",
       "group_id": "65c466cf9c5d",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -955,12 +956,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 608,
-      "rank_score": 116.8,
+      "rank_score": 111.3,
       "rank_basis": "recency+comments",
       "group_id": "223e6bddb6a0",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -1000,7 +1002,7 @@
       "collected_at": "2026-11-24T16:50:52Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 204,
+      "comment_count": 206,
       "tags": [
         "贴吧",
         "TGA2026",
@@ -1016,12 +1018,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 667,
-      "rank_score": 113.4,
+      "rank_score": 108.0,
       "rank_basis": "recency+comments",
       "group_id": "d6fb3ef82ef7",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -1035,12 +1038,12 @@
       "title": "原来一开始在地图右下角啊！？",
       "summary": "这通关得要多长时间",
       "post_url": "https://tieba.baidu.com/p/11211832229",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c3fdbdbaf4b7d0a27bc90495fbee760d/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-28-05_7b71c34746e693d1e01747bcdbbcde85",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=c7c8a83028061d957d46353a4bcf7bec/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-28-05_68f3310ecc8089324f265257657a4895",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c3fdbdbaf4b7d0a27bc90495fbee760d/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-29-05_6fc18699e65fd8ec08516a58556032bf",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=c7c8a83028061d957d46353a4bcf7bec/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-29-05_fc2cc322570d1d93394c7fa43e48490c",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c3fdbdbaf4b7d0a27bc90495fbee760d/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-28-05_7b71c34746e693d1e01747bcdbbcde85",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=c7c8a83028061d957d46353a4bcf7bec/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-28-05_68f3310ecc8089324f265257657a4895",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c3fdbdbaf4b7d0a27bc90495fbee760d/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-29-05_6fc18699e65fd8ec08516a58556032bf",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=c7c8a83028061d957d46353a4bcf7bec/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-29-05_fc2cc322570d1d93394c7fa43e48490c",
           "width": null,
           "height": null
         }
@@ -1055,17 +1058,17 @@
         "吧友自制GTA6互动地图",
         "ps5吧"
       ],
-      "content_hash": "f4c397dba0aaf82ea22839fad62c52ed2ecc6959",
+      "content_hash": "9eba234e87d6c866da8d84ff5caf4403b94da91a",
       "image_hash": "eac6a2a2a696b9a8",
-      "image_id": "6b84015dcfc47214",
+      "image_id": "93af194894e00c58",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 794,
-      "rank_score": 112.0,
+      "rank_score": 106.6,
       "rank_basis": "recency+comments",
       "group_id": "06cfa59be745",
       "group_size": 3,
@@ -1074,14 +1077,14 @@
           "source": "tieba",
           "source_name": "百度贴吧",
           "post_url": "https://tieba.baidu.com/p/11211827130",
-          "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c3fdbdbaf4b7d0a27bc90495fbee760d/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-28-05_7b71c34746e693d1e01747bcdbbcde85",
+          "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=c3fdbdbaf4b7d0a27bc90495fbee760d/94eef01f3a292df58e377d1dfa315c6035a873c6.jpg?tbpicau=2026-11-29-05_6fc18699e65fd8ec08516a58556032bf",
           "title": "原来一开始在地图右下角啊！？"
         },
         {
           "source": "tieba",
           "source_name": "百度贴吧",
           "post_url": "https://tieba.baidu.com/p/11223352273",
-          "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b3ef592f2b224f4a5799731b39f79044/3a87e950352ac65c112c497abdf2b21193138a89.jpg?tbpicau=2026-11-28-05_1d7eaedfcdd74eb20edcf8ff606df6ec",
+          "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=b3ef592f2b224f4a5799731b39f79044/3a87e950352ac65c112c497abdf2b21193138a89.jpg?tbpicau=2026-11-29-05_d6597f0de8b3269c58fa99ce548af916",
           "title": "感觉r星完全有技术力把hd时代的456三代地图放在同一个游戏里"
         }
       ],
@@ -1129,12 +1132,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 608,
-      "rank_score": 109.3,
+      "rank_score": 103.8,
       "rank_basis": "recency+comments",
       "group_id": "05d997780d05",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -1148,24 +1152,24 @@
       "title": "受封大典！BLG夺冠路上历代成员论功行赏🏆",
       "summary": "盘点23年起势至今的成员，抗抗们来打分，谁是国公，谁是罪臣？太多披皮反串的啦，来点正义史官🧐 - 国公（功勋卓著，3分） - 候伯（功大于过，4分） - 良将（功过相抵，3分） - 庸吏（平平无奇，2分） - 戴罪（过大于功，1分） - 罪臣（千古罪人，0分）",
       "post_url": "https://tieba.baidu.com/p/11222917031",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2b6ad528348b4710ce2ffdc4f3cfc3b2/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-28-05_e8e4e0dd01ad837723104ee8e60c1381",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e7c2530feaaf2eddd4f14bebbd2b70d4/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-28-05_55fbc3471756b2af45b9ed86f4334a74",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2b6ad528348b4710ce2ffdc4f3cfc3b2/0c5e75c7a7efce1b0cdde5c3e951f3deb58f6573.jpg?tbpicau=2026-11-29-05_9f42cfb1cceead5c9a323ed9178f6a1c",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e7c2530feaaf2eddd4f14bebbd2b70d4/0c5e75c7a7efce1b0cdde5c3e951f3deb58f6573.jpg?tbpicau=2026-11-29-05_3a1cc0a63d4d51ed6bd67f11097579a9",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2b6ad528348b4710ce2ffdc4f3cfc3b2/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-28-05_e8e4e0dd01ad837723104ee8e60c1381",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e7c2530feaaf2eddd4f14bebbd2b70d4/d143ad4bd11373f013c94296e20f4bfbfaed04c0.jpg?tbpicau=2026-11-28-05_55fbc3471756b2af45b9ed86f4334a74",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2b6ad528348b4710ce2ffdc4f3cfc3b2/0c5e75c7a7efce1b0cdde5c3e951f3deb58f6573.jpg?tbpicau=2026-11-29-05_9f42cfb1cceead5c9a323ed9178f6a1c",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e7c2530feaaf2eddd4f14bebbd2b70d4/0c5e75c7a7efce1b0cdde5c3e951f3deb58f6573.jpg?tbpicau=2026-11-29-05_3a1cc0a63d4d51ed6bd67f11097579a9",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=72d616cd5dd5ad6eaaf964e2b1ca39a3/0a55b319ebc4b745e3649a1f89fc1e178b8215c2.jpg?tbpicau=2026-11-28-05_2fab3f2769696f71919691f2c6b88acf",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=19f5836909c2d562f208d2efd72ae1d2/0a55b319ebc4b745e3649a1f89fc1e178b8215c2.jpg?tbpicau=2026-11-28-05_f6b36e8d5799d944b911e0e11fefad04",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=72d616cd5dd5ad6eaaf964e2b1ca39a3/0594bf305c6034a8fe1295888d1349540823767d.jpg?tbpicau=2026-11-29-05_ce1b124840f4038def9c99f8315d93fc",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=19f5836909c2d562f208d2efd72ae1d2/0594bf305c6034a8fe1295888d1349540823767d.jpg?tbpicau=2026-11-29-05_5908460edd4ad48c297607891ed412cf",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=11f3e0e59700baa1ba2c47b37711b9b1/42a7d933c895d1432385c92a35f082025baf07c3.jpg?tbpicau=2026-11-28-05_b3e69c80c50c07415fed70507f4f984e",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=823a29948def76093c0b9b9d1ee6d2f1/42a7d933c895d1432385c92a35f082025baf07c3.jpg?tbpicau=2026-11-28-05_d879881df234f6a13ac2f7206e2426dd",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=11f3e0e59700baa1ba2c47b37711b9b1/1984e6dce71190eff808bfd6881b9d16fcfa607e.jpg?tbpicau=2026-11-29-05_aae431d35be7d416d336e999ae63f4b3",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=823a29948def76093c0b9b9d1ee6d2f1/1984e6dce71190eff808bfd6881b9d16fcfa607e.jpg?tbpicau=2026-11-29-05_142e6c8d32b9769a5da116f87671a0ab",
           "width": null,
           "height": null
         }
@@ -1174,23 +1178,23 @@
       "collected_at": "2026-11-24T03:42:26Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 4028,
+      "comment_count": 4040,
       "tags": [
         "贴吧",
         "抗吧整活BLG受封大典",
         "抗压背锅吧"
       ],
-      "content_hash": "950e15db9fd0270c9b5bda8ef81d2c65e9b3da71",
+      "content_hash": "b213e1b3d22fd3104c6574b1d79f10488cb07d0e",
       "image_hash": "1f0d0c0a63793c2d",
-      "image_id": "cc10c7fa2ade2c16",
+      "image_id": "1959df301509495b",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-26T01:27:17Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 387,
-      "rank_score": 109.0,
+      "rank_score": 103.5,
       "rank_basis": "recency+comments",
       "group_id": "1a814a26ab3b",
       "group_size": 1,
@@ -1209,24 +1213,24 @@
       "title": "记录贴：bin哥夺冠大清算",
       "summary": "背景：2026 年 7 月 12 日 MSI 决赛 BLG 2:3 负于 HLE，Bin 成为舆论靶心，网暴持续约三个月，直到 11 月 15 日 S16 夺冠。 本贴旨在收集MSI失利后包括但不限于对Bin哥进行人身攻击，吃黑流等操作的UP，职业选手，解说等。正确记录历史，明察秋毫以正视听。 同时会发出来当前他们收到的清算力度，吧友们来打分。",
       "post_url": "https://tieba.baidu.com/p/11200608470",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=5561cbcc4cd162d985ee621421dea950/0c338744ebf81a4c066669c1912a6059252da666.jpg?tbpicau=2026-11-28-05_3b1d23e3824389d515cd6adbca3ac6d3",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=2a77622348f41bd5da53eaf661e1f0f6/0c338744ebf81a4c066669c1912a6059252da666.jpg?tbpicau=2026-11-28-05_d50df205a29bf31828b556baf51fa471",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=5561cbcc4cd162d985ee621421dea950/0c338744ebf81a4c066669c1912a6059252da666.jpg?tbpicau=2026-11-29-05_8e148c9823d9e61876aaf87da7f9f3d1",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=2a77622348f41bd5da53eaf661e1f0f6/0c338744ebf81a4c066669c1912a6059252da666.jpg?tbpicau=2026-11-29-05_1a5c5608f0daf678a413ec318cc3161a",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=5561cbcc4cd162d985ee621421dea950/0c338744ebf81a4c066669c1912a6059252da666.jpg?tbpicau=2026-11-28-05_3b1d23e3824389d515cd6adbca3ac6d3",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=2a77622348f41bd5da53eaf661e1f0f6/0c338744ebf81a4c066669c1912a6059252da666.jpg?tbpicau=2026-11-28-05_d50df205a29bf31828b556baf51fa471",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=5561cbcc4cd162d985ee621421dea950/0c338744ebf81a4c066669c1912a6059252da666.jpg?tbpicau=2026-11-29-05_8e148c9823d9e61876aaf87da7f9f3d1",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=2a77622348f41bd5da53eaf661e1f0f6/0c338744ebf81a4c066669c1912a6059252da666.jpg?tbpicau=2026-11-29-05_1a5c5608f0daf678a413ec318cc3161a",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6c974bd5ed64034f0fcdc20e9fc27980/28381f30e924b8998e6dfc3028061d950a7bf661.jpg?tbpicau=2026-11-28-05_3edbe8bc0bd5f8cad540884e1b1f4467",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=fa38e676d458d109c4e3abb0e163bd82/28381f30e924b8998e6dfc3028061d950a7bf661.jpg?tbpicau=2026-11-28-05_eb7844e80db13873ae693cac8d9319c6",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6c974bd5ed64034f0fcdc20e9fc27980/28381f30e924b8998e6dfc3028061d950a7bf661.jpg?tbpicau=2026-11-29-05_7f764ce0e3b43e0fb3945f3435c665cc",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=fa38e676d458d109c4e3abb0e163bd82/28381f30e924b8998e6dfc3028061d950a7bf661.jpg?tbpicau=2026-11-29-05_61659f0cfc356528e212a7c99cc4fcd1",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=f13e1d73971373f0f53f6f97940e4b8b/b31c8701a18b87d607022e17410828381f30fd72.jpg?tbpicau=2026-11-28-05_e9113aec2733a0e99017809ea89afdb3",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7c1d849018df8db1bc2e7e663918ac69/b31c8701a18b87d607022e17410828381f30fd72.jpg?tbpicau=2026-11-28-05_74bf0b72f2a751edb6a32a70a05e36b3",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=f13e1d73971373f0f53f6f97940e4b8b/b31c8701a18b87d607022e17410828381f30fd72.jpg?tbpicau=2026-11-29-05_a41cbd111f045ceec657152e6ac3bd82",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7c1d849018df8db1bc2e7e663918ac69/b31c8701a18b87d607022e17410828381f30fd72.jpg?tbpicau=2026-11-29-05_b1bb52aea65a207bf612fd67ead78beb",
           "width": null,
           "height": null
         }
@@ -1235,23 +1239,23 @@
       "collected_at": "2026-11-24T03:42:26Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 3555,
+      "comment_count": 3556,
       "tags": [
         "贴吧",
         "抗吧整活BLG受封大典",
         "抗压背锅吧"
       ],
-      "content_hash": "99227f8c5bc065c72623e7f164d05575cd19a0d6",
+      "content_hash": "935e9c0bc3476f6f2d101b83d1b0069f3ef38cac",
       "image_hash": "3c3bb69cdd353599",
-      "image_id": "d3e3bcb28b1af612",
+      "image_id": "294e37d9e4ec244a",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 773,
-      "rank_score": 109.0,
+      "rank_score": 103.5,
       "rank_basis": "recency+comments",
       "group_id": "dc0593352a6b",
       "group_size": 1,
@@ -1270,18 +1274,18 @@
       "title": "为什么blg就算夺冠了也给人一种暴发户的感觉",
       "summary": "blc一直在清算其它人，活脱脱小人得志猖狂的嘴脸，完全没有前三支冠军队伍那种天生的贵族气质",
       "post_url": "https://tieba.baidu.com/p/11206974830",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4f182468732ac65c6705667bcbf3b21d/e74509d062d9f2d322b3dce7efec8a136227cc4f.jpg?tbpicau=2026-11-28-05_a77ba8da3f7a5ae3fe8edb29b8674930",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=43e5178c0ced2e73fce9842eb73ad0b6/e74509d062d9f2d322b3dce7efec8a136227cc4f.jpg?tbpicau=2026-11-28-05_0add3093637d9e75540e3a445a484e0c",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4f182468732ac65c6705667bcbf3b21d/9b504fc2d562853590422a29d6ef76c6a7ef631c.jpg?tbpicau=2026-11-29-05_4c7deb1803ae56178c487cfaa62ce019",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=43e5178c0ced2e73fce9842eb73ad0b6/9b504fc2d562853590422a29d6ef76c6a7ef631c.jpg?tbpicau=2026-11-29-05_1c2ee381493073927137b5eb1803a3ed",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4f182468732ac65c6705667bcbf3b21d/e74509d062d9f2d322b3dce7efec8a136227cc4f.jpg?tbpicau=2026-11-28-05_a77ba8da3f7a5ae3fe8edb29b8674930",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=43e5178c0ced2e73fce9842eb73ad0b6/e74509d062d9f2d322b3dce7efec8a136227cc4f.jpg?tbpicau=2026-11-28-05_0add3093637d9e75540e3a445a484e0c",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4f182468732ac65c6705667bcbf3b21d/9b504fc2d562853590422a29d6ef76c6a7ef631c.jpg?tbpicau=2026-11-29-05_4c7deb1803ae56178c487cfaa62ce019",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=43e5178c0ced2e73fce9842eb73ad0b6/9b504fc2d562853590422a29d6ef76c6a7ef631c.jpg?tbpicau=2026-11-29-05_1c2ee381493073927137b5eb1803a3ed",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=806d7f29d513b07ebdbd50003cd69113/355d8912632762d08c9c5cb7e6ec08fa503dc64f.jpg?tbpicau=2026-11-28-05_6acb50b182d01ebeac407d1b2d682069",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=fc9e6cb3c1d6277fe912303a18036e0d/355d8912632762d08c9c5cb7e6ec08fa503dc64f.jpg?tbpicau=2026-11-28-05_9c32ecc4b94fcc82e5bc630a35f9f78e",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=806d7f29d513b07ebdbd50003cd69113/90ef76c6a7efce1be68930c2e951f3deb48f651c.jpg?tbpicau=2026-11-29-05_fa35998d7fb6037db7ea632c449ad9fe",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=fc9e6cb3c1d6277fe912303a18036e0d/90ef76c6a7efce1be68930c2e951f3deb48f651c.jpg?tbpicau=2026-11-29-05_80ca4231839c9f71e55f7d539095a8ed",
           "width": null,
           "height": null
         }
@@ -1290,23 +1294,23 @@
       "collected_at": "2026-11-24T03:42:26Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 742,
+      "comment_count": 744,
       "tags": [
         "贴吧",
         "抗吧整活BLG受封大典",
         "抗压背锅吧"
       ],
-      "content_hash": "8d28c6f4edda157c82d1fb98c4ffcd50188444be",
+      "content_hash": "1b086e23d2aa488f5d92f940f5e342cf1a975216",
       "image_hash": "b7c79b594b8e8c89",
-      "image_id": "b8a1b85343f9e4e6",
+      "image_id": "da2b13c456a276c0",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-26T16:12:33Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 605,
-      "rank_score": 109.0,
+      "rank_score": 103.5,
       "rank_basis": "recency+comments",
       "group_id": "8ca84d98857d",
       "group_size": 1,
@@ -1325,24 +1329,24 @@
       "title": "我就一句话，只有blc觉得wei菜",
       "summary": "有且仅有一个群体，就是blc你让jiejie粉丝来都说不出beichuan和傻豆比wei厉害",
       "post_url": "https://tieba.baidu.com/p/11165370425",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=629f3247d82f07085f052a08d924b865/09f790529822720ee9bac2f23dcb0a46f21fab46.jpg?tbpicau=2026-11-28-05_504b76eae6a85d1b4f60940d51bd0c37",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=285867b30110b912bfc1f4fcf3c68d3e/09f790529822720ee9bac2f23dcb0a46f21fab46.jpg?tbpicau=2026-11-28-05_812c8d4bb8532735d420207aeaa5ca97",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=629f3247d82f07085f052a08d924b865/09f790529822720ee9bac2f23dcb0a46f21fab46.jpg?tbpicau=2026-11-29-05_cf264b1701cd8c267d7810937eb4e033",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=285867b30110b912bfc1f4fcf3c68d3e/09f790529822720ee9bac2f23dcb0a46f21fab46.jpg?tbpicau=2026-11-29-05_07d30cd8d189f7a6afc073d7a660d19f",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=629f3247d82f07085f052a08d924b865/09f790529822720ee9bac2f23dcb0a46f21fab46.jpg?tbpicau=2026-11-28-05_504b76eae6a85d1b4f60940d51bd0c37",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=285867b30110b912bfc1f4fcf3c68d3e/09f790529822720ee9bac2f23dcb0a46f21fab46.jpg?tbpicau=2026-11-28-05_812c8d4bb8532735d420207aeaa5ca97",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=629f3247d82f07085f052a08d924b865/09f790529822720ee9bac2f23dcb0a46f21fab46.jpg?tbpicau=2026-11-29-05_cf264b1701cd8c267d7810937eb4e033",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=285867b30110b912bfc1f4fcf3c68d3e/09f790529822720ee9bac2f23dcb0a46f21fab46.jpg?tbpicau=2026-11-29-05_07d30cd8d189f7a6afc073d7a660d19f",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=f3110e9768dda3cc0be4b82831e93905/34a85edf8db1cb13f173ab1b9b54564e92584ba4.jpg?tbpicau=2026-11-28-05_630045babd30e252a0d6d6b36093152a",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=dafe50eb112c11dfded1bd21531c13ed/34a85edf8db1cb13f173ab1b9b54564e92584ba4.jpg?tbpicau=2026-11-28-05_8602fed691976089d5d717f0dab1cb0c",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=f3110e9768dda3cc0be4b82831e93905/34a85edf8db1cb13f173ab1b9b54564e92584ba4.jpg?tbpicau=2026-11-29-05_f515c506fbd6b09749b3426c47609808",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=dafe50eb112c11dfded1bd21531c13ed/34a85edf8db1cb13f173ab1b9b54564e92584ba4.jpg?tbpicau=2026-11-29-05_5bdd46c3e1493762e2a9982ae514c2c8",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2bf199cb7c87e9504217f3642039531b/2f2eb9389b504fc24893260da3dde71191ef6dee.jpg?tbpicau=2026-11-28-05_afc9ff9bd10862b828d284b7cd7b4fec",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65e82520707adab43dd01941bbefc221/2f2eb9389b504fc24893260da3dde71191ef6dee.jpg?tbpicau=2026-11-28-05_6a7f4ee06c1a1ab5c519c5d29e05fae6",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2bf199cb7c87e9504217f3642039531b/2f2eb9389b504fc24893260da3dde71191ef6dee.jpg?tbpicau=2026-11-29-05_4769e641252d8362f5299a71f8106e8e",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65e82520707adab43dd01941bbefc221/2f2eb9389b504fc24893260da3dde71191ef6dee.jpg?tbpicau=2026-11-29-05_e6c007f4db28e141ceea2ffe4ab3b3f6",
           "width": null,
           "height": null
         }
@@ -1351,23 +1355,23 @@
       "collected_at": "2026-11-24T03:42:26Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 1590,
+      "comment_count": 1619,
       "tags": [
         "贴吧",
         "抗吧整活BLG受封大典",
         "抗压背锅吧"
       ],
-      "content_hash": "fec2c96a89a781f1abc8943c041a677e697710f0",
+      "content_hash": "b46638e2f902103871270e6d83d78cf18dd83b9e",
       "image_hash": "3271696131d19e86",
-      "image_id": "73eed2f41ce24dbb",
+      "image_id": "4a81320ab1d51b7c",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 474,
       "image_height": 552,
-      "rank_score": 109.0,
+      "rank_score": 103.5,
       "rank_basis": "recency+comments",
       "group_id": "246a6f11ac2a",
       "group_size": 1,
@@ -1386,12 +1390,12 @@
       "title": "BLG真太子啊",
       "summary": "第一个合同里有私人飞机的选手要来了",
       "post_url": "https://tieba.baidu.com/p/11218615233",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=8181a3d54efa513d51aa6cd60d6d554c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-29-05_af27cab7e8323f544aa5192733cbc499",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=192aa821d12bd40742c7d1ff4bb2ef6c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-29-05_dc745eadf2de0730b4b9cad060b4ac8b",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=8181a3d54efa513d51aa6cd60d6d554c/37d5004e78f0f736bfcd7a084c55b319ebc4133d.jpg?tbpicau=2026-11-29-05_8b4d34e99aba42d811b62591d17ef89e",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=192aa821d12bd40742c7d1ff4bb2ef6c/37d5004e78f0f736bfcd7a084c55b319ebc4133d.jpg?tbpicau=2026-11-29-05_9c577413cf46813017a8030088c190d2",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=8181a3d54efa513d51aa6cd60d6d554c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-29-05_af27cab7e8323f544aa5192733cbc499",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=192aa821d12bd40742c7d1ff4bb2ef6c/033b5bb5c9ea15ce26ddd600f0003af33a87b283.jpg?tbpicau=2026-11-29-05_dc745eadf2de0730b4b9cad060b4ac8b",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=8181a3d54efa513d51aa6cd60d6d554c/37d5004e78f0f736bfcd7a084c55b319ebc4133d.jpg?tbpicau=2026-11-29-05_8b4d34e99aba42d811b62591d17ef89e",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=192aa821d12bd40742c7d1ff4bb2ef6c/37d5004e78f0f736bfcd7a084c55b319ebc4133d.jpg?tbpicau=2026-11-29-05_9c577413cf46813017a8030088c190d2",
           "width": null,
           "height": null
         }
@@ -1400,23 +1404,23 @@
       "collected_at": "2026-11-24T03:42:26Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 636,
+      "comment_count": 637,
       "tags": [
         "贴吧",
         "抗吧整活BLG受封大典",
         "抗压背锅吧"
       ],
-      "content_hash": "44ed5d33deb27e6345ed7faabba62a2cee84a5de",
+      "content_hash": "21cfc5eb7c6cebf9f0272d094c1737df29d00a62",
       "image_hash": "06a43270b22a9212",
-      "image_id": "e1da3aef62644fe6",
+      "image_id": "669b970d7ec7055f",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-26T16:12:33Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 916,
-      "rank_score": 109.0,
+      "rank_score": 103.5,
       "rank_basis": "recency+comments",
       "group_id": "5bfcb9e68abc",
       "group_size": 1,
@@ -1465,12 +1469,13 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 264,
-      "rank_score": 108.4,
+      "rank_score": 103.0,
       "rank_basis": "recency+comments",
       "group_id": "5bbd3d146f5f",
       "group_size": 1,
       "related": [],
       "source_stale": false,
+      "image_fallback": null,
       "trending": []
     },
     {
@@ -1484,24 +1489,24 @@
       "title": "我做的 GTA6 地图又更新了，点开地标能看附近",
       "summary": "前两天有兄弟问北部的细节，我又补了卡拉加山东侧水坝、港口水塔、伦托岛北侧跨海桥这类地标，这次一共加了 6 个点。 点开地标，下方有「附近点位」就能直接跳过去，不用再在地图上来回找。手机首屏能搜，默认开 2D，想看山谷再点 3D。现在的位置是社区估算，有哪块想看细一点欢迎说。 地图入口：网页链接",
       "post_url": "https://tieba.baidu.com/p/11200270304",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=17f17f9a4af431adbcd243317b36ac0f/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_5a84c34026cbcc52564000cf6dcd3083",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cb40b2ad4c7b02080cc93de352e283ee/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_de29a8d914be2b904cfab98d6c147074",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=17f17f9a4af431adbcd243317b36ac0f/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-29-05_b28438b2b33e919fb0b088b889bcc152",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cb40b2ad4c7b02080cc93de352e283ee/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-29-05_539cf9cf55dd3e0bd15506d90dbc55cd",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=17f17f9a4af431adbcd243317b36ac0f/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_5a84c34026cbcc52564000cf6dcd3083",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cb40b2ad4c7b02080cc93de352e283ee/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-28-05_de29a8d914be2b904cfab98d6c147074",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=17f17f9a4af431adbcd243317b36ac0f/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-29-05_b28438b2b33e919fb0b088b889bcc152",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=cb40b2ad4c7b02080cc93de352e283ee/3a292df5e0fe99251977f35872a85edf8db171bb.jpg?tbpicau=2026-11-29-05_539cf9cf55dd3e0bd15506d90dbc55cd",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=76e4a3cc77adcbef01347e0e9caf2e0e/2df5e0fe9925bc31fa269b9018df8db1cb1370bb.jpg?tbpicau=2026-11-28-05_cb686fda59f545c8eb3fd15deff31572",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bbd3a54344087bf47dec55ebc2e82611/2df5e0fe9925bc31fa269b9018df8db1cb1370bb.jpg?tbpicau=2026-11-28-05_e6405a86ffc82ab47c3e4d26efcb3f29",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=76e4a3cc77adcbef01347e0e9caf2e0e/2df5e0fe9925bc31fa269b9018df8db1cb1370bb.jpg?tbpicau=2026-11-29-05_6826877fa0c00c01ec5be523d42f37f6",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bbd3a54344087bf47dec55ebc2e82611/2df5e0fe9925bc31fa269b9018df8db1cb1370bb.jpg?tbpicau=2026-11-29-05_1e5ff5149ad53b5e912ca670fd646a1e",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=99eb64d730094b36db921be593cc7c00/9925bc315c6034a8f69922898d134954092376bb.jpg?tbpicau=2026-11-28-05_66aec0a8a0b9b9c9daced348c348d73c",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=aa4ed4cc4cd162d985ee601e21e4d8d1/9925bc315c6034a8f69922898d134954092376bb.jpg?tbpicau=2026-11-28-05_25dd26e3dd4acad7c04c2d916069d418",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=99eb64d730094b36db921be593cc7c00/9925bc315c6034a8f69922898d134954092376bb.jpg?tbpicau=2026-11-29-05_c39248d9aba2887b06a5f550a1c13bc4",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=aa4ed4cc4cd162d985ee601e21e4d8d1/9925bc315c6034a8f69922898d134954092376bb.jpg?tbpicau=2026-11-29-05_e5646e9194e708c4da1a9215d732432b",
           "width": null,
           "height": null
         }
@@ -1516,17 +1521,17 @@
         "吧友自制GTA6互动地图",
         "gta6吧"
       ],
-      "content_hash": "73d1072a411685ef490f22aa774454a12f357c72",
+      "content_hash": "9f49f1914ac0cc73c3f3cca7b992cd9b3243bc7b",
       "image_hash": "f2879158334fcbc3",
-      "image_id": "0c5d878c231d46b6",
+      "image_id": "66e47207d8f6166f",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 1106,
-      "rank_score": 107.7,
+      "rank_score": 102.2,
       "rank_basis": "recency+comments",
       "group_id": "2e410fe93f87",
       "group_size": 1,
@@ -1545,12 +1550,12 @@
       "title": "恶心的是，几个月后BLG就变成只有一个S冠了",
       "summary": "人们不会记得BLG这个S冠远超一个S冠的含金量，甚至到时候大飞还能用荣誉压左手一头",
       "post_url": "https://tieba.baidu.com/p/11221537501",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=180d70d6b61f3a295ac8d5c6a924bce3/a786c9177f3e67095d6494f77dc79f3df8dc5556.jpg?tbpicau=2026-11-28-05_de3ce1bf71ba0b7845fb18310b22dc6b",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9e1f1627f8096b6381195c523c08f679/a786c9177f3e67095d6494f77dc79f3df8dc5556.jpg?tbpicau=2026-11-28-05_04c51ff33c9984ce2161137f36da9aaa",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=180d70d6b61f3a295ac8d5c6a924bce3/a786c9177f3e67095d6494f77dc79f3df8dc5556.jpg?tbpicau=2026-11-29-05_7bea8f7c5d2c30f899d8e2adbe9299c5",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9e1f1627f8096b6381195c523c08f679/a786c9177f3e67095d6494f77dc79f3df8dc5556.jpg?tbpicau=2026-11-29-05_4e9e13877fc829852adee6515186e51b",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=180d70d6b61f3a295ac8d5c6a924bce3/a786c9177f3e67095d6494f77dc79f3df8dc5556.jpg?tbpicau=2026-11-28-05_de3ce1bf71ba0b7845fb18310b22dc6b",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9e1f1627f8096b6381195c523c08f679/a786c9177f3e67095d6494f77dc79f3df8dc5556.jpg?tbpicau=2026-11-28-05_04c51ff33c9984ce2161137f36da9aaa",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=180d70d6b61f3a295ac8d5c6a924bce3/a786c9177f3e67095d6494f77dc79f3df8dc5556.jpg?tbpicau=2026-11-29-05_7bea8f7c5d2c30f899d8e2adbe9299c5",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9e1f1627f8096b6381195c523c08f679/a786c9177f3e67095d6494f77dc79f3df8dc5556.jpg?tbpicau=2026-11-29-05_4e9e13877fc829852adee6515186e51b",
           "width": null,
           "height": null
         }
@@ -1565,17 +1570,17 @@
         "抗吧整活BLG受封大典",
         "抗压背锅吧"
       ],
-      "content_hash": "4f4559a06d673b577d8caadb5ada820d23e00df0",
+      "content_hash": "7e8ec34b7554883647c7683f8e3b9719bf9cf85e",
       "image_hash": "615c5af2c04c4ec0",
-      "image_id": "c1e406004b5f414e",
+      "image_id": "9262a547a3e4595d",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 579,
       "image_height": 326,
-      "rank_score": 106.1,
+      "rank_score": 100.6,
       "rank_basis": "recency+comments",
       "group_id": "b6e00f17ec53",
       "group_size": 1,
@@ -1624,7 +1629,7 @@
       "image_error": null,
       "image_width": null,
       "image_height": null,
-      "rank_score": 101.7,
+      "rank_score": 96.2,
       "rank_basis": "recency+comments",
       "group_id": "8aaf3af5a4c7",
       "group_size": 1,
@@ -1673,7 +1678,7 @@
       "image_error": null,
       "image_width": null,
       "image_height": null,
-      "rank_score": 100.4,
+      "rank_score": 95.0,
       "rank_basis": "recency+comments",
       "group_id": "2c9989a8e89c",
       "group_size": 1,
@@ -1693,12 +1698,12 @@
       "title": "某子军大王在盒上发出了他的评价",
       "summary": "估计他赶在tga之前出期视频又得爆，真是神了，到时候弹幕上100%全都是“还真是”他是懂如何赚流量的。感觉他的言论好极端啊，我倒是不介意他评价什么，就是有时候他把话说的太死了，没法理解，倒是看他喷我喜欢的游戏还挺有乐子的",
       "post_url": "https://tieba.baidu.com/p/11218417920",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=58625477d458d109c4e3a9bae158ccd0/c8fcc3cec3fdfc031773d4b1923f8794a4c226ab.jpg?tbpicau=2026-11-28-05_a68766c184bc52f27e9afa3dd49bf270",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=511c2a0d729b033b2c88fed825f547ee/c8fcc3cec3fdfc031773d4b1923f8794a4c226ab.jpg?tbpicau=2026-11-28-05_216324c42122da4e2816419b15ec5343",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=58625477d458d109c4e3a9bae158ccd0/c8fcc3cec3fdfc031773d4b1923f8794a4c226ab.jpg?tbpicau=2026-11-29-05_8c81cb0594c79fcd401c2d2b7d70701e",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=511c2a0d729b033b2c88fed825f547ee/c8fcc3cec3fdfc031773d4b1923f8794a4c226ab.jpg?tbpicau=2026-11-29-05_8c6d7270fccc43b0334e1f0dd6281be3",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=58625477d458d109c4e3a9bae158ccd0/c8fcc3cec3fdfc031773d4b1923f8794a4c226ab.jpg?tbpicau=2026-11-28-05_a68766c184bc52f27e9afa3dd49bf270",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=511c2a0d729b033b2c88fed825f547ee/c8fcc3cec3fdfc031773d4b1923f8794a4c226ab.jpg?tbpicau=2026-11-28-05_216324c42122da4e2816419b15ec5343",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=58625477d458d109c4e3a9bae158ccd0/c8fcc3cec3fdfc031773d4b1923f8794a4c226ab.jpg?tbpicau=2026-11-29-05_8c81cb0594c79fcd401c2d2b7d70701e",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=511c2a0d729b033b2c88fed825f547ee/c8fcc3cec3fdfc031773d4b1923f8794a4c226ab.jpg?tbpicau=2026-11-29-05_8c6d7270fccc43b0334e1f0dd6281be3",
           "width": null,
           "height": null
         }
@@ -1715,81 +1720,23 @@
         "GTA6首日狂卖37.9亿美元",
         "GTA6争议不断吧友逐条辟谣"
       ],
-      "content_hash": "15771feaf69d2a88cf07356859bdc6f4af7c4bcc",
+      "content_hash": "a4e259db813c8dc88b9ff0c6ead775a4bcdf76d6",
       "image_hash": "69356b77514d2d39",
-      "image_id": "b29fab3ad672176a",
+      "image_id": "9918f6735c0ec15e",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-26T16:12:33Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 2409,
-      "rank_score": 98.6,
+      "rank_score": 93.1,
       "rank_basis": "recency+comments",
       "group_id": "c3cf66d7f65e",
       "group_size": 1,
       "related": [],
       "source_stale": false,
       "trending": []
-    },
-    {
-      "id": "tieba:03616f3ea8e96d71",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11219549195",
-      "source_name": "百度贴吧",
-      "community": "斗破苍穹吧",
-      "title": "三年之约vs双帝之战",
-      "summary": "哪边质量更好",
-      "post_url": "https://tieba.baidu.com/p/11219549195",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=04ec3777631f95caa6f592bef9167fc5/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_ad6870f70a4b63cbc4f2c865f91a851b",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=00f5b7478c8065387beaa611a7e6d079/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_cc9133568ad01a02d7d7b5b119bdec62",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=04ec3777631f95caa6f592bef9167fc5/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_ad6870f70a4b63cbc4f2c865f91a851b",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=00f5b7478c8065387beaa611a7e6d079/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_cc9133568ad01a02d7d7b5b119bdec62",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e5d860308f3d70cf4cfaaa05c8ddd1ba/e6cd7b899e510fb395c2459e9f33c895d0430cdb.jpg?tbpicau=2026-11-28-05_5815d74d8ef611194954801d3162d8d8",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3ba2aa0d1f82b2b7a79f3bc60196bad2/e6cd7b899e510fb395c2459e9f33c895d0430cdb.jpg?tbpicau=2026-11-28-05_4403efb29cb2e94f289a345a76b8c6bc",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-22T23:06:03Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 150,
-      "tags": [
-        "贴吧",
-        "吧友吐槽双帝之战剧场版滥用AI",
-        "斗破苍穹吧"
-      ],
-      "content_hash": "b292c7383334308fd0ae188fee35d4e7d1623394",
-      "image_hash": "870f1733331f7149",
-      "image_id": "590f9746442184b0",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-25T16:38:59Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 870,
-      "rank_score": 98.2,
-      "rank_basis": "recency+comments+trend",
-      "group_id": "783bc3e5ddd6",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "image_fallback": null,
-      "trending": [
-        "vs"
-      ]
     },
     {
       "id": "tieba:2a8ac3ae04e97ac1",
@@ -1838,7 +1785,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1289,
-      "rank_score": 97.0,
+      "rank_score": 91.5,
       "rank_basis": "recency+comments",
       "group_id": "38df57e447cc",
       "group_size": 1,
@@ -1858,18 +1805,18 @@
       "title": "喵喵的结合提名TGA年度最佳独立游戏和最佳模拟/策略游戏",
       "summary": "",
       "post_url": "https://tieba.baidu.com/p/11206052554",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6c7d1e3f73fae6cd0cb4ab693fb20f9e/a9773912b31bb051034f4c20707adab44aede054.jpg?tbpicau=2026-11-28-05_82c54d529d4d7bb93b5bdebca01eee1f",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=540739e6f28f8c54e3d3c72d0a125cc8/a9773912b31bb051034f4c20707adab44aede054.jpg?tbpicau=2026-11-28-05_02037647da56f1f4772c238921e38dd4",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6c7d1e3f73fae6cd0cb4ab693fb20f9e/a9773912b31bb051034f4c20707adab44aede054.jpg?tbpicau=2026-11-29-05_448e684ca2d4cad16a6e027abd457270",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=540739e6f28f8c54e3d3c72d0a125cc8/a9773912b31bb051034f4c20707adab44aede054.jpg?tbpicau=2026-11-29-05_94532a5d92a12916bcf4e801d9f49a40",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6c7d1e3f73fae6cd0cb4ab693fb20f9e/a9773912b31bb051034f4c20707adab44aede054.jpg?tbpicau=2026-11-28-05_82c54d529d4d7bb93b5bdebca01eee1f",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=540739e6f28f8c54e3d3c72d0a125cc8/a9773912b31bb051034f4c20707adab44aede054.jpg?tbpicau=2026-11-28-05_02037647da56f1f4772c238921e38dd4",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=6c7d1e3f73fae6cd0cb4ab693fb20f9e/a9773912b31bb051034f4c20707adab44aede054.jpg?tbpicau=2026-11-29-05_448e684ca2d4cad16a6e027abd457270",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=540739e6f28f8c54e3d3c72d0a125cc8/a9773912b31bb051034f4c20707adab44aede054.jpg?tbpicau=2026-11-29-05_94532a5d92a12916bcf4e801d9f49a40",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2851ffc2a0cd7b89e96c3a8b3f254291/3912b31bb051f8197a4efc429cb44aed2e73e754.jpg?tbpicau=2026-11-28-05_7320a0841fb22e2a832b88489409976e",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0f887eb7ca5494ee87220d1b1dce91c3/3912b31bb051f8197a4efc429cb44aed2e73e754.jpg?tbpicau=2026-11-28-05_1b77f50f58b2feed15661eb0ba025f02",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2851ffc2a0cd7b89e96c3a8b3f254291/3912b31bb051f8197a4efc429cb44aed2e73e754.jpg?tbpicau=2026-11-29-05_53dc3fc1b87a1780ee46f323a4d3b956",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0f887eb7ca5494ee87220d1b1dce91c3/3912b31bb051f8197a4efc429cb44aed2e73e754.jpg?tbpicau=2026-11-29-05_9e3a635dbf68fe4cb53816a61dc0728e",
           "width": null,
           "height": null
         }
@@ -1884,17 +1831,17 @@
         "TGA2026",
         "喵喵的结合吧"
       ],
-      "content_hash": "2d4d46d8383cf39725d494e3765b7094e3019890",
+      "content_hash": "21045a4040cd40a700d6fc77ee9e80e153e654cb",
       "image_hash": "2424243d27272377",
-      "image_id": "04ac609031ab4082",
+      "image_id": "73ddc2827b73d47a",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-26T16:12:33Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 579,
       "image_height": 322,
-      "rank_score": 93.4,
+      "rank_score": 87.9,
       "rank_basis": "recency+comments",
       "group_id": "25a09db61cd0",
       "group_size": 1,
@@ -1913,18 +1860,18 @@
       "title": "就在刚刚，《绝地潜兵2》获TGA最佳社区支持奖提名",
       "summary": "无言投下",
       "post_url": "https://tieba.baidu.com/p/11205899739",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=bf4602d730094b36db921be593cd7c00/9925bc315c6034a8d03444898d134954082376e0.jpg?tbpicau=2026-11-28-05_81ad79bc80a5b41111e3c3a0eab12288",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=8ce3b2cc4cd162d985ee601e21e4d8d1/9925bc315c6034a8d03444898d134954082376e0.jpg?tbpicau=2026-11-28-05_2c1c3787450b3d02918c3fb85a892e91",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=bf4602d730094b36db921be593cd7c00/9925bc315c6034a8d03444898d134954082376e0.jpg?tbpicau=2026-11-29-05_96bbd7607e9852c242724c7f9f97d3b9",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=8ce3b2cc4cd162d985ee601e21e4d8d1/9925bc315c6034a8d03444898d134954082376e0.jpg?tbpicau=2026-11-29-05_aed10274e311741e7b4860f16e715b63",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=bf4602d730094b36db921be593cd7c00/9925bc315c6034a8d03444898d134954082376e0.jpg?tbpicau=2026-11-28-05_81ad79bc80a5b41111e3c3a0eab12288",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=8ce3b2cc4cd162d985ee601e21e4d8d1/9925bc315c6034a8d03444898d134954082376e0.jpg?tbpicau=2026-11-28-05_2c1c3787450b3d02918c3fb85a892e91",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=bf4602d730094b36db921be593cd7c00/9925bc315c6034a8d03444898d134954082376e0.jpg?tbpicau=2026-11-29-05_96bbd7607e9852c242724c7f9f97d3b9",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=8ce3b2cc4cd162d985ee601e21e4d8d1/9925bc315c6034a8d03444898d134954082376e0.jpg?tbpicau=2026-11-29-05_aed10274e311741e7b4860f16e715b63",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4404bf310d36acaf59e096f44cd88d03/bc315c6034a85edf025a022b0f540923dc5475e0.jpg?tbpicau=2026-11-28-05_c07b725bda81811f18f64534d04fee91",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=f41fc3e924d9f2d3201126ed99d7fb2e/bc315c6034a85edf025a022b0f540923dc5475e0.jpg?tbpicau=2026-11-28-05_5a89f70e7962a2173c1c8af956e550f8",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4404bf310d36acaf59e096f44cd88d03/bc315c6034a85edf025a022b0f540923dc5475e0.jpg?tbpicau=2026-11-29-05_8648858b90eed48923edc5aced3905e8",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=f41fc3e924d9f2d3201126ed99d7fb2e/bc315c6034a85edf025a022b0f540923dc5475e0.jpg?tbpicau=2026-11-29-05_2731c14c2516a162f36e32c78e82e009",
           "width": null,
           "height": null
         }
@@ -1939,17 +1886,17 @@
         "TGA2026",
         "helldivers吧"
       ],
-      "content_hash": "a9caba8331f4abfcf8636a072ec2bc63cba3bc05",
+      "content_hash": "a6aef343ed54dcdd4e907307b5b1fa2f8ea1923b",
       "image_hash": "252521352723277f",
-      "image_id": "c98cc455609a071e",
+      "image_id": "10914d812a1194fc",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
-      "image_checked_at": "2026-11-26T16:12:33Z",
+      "image_checked_at": "2026-11-27T01:24:01Z",
       "image_error": null,
       "image_width": 580,
       "image_height": 321,
-      "rank_score": 89.7,
+      "rank_score": 84.2,
       "rank_basis": "recency+comments",
       "group_id": "77ad3532de21",
       "group_size": 1,
@@ -1998,7 +1945,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1025,
-      "rank_score": 88.7,
+      "rank_score": 83.3,
       "rank_basis": "recency+comments",
       "group_id": "32d492a00768",
       "group_size": 1,
@@ -2047,7 +1994,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 935,
-      "rank_score": 86.7,
+      "rank_score": 81.2,
       "rank_basis": "recency+comments",
       "group_id": "c517416f872a",
       "group_size": 1,
@@ -2109,7 +2056,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 243,
-      "rank_score": 86.7,
+      "rank_score": 81.2,
       "rank_basis": "recency+comments",
       "group_id": "6f34363000f0",
       "group_size": 1,
@@ -2170,9 +2117,65 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 86.5,
+      "rank_score": 81.0,
       "rank_basis": "recency+comments",
       "group_id": "b1f78e60099a",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "image_fallback": null,
+      "trending": []
+    },
+    {
+      "id": "tieba:03616f3ea8e96d71",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11219549195",
+      "source_name": "百度贴吧",
+      "community": "斗破苍穹吧",
+      "title": "三年之约vs双帝之战",
+      "summary": "哪边质量更好",
+      "post_url": "https://tieba.baidu.com/p/11219549195",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=04ec3777631f95caa6f592bef9167fc5/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_ad6870f70a4b63cbc4f2c865f91a851b",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=00f5b7478c8065387beaa611a7e6d079/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_cc9133568ad01a02d7d7b5b119bdec62",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=04ec3777631f95caa6f592bef9167fc5/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_ad6870f70a4b63cbc4f2c865f91a851b",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=00f5b7478c8065387beaa611a7e6d079/5266d0160924ab1804cdd33e73fae6cd7a890bdb.jpg?tbpicau=2026-11-28-05_cc9133568ad01a02d7d7b5b119bdec62",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=e5d860308f3d70cf4cfaaa05c8ddd1ba/e6cd7b899e510fb395c2459e9f33c895d0430cdb.jpg?tbpicau=2026-11-28-05_5815d74d8ef611194954801d3162d8d8",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=3ba2aa0d1f82b2b7a79f3bc60196bad2/e6cd7b899e510fb395c2459e9f33c895d0430cdb.jpg?tbpicau=2026-11-28-05_4403efb29cb2e94f289a345a76b8c6bc",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-22T23:06:03Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 150,
+      "tags": [
+        "贴吧",
+        "吧友吐槽双帝之战剧场版滥用AI",
+        "斗破苍穹吧"
+      ],
+      "content_hash": "b292c7383334308fd0ae188fee35d4e7d1623394",
+      "image_hash": "870f1733331f7149",
+      "image_id": "590f9746442184b0",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-25T16:38:59Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 870,
+      "rank_score": 80.7,
+      "rank_basis": "recency+comments",
+      "group_id": "783bc3e5ddd6",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -2232,7 +2235,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 243,
-      "rank_score": 82.6,
+      "rank_score": 77.1,
       "rank_basis": "recency+comments",
       "group_id": "fc4cf591833f",
       "group_size": 1,
@@ -2287,7 +2290,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 82.0,
+      "rank_score": 76.6,
       "rank_basis": "recency+comments",
       "group_id": "0e5ed58ca2e2",
       "group_size": 1,
@@ -2343,7 +2346,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 765,
-      "rank_score": 81.3,
+      "rank_score": 75.8,
       "rank_basis": "recency+comments",
       "group_id": "97b430bde721",
       "group_size": 1,
@@ -2404,7 +2407,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 237,
-      "rank_score": 80.1,
+      "rank_score": 74.6,
       "rank_basis": "recency+comments",
       "group_id": "f02301e27b27",
       "group_size": 1,
@@ -2466,7 +2469,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1257,
-      "rank_score": 79.3,
+      "rank_score": 73.9,
       "rank_basis": "recency+comments",
       "group_id": "5bb09ff6c812",
       "group_size": 1,
@@ -2516,7 +2519,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 911,
-      "rank_score": 79.3,
+      "rank_score": 73.9,
       "rank_basis": "recency+comments",
       "group_id": "e626a963e9ff",
       "group_size": 1,
@@ -2578,7 +2581,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 580,
-      "rank_score": 79.2,
+      "rank_score": 73.8,
       "rank_basis": "recency+comments",
       "group_id": "05d883f8fafb",
       "group_size": 1,
@@ -2634,7 +2637,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1006,
-      "rank_score": 76.6,
+      "rank_score": 71.2,
       "rank_basis": "recency+comments",
       "group_id": "0e619e678e7c",
       "group_size": 1,
@@ -2683,7 +2686,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1289,
-      "rank_score": 76.3,
+      "rank_score": 70.8,
       "rank_basis": "recency+comments",
       "group_id": "6e14e7fd342f",
       "group_size": 1,
@@ -2744,7 +2747,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 725,
-      "rank_score": 72.3,
+      "rank_score": 66.8,
       "rank_basis": "recency+comments",
       "group_id": "172846165167",
       "group_size": 1,
@@ -2793,7 +2796,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 712,
-      "rank_score": 67.8,
+      "rank_score": 62.4,
       "rank_basis": "recency+comments",
       "group_id": "72c34c3f3011",
       "group_size": 1,
@@ -2842,7 +2845,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 387,
-      "rank_score": 67.0,
+      "rank_score": 61.5,
       "rank_basis": "recency+comments",
       "group_id": "dc1aa4829ae4",
       "group_size": 1,
@@ -2903,7 +2906,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 911,
-      "rank_score": 67.0,
+      "rank_score": 61.5,
       "rank_basis": "recency+comments",
       "group_id": "4fd729d1e40b",
       "group_size": 1,
@@ -2964,7 +2967,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 2379,
-      "rank_score": 67.0,
+      "rank_score": 61.5,
       "rank_basis": "recency+comments",
       "group_id": "47e4a7ff53d9",
       "group_size": 1,
@@ -3025,7 +3028,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 725,
-      "rank_score": 67.0,
+      "rank_score": 61.5,
       "rank_basis": "recency+comments",
       "group_id": "8cb3b2d49f73",
       "group_size": 1,
@@ -3080,7 +3083,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 420,
-      "rank_score": 67.0,
+      "rank_score": 61.5,
       "rank_basis": "recency+comments",
       "group_id": "988fb3a27b9f",
       "group_size": 1,
@@ -3141,7 +3144,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 786,
-      "rank_score": 66.6,
+      "rank_score": 61.1,
       "rank_basis": "recency+comments",
       "group_id": "582710d9416f",
       "group_size": 1,
@@ -3190,7 +3193,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 66.0,
+      "rank_score": 60.5,
       "rank_basis": "recency+comments",
       "group_id": "94a5e2c5aea4",
       "group_size": 1,
@@ -3239,7 +3242,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 725,
-      "rank_score": 64.0,
+      "rank_score": 58.5,
       "rank_basis": "recency+comments",
       "group_id": "286c7133fb3f",
       "group_size": 1,
@@ -3300,7 +3303,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 60.6,
+      "rank_score": 55.1,
       "rank_basis": "recency+comments",
       "group_id": "1982ff3bb7f5",
       "group_size": 1,
@@ -3349,7 +3352,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 644,
-      "rank_score": 60.3,
+      "rank_score": 54.9,
       "rank_basis": "recency+comments",
       "group_id": "fe7ff568e230",
       "group_size": 1,
@@ -3410,7 +3413,7 @@
       "image_error": null,
       "image_width": 579,
       "image_height": 397,
-      "rank_score": 59.5,
+      "rank_score": 54.1,
       "rank_basis": "recency+comments",
       "group_id": "32e76fbce321",
       "group_size": 1,
@@ -3471,7 +3474,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 58.4,
+      "rank_score": 52.9,
       "rank_basis": "recency+comments",
       "group_id": "ed3d2f75e2ba",
       "group_size": 1,
@@ -3532,7 +3535,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 58.4,
+      "rank_score": 52.9,
       "rank_basis": "recency+comments",
       "group_id": "f5b881d7289e",
       "group_size": 1,
@@ -3593,7 +3596,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 435,
-      "rank_score": 58.4,
+      "rank_score": 52.9,
       "rank_basis": "recency+comments",
       "group_id": "8e9a20c2e854",
       "group_size": 1,
@@ -3643,7 +3646,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 596,
-      "rank_score": 58.1,
+      "rank_score": 52.6,
       "rank_basis": "recency+comments",
       "group_id": "00e2f1536a1e",
       "group_size": 1,
@@ -3692,7 +3695,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1276,
-      "rank_score": 57.1,
+      "rank_score": 51.6,
       "rank_basis": "recency+comments",
       "group_id": "684ae1af3e84",
       "group_size": 1,
@@ -3741,9 +3744,58 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 1025,
-      "rank_score": 56.8,
+      "rank_score": 51.4,
       "rank_basis": "recency+comments",
       "group_id": "3f2c58b82623",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:58794b65bd2001d4",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11197891062",
+      "source_name": "百度贴吧",
+      "community": "gta6吧",
+      "title": "夜手搓了一个受够了弹窗广告站，连夜手搓一个GTA6互动地图",
+      "summary": "吧友们好，眼看11月19号《GTA 6》就要正式解锁了！🌴🚗 每次玩开放世界找全收集和彩蛋，最烦那些满屏弹窗广告、强制登录还要下App的攻略网站，躺在沙发上用手机查点位卡得要死。 作为一个强迫症程序员，这周末干脆自己动手用 React 撸了一个【极速纯净版 · 雷奥奈达（Leonida）互动地图 + 手柄秘籍查询器】，纯用爱发电分享给各位开荒的兄弟： 1. 真·零广告、免登录：浏览器打开秒加载，手机和电脑端都能丝滑缩放。2. 底图与区域：目前采用外",
+      "post_url": "https://tieba.baidu.com/p/11197891062",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4247203a1cafa40f3cc6ced59b65038c/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-29-05_d668594d5c6f0ff5506f43fb240d4375",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bc06692b0f540923aa69617ca263a034/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-29-05_96bc432529095e974a18f27eac872650",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4247203a1cafa40f3cc6ced59b65038c/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-29-05_d668594d5c6f0ff5506f43fb240d4375",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bc06692b0f540923aa69617ca263a034/87d6277f9e2f0708198fbd08af24b899a901f234.jpg?tbpicau=2026-11-29-05_96bc432529095e974a18f27eac872650",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T14:44:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 260,
+      "tags": [
+        "贴吧",
+        "吧友自制GTA6互动地图",
+        "gta6吧"
+      ],
+      "content_hash": "9afda3f60bdd2857eebdee3fc6f5f1cc2f4b024e",
+      "image_hash": "8d0f9f9e9d0d1f0d",
+      "image_id": "da4ba2c631fe48fc",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-27T01:24:01Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 363,
+      "rank_score": 51.4,
+      "rank_basis": "recency+comments",
+      "group_id": "141110556c9f",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -3790,58 +3842,9 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 268,
-      "rank_score": 56.7,
+      "rank_score": 51.2,
       "rank_basis": "recency+comments",
       "group_id": "bcdb3569e9a5",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:58794b65bd2001d4",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11197891062",
-      "source_name": "百度贴吧",
-      "community": "gta6吧",
-      "title": "夜手搓了一个受够了弹窗广告站，连夜手搓一个GTA6互动地图",
-      "summary": "吧友们好，眼看11月19号《GTA 6》就要正式解锁了！🌴🚗 每次玩开放世界找全收集和彩蛋，最烦那些满屏弹窗广告、强制登录还要下App的攻略网站，躺在沙发上用手机查点位卡得要死。 作为一个强迫症程序员，这周末干脆自己动手用 React 撸了一个【极速纯净版 · 雷奥奈达（Leonida）互动地图 + 手柄秘籍查询器】，纯用爱发电分享给各位开荒的兄弟： 1. 真·零广告、免登录：浏览器打开秒加载，手机和电脑端都能丝滑缩放。2. 底图与区域：目前采用外",
-      "post_url": "https://tieba.baidu.com/p/11197891062",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4247203a1cafa40f3cc6ced59b65038c/d84011e93901213f89b9d9d412e736d12e2e9584.jpg?tbpicau=2026-11-28-05_2aee5d733600089f0184bef2b375f410",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bc06692b0f540923aa69617ca263a034/d84011e93901213f89b9d9d412e736d12e2e9584.jpg?tbpicau=2026-11-28-05_39f011e370828a6c4c2b9677ee734d85",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=4247203a1cafa40f3cc6ced59b65038c/d84011e93901213f89b9d9d412e736d12e2e9584.jpg?tbpicau=2026-11-28-05_2aee5d733600089f0184bef2b375f410",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=bc06692b0f540923aa69617ca263a034/d84011e93901213f89b9d9d412e736d12e2e9584.jpg?tbpicau=2026-11-28-05_39f011e370828a6c4c2b9677ee734d85",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T14:44:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 251,
-      "tags": [
-        "贴吧",
-        "吧友自制GTA6互动地图",
-        "gta6吧"
-      ],
-      "content_hash": "1a7ed042168a8b1ff810bae5d3ab0513c0eb1d34",
-      "image_hash": "8d0f9f9e9d0d1f0d",
-      "image_id": "8943d4b4b77d0409",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-26T16:12:33Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 363,
-      "rank_score": 56.6,
-      "rank_basis": "recency+comments",
-      "group_id": "141110556c9f",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -3894,7 +3897,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 267,
-      "rank_score": 55.7,
+      "rank_score": 50.2,
       "rank_basis": "recency+comments",
       "group_id": "9564a2d7272e",
       "group_size": 1,
@@ -3943,7 +3946,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 53.7,
+      "rank_score": 48.2,
       "rank_basis": "recency+comments",
       "group_id": "dc820d281857",
       "group_size": 1,
@@ -3993,70 +3996,9 @@
       "image_error": null,
       "image_width": 579,
       "image_height": 262,
-      "rank_score": 52.2,
+      "rank_score": 46.7,
       "rank_basis": "recency+comments",
       "group_id": "c5748de8a9c3",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:328420d33939a8aa",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11195831625",
-      "source_name": "百度贴吧",
-      "community": "gta6吧",
-      "title": "GTA6还有五天就能玩了 各位打机环境准备的怎么样了？",
-      "summary": "我先晒一下我自己的备战GTA6打机小屋🛖",
-      "post_url": "https://tieba.baidu.com/p/11195831625",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=ba1e4c3f73fae6cd0cb4ab693fb30f9e/a9773912b31bb051d52c1e20707adab44aede0aa.jpg?tbpicau=2026-11-25-05_776fa54cf38e44939d229b63690abe1b",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=82646be6f28f8c54e3d3c72d0a125cc8/a9773912b31bb051d52c1e20707adab44aede0aa.jpg?tbpicau=2026-11-25-05_842e724bc3535073be953e0b5d787a02",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=ba1e4c3f73fae6cd0cb4ab693fb30f9e/a9773912b31bb051d52c1e20707adab44aede0aa.jpg?tbpicau=2026-11-25-05_776fa54cf38e44939d229b63690abe1b",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=82646be6f28f8c54e3d3c72d0a125cc8/a9773912b31bb051d52c1e20707adab44aede0aa.jpg?tbpicau=2026-11-25-05_842e724bc3535073be953e0b5d787a02",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3b11da9f9f33c895a67e9873e1137397/dab44aed2e738bd487291f39e78b87d6277ff9aa.jpg?tbpicau=2026-11-25-05_232be1c1287a39d1c3462cc5a0771435",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=19c078c6df25bc312b5d039a6ee4fc8c/dab44aed2e738bd487291f39e78b87d6277ff9aa.jpg?tbpicau=2026-11-25-05_4222800e13c05b37f163c7eca23ea30b",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=1eee2ec51466d0167e199e20a72bd498/1e178a82b9014a90d136ebb5ef773912b31beeaa.jpg?tbpicau=2026-11-25-05_d5d307ef9051ecb49d2e5f99c54499f1",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=b7daeefee1efce1bea2bcac89f6a82e3/1e178a82b9014a90d136ebb5ef773912b31beeaa.jpg?tbpicau=2026-11-25-05_c459ab59e0da97d0d86ccfa054350da7",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T14:44:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 112,
-      "tags": [
-        "贴吧",
-        "GTA玩家整活晒打机环境",
-        "gta6吧"
-      ],
-      "content_hash": "32a6b899e47900369d82574727d4f9d09e03ab2a",
-      "image_hash": "613970e0fe0c06c7",
-      "image_id": "f1a57990e436d20c",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-22T23:06:03Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 497,
-      "rank_score": 50.4,
-      "rank_basis": "recency+comments",
-      "group_id": "42b1bbdc43fa",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -4103,7 +4045,7 @@
       "image_error": null,
       "image_width": 580,
       "image_height": 326,
-      "rank_score": 49.7,
+      "rank_score": 45.0,
       "rank_basis": "recency+comments",
       "group_id": "5cd076672fa6",
       "group_size": 1,
@@ -4164,180 +4106,9 @@
       "image_error": null,
       "image_width": null,
       "image_height": null,
-      "rank_score": 49.7,
+      "rank_score": 45.0,
       "rank_basis": "recency+comments",
       "group_id": "74a4157f5e21",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:40441a48da0d660d",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "10973254139",
-      "source_name": "百度贴吧",
-      "community": "图拉丁吧",
-      "title": "评价一下我的打机环境，再晒晒大家的",
-      "summary": "",
-      "post_url": "https://tieba.baidu.com/p/10973254139",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2f152ebbca5494ee87220f111df4e0e1/95cad1c8a786c917a3f5fd3d8f3d70cf3ac757c4.jpg?tbpicau=2026-11-25-05_4c3c250fbb6ec23813d1f87ef74c4f7a",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0b01e1ff4c46f21fc9345c51c61f1a5d/95cad1c8a786c917a3f5fd3d8f3d70cf3ac757c4.jpg?tbpicau=2026-11-25-05_305675fc50552bbc9895a477c41dd7c8",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2f152ebbca5494ee87220f111df4e0e1/95cad1c8a786c917a3f5fd3d8f3d70cf3ac757c4.jpg?tbpicau=2026-11-25-05_4c3c250fbb6ec23813d1f87ef74c4f7a",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0b01e1ff4c46f21fc9345c51c61f1a5d/95cad1c8a786c917a3f5fd3d8f3d70cf3ac757c4.jpg?tbpicau=2026-11-25-05_305675fc50552bbc9895a477c41dd7c8",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=7dee26051a6034a829e2b889fb1249d9/3bc79f3df8dcd1005e6a5725348b4710b8122fc4.jpg?tbpicau=2026-11-25-05_da1d94b6dbd3286bf6b549ff57518f7e",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e8f81d70adf81a4c2632eecbe7111164/3bc79f3df8dcd1005e6a5725348b4710b8122fc4.jpg?tbpicau=2026-11-25-05_1f124f3f78dc4bb3d3290f21ad7c36ee",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=44f52b0175fa828bd1239debcd1e41cd/0ef41bd5ad6eddc4a9111bff7fdbb6fd536633c4.jpg?tbpicau=2026-11-25-05_348b20f4f0df291d54af31ec99073182",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=c24c7364732ac65c67056471cbc9c32c/0ef41bd5ad6eddc4a9111bff7fdbb6fd536633c4.jpg?tbpicau=2026-11-25-05_b019a4c648e6a33f469ed0cc9dd1d1cb",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T14:44:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 86,
-      "tags": [
-        "贴吧",
-        "GTA玩家整活晒打机环境",
-        "图拉丁吧"
-      ],
-      "content_hash": "0e437cc90e3a7d10b85a3d1a1af32fb4f5187d25",
-      "image_hash": "477b9b8bda8e870b",
-      "image_id": "e280e00bdc1895e0",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-22T23:06:03Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 435,
-      "rank_score": 48.3,
-      "rank_basis": "recency+comments",
-      "group_id": "3b4658eadaa2",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:2a63bfc11fe42bd1",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11210445940",
-      "source_name": "百度贴吧",
-      "community": "bilibili吧",
-      "title": "gta6露西亚这女主是真牛魔……",
-      "summary": "开局因为自己冲动弄丢孩子，后面假释回来还不断惹事。也就杰森这锁妖塔……能镇住这活宝啊。",
-      "post_url": "https://tieba.baidu.com/p/11210445940",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=77dc8b76d458d109c4e3a9bae159ccd0/c8fcc3cec3fdfc0338cd0bb0923f8794a4c22605.jpg?tbpicau=2026-11-25-05_86828f4373cb7c5e47df464ec112bdfa",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7ea2f50c729b033b2c88fed825f547ee/c8fcc3cec3fdfc0338cd0bb0923f8794a4c22605.jpg?tbpicau=2026-11-25-05_02de0ef0e57a268dc3385ddd4e855a9f",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=77dc8b76d458d109c4e3a9bae159ccd0/c8fcc3cec3fdfc0338cd0bb0923f8794a4c22605.jpg?tbpicau=2026-11-25-05_86828f4373cb7c5e47df464ec112bdfa",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7ea2f50c729b033b2c88fed825f547ee/c8fcc3cec3fdfc0338cd0bb0923f8794a4c22605.jpg?tbpicau=2026-11-25-05_02de0ef0e57a268dc3385ddd4e855a9f",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T00:09:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 206,
-      "tags": [
-        "贴吧",
-        "GTA6男主被吐槽太窝囊",
-        "bilibili吧"
-      ],
-      "content_hash": "6e0e899c4edab23c846d5a91555a955d3d0151fd",
-      "image_hash": "d3cae4e4d1f4f4d8",
-      "image_id": "61504e6691eccad1",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-22T23:06:03Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 387,
-      "rank_score": 46.4,
-      "rank_basis": "recency+comments",
-      "group_id": "540d5e0be884",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:6f9dc5c84c09e65b",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11210734621",
-      "source_name": "百度贴吧",
-      "community": "gta6吧",
-      "title": "发现一些有意思的彩蛋",
-      "summary": "崔佛也来雷奥奈达了",
-      "post_url": "https://tieba.baidu.com/p/11210734621",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=284f152b0f540923aa696376a259d1dc/cd11728b4710b9126d021df685fdfc03934522f3.jpg?tbpicau=2026-11-25-05_6f14588d594ca6ee06fe9ed650a8d156",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7c0709122659252da3171f0604a07206/cd11728b4710b9126d021df685fdfc03934522f3.jpg?tbpicau=2026-11-25-05_733d3f1b4df8696724e839243c4a4b35",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=284f152b0f540923aa696376a259d1dc/cd11728b4710b9126d021df685fdfc03934522f3.jpg?tbpicau=2026-11-25-05_6f14588d594ca6ee06fe9ed650a8d156",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7c0709122659252da3171f0604a07206/cd11728b4710b9126d021df685fdfc03934522f3.jpg?tbpicau=2026-11-25-05_733d3f1b4df8696724e839243c4a4b35",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=975680e7cbb1cb133e693c1bed5556da/d100baa1cd11728be4ee672a8efcc3cec2fd2cf3.jpg?tbpicau=2026-11-25-05_853eef2b5d0de02a31cbd57c0eb0e3b0",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=b9b28f379ff9d72a1764121fe4115909/d100baa1cd11728be4ee672a8efcc3cec2fd2cf3.jpg?tbpicau=2026-11-25-05_59a0f313ac0a22e59330e26916e8d5c9",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=73c2a226941b0ef46ce89856edc451a1/afc379310a55b3193cc4687d05a98226cffc17fd.jpg?tbpicau=2026-11-25-05_e9a21a073f9da770d8247646ba0c8ab8",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e1d1f016ff389b5038ffe250b50e94e0/afc379310a55b3193cc4687d05a98226cffc17fd.jpg?tbpicau=2026-11-25-05_24b81e07a4c230b20bf30cb2b0854d33",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T14:44:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 64,
-      "tags": [
-        "贴吧",
-        "GTA玩家整活晒打机环境",
-        "gta6吧"
-      ],
-      "content_hash": "e06c2fe852c367d9c4d0fdcff626b7b578845d4c",
-      "image_hash": "70ee30534808c8d0",
-      "image_id": "938f8f31e17ee95b",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-22T23:06:03Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 346,
-      "rank_score": 46.0,
-      "rank_basis": "recency+comments",
-      "group_id": "14d28eebee5d",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -5183,61 +4954,122 @@
       "trending": []
     },
     {
-      "id": "tieba:148ac0c085f540cb",
+      "id": "tieba:328420d33939a8aa",
       "content_type": "image",
       "authenticity": "real",
       "source": "tieba",
-      "source_id": "11209672197",
+      "source_id": "11195831625",
       "source_name": "百度贴吧",
       "community": "gta6吧",
-      "title": "杰森为什么这么受这美女欢迎？",
-      "summary": "不得不说杰哥实在太纯爱了，这都忍住了",
-      "post_url": "https://tieba.baidu.com/p/11209672197",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=7633eea3453b5bb5bed720f606d3d523/8d1001e93901213fe609a1d412e736d12f2e9584.jpg?tbpicau=2026-11-25-05_eec28386edf783f78e10620763a15b39",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e70690a8b003738dde4a0e208320c16c/8d1001e93901213fe609a1d412e736d12f2e9584.jpg?tbpicau=2026-11-25-05_5e9760c983044abe984af8ae0e50a282",
+      "title": "GTA6还有五天就能玩了 各位打机环境准备的怎么样了？",
+      "summary": "我先晒一下我自己的备战GTA6打机小屋🛖",
+      "post_url": "https://tieba.baidu.com/p/11195831625",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=ba1e4c3f73fae6cd0cb4ab693fb30f9e/a9773912b31bb051d52c1e20707adab44aede0aa.jpg?tbpicau=2026-11-25-05_776fa54cf38e44939d229b63690abe1b",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=82646be6f28f8c54e3d3c72d0a125cc8/a9773912b31bb051d52c1e20707adab44aede0aa.jpg?tbpicau=2026-11-25-05_842e724bc3535073be953e0b5d787a02",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=7633eea3453b5bb5bed720f606d3d523/8d1001e93901213fe609a1d412e736d12f2e9584.jpg?tbpicau=2026-11-25-05_eec28386edf783f78e10620763a15b39",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e70690a8b003738dde4a0e208320c16c/8d1001e93901213fe609a1d412e736d12f2e9584.jpg?tbpicau=2026-11-25-05_5e9760c983044abe984af8ae0e50a282",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=ba1e4c3f73fae6cd0cb4ab693fb30f9e/a9773912b31bb051d52c1e20707adab44aede0aa.jpg?tbpicau=2026-11-25-05_776fa54cf38e44939d229b63690abe1b",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=82646be6f28f8c54e3d3c72d0a125cc8/a9773912b31bb051d52c1e20707adab44aede0aa.jpg?tbpicau=2026-11-25-05_842e724bc3535073be953e0b5d787a02",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=633c818d8fea15ce41eee00186003a25/3901213fb80e7bec34e0ece9692eb9389b506b84.jpg?tbpicau=2026-11-25-05_f5ffed69915ebf0a5b70489835c185f7",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9604a9b5ef773912c4268763c822f725/3901213fb80e7bec34e0ece9692eb9389b506b84.jpg?tbpicau=2026-11-25-05_6d7627a6b78e75d54d46f7a60238c255",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3b11da9f9f33c895a67e9873e1137397/dab44aed2e738bd487291f39e78b87d6277ff9aa.jpg?tbpicau=2026-11-25-05_232be1c1287a39d1c3462cc5a0771435",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=19c078c6df25bc312b5d039a6ee4fc8c/dab44aed2e738bd487291f39e78b87d6277ff9aa.jpg?tbpicau=2026-11-25-05_4222800e13c05b37f163c7eca23ea30b",
           "width": null,
           "height": null
         },
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=9bcda1f34c46f21fc9345e5bc6246b31/65380cd7912397dded43770c1f82b2b7d0a28784.jpg?tbpicau=2026-11-25-05_2da94d6541fd13cc3d04511da3097e4e",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e80891c3bdedab6474724fc2c70ddefe/65380cd7912397dded43770c1f82b2b7d0a28784.jpg?tbpicau=2026-11-25-05_8f65dd9f7b8a3f548c4095a59a46b8c4",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=1eee2ec51466d0167e199e20a72bd498/1e178a82b9014a90d136ebb5ef773912b31beeaa.jpg?tbpicau=2026-11-25-05_d5d307ef9051ecb49d2e5f99c54499f1",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=b7daeefee1efce1bea2bcac89f6a82e3/1e178a82b9014a90d136ebb5ef773912b31beeaa.jpg?tbpicau=2026-11-25-05_c459ab59e0da97d0d86ccfa054350da7",
           "width": null,
           "height": null
         }
       ],
       "created_at": null,
-      "collected_at": "2026-11-20T00:09:51Z",
+      "collected_at": "2026-11-20T14:44:51Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 122,
+      "comment_count": 112,
       "tags": [
         "贴吧",
-        "GTA6男主被吐槽太窝囊",
+        "GTA玩家整活晒打机环境",
         "gta6吧"
       ],
-      "content_hash": "787cff5ed89d696de242be86dc85b4dc3f5aa58e",
-      "image_hash": "818783c2e6c6e6e1",
-      "image_id": "67a01959da436321",
+      "content_hash": "32a6b899e47900369d82574727d4f9d09e03ab2a",
+      "image_hash": "613970e0fe0c06c7",
+      "image_id": "f1a57990e436d20c",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
       "image_checked_at": "2026-11-22T23:06:03Z",
       "image_error": null,
       "image_width": 580,
-      "image_height": 326,
-      "rank_score": 42.4,
+      "image_height": 497,
+      "rank_score": 44.9,
       "rank_basis": "recency+comments",
-      "group_id": "de924c94dcee",
+      "group_id": "42b1bbdc43fa",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:40441a48da0d660d",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "10973254139",
+      "source_name": "百度贴吧",
+      "community": "图拉丁吧",
+      "title": "评价一下我的打机环境，再晒晒大家的",
+      "summary": "",
+      "post_url": "https://tieba.baidu.com/p/10973254139",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2f152ebbca5494ee87220f111df4e0e1/95cad1c8a786c917a3f5fd3d8f3d70cf3ac757c4.jpg?tbpicau=2026-11-25-05_4c3c250fbb6ec23813d1f87ef74c4f7a",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0b01e1ff4c46f21fc9345c51c61f1a5d/95cad1c8a786c917a3f5fd3d8f3d70cf3ac757c4.jpg?tbpicau=2026-11-25-05_305675fc50552bbc9895a477c41dd7c8",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2f152ebbca5494ee87220f111df4e0e1/95cad1c8a786c917a3f5fd3d8f3d70cf3ac757c4.jpg?tbpicau=2026-11-25-05_4c3c250fbb6ec23813d1f87ef74c4f7a",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=0b01e1ff4c46f21fc9345c51c61f1a5d/95cad1c8a786c917a3f5fd3d8f3d70cf3ac757c4.jpg?tbpicau=2026-11-25-05_305675fc50552bbc9895a477c41dd7c8",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=7dee26051a6034a829e2b889fb1249d9/3bc79f3df8dcd1005e6a5725348b4710b8122fc4.jpg?tbpicau=2026-11-25-05_da1d94b6dbd3286bf6b549ff57518f7e",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e8f81d70adf81a4c2632eecbe7111164/3bc79f3df8dcd1005e6a5725348b4710b8122fc4.jpg?tbpicau=2026-11-25-05_1f124f3f78dc4bb3d3290f21ad7c36ee",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=44f52b0175fa828bd1239debcd1e41cd/0ef41bd5ad6eddc4a9111bff7fdbb6fd536633c4.jpg?tbpicau=2026-11-25-05_348b20f4f0df291d54af31ec99073182",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=c24c7364732ac65c67056471cbc9c32c/0ef41bd5ad6eddc4a9111bff7fdbb6fd536633c4.jpg?tbpicau=2026-11-25-05_b019a4c648e6a33f469ed0cc9dd1d1cb",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T14:44:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 86,
+      "tags": [
+        "贴吧",
+        "GTA玩家整活晒打机环境",
+        "图拉丁吧"
+      ],
+      "content_hash": "0e437cc90e3a7d10b85a3d1a1af32fb4f5187d25",
+      "image_hash": "477b9b8bda8e870b",
+      "image_id": "e280e00bdc1895e0",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-22T23:06:03Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 435,
+      "rank_score": 42.9,
+      "rank_basis": "recency+comments",
+      "group_id": "3b4658eadaa2",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -5440,6 +5272,55 @@
       "trending": []
     },
     {
+      "id": "tieba:2a63bfc11fe42bd1",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11210445940",
+      "source_name": "百度贴吧",
+      "community": "bilibili吧",
+      "title": "gta6露西亚这女主是真牛魔……",
+      "summary": "开局因为自己冲动弄丢孩子，后面假释回来还不断惹事。也就杰森这锁妖塔……能镇住这活宝啊。",
+      "post_url": "https://tieba.baidu.com/p/11210445940",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=77dc8b76d458d109c4e3a9bae159ccd0/c8fcc3cec3fdfc0338cd0bb0923f8794a4c22605.jpg?tbpicau=2026-11-25-05_86828f4373cb7c5e47df464ec112bdfa",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7ea2f50c729b033b2c88fed825f547ee/c8fcc3cec3fdfc0338cd0bb0923f8794a4c22605.jpg?tbpicau=2026-11-25-05_02de0ef0e57a268dc3385ddd4e855a9f",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=77dc8b76d458d109c4e3a9bae159ccd0/c8fcc3cec3fdfc0338cd0bb0923f8794a4c22605.jpg?tbpicau=2026-11-25-05_86828f4373cb7c5e47df464ec112bdfa",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7ea2f50c729b033b2c88fed825f547ee/c8fcc3cec3fdfc0338cd0bb0923f8794a4c22605.jpg?tbpicau=2026-11-25-05_02de0ef0e57a268dc3385ddd4e855a9f",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T00:09:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 206,
+      "tags": [
+        "贴吧",
+        "GTA6男主被吐槽太窝囊",
+        "bilibili吧"
+      ],
+      "content_hash": "6e0e899c4edab23c846d5a91555a955d3d0151fd",
+      "image_hash": "d3cae4e4d1f4f4d8",
+      "image_id": "61504e6691eccad1",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-22T23:06:03Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 387,
+      "rank_score": 41.7,
+      "rank_basis": "recency+comments",
+      "group_id": "540d5e0be884",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
       "id": "tieba:a437bfebe798de35",
       "content_type": "image",
       "authenticity": "real",
@@ -5495,6 +5376,67 @@
       "trending": []
     },
     {
+      "id": "tieba:6f9dc5c84c09e65b",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11210734621",
+      "source_name": "百度贴吧",
+      "community": "gta6吧",
+      "title": "发现一些有意思的彩蛋",
+      "summary": "崔佛也来雷奥奈达了",
+      "post_url": "https://tieba.baidu.com/p/11210734621",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=284f152b0f540923aa696376a259d1dc/cd11728b4710b9126d021df685fdfc03934522f3.jpg?tbpicau=2026-11-25-05_6f14588d594ca6ee06fe9ed650a8d156",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7c0709122659252da3171f0604a07206/cd11728b4710b9126d021df685fdfc03934522f3.jpg?tbpicau=2026-11-25-05_733d3f1b4df8696724e839243c4a4b35",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=284f152b0f540923aa696376a259d1dc/cd11728b4710b9126d021df685fdfc03934522f3.jpg?tbpicau=2026-11-25-05_6f14588d594ca6ee06fe9ed650a8d156",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=7c0709122659252da3171f0604a07206/cd11728b4710b9126d021df685fdfc03934522f3.jpg?tbpicau=2026-11-25-05_733d3f1b4df8696724e839243c4a4b35",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=975680e7cbb1cb133e693c1bed5556da/d100baa1cd11728be4ee672a8efcc3cec2fd2cf3.jpg?tbpicau=2026-11-25-05_853eef2b5d0de02a31cbd57c0eb0e3b0",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=b9b28f379ff9d72a1764121fe4115909/d100baa1cd11728be4ee672a8efcc3cec2fd2cf3.jpg?tbpicau=2026-11-25-05_59a0f313ac0a22e59330e26916e8d5c9",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=73c2a226941b0ef46ce89856edc451a1/afc379310a55b3193cc4687d05a98226cffc17fd.jpg?tbpicau=2026-11-25-05_e9a21a073f9da770d8247646ba0c8ab8",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e1d1f016ff389b5038ffe250b50e94e0/afc379310a55b3193cc4687d05a98226cffc17fd.jpg?tbpicau=2026-11-25-05_24b81e07a4c230b20bf30cb2b0854d33",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T14:44:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 64,
+      "tags": [
+        "贴吧",
+        "GTA玩家整活晒打机环境",
+        "gta6吧"
+      ],
+      "content_hash": "e06c2fe852c367d9c4d0fdcff626b7b578845d4c",
+      "image_hash": "70ee30534808c8d0",
+      "image_id": "938f8f31e17ee95b",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-22T23:06:03Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 346,
+      "rank_score": 40.6,
+      "rank_basis": "recency+comments",
+      "group_id": "14d28eebee5d",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
       "id": "tieba:140316182a84ced2",
       "content_type": "image",
       "authenticity": "real",
@@ -5538,55 +5480,6 @@
       "rank_score": 40.6,
       "rank_basis": "recency+comments",
       "group_id": "d72f93aa5974",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:a5a2654a50df028c",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11211543434",
-      "source_name": "百度贴吧",
-      "community": "gta6吧",
-      "title": "老麦是真惨，放到现在也得被叫力工",
-      "summary": "",
-      "post_url": "https://tieba.baidu.com/p/11211543434",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=73a82bc485cec3fd8b3ea77de689d4b6/82025aafa40f4bfb3157485c454f78f0f7361837.jpg?tbpicau=2026-11-25-05_e15b85a1c3c65ad0521011093852d7f7",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=69769fe1cb1001e94e3c160d88350ad1/82025aafa40f4bfb3157485c454f78f0f7361837.jpg?tbpicau=2026-11-25-05_c1125dda8a529325dca05217a98b2df3",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=73a82bc485cec3fd8b3ea77de689d4b6/82025aafa40f4bfb3157485c454f78f0f7361837.jpg?tbpicau=2026-11-25-05_e15b85a1c3c65ad0521011093852d7f7",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=69769fe1cb1001e94e3c160d88350ad1/82025aafa40f4bfb3157485c454f78f0f7361837.jpg?tbpicau=2026-11-25-05_c1125dda8a529325dca05217a98b2df3",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T00:09:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 96,
-      "tags": [
-        "贴吧",
-        "GTA6男主被吐槽太窝囊",
-        "gta6吧"
-      ],
-      "content_hash": "0d26c98825df71a2ef392cfc04e685b640a27f94",
-      "image_hash": "122aac969e8cec31",
-      "image_id": "a1960f4765b9608c",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-22T23:06:03Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 1073,
-      "rank_score": 40.5,
-      "rank_basis": "recency+comments",
-      "group_id": "8ec68daf083b",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -5850,55 +5743,6 @@
       "trending": []
     },
     {
-      "id": "tieba:d26c0a09d41537c9",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11211540025",
-      "source_name": "百度贴吧",
-      "community": "gta6吧",
-      "title": "男主啊男主",
-      "summary": "杰森这辈子做的唯一一件错事不是加入特种兵部队没选上，也不是没去梅利威瑟，而是踏马的偷车时候搞了这个女主。或者说被这个女主缠上了。 他自己想怎么畅玩夜之城都行，带个女主，还有一个不知道是不是自己的孩子我真绷不住。 女主要强 但完全不够强，因为不带她抢劫带孩子跑路，出来了怎么又找男主来了？明明九个月就自由了，非要跟着去运货搞事，闺蜜男朋友完全不是什么好东西，非要跟着找活干，跟人家上罪恶城玩一圈，觉得自己也",
-      "post_url": "https://tieba.baidu.com/p/11211540025",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d841f8edeb6eddc426e7b4f309dab6a2/b319ebc4b74543a954932cc458178a82b901142a.jpg?tbpicau=2026-11-25-05_394bb98a3417f9f74bbcf3ecb131b99d",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4de5acfa9362853592e0d023a0d407fb/b319ebc4b74543a954932cc458178a82b901142a.jpg?tbpicau=2026-11-25-05_096452835c83425d86246d510437bf29",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d841f8edeb6eddc426e7b4f309dab6a2/b319ebc4b74543a954932cc458178a82b901142a.jpg?tbpicau=2026-11-25-05_394bb98a3417f9f74bbcf3ecb131b99d",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4de5acfa9362853592e0d023a0d407fb/b319ebc4b74543a954932cc458178a82b901142a.jpg?tbpicau=2026-11-25-05_096452835c83425d86246d510437bf29",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T00:09:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 89,
-      "tags": [
-        "贴吧",
-        "GTA6男主被吐槽太窝囊",
-        "gta6吧"
-      ],
-      "content_hash": "dcc61a4b90461c58e4ba13f4220743ac206e734a",
-      "image_hash": "0f1bbb2bbb392c2e",
-      "image_id": "288a97275efc9acd",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-22T23:06:03Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 435,
-      "rank_score": 39.9,
-      "rank_basis": "recency+comments",
-      "group_id": "143a88d280ac",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
       "id": "tieba:5e47d86b430710f8",
       "content_type": "image",
       "authenticity": "real",
@@ -5948,55 +5792,6 @@
       "trending": []
     },
     {
-      "id": "tieba:e8be8714ce303e2c",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11216975180",
-      "source_name": "百度贴吧",
-      "community": "抗压背锅吧",
-      "title": "三地鼠离队视频里已经有宙斯画面了，哪来的什么反转",
-      "summary": "信营销号的这辈子有了",
-      "post_url": "https://tieba.baidu.com/p/11216975180",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2352aec3f4fb43161a1f7a7210a44642/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_1e717df43682f8b3c51e982d45803e2a",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65b6656949b30f24359aee01f8aea07e/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_462c4ee9e1dbf4c7e17850aa903b7573",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2352aec3f4fb43161a1f7a7210a44642/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_1e717df43682f8b3c51e982d45803e2a",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65b6656949b30f24359aee01f8aea07e/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_462c4ee9e1dbf4c7e17850aa903b7573",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-21T14:00:30Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 4,
-      "tags": [
-        "贴吧",
-        "一下走仨教练T1就剩Easyhoon",
-        "抗压背锅吧"
-      ],
-      "content_hash": "d57e4ffbc1ec5fac147544f71e48f9c0d621e61c",
-      "image_hash": "233b333371734747",
-      "image_id": "c9dd85c64e79d2ab",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-21T22:41:00Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 261,
-      "rank_score": 39.8,
-      "rank_basis": "recency+comments",
-      "group_id": "281cbd330951",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
       "id": "tieba:98c9d2db4cc78981",
       "content_type": "image",
       "authenticity": "real",
@@ -6040,55 +5835,6 @@
       "rank_score": 39.7,
       "rank_basis": "recency+comments",
       "group_id": "d505d929f52d",
-      "group_size": 1,
-      "related": [],
-      "source_stale": false,
-      "trending": []
-    },
-    {
-      "id": "tieba:58aa78c6443de118",
-      "content_type": "image",
-      "authenticity": "real",
-      "source": "tieba",
-      "source_id": "11203260749",
-      "source_name": "百度贴吧",
-      "community": "ps5吧",
-      "title": "兄弟们晒下你们的打机环境",
-      "summary": "我已就绪",
-      "post_url": "https://tieba.baidu.com/p/11203260749",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=db59ceb5ef773912c4268569c8188675/62d0f703918fa0ec25a0ec05609759ee3d6ddb57.jpg?tbpicau=2026-11-25-05_aa7ed90448bfa82229b5407700c80215",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=ba508d76631f95caa6f590b4f92c0e03/62d0f703918fa0ec25a0ec05609759ee3d6ddb57.jpg?tbpicau=2026-11-25-05_b762b2ad33d45a77db02cf5298405a6f",
-      "images": [
-        {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=db59ceb5ef773912c4268569c8188675/62d0f703918fa0ec25a0ec05609759ee3d6ddb57.jpg?tbpicau=2026-11-25-05_aa7ed90448bfa82229b5407700c80215",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=ba508d76631f95caa6f590b4f92c0e03/62d0f703918fa0ec25a0ec05609759ee3d6ddb57.jpg?tbpicau=2026-11-25-05_b762b2ad33d45a77db02cf5298405a6f",
-          "width": null,
-          "height": null
-        }
-      ],
-      "created_at": null,
-      "collected_at": "2026-11-20T14:44:51Z",
-      "time_source": "collection",
-      "score": null,
-      "comment_count": 26,
-      "tags": [
-        "贴吧",
-        "GTA玩家整活晒打机环境",
-        "ps5吧"
-      ],
-      "content_hash": "3b62dc2950c0d4758a439a111ccb3cd4e1692393",
-      "image_hash": "a3a3a3a7f7cc4c38",
-      "image_id": "9a7785ec77e3065a",
-      "status": "active",
-      "image_status": "ok",
-      "image_http_status": 206,
-      "image_checked_at": "2026-11-22T23:06:03Z",
-      "image_error": null,
-      "image_width": 580,
-      "image_height": 689,
-      "rank_score": 39.2,
-      "rank_basis": "recency+comments",
-      "group_id": "6a471a843168",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -6407,6 +6153,67 @@
       "trending": []
     },
     {
+      "id": "tieba:148ac0c085f540cb",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11209672197",
+      "source_name": "百度贴吧",
+      "community": "gta6吧",
+      "title": "杰森为什么这么受这美女欢迎？",
+      "summary": "不得不说杰哥实在太纯爱了，这都忍住了",
+      "post_url": "https://tieba.baidu.com/p/11209672197",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=7633eea3453b5bb5bed720f606d3d523/8d1001e93901213fe609a1d412e736d12f2e9584.jpg?tbpicau=2026-11-25-05_eec28386edf783f78e10620763a15b39",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e70690a8b003738dde4a0e208320c16c/8d1001e93901213fe609a1d412e736d12f2e9584.jpg?tbpicau=2026-11-25-05_5e9760c983044abe984af8ae0e50a282",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=7633eea3453b5bb5bed720f606d3d523/8d1001e93901213fe609a1d412e736d12f2e9584.jpg?tbpicau=2026-11-25-05_eec28386edf783f78e10620763a15b39",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e70690a8b003738dde4a0e208320c16c/8d1001e93901213fe609a1d412e736d12f2e9584.jpg?tbpicau=2026-11-25-05_5e9760c983044abe984af8ae0e50a282",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=633c818d8fea15ce41eee00186003a25/3901213fb80e7bec34e0ece9692eb9389b506b84.jpg?tbpicau=2026-11-25-05_f5ffed69915ebf0a5b70489835c185f7",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=9604a9b5ef773912c4268763c822f725/3901213fb80e7bec34e0ece9692eb9389b506b84.jpg?tbpicau=2026-11-25-05_6d7627a6b78e75d54d46f7a60238c255",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=9bcda1f34c46f21fc9345e5bc6246b31/65380cd7912397dded43770c1f82b2b7d0a28784.jpg?tbpicau=2026-11-25-05_2da94d6541fd13cc3d04511da3097e4e",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=e80891c3bdedab6474724fc2c70ddefe/65380cd7912397dded43770c1f82b2b7d0a28784.jpg?tbpicau=2026-11-25-05_8f65dd9f7b8a3f548c4095a59a46b8c4",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T00:09:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 122,
+      "tags": [
+        "贴吧",
+        "GTA6男主被吐槽太窝囊",
+        "gta6吧"
+      ],
+      "content_hash": "787cff5ed89d696de242be86dc85b4dc3f5aa58e",
+      "image_hash": "818783c2e6c6e6e1",
+      "image_id": "67a01959da436321",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-22T23:06:03Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 326,
+      "rank_score": 37.6,
+      "rank_basis": "recency+comments",
+      "group_id": "de924c94dcee",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
       "id": "tieba:ad83a4f9fdba5a2c",
       "content_type": "image",
       "authenticity": "real",
@@ -6450,6 +6257,55 @@
       "rank_score": 36.3,
       "rank_basis": "recency+comments",
       "group_id": "74b1c189ecd3",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:a5a2654a50df028c",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11211543434",
+      "source_name": "百度贴吧",
+      "community": "gta6吧",
+      "title": "老麦是真惨，放到现在也得被叫力工",
+      "summary": "",
+      "post_url": "https://tieba.baidu.com/p/11211543434",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=73a82bc485cec3fd8b3ea77de689d4b6/82025aafa40f4bfb3157485c454f78f0f7361837.jpg?tbpicau=2026-11-25-05_e15b85a1c3c65ad0521011093852d7f7",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=69769fe1cb1001e94e3c160d88350ad1/82025aafa40f4bfb3157485c454f78f0f7361837.jpg?tbpicau=2026-11-25-05_c1125dda8a529325dca05217a98b2df3",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=73a82bc485cec3fd8b3ea77de689d4b6/82025aafa40f4bfb3157485c454f78f0f7361837.jpg?tbpicau=2026-11-25-05_e15b85a1c3c65ad0521011093852d7f7",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=69769fe1cb1001e94e3c160d88350ad1/82025aafa40f4bfb3157485c454f78f0f7361837.jpg?tbpicau=2026-11-25-05_c1125dda8a529325dca05217a98b2df3",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T00:09:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 96,
+      "tags": [
+        "贴吧",
+        "GTA6男主被吐槽太窝囊",
+        "gta6吧"
+      ],
+      "content_hash": "0d26c98825df71a2ef392cfc04e685b640a27f94",
+      "image_hash": "122aac969e8cec31",
+      "image_id": "a1960f4765b9608c",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-22T23:06:03Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 1073,
+      "rank_score": 35.8,
+      "rank_basis": "recency+comments",
+      "group_id": "8ec68daf083b",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -6517,6 +6373,55 @@
       "trending": []
     },
     {
+      "id": "tieba:d26c0a09d41537c9",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11211540025",
+      "source_name": "百度贴吧",
+      "community": "gta6吧",
+      "title": "男主啊男主",
+      "summary": "杰森这辈子做的唯一一件错事不是加入特种兵部队没选上，也不是没去梅利威瑟，而是踏马的偷车时候搞了这个女主。或者说被这个女主缠上了。 他自己想怎么畅玩夜之城都行，带个女主，还有一个不知道是不是自己的孩子我真绷不住。 女主要强 但完全不够强，因为不带她抢劫带孩子跑路，出来了怎么又找男主来了？明明九个月就自由了，非要跟着去运货搞事，闺蜜男朋友完全不是什么好东西，非要跟着找活干，跟人家上罪恶城玩一圈，觉得自己也",
+      "post_url": "https://tieba.baidu.com/p/11211540025",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d841f8edeb6eddc426e7b4f309dab6a2/b319ebc4b74543a954932cc458178a82b901142a.jpg?tbpicau=2026-11-25-05_394bb98a3417f9f74bbcf3ecb131b99d",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4de5acfa9362853592e0d023a0d407fb/b319ebc4b74543a954932cc458178a82b901142a.jpg?tbpicau=2026-11-25-05_096452835c83425d86246d510437bf29",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=d841f8edeb6eddc426e7b4f309dab6a2/b319ebc4b74543a954932cc458178a82b901142a.jpg?tbpicau=2026-11-25-05_394bb98a3417f9f74bbcf3ecb131b99d",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4de5acfa9362853592e0d023a0d407fb/b319ebc4b74543a954932cc458178a82b901142a.jpg?tbpicau=2026-11-25-05_096452835c83425d86246d510437bf29",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T00:09:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 89,
+      "tags": [
+        "贴吧",
+        "GTA6男主被吐槽太窝囊",
+        "gta6吧"
+      ],
+      "content_hash": "dcc61a4b90461c58e4ba13f4220743ac206e734a",
+      "image_hash": "0f1bbb2bbb392c2e",
+      "image_id": "288a97275efc9acd",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-22T23:06:03Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 435,
+      "rank_score": 35.2,
+      "rank_basis": "recency+comments",
+      "group_id": "143a88d280ac",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
       "id": "tieba:831a306b0946cf24",
       "content_type": "image",
       "authenticity": "real",
@@ -6566,6 +6471,55 @@
       "rank_score": 34.7,
       "rank_basis": "recency+comments",
       "group_id": "6d6d1868de11",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:e8be8714ce303e2c",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "11216975180",
+      "source_name": "百度贴吧",
+      "community": "抗压背锅吧",
+      "title": "三地鼠离队视频里已经有宙斯画面了，哪来的什么反转",
+      "summary": "信营销号的这辈子有了",
+      "post_url": "https://tieba.baidu.com/p/11216975180",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2352aec3f4fb43161a1f7a7210a44642/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_1e717df43682f8b3c51e982d45803e2a",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65b6656949b30f24359aee01f8aea07e/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_462c4ee9e1dbf4c7e17850aa903b7573",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=2352aec3f4fb43161a1f7a7210a44642/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_1e717df43682f8b3c51e982d45803e2a",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=65b6656949b30f24359aee01f8aea07e/b6003af33a87e9502b153d6456385343fbf2b4bc.jpg?tbpicau=2026-11-24-05_462c4ee9e1dbf4c7e17850aa903b7573",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-21T14:00:30Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 4,
+      "tags": [
+        "贴吧",
+        "一下走仨教练T1就剩Easyhoon",
+        "抗压背锅吧"
+      ],
+      "content_hash": "d57e4ffbc1ec5fac147544f71e48f9c0d621e61c",
+      "image_hash": "233b333371734747",
+      "image_id": "c9dd85c64e79d2ab",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-21T22:41:00Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 261,
+      "rank_score": 34.4,
+      "rank_basis": "recency+comments",
+      "group_id": "281cbd330951",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -6670,22 +6624,22 @@
       "trending": []
     },
     {
-      "id": "tieba:82761d35c0effb33",
+      "id": "tieba:58aa78c6443de118",
       "content_type": "image",
       "authenticity": "real",
       "source": "tieba",
-      "source_id": "10985142913",
+      "source_id": "11203260749",
       "source_name": "百度贴吧",
-      "community": "steam吧",
-      "title": "这够不够逆天",
-      "summary": "我感觉可以进十佳逆天打机环境排行榜",
-      "post_url": "https://tieba.baidu.com/p/10985142913",
-      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3667a8c04cd162d985ee621421dea950/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_e3accf2c3dfaa60bba0d50214fc813d9",
-      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4971012f48f41bd5da53eaf661e1f0f6/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_283340e3003d8d1e393fec67ec65fe20",
+      "community": "ps5吧",
+      "title": "兄弟们晒下你们的打机环境",
+      "summary": "我已就绪",
+      "post_url": "https://tieba.baidu.com/p/11203260749",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=db59ceb5ef773912c4268569c8188675/62d0f703918fa0ec25a0ec05609759ee3d6ddb57.jpg?tbpicau=2026-11-25-05_aa7ed90448bfa82229b5407700c80215",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=ba508d76631f95caa6f590b4f92c0e03/62d0f703918fa0ec25a0ec05609759ee3d6ddb57.jpg?tbpicau=2026-11-25-05_b762b2ad33d45a77db02cf5298405a6f",
       "images": [
         {
-          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3667a8c04cd162d985ee621421dea950/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_e3accf2c3dfaa60bba0d50214fc813d9",
-          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4971012f48f41bd5da53eaf661e1f0f6/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_283340e3003d8d1e393fec67ec65fe20",
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=db59ceb5ef773912c4268569c8188675/62d0f703918fa0ec25a0ec05609759ee3d6ddb57.jpg?tbpicau=2026-11-25-05_aa7ed90448bfa82229b5407700c80215",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=ba508d76631f95caa6f590b4f92c0e03/62d0f703918fa0ec25a0ec05609759ee3d6ddb57.jpg?tbpicau=2026-11-25-05_b762b2ad33d45a77db02cf5298405a6f",
           "width": null,
           "height": null
         }
@@ -6694,25 +6648,25 @@
       "collected_at": "2026-11-20T14:44:51Z",
       "time_source": "collection",
       "score": null,
-      "comment_count": 12,
+      "comment_count": 26,
       "tags": [
         "贴吧",
         "GTA玩家整活晒打机环境",
-        "steam吧"
+        "ps5吧"
       ],
-      "content_hash": "c0d44739e0dd0c6d77eaa87822c6aff83afd545e",
-      "image_hash": "e061e23f93b33b2b",
-      "image_id": "c915707d94a3e6d4",
+      "content_hash": "3b62dc2950c0d4758a439a111ccb3cd4e1692393",
+      "image_hash": "a3a3a3a7f7cc4c38",
+      "image_id": "9a7785ec77e3065a",
       "status": "active",
       "image_status": "ok",
       "image_http_status": 206,
       "image_checked_at": "2026-11-22T23:06:03Z",
       "image_error": null,
       "image_width": 580,
-      "image_height": 773,
-      "rank_score": 33.5,
+      "image_height": 689,
+      "rank_score": 33.7,
       "rank_basis": "recency+comments",
-      "group_id": "f26755e2d1b1",
+      "group_id": "6a471a843168",
       "group_size": 1,
       "related": [],
       "source_stale": false,
@@ -6878,6 +6832,55 @@
       "rank_score": 29.8,
       "rank_basis": "recency+comments",
       "group_id": "1512108a5fda",
+      "group_size": 1,
+      "related": [],
+      "source_stale": false,
+      "trending": []
+    },
+    {
+      "id": "tieba:82761d35c0effb33",
+      "content_type": "image",
+      "authenticity": "real",
+      "source": "tieba",
+      "source_id": "10985142913",
+      "source_name": "百度贴吧",
+      "community": "steam吧",
+      "title": "这够不够逆天",
+      "summary": "我感觉可以进十佳逆天打机环境排行榜",
+      "post_url": "https://tieba.baidu.com/p/10985142913",
+      "image_url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3667a8c04cd162d985ee621421dea950/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_e3accf2c3dfaa60bba0d50214fc813d9",
+      "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4971012f48f41bd5da53eaf661e1f0f6/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_283340e3003d8d1e393fec67ec65fe20",
+      "images": [
+        {
+          "url": "https://tiebapic.baidu.com/forum/w%3D580/sign=3667a8c04cd162d985ee621421dea950/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_e3accf2c3dfaa60bba0d50214fc813d9",
+          "thumbnail_url": "https://tiebapic.baidu.com/forum/w%3D720%3Bq%3D80/sign=4971012f48f41bd5da53eaf661e1f0f6/0c338744ebf81a4c65600acd912a6059252da660.jpg?tbpicau=2026-11-25-05_283340e3003d8d1e393fec67ec65fe20",
+          "width": null,
+          "height": null
+        }
+      ],
+      "created_at": null,
+      "collected_at": "2026-11-20T14:44:51Z",
+      "time_source": "collection",
+      "score": null,
+      "comment_count": 12,
+      "tags": [
+        "贴吧",
+        "GTA玩家整活晒打机环境",
+        "steam吧"
+      ],
+      "content_hash": "c0d44739e0dd0c6d77eaa87822c6aff83afd545e",
+      "image_hash": "e061e23f93b33b2b",
+      "image_id": "c915707d94a3e6d4",
+      "status": "active",
+      "image_status": "ok",
+      "image_http_status": 206,
+      "image_checked_at": "2026-11-22T23:06:03Z",
+      "image_error": null,
+      "image_width": 580,
+      "image_height": 773,
+      "rank_score": 28.0,
+      "rank_basis": "recency+comments",
+      "group_id": "f26755e2d1b1",
       "group_size": 1,
       "related": [],
       "source_stale": false,
